@@ -4,7 +4,7 @@ title: "战斗机制、寻路与数值"
 type: topic
 status: investigating
 verification: author-documented
-projects: [jason-simulator, hasty-cr, crforge, royalesim]
+projects: [jason-simulator, hasty-cr, crforge, royalesim, itzik-clashenv, crsim-agent-larkindaniel]
 last_reviewed: null
 ---
 
@@ -32,3 +32,8 @@ last_reviewed: null
 - 作者审核与具体许可证影响（公开不代表可直接复制）。
 
 [能力总入口](../capabilities/README.md) · [项目索引](../projects/README.md)
+
+## 新增技术来源（2026-10-13）
+
+- [ClashRoyaleEnv](../projects/itzik-clashenv.md)：C++17确定性模拟器、独立深拷贝分支、搜索教师、PPO训练及浏览器可视化。
+- [CRSim Agent](../projects/crsim-agent-larkindaniel.md)：冻结八卡的确定性模拟、信息公平性审计、PPO复现实验。

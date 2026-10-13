@@ -104,67 +104,67 @@ projects:
     path: projects/itzik-clashenv.md
     verification: author-documented
     license: MIT
-    topics: []
+    topics: [cr-battle-simulation, cr-ai-environment, cr-game-mechanics]
   - id: clashai-vegetableleaf
     title: "ClashAI"
     repository: https://github.com/vegetableleaf/ClashAI
     path: projects/clashai-vegetableleaf.md
     verification: author-documented
     license: unknown
-    topics: []
+    topics: [cr-ai-environment, cr-runtime-observation, cr-replay-state]
   - id: crsim-agent-larkindaniel
     title: "CRSim Agent"
     repository: https://github.com/larkindaniel/clash-royale-agent
     path: projects/crsim-agent-larkindaniel.md
     verification: author-documented
     license: MIT
-    topics: []
+    topics: [cr-battle-simulation, cr-ai-environment, cr-game-mechanics]
   - id: build-a-bot
     title: "ClashRoyaleBuildABot"
     repository: https://github.com/Pbatch/ClashRoyaleBuildABot
     path: projects/build-a-bot.md
     verification: author-documented
     license: MIT
-    topics: []
+    topics: [cr-runtime-observation, cr-ai-environment]
   - id: sc-extract
     title: "sc_extract"
     repository: https://github.com/nextonesfaster/sc-extract
     path: projects/sc-extract.md
     verification: author-documented
     license: MIT
-    topics: []
+    topics: [cr-assets-data]
   - id: detection-dataset
     title: "CR Detection Dataset"
     repository: https://github.com/wty-yy/Clash-Royale-Detection-Dataset
     path: projects/detection-dataset.md
     verification: author-documented
     license: MIT
-    topics: []
+    topics: [cr-runtime-observation, cr-ai-environment]
   - id: claude-royale
     title: "Claude Royale"
     repository: https://github.com/houseworthe/claude-royale
     path: projects/claude-royale.md
     verification: author-documented
     license: MIT
-    topics: []
+    topics: [cr-runtime-observation, cr-ai-environment]
   - id: supercell-csv-decoder
     title: "Supercell Resource Decoder"
     repository: https://github.com/proydakov/supercell-resource-decoder
     path: projects/supercell-csv-decoder.md
     verification: author-documented
     license: MIT
-    topics: []
+    topics: [cr-assets-data]
   - id: royaleapi-static-data
     title: "RoyaleAPI Static Data"
     repository: https://github.com/RoyaleAPI/cr-api-data
     path: projects/royaleapi-static-data.md
     verification: author-documented
     license: unknown
-    topics: []
+    topics: [cr-assets-data]
   - id: card-tracker
     title: "AI Card Tracker"
     repository: https://github.com/AmarSaini/Clash-Royale-AI-Card-Tracker
     path: projects/card-tracker.md
     verification: author-documented
     license: Apache-2.0
-    topics: []
+    topics: [cr-runtime-observation]

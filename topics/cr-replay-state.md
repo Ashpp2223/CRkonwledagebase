@@ -4,7 +4,7 @@ title: "回放、快照与状态恢复"
 type: topic
 status: investigating
 verification: author-documented
-projects: [firstlight-cr, jason-battle-engine, replay-studio, ashpp-replay]
+projects: [firstlight-cr, jason-battle-engine, replay-studio, ashpp-replay, clashai-vegetableleaf]
 last_reviewed: null
 ---
 
@@ -32,3 +32,7 @@ last_reviewed: null
 - 作者审核与具体许可证影响（公开不代表可直接复制）。
 
 [能力总入口](../capabilities/README.md) · [项目索引](../projects/README.md)
+
+## 新增技术来源（2026-10-13）
+
+- [ClashAI](../projects/clashai-vegetableleaf.md)：原生回放重驱、公开观测、模仿学习和强化学习部署流水线。

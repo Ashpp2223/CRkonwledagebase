@@ -5,7 +5,7 @@ type: project
 status: implemented
 verification: author-documented
 repository: https://github.com/nextonesfaster/sc-extract
-topics: []
+topics: [cr-assets-data]
 maintainers: []
 last_reviewed: null
 license: MIT
@@ -13,14 +13,20 @@ license: MIT
 
 # sc_extract
 
-[原始仓库](https://github.com/nextonesfaster/sc-extract)。此项目被作为中台技术来源编目；未宣称原作者已加入，也未进行独立集成测试。
+**来源**：[nextonesfaster/sc-extract](https://github.com/nextonesfaster/sc-extract)，参考提交 [3a837dee0fbe](https://github.com/nextonesfaster/sc-extract/tree/3a837dee0fbe9aa6b3d72ab99976e3b4497cebfc)。目前以作者公开资料编目；尚未完成第三方设备/性能测试，原作者也未确认加入中台。
 
-## 可衍生的技术资产
+## 核心可衍生资产
 
-Rust SC纹理、精灵和CSV提取命令行及crate。
+Rust SC图像、精灵与CSV格式处理CLI和crate。
 
-## 复用边界
+## 能力入口
 
-新版皇室战争格式兼容性待核实，游戏资源须独立授权。
+- [asset-ingestion](../capabilities/asset-ingestion/README.md)
 
-阅读 [技术中台复用成熟度](../docs/reuse-maturity.md)。项目能力的细粒度关联以 [实现矩阵](../registry/implementations.yaml) 为准；R1 为作者公开资料，R2 需固定 SHA 的源码审查。
+## 研究网络
+
+- [资源与数据解析](../topics/cr-assets-data.md)
+
+## 限制
+
+请将作者声称的性能、准确率、游戏版本支持与独立复现区分开来。代码开源许可证不自动涵盖游戏素材/模型/回放权属。项目入目录不等于当前即可集成；按 [复用成熟度](../docs/reuse-maturity.md) 处理。

@@ -5,7 +5,7 @@ type: project
 status: implemented
 verification: author-documented
 repository: https://github.com/itzik123/ClashRoyaleAi
-topics: []
+topics: [cr-battle-simulation, cr-ai-environment, cr-game-mechanics]
 maintainers: []
 last_reviewed: null
 license: MIT
@@ -13,14 +13,25 @@ license: MIT
 
 # ClashRoyaleEnv
 
-[原始仓库](https://github.com/itzik123/ClashRoyaleAi)。此项目被作为中台技术来源编目；未宣称原作者已加入，也未进行独立集成测试。
+**来源**：[itzik123/ClashRoyaleAi](https://github.com/itzik123/ClashRoyaleAi)，参考提交 [2f172925a15b](https://github.com/itzik123/ClashRoyaleAi/tree/2f172925a15b17f973291f41a789b19a29f0fc43)。目前以作者公开资料编目；尚未完成第三方设备/性能测试，原作者也未确认加入中台。
 
-## 可衍生的技术资产
+## 核心可衍生资产
 
-C++17确定性战斗引擎、深拷贝状态分叉、Python训练、前瞻搜索和浏览器教学实验。
+C++17确定性模拟器、独立深拷贝分支、搜索教师、PPO训练及浏览器可视化。
 
-## 复用边界
+## 能力入口
 
-Python绑定主要针对Windows与3.11；作者性能数字未复核。
+- [snapshot-recovery](../capabilities/snapshot-recovery/README.md)
+- [lookahead-planning](../capabilities/lookahead-planning/README.md)
+- [rules-simulation](../capabilities/rules-simulation/README.md)
+- [agent-environment](../capabilities/agent-environment/README.md)
 
-阅读 [技术中台复用成熟度](../docs/reuse-maturity.md)。项目能力的细粒度关联以 [实现矩阵](../registry/implementations.yaml) 为准；R1 为作者公开资料，R2 需固定 SHA 的源码审查。
+## 研究网络
+
+- [独立战斗模拟器](../topics/cr-battle-simulation.md)
+- [AI 训练环境与决策](../topics/cr-ai-environment.md)
+- [战斗机制、寻路与数值](../topics/cr-game-mechanics.md)
+
+## 限制
+
+请将作者声称的性能、准确率、游戏版本支持与独立复现区分开来。代码开源许可证不自动涵盖游戏素材/模型/回放权属。项目入目录不等于当前即可集成；按 [复用成熟度](../docs/reuse-maturity.md) 处理。

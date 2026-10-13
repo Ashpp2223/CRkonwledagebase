@@ -5,7 +5,7 @@ type: project
 status: implemented
 verification: author-documented
 repository: https://github.com/proydakov/supercell-resource-decoder
-topics: []
+topics: [cr-assets-data]
 maintainers: []
 last_reviewed: null
 license: MIT
@@ -13,14 +13,20 @@ license: MIT
 
 # Supercell Resource Decoder
 
-[原始仓库](https://github.com/proydakov/supercell-resource-decoder)。此项目被作为中台技术来源编目；未宣称原作者已加入，也未进行独立集成测试。
+**来源**：[proydakov/supercell-resource-decoder](https://github.com/proydakov/supercell-resource-decoder)，参考提交 [7b8bb5a8d1b1](https://github.com/proydakov/supercell-resource-decoder/tree/7b8bb5a8d1b1ef74b05842b6c4c73b599e3d31d4)。目前以作者公开资料编目；尚未完成第三方设备/性能测试，原作者也未确认加入中台。
 
-## 可衍生的技术资产
+## 核心可衍生资产
 
-历史Supercell二进制CSV格式解码和实验编码。
+Supercell旧式二进制CSV解码和实验性编码。
 
-## 复用边界
+## 能力入口
 
-新版本格式未确认，编码为实验性质。
+- [asset-ingestion](../capabilities/asset-ingestion/README.md)
 
-阅读 [技术中台复用成熟度](../docs/reuse-maturity.md)。项目能力的细粒度关联以 [实现矩阵](../registry/implementations.yaml) 为准；R1 为作者公开资料，R2 需固定 SHA 的源码审查。
+## 研究网络
+
+- [资源与数据解析](../topics/cr-assets-data.md)
+
+## 限制
+
+请将作者声称的性能、准确率、游戏版本支持与独立复现区分开来。代码开源许可证不自动涵盖游戏素材/模型/回放权属。项目入目录不等于当前即可集成；按 [复用成熟度](../docs/reuse-maturity.md) 处理。

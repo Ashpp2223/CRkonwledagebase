@@ -4,7 +4,7 @@ title: "运行时游戏状态观测"
 type: topic
 status: investigating
 verification: author-documented
-projects: [memory-reader, tencent-overlay, tencent-model-harness, katacr]
+projects: [memory-reader, tencent-overlay, tencent-model-harness, katacr, clashai-vegetableleaf, build-a-bot, detection-dataset, claude-royale, card-tracker]
 last_reviewed: null
 ---
 
@@ -32,3 +32,11 @@ last_reviewed: null
 - 作者审核与具体许可证影响（公开不代表可直接复制）。
 
 [能力总入口](../capabilities/README.md) · [项目索引](../projects/README.md)
+
+## 新增技术来源（2026-10-13）
+
+- [ClashAI](../projects/clashai-vegetableleaf.md)：原生回放重驱、公开观测、模仿学习和强化学习部署流水线。
+- [ClashRoyaleBuildABot](../projects/build-a-bot.md)：屏幕视觉检测器、结构化状态和动作策略分层。
+- [CR Detection Dataset](../projects/detection-dataset.md)：历史图像切片及合成目标检测样本生成方法。
+- [Claude Royale](../projects/claude-royale.md)：截图—LLM决策—输入的多智能体调度与UI生命周期经验。
+- [AI Card Tracker](../projects/card-tracker.md)：早期CNN卡牌跟踪、循环和圣水估计。

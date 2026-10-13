@@ -5,7 +5,7 @@ type: project
 status: implemented
 verification: author-documented
 repository: https://github.com/vegetableleaf/ClashAI
-topics: []
+topics: [cr-ai-environment, cr-runtime-observation, cr-replay-state]
 maintainers: []
 last_reviewed: null
 license: unknown
@@ -13,14 +13,25 @@ license: unknown
 
 # ClashAI
 
-[原始仓库](https://github.com/vegetableleaf/ClashAI)。此项目被作为中台技术来源编目；未宣称原作者已加入，也未进行独立集成测试。
+**来源**：[vegetableleaf/ClashAI](https://github.com/vegetableleaf/ClashAI)，参考提交 [f1aed2cd034a](https://github.com/vegetableleaf/ClashAI/tree/f1aed2cd034a87f1af4df996cc16d4922d9a8b6f)。目前以作者公开资料编目；尚未完成第三方设备/性能测试，原作者也未确认加入中台。
 
-## 可衍生的技术资产
+## 核心可衍生资产
 
-真人回放原生重建→公开信息模仿学习→强化学习→部署门禁→客户端运行。
+原生回放重驱、公开观测、模仿学习和强化学习部署流水线。
 
-## 复用边界
+## 能力入口
 
-没有明确整体开源许可证；训练成绩与服务条款风险需核对。
+- [replay-to-learning](../capabilities/replay-to-learning/README.md)
+- [visual-perception](../capabilities/visual-perception/README.md)
+- [agent-runtime](../capabilities/agent-runtime/README.md)
+- [agent-environment](../capabilities/agent-environment/README.md)
 
-阅读 [技术中台复用成熟度](../docs/reuse-maturity.md)。项目能力的细粒度关联以 [实现矩阵](../registry/implementations.yaml) 为准；R1 为作者公开资料，R2 需固定 SHA 的源码审查。
+## 研究网络
+
+- [AI 训练环境与决策](../topics/cr-ai-environment.md)
+- [运行时游戏状态观测](../topics/cr-runtime-observation.md)
+- [回放、快照与状态恢复](../topics/cr-replay-state.md)
+
+## 限制
+
+请将作者声称的性能、准确率、游戏版本支持与独立复现区分开来。代码开源许可证不自动涵盖游戏素材/模型/回放权属。项目入目录不等于当前即可集成；按 [复用成熟度](../docs/reuse-maturity.md) 处理。

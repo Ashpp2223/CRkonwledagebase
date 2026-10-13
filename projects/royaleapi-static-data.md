@@ -5,7 +5,7 @@ type: project
 status: implemented
 verification: author-documented
 repository: https://github.com/RoyaleAPI/cr-api-data
-topics: []
+topics: [cr-assets-data]
 maintainers: []
 last_reviewed: null
 license: unknown
@@ -13,14 +13,20 @@ license: unknown
 
 # RoyaleAPI Static Data
 
-[原始仓库](https://github.com/RoyaleAPI/cr-api-data)。此项目被作为中台技术来源编目；未宣称原作者已加入，也未进行独立集成测试。
+**来源**：[RoyaleAPI/cr-api-data](https://github.com/RoyaleAPI/cr-api-data)，参考提交 [d5461b0a59bf](https://github.com/RoyaleAPI/cr-api-data/tree/d5461b0a59bff33c4da2fc845b07275b66b2d6ff)。目前以作者公开资料编目；尚未完成第三方设备/性能测试，原作者也未确认加入中台。
 
-## 可衍生的技术资产
+## 核心可衍生资产
 
-第三方卡牌JSON与常量数据归档。
+第三方卡牌JSON及显示元数据历史参考。
 
-## 复用边界
+## 能力入口
 
-并非官方最新战斗参数，需要校对更新时间。
+- [asset-ingestion](../capabilities/asset-ingestion/README.md)
 
-阅读 [技术中台复用成熟度](../docs/reuse-maturity.md)。项目能力的细粒度关联以 [实现矩阵](../registry/implementations.yaml) 为准；R1 为作者公开资料，R2 需固定 SHA 的源码审查。
+## 研究网络
+
+- [资源与数据解析](../topics/cr-assets-data.md)
+
+## 限制
+
+请将作者声称的性能、准确率、游戏版本支持与独立复现区分开来。代码开源许可证不自动涵盖游戏素材/模型/回放权属。项目入目录不等于当前即可集成；按 [复用成熟度](../docs/reuse-maturity.md) 处理。

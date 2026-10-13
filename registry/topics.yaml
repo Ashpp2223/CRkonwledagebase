@@ -6,24 +6,24 @@ topics:
   - id: cr-battle-simulation
     title: "独立战斗模拟器"
     path: topics/cr-battle-simulation.md
-    projects: [jason-simulator, hasty-cr, royalegym, royalesim, crforge]
+    projects: [jason-simulator, hasty-cr, royalegym, royalesim, crforge, itzik-clashenv, crsim-agent-larkindaniel]
   - id: cr-replay-state
     title: "回放、快照与状态恢复"
     path: topics/cr-replay-state.md
-    projects: [firstlight-cr, jason-battle-engine, replay-studio, ashpp-replay]
+    projects: [firstlight-cr, jason-battle-engine, replay-studio, ashpp-replay, clashai-vegetableleaf]
   - id: cr-ai-environment
     title: "AI 训练环境与决策"
     path: topics/cr-ai-environment.md
-    projects: [firstlight-cr, jason-battle-engine, jason-simulator, tencent-model-harness, hasty-cr, royalegym, royalesim, crforge, katacr]
+    projects: [firstlight-cr, jason-battle-engine, jason-simulator, tencent-model-harness, hasty-cr, royalegym, royalesim, crforge, katacr, itzik-clashenv, clashai-vegetableleaf, crsim-agent-larkindaniel, build-a-bot, detection-dataset, claude-royale]
   - id: cr-runtime-observation
     title: "运行时游戏状态观测"
     path: topics/cr-runtime-observation.md
-    projects: [memory-reader, tencent-overlay, tencent-model-harness, katacr]
+    projects: [memory-reader, tencent-overlay, tencent-model-harness, katacr, clashai-vegetableleaf, build-a-bot, detection-dataset, claude-royale, card-tracker]
   - id: cr-assets-data
     title: "资源与数据解析"
     path: topics/cr-assets-data.md
-    projects: [sc-downloader]
+    projects: [sc-downloader, sc-extract, supercell-csv-decoder, royaleapi-static-data]
   - id: cr-game-mechanics
     title: "战斗机制、寻路与数值"
     path: topics/cr-game-mechanics.md
-    projects: [jason-simulator, hasty-cr, crforge, royalesim]
+    projects: [jason-simulator, hasty-cr, crforge, royalesim, itzik-clashenv, crsim-agent-larkindaniel]

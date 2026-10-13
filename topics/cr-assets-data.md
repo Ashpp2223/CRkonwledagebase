@@ -4,7 +4,7 @@ title: "资源与数据解析"
 type: topic
 status: investigating
 verification: author-documented
-projects: [sc-downloader]
+projects: [sc-downloader, sc-extract, supercell-csv-decoder, royaleapi-static-data]
 last_reviewed: null
 ---
 
@@ -29,3 +29,9 @@ last_reviewed: null
 - 作者审核与具体许可证影响（公开不代表可直接复制）。
 
 [能力总入口](../capabilities/README.md) · [项目索引](../projects/README.md)
+
+## 新增技术来源（2026-10-13）
+
+- [sc_extract](../projects/sc-extract.md)：Rust SC图像、精灵与CSV格式处理CLI和crate。
+- [Supercell Resource Decoder](../projects/supercell-csv-decoder.md)：Supercell旧式二进制CSV解码和实验性编码。
+- [RoyaleAPI Static Data](../projects/royaleapi-static-data.md)：第三方卡牌JSON及显示元数据历史参考。

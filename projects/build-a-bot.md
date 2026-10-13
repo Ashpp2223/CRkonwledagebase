@@ -5,7 +5,7 @@ type: project
 status: implemented
 verification: author-documented
 repository: https://github.com/Pbatch/ClashRoyaleBuildABot
-topics: []
+topics: [cr-runtime-observation, cr-ai-environment]
 maintainers: []
 last_reviewed: null
 license: MIT
@@ -13,14 +13,23 @@ license: MIT
 
 # ClashRoyaleBuildABot
 
-[原始仓库](https://github.com/Pbatch/ClashRoyaleBuildABot)。此项目被作为中台技术来源编目；未宣称原作者已加入，也未进行独立集成测试。
+**来源**：[Pbatch/ClashRoyaleBuildABot](https://github.com/Pbatch/ClashRoyaleBuildABot)，参考提交 [f89ecbf309e6](https://github.com/Pbatch/ClashRoyaleBuildABot/tree/f89ecbf309e698cb9fccdfb64a6ff2a930e6541e)。目前以作者公开资料编目；尚未完成第三方设备/性能测试，原作者也未确认加入中台。
 
-## 可衍生的技术资产
+## 核心可衍生资产
 
-截图视觉、卡牌/单位/数字识别、状态生成与动作策略分层。
+屏幕视觉检测器、结构化状态和动作策略分层。
 
-## 复用边界
+## 能力入口
 
-模拟器版本、模型准确率及运行适配须测试。
+- [visual-perception](../capabilities/visual-perception/README.md)
+- [state-observation](../capabilities/state-observation/README.md)
+- [agent-runtime](../capabilities/agent-runtime/README.md)
 
-阅读 [技术中台复用成熟度](../docs/reuse-maturity.md)。项目能力的细粒度关联以 [实现矩阵](../registry/implementations.yaml) 为准；R1 为作者公开资料，R2 需固定 SHA 的源码审查。
+## 研究网络
+
+- [运行时游戏状态观测](../topics/cr-runtime-observation.md)
+- [AI 训练环境与决策](../topics/cr-ai-environment.md)
+
+## 限制
+
+请将作者声称的性能、准确率、游戏版本支持与独立复现区分开来。代码开源许可证不自动涵盖游戏素材/模型/回放权属。项目入目录不等于当前即可集成；按 [复用成熟度](../docs/reuse-maturity.md) 处理。

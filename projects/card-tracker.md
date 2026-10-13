@@ -5,7 +5,7 @@ type: project
 status: implemented
 verification: author-documented
 repository: https://github.com/AmarSaini/Clash-Royale-AI-Card-Tracker
-topics: []
+topics: [cr-runtime-observation]
 maintainers: []
 last_reviewed: null
 license: Apache-2.0
@@ -13,14 +13,20 @@ license: Apache-2.0
 
 # AI Card Tracker
 
-[原始仓库](https://github.com/AmarSaini/Clash-Royale-AI-Card-Tracker)。此项目被作为中台技术来源编目；未宣称原作者已加入，也未进行独立集成测试。
+**来源**：[AmarSaini/Clash-Royale-AI-Card-Tracker](https://github.com/AmarSaini/Clash-Royale-AI-Card-Tracker)，参考提交 [8cc85f719469](https://github.com/AmarSaini/Clash-Royale-AI-Card-Tracker/tree/8cc85f71946921a13e6ffc4e33e155937de32873)。目前以作者公开资料编目；尚未完成第三方设备/性能测试，原作者也未确认加入中台。
 
-## 可衍生的技术资产
+## 核心可衍生资产
 
-早期CNN对手卡牌、卡序与圣水估计研究。
+早期CNN卡牌跟踪、循环和圣水估计。
 
-## 复用边界
+## 能力入口
 
-历史研究，不能直接用于当前客户端。
+- [visual-perception](../capabilities/visual-perception/README.md)
 
-阅读 [技术中台复用成熟度](../docs/reuse-maturity.md)。项目能力的细粒度关联以 [实现矩阵](../registry/implementations.yaml) 为准；R1 为作者公开资料，R2 需固定 SHA 的源码审查。
+## 研究网络
+
+- [运行时游戏状态观测](../topics/cr-runtime-observation.md)
+
+## 限制
+
+请将作者声称的性能、准确率、游戏版本支持与独立复现区分开来。代码开源许可证不自动涵盖游戏素材/模型/回放权属。项目入目录不等于当前即可集成；按 [复用成熟度](../docs/reuse-maturity.md) 处理。
