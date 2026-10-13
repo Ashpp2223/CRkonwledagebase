@@ -1,0 +1,145 @@
+# Reverse finding = source-backed observation, not an integration promise.
+findings:
+  - id: re-apk-native-layers
+    title: "Android 启动与原生游戏库划分"
+    category: native
+    path: research/reverse-engineering/native-binary.md
+    source: https://github.com/Jason-XII/cr-memory-reader/blob/9af94ca2f273ce526dda6256bdbd5d5555fb82d4/My%20Own%20Findings.md
+    source_sha: 9af94ca2f273ce526dda6256bdbd5d5555fb82d4
+    verification: author-documented
+    applicability: historical
+    game_build: "13.300.6"
+    claim: "作者分析过一份 Null's 安装包，并区分第三方启动库和原生游戏库"
+    reproduced_by_middle_platform: false
+  - id: re-runtime-holder
+    title: "原生战斗容器 holder 与实体 HP 观察"
+    category: memory
+    path: research/reverse-engineering/runtime-memory.md
+    source: https://github.com/Jason-XII/cr-memory-reader/blob/9af94ca2f273ce526dda6256bdbd5d5555fb82d4/README.md
+    source_sha: 9af94ca2f273ce526dda6256bdbd5d5555fb82d4
+    verification: author-documented
+    applicability: build-not-fixed
+    game_build: "unknown"
+    claim: "作者将战斗对象关联到 holder 与 HP 组件访问器；不是通用稳定符号"
+    reproduced_by_middle_platform: false
+  - id: re-x86-readonly-profile
+    title: "x86_64 只读内存和校准证据分级"
+    category: memory
+    path: research/reverse-engineering/runtime-memory.md
+    source: https://github.com/Jason-XII/cr-memory-reader/blob/9af94ca2f273ce526dda6256bdbd5d5555fb82d4/x86_64/%E5%86%85%E5%AD%98%E8%AF%BB%E5%8F%96%E6%8A%80%E6%9C%AF%E6%8C%87%E5%8D%97.md
+    source_sha: 9af94ca2f273ce526dda6256bdbd5d5555fb82d4
+    verification: author-documented
+    applicability: exact-build
+    game_build: "150535022 / x86_64"
+    claim: "按固定 libg SHA/Build ID 检查，直接读、推断和估计的字段使用不同标签"
+    reproduced_by_middle_platform: false
+  - id: re-native-descriptor
+    title: "原生部署卡牌 Descriptor 结构约束"
+    category: native
+    path: research/reverse-engineering/native-layouts.md
+    source: https://github.com/Jaasssoooonnnnn/FirstLight_CR/blob/3ade158c52bf33de3ffcea600ce380946b7de0d8/native_runner/probe/combat_deployment_layout.h
+    source_sha: 3ade158c52bf33de3ffcea600ce380946b7de0d8
+    verification: source-inspected
+    applicability: exact-build
+    game_build: "Nulls 15.535.13"
+    claim: "FirstLight 使用类型描述、不变量和特殊卡牌约束表达构建相关的部署选择"
+    reproduced_by_middle_platform: false
+  - id: re-native-snapshot
+    title: "原生进程内快照 API"
+    category: native
+    path: research/reverse-engineering/native-layouts.md
+    source: https://github.com/Jaasssoooonnnnn/FirstLight_CR/blob/3ade158c52bf33de3ffcea600ce380946b7de0d8/native_runner/cr_native_env.py
+    source_sha: 3ade158c52bf33de3ffcea600ce380946b7de0d8
+    verification: source-inspected
+    applicability: exact-build
+    game_build: "Nulls 15.535.13"
+    claim: "NativeClashEnv 包含快照创建、恢复和释放方法，句柄绑定当前进程和 manager generation"
+    reproduced_by_middle_platform: false
+  - id: re-tencent-old-offset
+    title: "腾讯 Overlay 旧偏移在 38.4.2 失效"
+    category: memory
+    path: research/reverse-engineering/version-revalidation.md
+    source: https://github.com/ak1NaN/ClashRoyale-tencent-overlay/blob/08e12bb231a334552fe5da43918d9e95e94b96f9/README.md
+    source_sha: 08e12bb231a334552fe5da43918d9e95e94b96f9
+    verification: author-documented
+    applicability: invalidated
+    game_build: "Tencent 38.4.2"
+    claim: "作者 README 明确宣告旧 Overlay 偏移失效"
+    reproduced_by_middle_platform: false
+  - id: re-tencent-new-config
+    title: "Tencent Model Harness 独立版本偏移配置"
+    category: memory
+    path: research/reverse-engineering/version-revalidation.md
+    source: https://github.com/ak1NaN/ClashRoyale-tencent-model-harness/blob/4a2c033e8fa4051dfdadaf7348408b833aecfb28/README.md
+    source_sha: 4a2c033e8fa4051dfdadaf7348408b833aecfb28
+    verification: author-documented
+    applicability: exact-build
+    game_build: "Tencent 38.4.2"
+    claim: "Model Harness 声明其自身配置针对 38.4.2；与 Overlay 失效并不矛盾"
+    reproduced_by_middle_platform: false
+  - id: re-packet-metadata
+    title: "包头元信息与加密载荷不同"
+    category: protocol
+    path: research/reverse-engineering/protocol-history.md
+    source: https://github.com/weeco/supercell-packet-listener/blob/dff096ba639e03e109c772885eab2a6ce7cdf2c2/README.md
+    source_sha: dff096ba639e03e109c772885eab2a6ce7cdf2c2
+    verification: author-documented
+    applicability: historical
+    game_build: "2018 historical client"
+    claim: "历史代理说明包头元数据可见，而负载未被解码"
+    reproduced_by_middle_platform: false
+  - id: re-protocol-schema
+    title: "EndClientTurn 历史消息结构定义"
+    category: protocol
+    path: research/reverse-engineering/protocol-history.md
+    source: https://github.com/royale-proxy/cr-messages/blob/64560f4a3c78005cea53c697fbe8ad2bb55bb82d/README.md
+    source_sha: 64560f4a3c78005cea53c697fbe8ad2bb55bb82d
+    verification: author-documented
+    applicability: historical
+    game_build: "2017 historical client"
+    claim: "字段 schema 在历史文档中包含 tick/checksum/commands，不能套用当前版本"
+    reproduced_by_middle_platform: false
+  - id: re-rocca-ect-ohd
+    title: "Giovanni Rocca 早期 ECT/OHD 研究"
+    category: protocol
+    path: research/reverse-engineering/protocol-history.md
+    source: https://www.giovanni-rocca.com/reverse-engineering-supercell-clash-royale-part-2/
+    source_sha: null
+    verification: author-documented
+    applicability: historical
+    game_build: "2017"
+    claim: "原作者文章的协议/校验研究方法值得参考；具体结果已过时"
+    reproduced_by_middle_platform: false
+  - id: re-frida-old-proxy
+    title: "2017 Frida/Python 历史消息分析"
+    category: protocol
+    path: research/reverse-engineering/protocol-history.md
+    source: https://github.com/iGio90/frida_cr_proxy/blob/912065bd9f73b344ade02ad509c77acafe2732d7/proxy.py
+    source_sha: 912065bd9f73b344ade02ad509c77acafe2732d7
+    verification: author-documented
+    applicability: historical
+    game_build: "2017 x86 client"
+    claim: "历史 Frida 与 Python 分析工具，不适用当前客户端"
+    reproduced_by_middle_platform: false
+  - id: re-sc-resource-formats
+    title: "Supercell SC/CSV 等文件解析"
+    category: assets
+    path: research/reverse-engineering/resource-formats.md
+    source: https://github.com/123456abcdef/cr-sc-dump/blob/8fb2114123d667e7ad010bb9dc0c55ccac1f655b/README.md
+    source_sha: 8fb2114123d667e7ad010bb9dc0c55ccac1f655b
+    verification: author-documented
+    applicability: build-not-fixed
+    game_build: "unknown"
+    claim: "可研究 SC、CSV、SCTX 等格式工具链，不代表对新资源都兼容"
+    reproduced_by_middle_platform: false
+  - id: re-asset-fingerprint
+    title: "资源 Masterhash/Fingerprint 与离线清单"
+    category: assets
+    path: research/reverse-engineering/resource-formats.md
+    source: https://github.com/Darknighture/sc-downloader-gui/blob/f276f45e6c98b255b951507a6f79987c88613848/README.md
+    source_sha: f276f45e6c98b255b951507a6f79987c88613848
+    verification: author-documented
+    applicability: build-not-fixed
+    game_build: "unknown"
+    claim: "作者提供 Fingerprint 驱动的资源流程，CR 新版补丁握手受限"
+    reproduced_by_middle_platform: false
