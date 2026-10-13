@@ -29,6 +29,10 @@
 - **[可组合的技术链路](landscape/composition-patterns.md)**：原生→模拟→搜索、回放→训练、视觉→分析、资源→校准四条路线。
 - **[衍生战斗力路线图](landscape/roadmap-derivative-power.md)**：接下来哪些底层验证和文档资产最能减少重复研究。
 
+## 知识研究与复用
+
+[知识生命周期与质量标准](docs/knowledge-workflow.md) · [知识笔记实例：四种状态恢复](research/knowledge-notes/snapshot-semantics.md) · [知识研究 / 综合 / 应用 Skills](docs/skills.md)
+
 ## 项目与证据
 
 [能力目录](capabilities/README.md) · [项目来源档案](projects/README.md) · [研究专题](topics/README.md) · [源码审计](docs/source-audits/native-engine-2026-10-13.md) · [成熟度与授权](docs/reuse-maturity.md)

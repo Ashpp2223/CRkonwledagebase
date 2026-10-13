@@ -46,3 +46,7 @@ registry/implementations.yaml               # 项目×能力×成熟度×证据
 ## 长期维护协议
 
 `AGENTS.md` 记录不变量，`.agents/skills/` 记录按任务激活的操作步骤，`docs/maintainer-handbook.md` 记录面向人的维护/移交规则，`docs/editorial-standards.md` 规范技术写作，`scripts/validate*.py` 是自动化结构检查。不同职责不应复制粘贴同一份长规则。
+
+## 知识层：证据与可迁移机制
+
+从资料获得的**原子主张**与跨来源总结的**机制解释**是内容类型，而非新增的强制注册实体。可按 [知识生命周期](knowledge-workflow.md) 收录到现有 `topics/`、`research/` 和 `capabilities/`；确有独立比较价值时用 `research/knowledge-notes/`。机器索引的事实源仍由现有 Project、Capability、Implementation、Topic、ReverseFinding 管理。

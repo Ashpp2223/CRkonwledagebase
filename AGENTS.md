@@ -29,6 +29,9 @@
 
 维护者先阅读 [维护者手册](docs/maintainer-handbook.md) 和 [写作规范](docs/editorial-standards.md)。修改时按任务选择仓库 Skill，而不是每次加载全部指导：
 
+- [research-cr-knowledge](.agents/skills/research-cr-knowledge/SKILL.md)：从源码、研究文档、测试与反例获取可核对的技术事实。
+- [synthesize-cr-knowledge](.agents/skills/synthesize-cr-knowledge/SKILL.md)：比较多个来源，提炼有条件成立的机制、差异和工程结论。
+- [apply-cr-knowledge](.agents/skills/apply-cr-knowledge/SKILL.md)：将中台知识用于选型、接口适配和最小验证，输出可追踪来源。
 - [curate-cr-knowledge](.agents/skills/curate-cr-knowledge/SKILL.md)：收录/变更项目、能力、专题、逆向发现与实现关联。
 - [review-cr-evidence](.agents/skills/review-cr-evidence/SKILL.md)：核对源码事实、版本适用性、逆向证据或 R0–R4 等级变更。
 - [review-cr-pr](.agents/skills/review-cr-pr/SKILL.md)：合并前逐项审查索引、证据、兼容性、链接与文档质量。
@@ -36,3 +39,5 @@
 维护变更必须同时运行 `python scripts/validate.py` 和 `python scripts/validate_skills.py`；如果无法运行，应报告原因并且不得宣称 CI 已通过。
 
 **文档原则**：高信息密度、可定位来源；避免与任务无关的身份声明、重复的否定式免责声明和空泛套话。核心限制（版本、证据、兼容性、授权）保留在真正影响技术判断的位置。
+
+知识内容的状态与复验方式见 [知识生命周期规范](docs/knowledge-workflow.md)。研究后若结论证据不足应保留 unknown，不得通过总结措辞提升事实可信度。

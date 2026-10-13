@@ -10,7 +10,7 @@ import yaml
 
 ROOT = Path(__file__).resolve().parents[1]
 SKILLS_ROOT = ROOT / ".agents" / "skills"
-EXPECTED = {"curate-cr-knowledge", "review-cr-evidence", "review-cr-pr"}
+EXPECTED = {"research-cr-knowledge", "synthesize-cr-knowledge", "apply-cr-knowledge", "curate-cr-knowledge", "review-cr-evidence", "review-cr-pr"}
 NAME = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*$")
 issues: list[str] = []
 

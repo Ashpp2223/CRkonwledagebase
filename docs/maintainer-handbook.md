@@ -26,6 +26,14 @@
 4. 跑 `python scripts/validate.py` 与 `python scripts/validate_skills.py`，确认基线没有结构/链接问题。
 5. 选择一个真实修正任务，从最小 PR 开始；不需要先阅读所有项目文章。
 
+## 知识生产与长期复用
+
+遇到新的技术问题，使用 [知识研究 Skill](../.agents/skills/research-cr-knowledge/SKILL.md) 抽取版本化证据；需要跨来源解释时使用 [知识综合 Skill](../.agents/skills/synthesize-cr-knowledge/SKILL.md)，并按 [知识生命周期规范](knowledge-workflow.md) 保留命题、适用域、反例与下一步实验。之后由取证审查和编目流程写回中台。
+
+遇到开发者复用请求，使用 [知识应用 Skill](../.agents/skills/apply-cr-knowledge/SKILL.md) 从具体需求返回候选技术、依赖差异与可检验的接入方法。**没有必要为每个问题增加 Markdown 文件**；优先更新已存在的能力卡或技术专题。
+
+第一份具体范例：[快照/深拷贝/序列化/重放之间的语义差异](../research/knowledge-notes/snapshot-semantics.md)。
+
 ## 维护任务的标准流程
 
 1. **界定变化**：新增/修订的是项目事实、能力、实现关系、逆向发现、接口草案还是文章解释。

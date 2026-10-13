@@ -4,9 +4,18 @@
 
 | Skill | 什么时候使用 | 输入与成果 |
 | --- | --- | --- |
+| [research-cr-knowledge](../.agents/skills/research-cr-knowledge/SKILL.md) | 针对技术问题调查源码、文档、实验和失败案例 | 问题 → 可核对的技术主张与来源 |
+| [synthesize-cr-knowledge](../.agents/skills/synthesize-cr-knowledge/SKILL.md) | 多个项目解决相似问题，需要机制对比和抽象 | 多源证据 → 适用条件、反例、可复用规律 |
+| [apply-cr-knowledge](../.agents/skills/apply-cr-knowledge/SKILL.md) | 开发者问怎样选方案、组合技术或验证接口 | 开发需求 → 候选实现、风险与最小验证 |
 | [curate-cr-knowledge](../.agents/skills/curate-cr-knowledge/SKILL.md) | 新项目、能力、研究专题、实现关系需要编目或更新 | 原始来源 → 结构化索引与读者入口 |
 | [review-cr-evidence](../.agents/skills/review-cr-evidence/SKILL.md) | 校对逆向结论、验证源码、提升复用等级 | 固定版本证据 → 有边界的审核记录 |
 | [review-cr-pr](../.agents/skills/review-cr-pr/SKILL.md) | 合并 PR 前审核索引、证据与文档质量 | 变更差异 → 审查结论、阻断项与修复意见 |
+
+## 研究知识的完整链路
+
+`research-cr-knowledge`（取证）→ `synthesize-cr-knowledge`（提炼可复用规律）→ `review-cr-evidence`（审定结论与等级）→ `curate-cr-knowledge`（登记和更新）→ `apply-cr-knowledge`（应用于开发需求）。
+
+这不是每次都必须串行执行的强制流程；只回答现有知识时用 `apply`，只纠正一条来源时用 `research` 或 `review`。具体规范见 [知识生命周期](knowledge-workflow.md)，实例见 [快照语义知识笔记](../research/knowledge-notes/snapshot-semantics.md)。
 
 ## 分工
 
@@ -18,6 +27,6 @@
 
 ## 在 Codex 等工具中使用
 
-进入仓库后，可以显式指定 `$curate-cr-knowledge`、`$review-cr-evidence` 或 `$review-cr-pr`；如果工具没有显示仓库 Skill，也可以让 Agent 直接读取具体 `SKILL.md`。
+进入仓库后，可以显式指定 `$research-cr-knowledge`、`$synthesize-cr-knowledge`、`$apply-cr-knowledge`、`$curate-cr-knowledge`、`$review-cr-evidence` 或 `$review-cr-pr`；如果工具没有显示仓库 Skill，也可以让 Agent 直接读取具体 `SKILL.md`。
 
 增加 Skill 需要解决**新的、反复发生的维护任务**。优先扩充现有 Skill 的小型参考资料，避免为每个细分文档另建一个 Skill。名称与目录名一致，description 要写清触发时机。
