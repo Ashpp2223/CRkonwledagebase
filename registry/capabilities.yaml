@@ -35,3 +35,28 @@ capabilities:
     path: capabilities/rules-simulation/README.md
     lifecycle: catalogued
     standardization: none
+  - id: lookahead-planning
+    title: "前瞻搜索与策略蒸馏"
+    path: capabilities/lookahead-planning/README.md
+    lifecycle: catalogued
+    standardization: none
+  - id: visual-perception
+    title: "屏幕感知与视觉状态融合"
+    path: capabilities/visual-perception/README.md
+    lifecycle: catalogued
+    standardization: none
+  - id: replay-to-learning
+    title: "回放到训练样本流水线"
+    path: capabilities/replay-to-learning/README.md
+    lifecycle: catalogued
+    standardization: none
+  - id: simulator-validation
+    title: "模拟器保真校准与反例验证"
+    path: capabilities/simulator-validation/README.md
+    lifecycle: catalogued
+    standardization: none
+  - id: agent-runtime
+    title: "智能体运行时与决策执行编排"
+    path: capabilities/agent-runtime/README.md
+    lifecycle: catalogued
+    standardization: none

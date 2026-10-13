@@ -278,3 +278,311 @@ implementations:
     claim: "Java ECS、数据驱动卡牌和状态效果"
     limits: "实现广度不代表无偏差"
     evidence: https://github.com/voonhous/crforge
+  - id: lookahead-planning--itzik-clashenv
+    capability: lookahead-planning
+    project: itzik-clashenv
+    reuse_level: R1
+    verification: author-documented
+    integration: unverified
+    claim: "深拷贝并对候选动作逐个模拟未来、教师搜索、策略蒸馏"
+    limits: "尚未经中台独立集成验证，需固定游戏/数据/运行环境及相关许可证"
+    evidence: https://github.com/itzik123/ClashRoyaleAi
+  - id: visual-perception--clashai-vegetableleaf
+    capability: visual-perception
+    project: clashai-vegetableleaf
+    reuse_level: R1
+    verification: author-documented
+    integration: unverified
+    claim: "视觉与公开信息观测契约、状态融合"
+    limits: "尚未经中台独立集成验证，需固定游戏/数据/运行环境及相关许可证"
+    evidence: https://github.com/vegetableleaf/ClashAI
+  - id: visual-perception--build-a-bot
+    capability: visual-perception
+    project: build-a-bot
+    reuse_level: R1
+    verification: author-documented
+    integration: unverified
+    claim: "截图检测器和结构化状态生成"
+    limits: "尚未经中台独立集成验证，需固定游戏/数据/运行环境及相关许可证"
+    evidence: https://github.com/Pbatch/ClashRoyaleBuildABot
+  - id: visual-perception--detection-dataset
+    capability: visual-perception
+    project: detection-dataset
+    reuse_level: R1
+    verification: author-documented
+    integration: unverified
+    claim: "合成视觉标注样本"
+    limits: "尚未经中台独立集成验证，需固定游戏/数据/运行环境及相关许可证"
+    evidence: https://github.com/wty-yy/Clash-Royale-Detection-Dataset
+  - id: visual-perception--itzik-clashenv
+    capability: visual-perception
+    project: itzik-clashenv
+    reuse_level: R1
+    verification: author-documented
+    integration: unverified
+    claim: "视觉转游戏事件并驱动模拟器估计"
+    limits: "尚未经中台独立集成验证，需固定游戏/数据/运行环境及相关许可证"
+    evidence: https://github.com/itzik123/ClashRoyaleAi
+  - id: visual-perception--katacr
+    capability: visual-perception
+    project: katacr
+    reuse_level: R1
+    verification: author-documented
+    integration: unverified
+    claim: "YOLO/OCR 和视觉训练链"
+    limits: "尚未经中台独立集成验证，需固定游戏/数据/运行环境及相关许可证"
+    evidence: https://github.com/wty-yy/KataCR
+  - id: visual-perception--card-tracker
+    capability: visual-perception
+    project: card-tracker
+    reuse_level: R0
+    verification: author-documented
+    integration: unverified
+    claim: "早期视觉循环与卡牌识别研究"
+    limits: "尚未经中台独立集成验证，需固定游戏/数据/运行环境及相关许可证"
+    evidence: https://github.com/AmarSaini/Clash-Royale-AI-Card-Tracker
+  - id: replay-to-learning--clashai-vegetableleaf
+    capability: replay-to-learning
+    project: clashai-vegetableleaf
+    reuse_level: R1
+    verification: author-documented
+    integration: unverified
+    claim: "真人回放经原生重建、IL、PPO 和验收门禁"
+    limits: "尚未经中台独立集成验证，需固定游戏/数据/运行环境及相关许可证"
+    evidence: https://github.com/vegetableleaf/ClashAI
+  - id: replay-to-learning--firstlight-cr
+    capability: replay-to-learning
+    project: firstlight-cr
+    reuse_level: R1
+    verification: author-documented
+    integration: unverified
+    claim: "回放重建、结构化观测、IL 与 PPO"
+    limits: "尚未经中台独立集成验证，需固定游戏/数据/运行环境及相关许可证"
+    evidence: https://github.com/Jaasssoooonnnnn/FirstLight_CR
+  - id: replay-to-learning--jason-battle-engine
+    capability: replay-to-learning
+    project: jason-battle-engine
+    reuse_level: R1
+    verification: author-documented
+    integration: unverified
+    claim: "原生回放缓存与训练/评测流程"
+    limits: "尚未经中台独立集成验证，需固定游戏/数据/运行环境及相关许可证"
+    evidence: https://github.com/Jason-XII/clash-royale-battle-engine
+  - id: replay-to-learning--royalegym
+    capability: replay-to-learning
+    project: royalegym
+    reuse_level: R1
+    verification: author-documented
+    integration: unverified
+    claim: "行为克隆与 Gymnasium 训练流程"
+    limits: "尚未经中台独立集成验证，需固定游戏/数据/运行环境及相关许可证"
+    evidence: https://github.com/RoyaleGym/RoyaleGym
+  - id: replay-to-learning--detection-dataset
+    capability: replay-to-learning
+    project: detection-dataset
+    reuse_level: R1
+    verification: author-documented
+    integration: unverified
+    claim: "合成视觉数据集生成方法"
+    limits: "尚未经中台独立集成验证，需固定游戏/数据/运行环境及相关许可证"
+    evidence: https://github.com/wty-yy/Clash-Royale-Detection-Dataset
+  - id: simulator-validation--royalesim
+    capability: simulator-validation
+    project: royalesim
+    reuse_level: R1
+    verification: author-documented
+    integration: unverified
+    claim: "真实对局差分、单位时序和误差校准日志"
+    limits: "尚未经中台独立集成验证，需固定游戏/数据/运行环境及相关许可证"
+    evidence: https://github.com/RoyaleGym/RoyaleSim
+  - id: simulator-validation--hasty-cr
+    capability: simulator-validation
+    project: hasty-cr
+    reuse_level: R1
+    verification: author-documented
+    integration: unverified
+    claim: "大量机制回归及已知失败案例"
+    limits: "尚未经中台独立集成验证，需固定游戏/数据/运行环境及相关许可证"
+    evidence: https://github.com/hastylmao/Hasty-CR
+  - id: simulator-validation--crsim-agent-larkindaniel
+    capability: simulator-validation
+    project: crsim-agent-larkindaniel
+    reuse_level: R1
+    verification: author-documented
+    integration: unverified
+    claim: "信息泄露测试、模拟偏差、PPO 可复现实验"
+    limits: "尚未经中台独立集成验证，需固定游戏/数据/运行环境及相关许可证"
+    evidence: https://github.com/larkindaniel/clash-royale-agent
+  - id: simulator-validation--itzik-clashenv
+    capability: simulator-validation
+    project: itzik-clashenv
+    reuse_level: R1
+    verification: author-documented
+    integration: unverified
+    claim: "快照隔离、随机一致性、卡牌行为测试"
+    limits: "尚未经中台独立集成验证，需固定游戏/数据/运行环境及相关许可证"
+    evidence: https://github.com/itzik123/ClashRoyaleAi
+  - id: simulator-validation--jason-simulator
+    capability: simulator-validation
+    project: jason-simulator
+    reuse_level: R1
+    verification: author-documented
+    integration: unverified
+    claim: "寻路、攻击和卡牌规则验证参照"
+    limits: "尚未经中台独立集成验证，需固定游戏/数据/运行环境及相关许可证"
+    evidence: https://github.com/Jason-XII/clash-royale-simulator
+  - id: agent-runtime--clashai-vegetableleaf
+    capability: agent-runtime
+    project: clashai-vegetableleaf
+    reuse_level: R1
+    verification: author-documented
+    integration: unverified
+    claim: "观测—策略—输入与版本化部署检查"
+    limits: "尚未经中台独立集成验证，需固定游戏/数据/运行环境及相关许可证"
+    evidence: https://github.com/vegetableleaf/ClashAI
+  - id: agent-runtime--claude-royale
+    capability: agent-runtime
+    project: claude-royale
+    reuse_level: R1
+    verification: author-documented
+    integration: unverified
+    claim: "指挥 Agent 与执行 Agent 并发，延迟补偿"
+    limits: "尚未经中台独立集成验证，需固定游戏/数据/运行环境及相关许可证"
+    evidence: https://github.com/houseworthe/claude-royale
+  - id: agent-runtime--build-a-bot
+    capability: agent-runtime
+    project: build-a-bot
+    reuse_level: R1
+    verification: author-documented
+    integration: unverified
+    claim: "检测器、状态表示、动作决策的分层框架"
+    limits: "尚未经中台独立集成验证，需固定游戏/数据/运行环境及相关许可证"
+    evidence: https://github.com/Pbatch/ClashRoyaleBuildABot
+  - id: agent-runtime--tencent-model-harness
+    capability: agent-runtime
+    project: tencent-model-harness
+    reuse_level: R1
+    verification: author-documented
+    integration: unverified
+    claim: "国服状态映射、模型推理、动作执行回执"
+    limits: "尚未经中台独立集成验证，需固定游戏/数据/运行环境及相关许可证"
+    evidence: https://github.com/ak1NaN/ClashRoyale-tencent-model-harness
+  - id: snapshot-recovery--itzik-clashenv
+    capability: snapshot-recovery
+    project: itzik-clashenv
+    reuse_level: R2
+    verification: source-inspected
+    integration: unverified
+    claim: "C++ 深拷贝快照，经 Python 绑定提供独立搜索分支"
+    limits: "尚未经中台独立集成验证，需固定游戏/数据/运行环境及相关许可证"
+    evidence: https://github.com/itzik123/ClashRoyaleAi/blob/2f172925a15b17f973291f41a789b19a29f0fc43/src/bindings.cpp#L170-L180
+    reviewed_commit: 2f172925a15b17f973291f41a789b19a29f0fc43
+    audit_path: docs/source-audits/itzik-clashenv-2026-10-13.md
+  - id: snapshot-recovery--royalesim
+    capability: snapshot-recovery
+    project: royalesim
+    reuse_level: R1
+    verification: author-documented
+    integration: unverified
+    claim: "引擎字节保存/恢复、状态哈希"
+    limits: "尚未经中台独立集成验证，需固定游戏/数据/运行环境及相关许可证"
+    evidence: https://github.com/RoyaleGym/RoyaleSim
+  - id: rules-simulation--itzik-clashenv
+    capability: rules-simulation
+    project: itzik-clashenv
+    reuse_level: R1
+    verification: author-documented
+    integration: unverified
+    claim: "可改写的 C++ 游戏规则及 Gymnasium 封装"
+    limits: "尚未经中台独立集成验证，需固定游戏/数据/运行环境及相关许可证"
+    evidence: https://github.com/itzik123/ClashRoyaleAi
+  - id: rules-simulation--crsim-agent-larkindaniel
+    capability: rules-simulation
+    project: crsim-agent-larkindaniel
+    reuse_level: R1
+    verification: author-documented
+    integration: unverified
+    claim: "限定八卡的确定性规则集与 RL"
+    limits: "尚未经中台独立集成验证，需固定游戏/数据/运行环境及相关许可证"
+    evidence: https://github.com/larkindaniel/clash-royale-agent
+  - id: state-observation--clashai-vegetableleaf
+    capability: state-observation
+    project: clashai-vegetableleaf
+    reuse_level: R1
+    verification: author-documented
+    integration: unverified
+    claim: "公开可见信息和原生/视觉状态融合"
+    limits: "尚未经中台独立集成验证，需固定游戏/数据/运行环境及相关许可证"
+    evidence: https://github.com/vegetableleaf/ClashAI
+  - id: state-observation--build-a-bot
+    capability: state-observation
+    project: build-a-bot
+    reuse_level: R1
+    verification: author-documented
+    integration: unverified
+    claim: "屏幕事件、单位及手牌状态结构化"
+    limits: "尚未经中台独立集成验证，需固定游戏/数据/运行环境及相关许可证"
+    evidence: https://github.com/Pbatch/ClashRoyaleBuildABot
+  - id: asset-ingestion--sc-extract
+    capability: asset-ingestion
+    project: sc-extract
+    reuse_level: R1
+    verification: author-documented
+    integration: unverified
+    claim: "Rust SC、Sprite 与 CSV 解码/提取"
+    limits: "尚未经中台独立集成验证，需固定游戏/数据/运行环境及相关许可证"
+    evidence: https://github.com/nextonesfaster/sc-extract
+  - id: asset-ingestion--supercell-csv-decoder
+    capability: asset-ingestion
+    project: supercell-csv-decoder
+    reuse_level: R1
+    verification: author-documented
+    integration: unverified
+    claim: "Python Supercell CSV 解码"
+    limits: "尚未经中台独立集成验证，需固定游戏/数据/运行环境及相关许可证"
+    evidence: https://github.com/proydakov/supercell-resource-decoder
+  - id: asset-ingestion--royaleapi-static-data
+    capability: asset-ingestion
+    project: royaleapi-static-data
+    reuse_level: R1
+    verification: author-documented
+    integration: unverified
+    claim: "第三方静态卡牌 JSON 和常量数据"
+    limits: "尚未经中台独立集成验证，需固定游戏/数据/运行环境及相关许可证"
+    evidence: https://github.com/RoyaleAPI/cr-api-data
+  - id: agent-environment--itzik-clashenv
+    capability: agent-environment
+    project: itzik-clashenv
+    reuse_level: R1
+    verification: author-documented
+    integration: unverified
+    claim: "C++/pybind11 Gymnasium 强化学习环境"
+    limits: "尚未经中台独立集成验证，需固定游戏/数据/运行环境及相关许可证"
+    evidence: https://github.com/itzik123/ClashRoyaleAi
+  - id: agent-environment--clashai-vegetableleaf
+    capability: agent-environment
+    project: clashai-vegetableleaf
+    reuse_level: R1
+    verification: author-documented
+    integration: unverified
+    claim: "公开信息模仿学习与强化学习"
+    limits: "尚未经中台独立集成验证，需固定游戏/数据/运行环境及相关许可证"
+    evidence: https://github.com/vegetableleaf/ClashAI
+  - id: agent-environment--crsim-agent-larkindaniel
+    capability: agent-environment
+    project: crsim-agent-larkindaniel
+    reuse_level: R1
+    verification: author-documented
+    integration: unverified
+    claim: "可重复实验的 PPO、掩码和 checkpoint"
+    limits: "尚未经中台独立集成验证，需固定游戏/数据/运行环境及相关许可证"
+    evidence: https://github.com/larkindaniel/clash-royale-agent
+  - id: replay-reconstruction--clashai-vegetableleaf
+    capability: replay-reconstruction
+    project: clashai-vegetableleaf
+    reuse_level: R1
+    verification: author-documented
+    integration: unverified
+    claim: "利用原生引擎回放真人命令并导出观察"
+    limits: "尚未经中台独立集成验证，需固定游戏/数据/运行环境及相关许可证"
+    evidence: https://github.com/vegetableleaf/ClashAI
