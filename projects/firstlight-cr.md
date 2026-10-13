@@ -28,3 +28,5 @@ license: Apache-2.0
 [安装说明](https://github.com/Jaasssoooonnnnn/FirstLight_CR/blob/3ade158c52bf33de3ffcea600ce380946b7de0d8/docs/getting_started.md#L13-L23) 固定 Windows / Android 12 MuMu ARM64、Null's Royale APK 15.535.13 及内容 15.535.86 的安装目标。用户须自行具备合法客户端资源。**进程内快照句柄随进程与 manager generation 失效**，没有证明任意状态多实例克隆。当前没有中台设备实测。
 
 [原生控制能力](../capabilities/battle-control/README.md) · [快照恢复能力](../capabilities/snapshot-recovery/README.md) · [AI 训练专题](../topics/cr-ai-environment.md)
+
+本项目涉及的逆向研究方法与跨版本限制已整理至 [逆向工程知识中心](../research/reverse-engineering/README.md)。

@@ -81,6 +81,7 @@ topics = index(read_yaml("registry/topics.yaml", "topics"), "topics")
 caps = index(read_yaml("registry/capabilities.yaml", "capabilities"), "capabilities")
 impls = read_yaml("registry/implementations.yaml", "implementations")
 rels = read_yaml("registry/relationships.yaml", "relationships")
+reverse_findings = read_yaml("registry/reverse-findings.yaml", "findings")
 
 for pid, row in projects.items():
     path = row.get("path", "")
@@ -177,6 +178,43 @@ for rec in rels:
     if not rec.get("type"):
         bad(where, "missing relationship type")
 
+seen_findings: set[str] = set()
+for finding in reverse_findings:
+    fid = finding.get("id")
+    where = f"reverse finding {fid!r}"
+    if not isinstance(fid, str) or not SLUG.fullmatch(fid):
+        bad(where, "invalid ID")
+        continue
+    if fid in seen_findings:
+        bad(where, "duplicate ID")
+    seen_findings.add(fid)
+    path = finding.get("path")
+    if not isinstance(path, str) or not (ROOT / path).is_file():
+        bad(where, f"missing research page {path!r}")
+    if finding.get("category") not in {"native", "memory", "protocol", "assets"}:
+        bad(where, "invalid reverse-engineering category")
+    if finding.get("verification") not in EVIDENCE:
+        bad(where, "invalid evidence grade")
+    if finding.get("applicability") not in {"exact-build", "historical", "build-not-fixed", "invalidated"}:
+        bad(where, "invalid temporal/build applicability")
+    source = finding.get("source")
+    if not isinstance(source, str) or not source.startswith("https://"):
+        bad(where, "missing reference URL")
+    sha = finding.get("source_sha")
+    if sha is not None:
+        if not isinstance(sha, str) or not re.fullmatch(r"[0-9a-f]{40}", sha):
+            bad(where, "invalid 40-character source_sha")
+        elif not isinstance(source, str) or f"/blob/{sha}/" not in source:
+            bad(where, "source_sha must match the pinned GitHub blob")
+    if finding.get("verification") == "source-inspected" and sha is None:
+        bad(where, "source-inspected finding must pin a source SHA")
+    if not isinstance(finding.get("claim"), str) or not finding["claim"].strip():
+        bad(where, "missing factual claim")
+    if not isinstance(finding.get("game_build"), str) or not finding["game_build"].strip():
+        bad(where, "missing build scope (use 'unknown' if unavailable)")
+    if finding.get("reproduced_by_middle_platform") is not False:
+        bad(where, "device-reproduced flag needs a separately audited test record")
+
 for file in ROOT.rglob("*.md"):
     relative = file.relative_to(ROOT).as_posix()
     text = file.read_text(encoding="utf-8")
@@ -196,5 +234,5 @@ for error in ERRORS:
     print("ERROR:", error)
 print(f"Verified {len(projects)} projects, {len(topics)} research topics, "
       f"{len(caps)} capabilities, {len(impls)} implementations, "
-      f"{len(rels)} relationships. {len(ERRORS)} issue(s).")
+      f"{len(rels)} relationships, {len(reverse_findings)} reverse findings. {len(ERRORS)} issue(s).")
 sys.exit(1 if ERRORS else 0)

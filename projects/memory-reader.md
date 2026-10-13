@@ -35,3 +35,5 @@ license: unknown
 ## 待复核
 
 - 实际运行能力、对应提交 SHA、准确兼容版本、维护者确认和授权边界。
+
+本项目涉及的逆向研究方法与跨版本限制已整理至 [逆向工程知识中心](../research/reverse-engineering/README.md)。

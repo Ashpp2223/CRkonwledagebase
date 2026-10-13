@@ -40,3 +40,5 @@ last_reviewed: null
 - [CR Detection Dataset](../projects/detection-dataset.md)：历史图像切片及合成目标检测样本生成方法。
 - [Claude Royale](../projects/claude-royale.md)：截图—LLM决策—输入的多智能体调度与UI生命周期经验。
 - [AI Card Tracker](../projects/card-tracker.md)：早期CNN卡牌跟踪、循环和圣水估计。
+
+逆向方法与版本证据另见 [逆向知识中心](../research/reverse-engineering/README.md) 和 [相关研究](../research/reverse-engineering/runtime-memory.md)。

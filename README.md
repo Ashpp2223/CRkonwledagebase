@@ -23,6 +23,8 @@
 
 ## GitHub 全生态调查与选择依据
 
+**[逆向工程知识中心](research/reverse-engineering/README.md)**：APK/Native、运行时内存、战斗对象布局、历史网络协议、资源格式、版本复验与 [13 条版本绑定的发现记录](registry/reverse-findings.yaml)。这是独立的证据型知识层，并非运行时组件。
+
 - **[2026 年 GitHub 生态技术调查](landscape/2026-10-13-landscape.md)**：高价值项目与配套研究、优先级 A/B/C、排除理由及已知失效。
 - **[可组合的技术链路](landscape/composition-patterns.md)**：原生→模拟→搜索、回放→训练、视觉→分析、资源→校准四条路线。
 - **[衍生战斗力路线图](landscape/roadmap-derivative-power.md)**：接下来哪些底层验证和文档资产最能减少重复研究。

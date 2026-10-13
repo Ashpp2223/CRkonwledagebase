@@ -36,3 +36,5 @@ macOS/ARM64 腾讯客户端覆盖层，按 README 显示部署队列事件、半
 - [上游 README](https://github.com/ak1NaN/ClashRoyale-tencent-overlay)
 
 **待核实**：精确上游提交、运行环境、独立复现测试以及上游作者审阅。
+
+本项目涉及的逆向研究方法与跨版本限制已整理至 [逆向工程知识中心](../research/reverse-engineering/README.md)。

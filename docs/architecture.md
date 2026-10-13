@@ -18,6 +18,8 @@ registry/implementations.yaml               # 项目×能力×成熟度×证据
 
 ## 实体边界和不变量
 
+- **ReverseFinding**：单条带版本、来源、状态的逆向事实或研究线索，保存在 [reverse-findings.yaml](../registry/reverse-findings.yaml)。它不等同于 Project/Implementation，也不是 R3 的可集成组件。历史协议或失效偏移只能作为历史证据。
+
 - **Project**：一个可追踪的上游仓库；不同仓库不能因为同一作者而被合并为一条（已将 Tencent Overlay/Model Harness 与 RoyaleGym/RoyaleSim 分开）。
 - **Capability**：一个稳定的开发需求/复用能力，`id` 不随文案修改。它不代表某个软件已经提供公共 SDK。
 - **Implementation**：一个 `(capability, project)` 关联；保留说明、限制、证据、独立成熟度和集成状态，唯一 `id` 为 `capability--project`。

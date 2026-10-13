@@ -32,3 +32,5 @@ last_reviewed: null
 - 作者审核与具体许可证影响（公开不代表可直接复制）。
 
 [能力总入口](../capabilities/README.md) · [项目索引](../projects/README.md)
+
+逆向方法与版本证据另见 [逆向知识中心](../research/reverse-engineering/README.md) 和 [相关研究](../research/reverse-engineering/native-layouts.md)。

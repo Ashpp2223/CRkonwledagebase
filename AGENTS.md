@@ -10,6 +10,8 @@
 4. 对跨模块组合，查 [组合路线](landscape/composition-patterns.md)、[研究专题](topics/README.md) 和 [生态调查](landscape/2026-10-13-landscape.md)。
 5. 分辨作者文档、源码静态核查、独立集成测试三种证据，固定游戏版本及数据接口；最后引用原始源码和中台审计链接。
 
+针对逆向技术问题：先看 [逆向研究中心](research/reverse-engineering/README.md) 和 [机器发现索引](registry/reverse-findings.yaml)，严格核对客户端 build、ABI、source SHA、applicability 和 author-documented/source-inspected 等级；历史协议与失效偏移不能按“当前可用”推荐。
+
 ## 禁止的推断
 
 - A 级项目 ≠ R3 成熟组件；有 README ≠ 已独立验证；代码公开 ≠ 允许复制所有文件。

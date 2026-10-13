@@ -4,7 +4,7 @@
 
 **不允许跨游戏构建直接继承函数偏移、对象偏移、运行时指针或协议消息含义。**
 
-[Jason Windows 内存读取指南](https://github.com/Jason-XII/cr-memory-reader/blob/9af94ca2f273ce526dda6256bdbd5d5555fb82d4/x86_64/%E5%86%85%E5%AD%98%E8%AF%BB%E6%8F%8F%E6%8A%80%E6%9C%AF%E6%8C%87%E5%8D%97.md) 所描述的思路是：先核验精确构建身份，再确认布局和字段证据，最后运行；若不匹配则拒绝，而不是回退到猜测地址。阅读时以[原始文件路径](https://github.com/Jason-XII/cr-memory-reader/blob/9af94ca2f273ce526dda6256bdbd5d5555fb82d4/x86_64/%E5%86%85%E5%AD%98%E8%AF%BB%E5%8F%96%E6%8A%80%E6%9C%AF%E6%8C%87%E5%8D%97.md)为准。
+[Jason Windows 内存读取指南](https://github.com/Jason-XII/cr-memory-reader/blob/9af94ca2f273ce526dda6256bdbd5d5555fb82d4/x86_64/%E5%86%85%E5%AD%98%E8%AF%BB%E5%8F%96%E6%8A%80%E6%9C%AF%E6%8C%87%E5%8D%97.md) 所描述的思路是：先核验精确构建身份，再确认布局和字段证据，最后运行；若不匹配则拒绝，而不是回退到猜测地址。阅读时以[原始文件路径](https://github.com/Jason-XII/cr-memory-reader/blob/9af94ca2f273ce526dda6256bdbd5d5555fb82d4/x86_64/%E5%86%85%E5%AD%98%E8%AF%BB%E5%8F%96%E6%8A%80%E6%9C%AF%E6%8C%87%E5%8D%97.md)为准。
 
 ## 复验矩阵
 

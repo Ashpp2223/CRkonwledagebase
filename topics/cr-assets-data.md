@@ -35,3 +35,5 @@ last_reviewed: null
 - [sc_extract](../projects/sc-extract.md)：Rust SC图像、精灵与CSV格式处理CLI和crate。
 - [Supercell Resource Decoder](../projects/supercell-csv-decoder.md)：Supercell旧式二进制CSV解码和实验性编码。
 - [RoyaleAPI Static Data](../projects/royaleapi-static-data.md)：第三方卡牌JSON及显示元数据历史参考。
+
+逆向方法与版本证据另见 [逆向知识中心](../research/reverse-engineering/README.md) 和 [相关研究](../research/reverse-engineering/resource-formats.md)。
