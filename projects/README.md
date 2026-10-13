@@ -20,3 +20,20 @@
 | [SC Downloader GUI](sc-downloader.md) | [Darknighture/sc-downloader-gui](https://github.com/Darknighture/sc-downloader-gui) |
 
 [其他待深入的项目](additional-projects.md) 暂列为扩展线索。这里按**一个外部 GitHub 仓库一个项目 ID** 建档，原 `tencent-tools` 聚合页仅作为迁移说明。
+
+## 本次生态扩展项目索引
+
+| 项目 | 主要可衍生技术 |
+| --- | --- |
+| [ClashRoyaleEnv](itzik-clashenv.md) | 独立状态分叉、规划、AI 训练 |
+| [ClashAI](clashai-vegetableleaf.md) | 真实回放/公开观测/IL→RL |
+| [CRSim Agent](crsim-agent-larkindaniel.md) | 受控实验和可验证模拟器 |
+| [BuildABot](build-a-bot.md) | 屏幕状态解析 |
+| [sc_extract](sc-extract.md) | Rust SC/CSV 资源解析 |
+| [Detection Dataset](detection-dataset.md) | CV 合成训练样本 |
+| [Claude Royale](claude-royale.md) | Agent 调度与延迟管理 |
+| [Supercell CSV Decoder](supercell-csv-decoder.md) | 历史 CSV 解码 |
+| [RoyaleAPI Static Data](royaleapi-static-data.md) | 数据常量归档 |
+| [AI Card Tracker](card-tracker.md) | 历史对手卡序视觉估计 |
+
+完整收录逻辑和低优先级项目见 [GitHub 技术生态调查](../landscape/2026-10-13-landscape.md)。
