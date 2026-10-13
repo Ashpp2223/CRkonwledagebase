@@ -13,27 +13,18 @@ license: unknown
 
 # Jason Clash Royale Battle Engine
 
-**原仓库**：[Jason-XII/clash-royale-battle-engine](https://github.com/Jason-XII/clash-royale-battle-engine)。**初次整理**：2026-10-13。仅依据公开作者文档，尚未得到原作者审核，也未独立测试。
+[上游仓库](https://github.com/Jason-XII/clash-royale-battle-engine) · [源码核查](../docs/source-audits/native-engine-2026-10-13.md)
 
-## 公开描述的能力
+## 已定位的代码入口
 
-以 Python API 封装原生战斗引擎、对局数据与训练流水线；README 说明借鉴 FirstLight，PPO 阶段使用 clapha-engine。
+- [`Engine.reset`](https://github.com/Jason-XII/clash-royale-battle-engine/blob/2b3361954c189a8ea508f3f54cf94a56c2e045fc/engine.py#L202-L221) 固定原生 headless 对局及初始 Tick 暖机；
+- [`Engine.step`](https://github.com/Jason-XII/clash-royale-battle-engine/blob/2b3361954c189a8ea508f3f54cf94a56c2e045fc/engine.py#L222-L239) 以 `Play(owner, slot, x, y)` 提交动作，返回 `Transition`；
+- [`RenderedEngine`](https://github.com/Jason-XII/clash-royale-battle-engine/blob/2b3361954c189a8ea508f3f54cf94a56c2e045fc/engine.py#L289-L320) 控制原生渲染模式。
 
-## 兼容与限制
+公开 README 将 ARM64 Android 原生探针、训练缓存和 Linux x86_64 的 `clapha-engine` PPO 训练区分为不同阶段，具体版本/平台请按各模块核对。
 
-其 README 说明部分计算平台与游戏版本限制；不要把外部依赖和原生游戏文件当作仓库自身的自由授权资产。
+## 复用约束
 
-## 相关专题
+中台仅对**接口代码存在及签名**做了静态核查；客户端源码没有已确认的整体标准许可证，不能默认复制。没有完成统一安装、版本兼容或性能验证。同 owner 同步动作的回执匹配有限制；遇到写入通信异常不能盲重试。
 
-- [原生战斗引擎](../topics/cr-native-engine.md)
-- [AI 训练环境与决策](../topics/cr-ai-environment.md)
-- [回放、快照与状态恢复](../topics/cr-replay-state.md)
-
-## 证据
-
-- [仓库 README](https://github.com/Jason-XII/clash-royale-battle-engine)
-- [补充来源](https://github.com/Jason-XII/clash-royale-battle-engine)
-
-## 待复核
-
-- 实际运行能力、对应提交 SHA、准确兼容版本、维护者确认和授权边界。
+[原生控制能力](../capabilities/battle-control/README.md) · [兼容性对照](../capabilities/battle-control/compatibility.md)

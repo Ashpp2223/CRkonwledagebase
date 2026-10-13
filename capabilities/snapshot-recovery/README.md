@@ -9,35 +9,31 @@ last_reviewed: null
 
 # 状态快照与恢复
 
-**需要解决的问题**：能否从任意历史局面继续执行，并保持状态一致？
+**开发需求**：历史局面重复运行、复盘分支、按 Tick 跳转或者 MCTS 策略搜索。
 
-**能力边界**：快照恢复、逐 tick 缓存、从开局重放是不同能力。
+首先区分四种不同东西：**原生进程内快照**、**按 Tick 缓存状态**、**动作日志从起点重放**、**独立引擎实例的任意局面克隆**。现阶段不能证明它们等价。
 
-## 采用前必须回答
+## 公开实现对照
 
-- 定义状态覆盖范围：实体、随机数、动作队列、手牌、计时器。
-- 明确快照是否只在当前进程有效。
-- 记录恢复速度、内存开销与是否支持独立分叉。
-- 用相同动作序列校验恢复后的状态摘要。
+| 项目 | 明确证据 | 中台等级 | 尚未确认 |
+| --- | --- | --- | --- |
+| [FirstLight CR](../../projects/firstlight-cr.md) | `NativeClashEnv.create_snapshot/restore/release_snapshot` + 原生探针命令 | **R2/source-inspected**（只针对进程内快照接口的存在和限制） | 跨进程持久化、跨 manager generation 恢复、独立实例并行克隆、实际性能 |
+| [Ashpp 复盘器](../../projects/ashpp-replay.md) | `BattleController.snapshot_create/restore` + 清空旧分支调度 + 动作日志回放 | **R2/source-inspected**（只针对控制流程） | 全 GameState 字节级等价、并行多实例、不同平台集成 |
+| [Replay Studio](../../projects/replay-studio.md) | 按 Tick 预演算、应用级缓存和跳转 | R1/author-documented | 不等同于原生任意时刻快照 |
 
-## 已公开的相关实现
+**第一项是本次重要更正**：FirstLight 在其原生控制层中确实具备快照接口；旧版知识库漏收了这一能力。具体证据：[Python API](https://github.com/Jaasssoooonnnnn/FirstLight_CR/blob/3ade158c52bf33de3ffcea600ce380946b7de0d8/native_runner/cr_native_env.py#L2828-L2860) 与 [C++ 探针命令](https://github.com/Jaasssoooonnnnn/FirstLight_CR/blob/3ade158c52bf33de3ffcea600ce380946b7de0d8/native_runner/probe/cr_replay_probe.cpp#L6804-L6868)。
 
-| 来源项目 | 复用成熟度 / 证据 | 公开描述 | 限制 | 原始来源 |
-| --- | --- | --- | --- | --- |
-| [皇室战争复盘器](../../projects/ashpp-replay.md) | R1 · author-documented | 原生进程内快照与动作日志重放 | 快照句柄不跨进程，重启需重放 | [来源](https://github.com/Ashpp2223/clashroyalereplay) |
-| [Clash Royale Replay Studio](../../projects/replay-studio.md) | R1 · author-documented | 按 tick 预演算和缓存支持时间跳转 | 不能直接等同于可分叉的任意状态原生快照 | [来源](https://github.com/ak1NaN/ClashRoyale-replay-studio) |
+Ashpp 的复盘控制器还明确处理了快照**之外**的调度队列，恢复后会清空旧分支未来动作：[源码](https://github.com/Ashpp2223/clashroyalereplay/blob/de46d7ea3831a64565140cdb9d4b947f9fe21916/bridge/controller.py#L286-L312)。
 
-> 上表为**作者文档层级的能力关联**，未独立检查完整源码或运行测试；R0/R1 并不是可下载即用的组件。细节见 [成熟度规则](../../docs/reuse-maturity.md) 和 [机器登记](../../registry/implementations.yaml)。
+## 关键区别
 
-## 选择与集成判断
+- **句柄有效期**：FirstLight 文档明确仅当前应用进程和 manager generation 有效；Ashpp 也不是序列化快照方案。
+- **状态覆盖率**：即使原生快照保存内部 GameState，也不能未经测试就假设命令调度、外部缓存、模型记忆和 RNG 均被完整覆盖。
+- **分支隔离**：进程内原地恢复是恢复一个实例，不等于可同时运行多条相互独立分支。
+- **精确性**：Hash 相等最多证明已选摘要字段一致；证明全部状态等价需单独设计完整字段/差分验证。
 
-- 只需回放拖动时，缓存或动作重放可能足够。
-- 要做 MCTS / 并行树搜索，必须单独验证任意节点克隆、实例隔离、恢复开销。
+## 准备开展的实验
 
-## 尚缺的中台资产
+请根据 [快照集成与验收清单](integration.md) 固定代码和游戏版本，测量恢复时间、内存、状态一致性、分支污染及重启边界。未执行真实实验不得将 R2 升为 R3。
 
-- 可复现的运行环境及固定提交、版本指纹。
-- 统一测试场景下的功能验证、性能数据和错误案例。
-- 作者审阅、许可证核对与明确的集成入口（若存在）。
-
-[返回能力目录](../README.md) · [查看项目目录](../../projects/README.md)
+[来源核查](../../docs/source-audits/native-engine-2026-10-13.md) · [返回能力目录](../README.md)

@@ -12,12 +12,14 @@ implementations:
   - id: battle-control--jason-battle-engine
     capability: battle-control
     project: jason-battle-engine
-    reuse_level: R1
-    verification: author-documented
+    reuse_level: R2
+    verification: source-inspected
     integration: unverified
-    claim: "封装原生引擎接口及控制流程"
-    limits: "运行平台与固定原生库需核对"
-    evidence: https://github.com/Jason-XII/clash-royale-battle-engine
+    claim: "源码中有 Engine.reset/step/Transition 与 session-v1 控制入口；本次只静态核查客户端接口"
+    limits: "无整体许可证确认；需原生探针和指定运行环境，未做集成测试；同 owner 多动作执行确认存在歧义"
+    evidence: https://github.com/Jason-XII/clash-royale-battle-engine/blob/2b3361954c189a8ea508f3f54cf94a56c2e045fc/engine.py#L147-L239    reviewed_commit: 2b3361954c189a8ea508f3f54cf94a56c2e045fc
+    audit_path: docs/source-audits/native-engine-2026-10-13.md
+
   - id: battle-control--replay-studio
     capability: battle-control
     project: replay-studio
@@ -81,15 +83,28 @@ implementations:
     claim: "离线引擎内结构化观测"
     limits: "不是任意正式线上客户端观测接口"
     evidence: https://github.com/Jaasssoooonnnnn/FirstLight_CR
+  - id: snapshot-recovery--firstlight-cr
+    capability: snapshot-recovery
+    project: firstlight-cr
+    reuse_level: R2
+    verification: source-inspected
+    integration: unverified
+    claim: "静态核查 NativeClashEnv 的进程内 create_snapshot/restore/release_snapshot 及原生探针命令"
+    limits: "句柄仅当前 app 进程和无渲染 manager generation 有效；未验证跨进程序列化或多实例并行搜索"
+    evidence: https://github.com/Jaasssoooonnnnn/FirstLight_CR/blob/3ade158c52bf33de3ffcea600ce380946b7de0d8/native_runner/cr_native_env.py#L2828-L2860
+    reviewed_commit: 3ade158c52bf33de3ffcea600ce380946b7de0d8
+    audit_path: docs/source-audits/native-engine-2026-10-13.md
   - id: snapshot-recovery--ashpp-replay
     capability: snapshot-recovery
     project: ashpp-replay
-    reuse_level: R1
-    verification: author-documented
+    reuse_level: R2
+    verification: source-inspected
     integration: unverified
-    claim: "原生进程内快照与动作日志重放"
-    limits: "快照句柄不跨进程，重启需重放"
-    evidence: https://github.com/Ashpp2223/clashroyalereplay
+    claim: "源码确认进程内快照 create/restore/release；恢复时清除旧分支原生调度队列"
+    limits: "句柄不跨进程；摘要非完整 GameState 证明；不是公开稳定 SDK"
+    evidence: https://github.com/Ashpp2223/clashroyalereplay/blob/de46d7ea3831a64565140cdb9d4b947f9fe21916/bridge/controller.py#L240-L312    reviewed_commit: de46d7ea3831a64565140cdb9d4b947f9fe21916
+    audit_path: docs/source-audits/native-engine-2026-10-13.md
+
   - id: snapshot-recovery--replay-studio
     capability: snapshot-recovery
     project: replay-studio
