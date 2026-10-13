@@ -147,6 +147,15 @@ for rec in impls:
         bad(where, "claim and limits are required")
     if rank in ("R2", "R3", "R4") and rec.get("verification") not in ("source-inspected", "reproduced"):
         bad(where, "R2+ requires source inspection or independent reproduction")
+    if rank in ("R2", "R3", "R4"):
+        commit = rec.get("reviewed_commit")
+        audit_path = rec.get("audit_path")
+        if not isinstance(commit, str) or not re.fullmatch(r"[0-9a-f]{40}", commit):
+            bad(where, "R2+ requires an exact reviewed_commit SHA")
+        if not isinstance(audit_path, str) or not (ROOT / audit_path).is_file():
+            bad(where, "R2+ requires an existing audit_path")
+        if isinstance(commit, str) and f"/blob/{commit}/" not in str(rec.get("evidence", "")):
+            bad(where, "R2+ evidence must be a GitHub permalink to the reviewed commit")
     if rank in ("R3", "R4"):
         if rec.get("verification") != "reproduced":
             bad(where, "R3+ requires independent reproduction")

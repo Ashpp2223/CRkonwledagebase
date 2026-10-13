@@ -23,11 +23,11 @@
 - [研究专题](topics/README.md) — 不同实现的机制、差异、证据和未解决问题。
 - [候选接口协议](contracts/README.md) — **均为 Draft**，不能当作现有项目的 API。
 - [任务指南](guides/README.md) — 按具体开发任务组合能力和测试。
-- [机器索引](registry/capabilities.yaml) — 配合 [实现矩阵](registry/implementations.yaml)、[项目表](registry/projects.yaml)、[专题表](registry/topics.yaml) 与 [关系表](registry/relationships.yaml)。
+- [源码审计实例](docs/source-audits/native-engine-2026-10-13.md) — 已核查 FirstLight 快照、Jason Engine 接口、复盘器分支隔离；设备级复现仍缺。\n- [机器索引](registry/capabilities.yaml) — 配合 [实现矩阵](registry/implementations.yaml)、[项目表](registry/projects.yaml)、[专题表](registry/topics.yaml) 与 [关系表](registry/relationships.yaml)。
 
 ### 如何判断能否复用
 
-先查看 [复用成熟度和证据等级](docs/reuse-maturity.md)：R0 研究线索、R1 可参考知识、R2 有源码核查证据、R3 满足指定条件的集成、R4 有维护承诺。**每项能力的实现单独评级；技术成熟度、实测证据、版权/许可证和版本兼容是不同维度。** 当前首批条目未获中台独立验证，因此不宣称 R3/R4。
+先查看 [复用成熟度和证据等级](docs/reuse-maturity.md)：R0 研究线索、R1 可参考知识、R2 有源码核查证据、R3 满足指定条件的集成、R4 有维护承诺。**每项能力的实现单独评级；技术成熟度、实测证据、版权/许可证和版本兼容是不同维度。** 目前只有部分接口获得了**限定范围的静态源码核查（R2）**，整个仓库仍未完成原生集成测试，因此不宣称 R3/R4。
 
 ## 一起维护
 

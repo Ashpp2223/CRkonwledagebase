@@ -26,3 +26,15 @@ R 等级不表示性能、准确度或安全性的连续分数。R3 不代表“
 - 重大更新或证据过时，应降级或标记未复核。
 
 当前 `registry/implementations.yaml` 的初始条目几乎全部 R1/author-documented。它不是已验证的统一组件商店。
+
+## R2 源码审查记录：自动化约束
+
+使用 R2 及更高等级时，`registry/implementations.yaml` 必须同时包含：
+
+- `reviewed_commit`：固定的 **40 位 Git SHA**，不能填 `main` 或 `latest`。
+- `evidence`：指向同一 Git SHA 下的具体源文件/行区间的 GitHub permalink。
+- `audit_path`：本仓库已存在的审查记录文件，描述**具体确认的能力**、入口、假设、未知边界和检查方法。
+
+CI 检查上述结构要求。项目主页上的 `verification: author-documented` 与某个具体能力的 `verification: source-inspected` 可以并存：**不能因为检查过一项 API 就宣称完整项目已通过源码审查**。
+
+首次参考：[2026-10-13 原生引擎源码核查](source-audits/native-engine-2026-10-13.md)。

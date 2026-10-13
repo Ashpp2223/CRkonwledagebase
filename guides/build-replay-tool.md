@@ -22,6 +22,8 @@
 
 - [Replay Studio](../projects/replay-studio.md)：导入 HTML，预演算后播放；缺少原始隐藏状态时为相容重建。
 - [Ashpp 复盘器](../projects/ashpp-replay.md)：原生复盘、节点分叉、进程内状态快照与动作日志恢复。
-- [FirstLight](../projects/firstlight-cr.md)：原生对局环境与回放数据重建。
+- [FirstLight](../projects/firstlight-cr.md)：原生对局环境与回放数据重建；已在源码确认存在**进程内**快照 API，但不能自动推断支持持久化和 MCTS 并行克隆。
 
 不把任何一个项目内建接口称为跨项目稳定 API。更细的 [快照验收表](../capabilities/snapshot-recovery/integration.md)。
+
+更多已核查的接口差异请看 [原生战斗控制接入手册](../capabilities/battle-control/integration.md) 和 [兼容性对照](../capabilities/battle-control/compatibility.md)。
