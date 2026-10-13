@@ -4,28 +4,31 @@ title: "战斗机制、寻路与数值"
 type: topic
 status: investigating
 verification: author-documented
-projects: [jason-simulator,hasty-cr,crforge]
+projects: [jason-simulator, hasty-cr, crforge, royalesim]
 last_reviewed: null
 ---
 
 # 战斗机制、寻路与数值
 
-**研究范围**：寻路、锁定目标、攻击、状态效果、卡牌轮换及机制校准。
+本页是**跨项目研究专题**；面向开发任务优先查看 [可修改的战斗规则模拟](../capabilities/rules-simulation/README.md)。
 
-## 相关实现（作者文档整理）
+## 相关项目与路线（依据公开文档）
 
-| 项目 | 路线 / 重点 |
+| 项目 | 技术来源 |
 | --- | --- |
-| [Jason Clash Royale Simulator](../projects/jason-simulator.md) | 从零实现战斗逻辑，包含 A* 寻路、卡牌交互、局域网对战与 RL 环境 |
-| [Hasty-CR](../projects/hasty-cr.md) | 自建整数确定性战斗引擎、机制测试、差分测量和 PPO 训练 |
-| [crforge](../projects/crforge.md) | Java 确定性 Tick 模拟器，使用 ECS 风格实体与系统、JSON 驱动卡牌、LibGDX 调试界面和 ZMQ/Gymnasium 桥接。 |
+| [Jason Clash Royale Simulator](../projects/jason-simulator.md) | [作者仓库](https://github.com/Jason-XII/clash-royale-simulator) |
+| [Hasty-CR](../projects/hasty-cr.md) | [作者仓库](https://github.com/hastylmao/Hasty-CR) |
+| [crforge](../projects/crforge.md) | [作者仓库](https://github.com/voonhous/crforge) |
+| [RoyaleSim](../projects/royalesim.md) | [作者仓库](https://github.com/RoyaleGym/RoyaleSim) |
 
-## 复用判断
+## 研究边界与差异
 
-优先复用**公开可验证的机制描述、接口设计方法与测试思路**。实际代码复制需确认许可证、上游版权和版本适用性；不同项目的状态、时钟、坐标、卡牌 ID 不应假定兼容。
+研究寻路、索敌、攻击和状态效果时应优先提交可复现反例；实现 100+ 卡牌数据定义不等于规则逐项准确。
 
-## 待核实
+## 需要补充的证据
 
-- 各项目固定提交、支持版本及运行证据。
-- 同等测试条件下的行为差异和性能数据。
-- 作者是否愿意共同维护专题。
+- 固定游戏客户端、资源和源代码提交版本。
+- 反例、差分对照测试、性能测量的条件。
+- 作者审核与具体许可证影响（公开不代表可直接复制）。
+
+[能力总入口](../capabilities/README.md) · [项目索引](../projects/README.md)

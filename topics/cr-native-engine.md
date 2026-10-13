@@ -4,29 +4,31 @@ title: "原生战斗引擎"
 type: topic
 status: investigating
 verification: author-documented
-projects: [firstlight-cr,jason-battle-engine,replay-studio,ashpp-replay]
+projects: [firstlight-cr, jason-battle-engine, replay-studio, ashpp-replay]
 last_reviewed: null
 ---
 
 # 原生战斗引擎
 
-**研究范围**：原版游戏原生逻辑驱动的离线对局、探针与 Python 环境。
+本页是**跨项目研究专题**；面向开发任务优先查看 [原生战斗驱动](../capabilities/battle-control/README.md)、[状态快照与恢复](../capabilities/snapshot-recovery/README.md)、[对局重建与分支回放](../capabilities/replay-reconstruction/README.md)。
 
-## 相关实现（作者文档整理）
+## 相关项目与路线（依据公开文档）
 
-| 项目 | 路线 / 重点 |
+| 项目 | 技术来源 |
 | --- | --- |
-| [FirstLight CR](../projects/firstlight-cr.md) | 原生战斗环境、结构化状态与动作、Parquet 回放重建、模仿学习与 PPO 自博弈 |
-| [Jason Clash Royale Battle Engine](../projects/jason-battle-engine.md) | 以 Python API 封装原生战斗引擎、对局数据与训练流水线 |
-| [Clash Royale Replay Studio](../projects/replay-studio.md) | 解析 RoyaleAPI 独立对局 HTML，在本地原生引擎中预演算、缓存并以 0.25×–16× 倍速回放。 |
-| [皇室战争复盘器](../projects/ashpp-replay.md) | Tauri + React 桌面复盘器，使用原生画面，支持节点分支、进程内状态快照、动作日志重放与状态摘要校验。 |
+| [FirstLight CR](../projects/firstlight-cr.md) | [作者仓库](https://github.com/Jaasssoooonnnnn/FirstLight_CR) |
+| [Jason Clash Royale Battle Engine](../projects/jason-battle-engine.md) | [作者仓库](https://github.com/Jason-XII/clash-royale-battle-engine) |
+| [Clash Royale Replay Studio](../projects/replay-studio.md) | [作者仓库](https://github.com/ak1NaN/ClashRoyale-replay-studio) |
+| [皇室战争复盘器](../projects/ashpp-replay.md) | [作者仓库](https://github.com/Ashpp2223/clashroyalereplay) |
 
-## 复用判断
+## 研究边界与差异
 
-优先复用**公开可验证的机制描述、接口设计方法与测试思路**。实际代码复制需确认许可证、上游版权和版本适用性；不同项目的状态、时钟、坐标、卡牌 ID 不应假定兼容。
+原生引擎封装与完整训练环境在耦合层级上不同。不能从“原生引擎可启动”推断公开了可跨进程持久化的状态克隆。
 
-## 待核实
+## 需要补充的证据
 
-- 各项目固定提交、支持版本及运行证据。
-- 同等测试条件下的行为差异和性能数据。
-- 作者是否愿意共同维护专题。
+- 固定游戏客户端、资源和源代码提交版本。
+- 反例、差分对照测试、性能测量的条件。
+- 作者审核与具体许可证影响（公开不代表可直接复制）。
+
+[能力总入口](../capabilities/README.md) · [项目索引](../projects/README.md)

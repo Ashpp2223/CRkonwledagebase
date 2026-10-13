@@ -4,33 +4,36 @@ title: "AI 训练环境与决策"
 type: topic
 status: investigating
 verification: author-documented
-projects: [firstlight-cr,jason-battle-engine,jason-simulator,tencent-tools,hasty-cr,royalegym,crforge,katacr]
+projects: [firstlight-cr, jason-battle-engine, jason-simulator, tencent-model-harness, hasty-cr, royalegym, royalesim, crforge, katacr]
 last_reviewed: null
 ---
 
 # AI 训练环境与决策
 
-**研究范围**：观测空间、动作空间、模型服务、模仿学习、PPO 和评估。
+本页是**跨项目研究专题**；面向开发任务优先查看 [智能体环境与模型对接](../capabilities/agent-environment/README.md)、[对局状态观测](../capabilities/state-observation/README.md)。
 
-## 相关实现（作者文档整理）
+## 相关项目与路线（依据公开文档）
 
-| 项目 | 路线 / 重点 |
+| 项目 | 技术来源 |
 | --- | --- |
-| [FirstLight CR](../projects/firstlight-cr.md) | 原生战斗环境、结构化状态与动作、Parquet 回放重建、模仿学习与 PPO 自博弈 |
-| [Jason Clash Royale Battle Engine](../projects/jason-battle-engine.md) | 以 Python API 封装原生战斗引擎、对局数据与训练流水线 |
-| [Jason Clash Royale Simulator](../projects/jason-simulator.md) | 从零实现战斗逻辑，包含 A* 寻路、卡牌交互、局域网对战与 RL 环境 |
-| [Tencent Overlay 与 Model Harness](../projects/tencent-tools.md) | Tencent Model Harness 将腾讯客户端读取状态转换为 FirstLight V4 输入，输出动作与回执 |
-| [Hasty-CR](../projects/hasty-cr.md) | 自建整数确定性战斗引擎、机制测试、差分测量和 PPO 训练 |
-| [RoyaleGym / RoyaleSim](../projects/royalegym.md) | RoyaleGym 提供 Gymnasium/PettingZoo 风格接口，RoyaleSim 提供 Rust 整数战斗引擎和 Python 调用。 |
-| [crforge](../projects/crforge.md) | Java 确定性 Tick 模拟器，使用 ECS 风格实体与系统、JSON 驱动卡牌、LibGDX 调试界面和 ZMQ/Gymnasium 桥接。 |
-| [KataCR](../projects/katacr.md) | 非嵌入式视觉 AI，使用图像识别、分类和离线强化学习策略。 |
+| [FirstLight CR](../projects/firstlight-cr.md) | [作者仓库](https://github.com/Jaasssoooonnnnn/FirstLight_CR) |
+| [Jason Clash Royale Battle Engine](../projects/jason-battle-engine.md) | [作者仓库](https://github.com/Jason-XII/clash-royale-battle-engine) |
+| [Jason Clash Royale Simulator](../projects/jason-simulator.md) | [作者仓库](https://github.com/Jason-XII/clash-royale-simulator) |
+| [Tencent Model Harness](../projects/tencent-model-harness.md) | [作者仓库](https://github.com/ak1NaN/ClashRoyale-tencent-model-harness) |
+| [Hasty-CR](../projects/hasty-cr.md) | [作者仓库](https://github.com/hastylmao/Hasty-CR) |
+| [RoyaleGym](../projects/royalegym.md) | [作者仓库](https://github.com/RoyaleGym/RoyaleGym) |
+| [RoyaleSim](../projects/royalesim.md) | [作者仓库](https://github.com/RoyaleGym/RoyaleSim) |
+| [crforge](../projects/crforge.md) | [作者仓库](https://github.com/voonhous/crforge) |
+| [KataCR](../projects/katacr.md) | [作者仓库](https://github.com/wty-yy/KataCR) |
 
-## 复用判断
+## 研究边界与差异
 
-优先复用**公开可验证的机制描述、接口设计方法与测试思路**。实际代码复制需确认许可证、上游版权和版本适用性；不同项目的状态、时钟、坐标、卡牌 ID 不应假定兼容。
+模仿学习、PPO、视觉识别、实时模型部署是不同流水线环节。不能把模型训练成果等同于已经有可部署的统一接口。
 
-## 待核实
+## 需要补充的证据
 
-- 各项目固定提交、支持版本及运行证据。
-- 同等测试条件下的行为差异和性能数据。
-- 作者是否愿意共同维护专题。
+- 固定游戏客户端、资源和源代码提交版本。
+- 反例、差分对照测试、性能测量的条件。
+- 作者审核与具体许可证影响（公开不代表可直接复制）。
+
+[能力总入口](../capabilities/README.md) · [项目索引](../projects/README.md)

@@ -10,20 +10,22 @@ last_reviewed: null
 
 # 资源与数据解析
 
-**研究范围**：版本指纹、卡牌配置、CSV、地图与 SC 资源处理。
+本页是**跨项目研究专题**；面向开发任务优先查看 [资源与配置数据获取](../capabilities/asset-ingestion/README.md)。
 
-## 相关实现（作者文档整理）
+## 相关项目与路线（依据公开文档）
 
-| 项目 | 路线 / 重点 |
+| 项目 | 技术来源 |
 | --- | --- |
-| [SC Downloader GUI](../projects/sc-downloader.md) | 图形化下载 Supercell 资源，支持 Masterhash/Fingerprint、按类型下载、断点补齐、可选压缩格式解码。 |
+| [SC Downloader GUI](../projects/sc-downloader.md) | [作者仓库](https://github.com/Darknighture/sc-downloader-gui) |
 
-## 复用判断
+## 研究边界与差异
 
-优先复用**公开可验证的机制描述、接口设计方法与测试思路**。实际代码复制需确认许可证、上游版权和版本适用性；不同项目的状态、时钟、坐标、卡牌 ID 不应假定兼容。
+抓取原始游戏文件与共享可再分发的技术知识不同；资源版本及第三方素材许可必须独立核对。
 
-## 待核实
+## 需要补充的证据
 
-- 各项目固定提交、支持版本及运行证据。
-- 同等测试条件下的行为差异和性能数据。
-- 作者是否愿意共同维护专题。
+- 固定游戏客户端、资源和源代码提交版本。
+- 反例、差分对照测试、性能测量的条件。
+- 作者审核与具体许可证影响（公开不代表可直接复制）。
+
+[能力总入口](../capabilities/README.md) · [项目索引](../projects/README.md)

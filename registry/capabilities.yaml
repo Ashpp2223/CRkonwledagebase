@@ -1,0 +1,37 @@
+# Capability = developer-facing problem, not a promise of public SDK.
+capabilities:
+  - id: battle-control
+    title: "原生战斗驱动"
+    path: capabilities/battle-control/README.md
+    lifecycle: catalogued
+    standardization: none
+  - id: state-observation
+    title: "对局状态观测"
+    path: capabilities/state-observation/README.md
+    lifecycle: catalogued
+    standardization: none
+  - id: snapshot-recovery
+    title: "状态快照与恢复"
+    path: capabilities/snapshot-recovery/README.md
+    lifecycle: catalogued
+    standardization: none
+  - id: replay-reconstruction
+    title: "对局重建与分支回放"
+    path: capabilities/replay-reconstruction/README.md
+    lifecycle: catalogued
+    standardization: none
+  - id: agent-environment
+    title: "智能体环境与模型对接"
+    path: capabilities/agent-environment/README.md
+    lifecycle: catalogued
+    standardization: none
+  - id: asset-ingestion
+    title: "资源与配置数据获取"
+    path: capabilities/asset-ingestion/README.md
+    lifecycle: catalogued
+    standardization: none
+  - id: rules-simulation
+    title: "可修改的战斗规则模拟"
+    path: capabilities/rules-simulation/README.md
+    lifecycle: catalogued
+    standardization: none

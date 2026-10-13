@@ -1,4 +1,4 @@
-# Only relationships described by publicly accessible project documentation.
+# Direction: from = dependent/derived; to = referenced upstream. Not a compatibility guarantee.
 relationships:
   - from: jason-battle-engine
     to: firstlight-cr
@@ -8,11 +8,19 @@ relationships:
     to: jason-battle-engine
     type: builds-on
     evidence: https://github.com/ak1NaN/ClashRoyale-replay-studio
-  - from: tencent-tools
-    to: firstlight-cr
-    type: model-interface-uses
-    evidence: https://github.com/ak1NaN/ClashRoyale-tencent-model-harness
   - from: ashpp-replay
     to: jason-battle-engine
     type: builds-on
     evidence: https://github.com/Ashpp2223/clashroyalereplay
+  - from: tencent-overlay
+    to: memory-reader
+    type: derives-from
+    evidence: https://github.com/ak1NaN/ClashRoyale-tencent-overlay
+  - from: tencent-model-harness
+    to: firstlight-cr
+    type: model-interface-uses
+    evidence: https://github.com/ak1NaN/ClashRoyale-tencent-model-harness
+  - from: royalegym
+    to: royalesim
+    type: engine-uses
+    evidence: https://github.com/RoyaleGym/RoyaleGym

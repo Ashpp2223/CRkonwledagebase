@@ -4,28 +4,31 @@ title: "运行时游戏状态观测"
 type: topic
 status: investigating
 verification: author-documented
-projects: [memory-reader,tencent-tools,katacr]
+projects: [memory-reader, tencent-overlay, tencent-model-harness, katacr]
 last_reviewed: null
 ---
 
 # 运行时游戏状态观测
 
-**研究范围**：客户端内部数据和图像识别两条信息输入路线。
+本页是**跨项目研究专题**；面向开发任务优先查看 [对局状态观测](../capabilities/state-observation/README.md)。
 
-## 相关实现（作者文档整理）
+## 相关项目与路线（依据公开文档）
 
-| 项目 | 路线 / 重点 |
+| 项目 | 技术来源 |
 | --- | --- |
-| [CR Memory Reader](../projects/memory-reader.md) | 通过原生内存/探针研究读取圣水、手牌、皇家塔血量及场上实体 |
-| [Tencent Overlay 与 Model Harness](../projects/tencent-tools.md) | Tencent Model Harness 将腾讯客户端读取状态转换为 FirstLight V4 输入，输出动作与回执 |
-| [KataCR](../projects/katacr.md) | 非嵌入式视觉 AI，使用图像识别、分类和离线强化学习策略。 |
+| [CR Memory Reader](../projects/memory-reader.md) | [作者仓库](https://github.com/Jason-XII/cr-memory-reader) |
+| [Tencent Overlay](../projects/tencent-overlay.md) | [作者仓库](https://github.com/ak1NaN/ClashRoyale-tencent-overlay) |
+| [Tencent Model Harness](../projects/tencent-model-harness.md) | [作者仓库](https://github.com/ak1NaN/ClashRoyale-tencent-model-harness) |
+| [KataCR](../projects/katacr.md) | [作者仓库](https://github.com/wty-yy/KataCR) |
 
-## 复用判断
+## 研究边界与差异
 
-优先复用**公开可验证的机制描述、接口设计方法与测试思路**。实际代码复制需确认许可证、上游版权和版本适用性；不同项目的状态、时钟、坐标、卡牌 ID 不应假定兼容。
+内存/Frida 读取与画面视觉识别依赖完全不同。腾讯 38.4.2 的旧覆盖层偏移已经按其 README 标为失效。
 
-## 待核实
+## 需要补充的证据
 
-- 各项目固定提交、支持版本及运行证据。
-- 同等测试条件下的行为差异和性能数据。
-- 作者是否愿意共同维护专题。
+- 固定游戏客户端、资源和源代码提交版本。
+- 反例、差分对照测试、性能测量的条件。
+- 作者审核与具体许可证影响（公开不代表可直接复制）。
+
+[能力总入口](../capabilities/README.md) · [项目索引](../projects/README.md)

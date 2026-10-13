@@ -1,0 +1,263 @@
+# One record per (capability, project). R-level is claim maturity, not an integration guarantee.
+implementations:
+  - id: battle-control--firstlight-cr
+    capability: battle-control
+    project: firstlight-cr
+    reuse_level: R1
+    verification: author-documented
+    integration: unverified
+    claim: "原生离线战斗环境与 reset/step"
+    limits: "需匹配游戏和资源构建；未审查完整接口"
+    evidence: https://github.com/Jaasssoooonnnnn/FirstLight_CR
+  - id: battle-control--jason-battle-engine
+    capability: battle-control
+    project: jason-battle-engine
+    reuse_level: R1
+    verification: author-documented
+    integration: unverified
+    claim: "封装原生引擎接口及控制流程"
+    limits: "运行平台与固定原生库需核对"
+    evidence: https://github.com/Jason-XII/clash-royale-battle-engine
+  - id: battle-control--replay-studio
+    capability: battle-control
+    project: replay-studio
+    reuse_level: R1
+    verification: author-documented
+    integration: unverified
+    claim: "回放应用内部调用原生战斗探针"
+    limits: "未提供可独立复用的稳定 SDK"
+    evidence: https://github.com/ak1NaN/ClashRoyale-replay-studio
+  - id: battle-control--ashpp-replay
+    capability: battle-control
+    project: ashpp-replay
+    reuse_level: R1
+    verification: author-documented
+    integration: unverified
+    claim: "复盘器桥接提供原生对战和动作控制"
+    limits: "内部接口，未宣称可供第三方直接集成"
+    evidence: https://github.com/Ashpp2223/clashroyalereplay
+  - id: state-observation--memory-reader
+    capability: state-observation
+    project: memory-reader
+    reuse_level: R1
+    verification: author-documented
+    integration: unverified
+    claim: "内存/原生对象的圣水、手牌、实体观测"
+    limits: "依赖客户端版本及环境"
+    evidence: https://github.com/Jason-XII/cr-memory-reader
+  - id: state-observation--tencent-overlay
+    capability: state-observation
+    project: tencent-overlay
+    reuse_level: R0
+    verification: author-documented
+    integration: unverified
+    claim: "腾讯版客户端的部署队列覆盖层"
+    limits: "README 声明旧内存偏移在 38.4.2 更新后失效"
+    evidence: https://github.com/ak1NaN/ClashRoyale-tencent-overlay
+  - id: state-observation--tencent-model-harness
+    capability: state-observation
+    project: tencent-model-harness
+    reuse_level: R1
+    verification: author-documented
+    integration: unverified
+    claim: "国服观测转换为 FirstLight V4 模型输入"
+    limits: "适用 38.4.2 配置；需逐构建校验偏移"
+    evidence: https://github.com/ak1NaN/ClashRoyale-tencent-model-harness
+  - id: state-observation--katacr
+    capability: state-observation
+    project: katacr
+    reuse_level: R1
+    verification: author-documented
+    integration: unverified
+    claim: "基于图像的单位/手牌识别与状态融合"
+    limits: "依赖视频链路及图像模型/分辨率"
+    evidence: https://github.com/wty-yy/KataCR
+  - id: state-observation--firstlight-cr
+    capability: state-observation
+    project: firstlight-cr
+    reuse_level: R1
+    verification: author-documented
+    integration: unverified
+    claim: "离线引擎内结构化观测"
+    limits: "不是任意正式线上客户端观测接口"
+    evidence: https://github.com/Jaasssoooonnnnn/FirstLight_CR
+  - id: snapshot-recovery--ashpp-replay
+    capability: snapshot-recovery
+    project: ashpp-replay
+    reuse_level: R1
+    verification: author-documented
+    integration: unverified
+    claim: "原生进程内快照与动作日志重放"
+    limits: "快照句柄不跨进程，重启需重放"
+    evidence: https://github.com/Ashpp2223/clashroyalereplay
+  - id: snapshot-recovery--replay-studio
+    capability: snapshot-recovery
+    project: replay-studio
+    reuse_level: R1
+    verification: author-documented
+    integration: unverified
+    claim: "按 tick 预演算和缓存支持时间跳转"
+    limits: "不能直接等同于可分叉的任意状态原生快照"
+    evidence: https://github.com/ak1NaN/ClashRoyale-replay-studio
+  - id: replay-reconstruction--replay-studio
+    capability: replay-reconstruction
+    project: replay-studio
+    reuse_level: R1
+    verification: author-documented
+    integration: unverified
+    claim: "RoyaleAPI HTML 事件导入与原生画面重建"
+    limits: "缺少种子/秘密初手；不保证完全一致"
+    evidence: https://github.com/ak1NaN/ClashRoyale-replay-studio
+  - id: replay-reconstruction--firstlight-cr
+    capability: replay-reconstruction
+    project: firstlight-cr
+    reuse_level: R1
+    verification: author-documented
+    integration: unverified
+    claim: "Parquet 对局回放的原生重建和模仿学习数据生成"
+    limits: "对局复现成功比例为作者报告，不代表所有回放准确"
+    evidence: https://github.com/Jaasssoooonnnnn/FirstLight_CR
+  - id: replay-reconstruction--ashpp-replay
+    capability: replay-reconstruction
+    project: ashpp-replay
+    reuse_level: R1
+    verification: author-documented
+    integration: unverified
+    claim: "动作历史、分支节点、从日志恢复局面"
+    limits: "是交互式复盘/假设分支，不等同于导入真人对局"
+    evidence: https://github.com/Ashpp2223/clashroyalereplay
+  - id: replay-reconstruction--jason-battle-engine
+    capability: replay-reconstruction
+    project: jason-battle-engine
+    reuse_level: R1
+    verification: author-documented
+    integration: unverified
+    claim: "重建回放与原生状态缓存研究"
+    limits: "依赖 FirstLight 与具体游戏版本"
+    evidence: https://github.com/Jason-XII/clash-royale-battle-engine
+  - id: agent-environment--firstlight-cr
+    capability: agent-environment
+    project: firstlight-cr
+    reuse_level: R1
+    verification: author-documented
+    integration: unverified
+    claim: "原生环境、模仿学习、PPO、自博弈、策略服务"
+    limits: "模型与环境使用特定 Observation/Action 契约"
+    evidence: https://github.com/Jaasssoooonnnnn/FirstLight_CR
+  - id: agent-environment--jason-battle-engine
+    capability: agent-environment
+    project: jason-battle-engine
+    reuse_level: R1
+    verification: author-documented
+    integration: unverified
+    claim: "离线对局与模仿/PPO 训练流水线"
+    limits: "依赖原生游戏数据及外部模拟环境"
+    evidence: https://github.com/Jason-XII/clash-royale-battle-engine
+  - id: agent-environment--jason-simulator
+    capability: agent-environment
+    project: jason-simulator
+    reuse_level: R1
+    verification: author-documented
+    integration: unverified
+    claim: "独立模拟器和强化学习环境"
+    limits: "卡牌覆盖不完整"
+    evidence: https://github.com/Jason-XII/clash-royale-simulator
+  - id: agent-environment--hasty-cr
+    capability: agent-environment
+    project: hasty-cr
+    reuse_level: R1
+    verification: author-documented
+    integration: unverified
+    claim: "可确定性运行的模拟器及策略训练"
+    limits: "独立模拟准确性必须按机制验证"
+    evidence: https://github.com/hastylmao/Hasty-CR
+  - id: agent-environment--royalegym
+    capability: agent-environment
+    project: royalegym
+    reuse_level: R1
+    verification: author-documented
+    integration: unverified
+    claim: "Gymnasium/PettingZoo 风格环境与评测"
+    limits: "需与 RoyaleSim 版本配套"
+    evidence: https://github.com/RoyaleGym/RoyaleGym
+  - id: agent-environment--royalesim
+    capability: agent-environment
+    project: royalesim
+    reuse_level: R1
+    verification: author-documented
+    integration: unverified
+    claim: "Rust 底层战斗引擎与 Python API"
+    limits: "只是引擎，不等于完整训练工具链"
+    evidence: https://github.com/RoyaleGym/RoyaleSim
+  - id: agent-environment--crforge
+    capability: agent-environment
+    project: crforge
+    reuse_level: R1
+    verification: author-documented
+    integration: unverified
+    claim: "Java 模拟器经 ZMQ/Gymnasium 接口训练"
+    limits: "需要 Java 运行时和桥接进程"
+    evidence: https://github.com/voonhous/crforge
+  - id: agent-environment--katacr
+    capability: agent-environment
+    project: katacr
+    reuse_level: R1
+    verification: author-documented
+    integration: unverified
+    claim: "视觉观测下的策略训练和执行"
+    limits: "验证环境为历史版本，运行前需重新评估"
+    evidence: https://github.com/wty-yy/KataCR
+  - id: agent-environment--tencent-model-harness
+    capability: agent-environment
+    project: tencent-model-harness
+    reuse_level: R1
+    verification: author-documented
+    integration: unverified
+    claim: "FirstLight V4 模型在腾讯客户端的推理部署"
+    limits: "这是推理适配而不是新的训练环境"
+    evidence: https://github.com/ak1NaN/ClashRoyale-tencent-model-harness
+  - id: asset-ingestion--sc-downloader
+    capability: asset-ingestion
+    project: sc-downloader
+    reuse_level: R1
+    verification: author-documented
+    integration: unverified
+    claim: "多线程资源下载、解压与版本文件缓存"
+    limits: "皇室战争 Latest Patch 握手暂不可用"
+    evidence: https://github.com/Darknighture/sc-downloader-gui
+  - id: rules-simulation--jason-simulator
+    capability: rules-simulation
+    project: jason-simulator
+    reuse_level: R1
+    verification: author-documented
+    integration: unverified
+    claim: "自主战斗实现、寻路与卡牌行为"
+    limits: "README 称实现 47 卡，非官方原生逻辑"
+    evidence: https://github.com/Jason-XII/clash-royale-simulator
+  - id: rules-simulation--hasty-cr
+    capability: rules-simulation
+    project: hasty-cr
+    reuse_level: R1
+    verification: author-documented
+    integration: unverified
+    claim: "整数确定性机制实现、机制探针与大量测试"
+    limits: "仍须验证与目标原生版本的逐项一致性"
+    evidence: https://github.com/hastylmao/Hasty-CR
+  - id: rules-simulation--royalesim
+    capability: rules-simulation
+    project: royalesim
+    reuse_level: R1
+    verification: author-documented
+    integration: unverified
+    claim: "Rust 固定 tick 战斗引擎"
+    limits: "卡牌覆盖、准确性需基准评估"
+    evidence: https://github.com/RoyaleGym/RoyaleSim
+  - id: rules-simulation--crforge
+    capability: rules-simulation
+    project: crforge
+    reuse_level: R1
+    verification: author-documented
+    integration: unverified
+    claim: "Java ECS、数据驱动卡牌和状态效果"
+    limits: "实现广度不代表无偏差"
+    evidence: https://github.com/voonhous/crforge

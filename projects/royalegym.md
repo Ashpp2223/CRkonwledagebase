@@ -1,6 +1,6 @@
 ---
 id: royalegym
-title: "RoyaleGym / RoyaleSim"
+title: "RoyaleGym"
 type: project
 status: implemented
 verification: author-documented
@@ -11,28 +11,29 @@ last_reviewed: null
 license: MIT
 ---
 
-# RoyaleGym / RoyaleSim
+# RoyaleGym
 
-**原仓库**：[RoyaleGym/RoyaleGym](https://github.com/RoyaleGym/RoyaleGym)。**初次整理**：2026-10-13。仅依据公开作者文档，尚未得到原作者审核，也未独立测试。
+**原始仓库**：[RoyaleGym/RoyaleGym](https://github.com/RoyaleGym/RoyaleGym)。目前仅按作者文档编目，并未得到独立运行验证或作者加入确认。
 
-## 公开描述的能力
+## 公开实现的内容
 
-RoyaleGym 提供 Gymnasium/PettingZoo 风格接口，RoyaleSim 提供 Rust 整数战斗引擎和 Python 调用。
+Python 侧智能体接口，README 提供与底层 RoyaleSim 共同使用的对局与训练示例，面向 Gymnasium / PettingZoo 类工作流。
 
-## 兼容与限制
+## 版本、运行与复用限制
 
-独立模拟器与原生引擎行为等价性仍需实验核对；具体能力以仓库版本为准。
+必须核对 RoyaleSim 版本、依赖、卡牌覆盖和仿真规则精度。
 
-## 相关专题
+## 相关能力
+
+- [智能体环境与模型对接](../capabilities/agent-environment/README.md)：Gymnasium/PettingZoo 风格环境与评测（R1，author-documented）
+
+## 相关研究专题
 
 - [独立战斗模拟器](../topics/cr-battle-simulation.md)
 - [AI 训练环境与决策](../topics/cr-ai-environment.md)
 
-## 证据
+## 来源
 
-- [仓库 README](https://github.com/RoyaleGym/RoyaleGym)
-- [补充来源](https://github.com/RoyaleGym/RoyaleSim)
+- [上游 README](https://github.com/RoyaleGym/RoyaleSim)
 
-## 待复核
-
-- 实际运行能力、对应提交 SHA、准确兼容版本、维护者确认和授权边界。
+**待核实**：精确上游提交、运行环境、独立复现测试以及上游作者审阅。

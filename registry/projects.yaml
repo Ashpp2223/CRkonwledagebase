@@ -1,4 +1,4 @@
-# Registry of curated entries. verification=author-documented means author README/description only.
+# One project identity per upstream repository; capability relations live only in implementations.yaml.
 projects:
   - id: firstlight-cr
     title: "FirstLight CR"
@@ -6,35 +6,35 @@ projects:
     path: projects/firstlight-cr.md
     verification: author-documented
     license: Apache-2.0
-    topics: [cr-native-engine,cr-replay-state,cr-ai-environment]
+    topics: [cr-native-engine, cr-replay-state, cr-ai-environment]
   - id: jason-battle-engine
     title: "Jason Clash Royale Battle Engine"
     repository: https://github.com/Jason-XII/clash-royale-battle-engine
     path: projects/jason-battle-engine.md
     verification: author-documented
     license: unknown
-    topics: [cr-native-engine,cr-ai-environment,cr-replay-state]
+    topics: [cr-native-engine, cr-ai-environment, cr-replay-state]
   - id: jason-simulator
     title: "Jason Clash Royale Simulator"
     repository: https://github.com/Jason-XII/clash-royale-simulator
     path: projects/jason-simulator.md
     verification: author-documented
     license: unknown
-    topics: [cr-battle-simulation,cr-game-mechanics,cr-ai-environment]
+    topics: [cr-battle-simulation, cr-game-mechanics, cr-ai-environment]
   - id: replay-studio
     title: "Clash Royale Replay Studio"
     repository: https://github.com/ak1NaN/ClashRoyale-replay-studio
     path: projects/replay-studio.md
     verification: author-documented
     license: unknown
-    topics: [cr-replay-state,cr-native-engine]
+    topics: [cr-replay-state, cr-native-engine]
   - id: ashpp-replay
     title: "皇室战争复盘器"
     repository: https://github.com/Ashpp2223/clashroyalereplay
     path: projects/ashpp-replay.md
     verification: author-documented
     license: unknown
-    topics: [cr-replay-state,cr-native-engine]
+    topics: [cr-replay-state, cr-native-engine]
   - id: memory-reader
     title: "CR Memory Reader"
     repository: https://github.com/Jason-XII/cr-memory-reader
@@ -42,41 +42,55 @@ projects:
     verification: author-documented
     license: unknown
     topics: [cr-runtime-observation]
-  - id: tencent-tools
-    title: "Tencent Overlay 与 Model Harness"
+  - id: tencent-overlay
+    title: "Tencent Overlay"
+    repository: https://github.com/ak1NaN/ClashRoyale-tencent-overlay
+    path: projects/tencent-overlay.md
+    verification: author-documented
+    license: unknown
+    topics: [cr-runtime-observation]
+  - id: tencent-model-harness
+    title: "Tencent Model Harness"
     repository: https://github.com/ak1NaN/ClashRoyale-tencent-model-harness
-    path: projects/tencent-tools.md
+    path: projects/tencent-model-harness.md
     verification: author-documented
     license: Apache-2.0
-    topics: [cr-runtime-observation,cr-ai-environment]
+    topics: [cr-runtime-observation, cr-ai-environment]
   - id: hasty-cr
     title: "Hasty-CR"
     repository: https://github.com/hastylmao/Hasty-CR
     path: projects/hasty-cr.md
     verification: author-documented
     license: MIT
-    topics: [cr-battle-simulation,cr-game-mechanics,cr-ai-environment]
+    topics: [cr-battle-simulation, cr-game-mechanics, cr-ai-environment]
   - id: royalegym
-    title: "RoyaleGym / RoyaleSim"
+    title: "RoyaleGym"
     repository: https://github.com/RoyaleGym/RoyaleGym
     path: projects/royalegym.md
     verification: author-documented
     license: MIT
-    topics: [cr-battle-simulation,cr-ai-environment]
+    topics: [cr-battle-simulation, cr-ai-environment]
+  - id: royalesim
+    title: "RoyaleSim"
+    repository: https://github.com/RoyaleGym/RoyaleSim
+    path: projects/royalesim.md
+    verification: author-documented
+    license: MIT
+    topics: [cr-battle-simulation, cr-ai-environment]
   - id: crforge
     title: "crforge"
     repository: https://github.com/voonhous/crforge
     path: projects/crforge.md
     verification: author-documented
     license: Apache-2.0
-    topics: [cr-battle-simulation,cr-game-mechanics,cr-ai-environment]
+    topics: [cr-battle-simulation, cr-game-mechanics, cr-ai-environment]
   - id: katacr
     title: "KataCR"
     repository: https://github.com/wty-yy/KataCR
     path: projects/katacr.md
     verification: author-documented
     license: MIT
-    topics: [cr-runtime-observation,cr-ai-environment]
+    topics: [cr-runtime-observation, cr-ai-environment]
   - id: sc-downloader
     title: "SC Downloader GUI"
     repository: https://github.com/Darknighture/sc-downloader-gui

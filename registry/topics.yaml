@@ -6,7 +6,7 @@ topics:
   - id: cr-battle-simulation
     title: "独立战斗模拟器"
     path: topics/cr-battle-simulation.md
-    projects: [jason-simulator, hasty-cr, royalegym, crforge]
+    projects: [jason-simulator, hasty-cr, royalegym, royalesim, crforge]
   - id: cr-replay-state
     title: "回放、快照与状态恢复"
     path: topics/cr-replay-state.md
@@ -14,11 +14,11 @@ topics:
   - id: cr-ai-environment
     title: "AI 训练环境与决策"
     path: topics/cr-ai-environment.md
-    projects: [firstlight-cr, jason-battle-engine, jason-simulator, tencent-tools, hasty-cr, royalegym, crforge, katacr]
+    projects: [firstlight-cr, jason-battle-engine, jason-simulator, tencent-model-harness, hasty-cr, royalegym, royalesim, crforge, katacr]
   - id: cr-runtime-observation
     title: "运行时游戏状态观测"
     path: topics/cr-runtime-observation.md
-    projects: [memory-reader, tencent-tools, katacr]
+    projects: [memory-reader, tencent-overlay, tencent-model-harness, katacr]
   - id: cr-assets-data
     title: "资源与数据解析"
     path: topics/cr-assets-data.md
@@ -26,4 +26,4 @@ topics:
   - id: cr-game-mechanics
     title: "战斗机制、寻路与数值"
     path: topics/cr-game-mechanics.md
-    projects: [jason-simulator, hasty-cr, crforge]
+    projects: [jason-simulator, hasty-cr, crforge, royalesim]
