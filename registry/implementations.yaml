@@ -17,7 +17,8 @@ implementations:
     integration: unverified
     claim: "源码中有 Engine.reset/step/Transition 与 session-v1 控制入口；本次只静态核查客户端接口"
     limits: "无整体许可证确认；需原生探针和指定运行环境，未做集成测试；同 owner 多动作执行确认存在歧义"
-    evidence: https://github.com/Jason-XII/clash-royale-battle-engine/blob/2b3361954c189a8ea508f3f54cf94a56c2e045fc/engine.py#L147-L239    reviewed_commit: 2b3361954c189a8ea508f3f54cf94a56c2e045fc
+    evidence: https://github.com/Jason-XII/clash-royale-battle-engine/blob/2b3361954c189a8ea508f3f54cf94a56c2e045fc/engine.py#L147-L239
+    reviewed_commit: 2b3361954c189a8ea508f3f54cf94a56c2e045fc
     audit_path: docs/source-audits/native-engine-2026-10-13.md
 
   - id: battle-control--replay-studio
@@ -102,7 +103,8 @@ implementations:
     integration: unverified
     claim: "源码确认进程内快照 create/restore/release；恢复时清除旧分支原生调度队列"
     limits: "句柄不跨进程；摘要非完整 GameState 证明；不是公开稳定 SDK"
-    evidence: https://github.com/Ashpp2223/clashroyalereplay/blob/de46d7ea3831a64565140cdb9d4b947f9fe21916/bridge/controller.py#L240-L312    reviewed_commit: de46d7ea3831a64565140cdb9d4b947f9fe21916
+    evidence: https://github.com/Ashpp2223/clashroyalereplay/blob/de46d7ea3831a64565140cdb9d4b947f9fe21916/bridge/controller.py#L240-L312
+    reviewed_commit: de46d7ea3831a64565140cdb9d4b947f9fe21916
     audit_path: docs/source-audits/native-engine-2026-10-13.md
 
   - id: snapshot-recovery--replay-studio
