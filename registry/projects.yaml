@@ -76,7 +76,7 @@ projects:
     path: projects/royalesim.md
     verification: author-documented
     license: MIT
-    topics: [cr-battle-simulation, cr-ai-environment]
+    topics: [cr-battle-simulation, cr-ai-environment, cr-game-mechanics]
   - id: crforge
     title: "crforge"
     repository: https://github.com/voonhous/crforge

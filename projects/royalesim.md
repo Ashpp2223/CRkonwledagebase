@@ -5,7 +5,7 @@ type: project
 status: implemented
 verification: author-documented
 repository: https://github.com/RoyaleGym/RoyaleSim
-topics: [cr-battle-simulation, cr-ai-environment]
+topics: [cr-battle-simulation, cr-ai-environment, cr-game-mechanics]
 maintainers: []
 last_reviewed: null
 license: MIT
@@ -29,6 +29,8 @@ Rust 独立战斗引擎；README 描述整数 Tick 仿真及 Python 调用（Bat
 - [可修改的战斗规则模拟](../capabilities/rules-simulation/README.md)：Rust 固定 tick 战斗引擎（R1，author-documented）
 
 ## 相关研究专题
+
+- [战斗机制、寻路与数值](../topics/cr-game-mechanics.md)
 
 - [独立战斗模拟器](../topics/cr-battle-simulation.md)
 - [AI 训练环境与决策](../topics/cr-ai-environment.md)
