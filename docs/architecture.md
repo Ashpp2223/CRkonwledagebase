@@ -42,3 +42,7 @@ registry/implementations.yaml               # 项目×能力×成熟度×证据
 已有 `topics/` 路径保持不变（避免旧链接失效）；旧的 `projects/tencent-tools.md` 保留迁移指引，不再作为独立仓库索引。
 
 [架构决策记录](adr/0001-capability-center.md) · [证据/成熟度规则](reuse-maturity.md)
+
+## 长期维护协议
+
+`AGENTS.md` 记录不变量，`.agents/skills/` 记录按任务激活的操作步骤，`docs/maintainer-handbook.md` 记录面向人的维护/移交规则，`docs/editorial-standards.md` 规范技术写作，`scripts/validate*.py` 是自动化结构检查。不同职责不应复制粘贴同一份长规则。

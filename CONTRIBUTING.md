@@ -2,6 +2,8 @@
 
 欢迎项目作者和研究者贡献原始知识与验证材料。请优先从 [能力目录](capabilities/README.md) 检索，避免重复创建新概念。
 
+初次维护请阅读 [维护者手册](docs/maintainer-handbook.md) 和 [文档写作规范](docs/editorial-standards.md)。常见维护任务可以按 [仓库级 Skills](docs/skills.md) 直接执行。
+
 ## 三种贡献路径
 
 1. **登记项目**：参照 [项目模板](templates/project.md) 新建单仓库项目卡，登记 `registry/projects.yaml`，并维护相关专题双向引用。
@@ -19,6 +21,6 @@
 
 ## 自检
 
-安装 Python 3.12 与 `PyYAML>=6,<7`，运行 `python scripts/validate.py`；CI 在提交/PR 时运行同一检查。无需数据库与 AI API。
+安装 Python 3.12 与 `PyYAML>=6,<7`，运行 `python scripts/validate.py` 和 `python scripts/validate_skills.py`；CI 在提交/PR 时执行同样的检查。无需数据库与 AI API。
 
 [成熟度标准](docs/reuse-maturity.md) · [协作治理](GOVERNANCE.md)

@@ -37,7 +37,7 @@
 
 ## 如何参与
 
-[CONTRIBUTING](CONTRIBUTING.md) · [GOVERNANCE](GOVERNANCE.md) · [AGENTS](AGENTS.md) · [架构说明](docs/architecture.md)
+[维护者手册](docs/maintainer-handbook.md) · [项目 Skills](docs/skills.md) · [写作规范](docs/editorial-standards.md) · [贡献指南](CONTRIBUTING.md) · [AGENTS](AGENTS.md)
 
 - 项目作者可以维护自己的来源文档，其他人可以提供有证据的功能补充与纠错。
 - 提高某项能力的 R 等级需要固定版本和可核对的源码/实验记录；作者称“测试通过”不等于中台实测。

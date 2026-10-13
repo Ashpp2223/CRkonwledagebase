@@ -18,3 +18,9 @@
 - [ ] 没有把作者陈述写成中台独立验证
 - [ ] 已运行 `python scripts/validate.py`（或注明阻碍）
 - [ ] 未提交无授权的游戏客户端、原始素材或源码
+
+## 维护者自检
+
+- [ ] 已按 [PR 审查 Skill](../.agents/skills/review-cr-pr/SKILL.md) 审查内容和来源
+- [ ] `python scripts/validate.py` 已通过（未执行请注明）
+- [ ] `python scripts/validate_skills.py` 已通过（未执行请注明）
