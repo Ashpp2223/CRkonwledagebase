@@ -44,3 +44,14 @@ last_reviewed: null
 - 作者审阅、许可证核对与明确的集成入口（若存在）。
 
 [返回能力目录](../README.md) · [查看项目目录](../../projects/README.md)
+
+## 扩展来源（2026-10-13）：已登记的高衍生实现
+
+下面是本轮 GitHub 调查新增的候选。**能力评级以 [实现矩阵](../../registry/implementations.yaml) 为准；R2 仅对指定源码范围有效，均未完成第三方集成验收。**
+
+| 项目 | 新的可复用切入点 |
+| --- | --- |
+| [ClashAI](../../projects/clashai-vegetableleaf.md) | 公开观测契约 + 原生/视觉状态估计；R1，仍未复现 |
+| [BuildABot](../../projects/build-a-bot.md) | 截图识别后生成手牌/单位结构化数据；R1 |
+
+[技术组合地图](../../landscape/composition-patterns.md) · [高价值项目调查](../../landscape/2026-10-13-landscape.md)

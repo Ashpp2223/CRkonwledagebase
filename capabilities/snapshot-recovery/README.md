@@ -37,3 +37,14 @@ Ashpp 的复盘控制器还明确处理了快照**之外**的调度队列，恢�
 请根据 [快照集成与验收清单](integration.md) 固定代码和游戏版本，测量恢复时间、内存、状态一致性、分支污染及重启边界。未执行真实实验不得将 R2 升为 R3。
 
 [来源核查](../../docs/source-audits/native-engine-2026-10-13.md) · [返回能力目录](../README.md)
+
+## 扩展来源（2026-10-13）：已登记的高衍生实现
+
+下面是本轮 GitHub 调查新增的候选。**能力评级以 [实现矩阵](../../registry/implementations.yaml) 为准；R2 仅对指定源码范围有效，均未完成第三方集成验收。**
+
+| 项目 | 新的可复用切入点 |
+| --- | --- |
+| [ClashRoyaleEnv](../../projects/itzik-clashenv.md) | GameManager 深拷贝＋pybind snapshot；R2 静态代码检查，非原生引擎 |
+| [RoyaleSim](../../projects/royalesim.md) | 字节 save/load 与 state_hash；R1 文档说明 |
+
+[技术组合地图](../../landscape/composition-patterns.md) · [高价值项目调查](../../landscape/2026-10-13-landscape.md)
