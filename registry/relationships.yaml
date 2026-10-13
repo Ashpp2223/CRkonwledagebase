@@ -1,0 +1,18 @@
+# Only relationships described by publicly accessible project documentation.
+relationships:
+  - from: jason-battle-engine
+    to: firstlight-cr
+    type: derives-from
+    evidence: https://github.com/Jason-XII/clash-royale-battle-engine
+  - from: replay-studio
+    to: jason-battle-engine
+    type: builds-on
+    evidence: https://github.com/ak1NaN/ClashRoyale-replay-studio
+  - from: tencent-tools
+    to: firstlight-cr
+    type: model-interface-uses
+    evidence: https://github.com/ak1NaN/ClashRoyale-tencent-model-harness
+  - from: ashpp-replay
+    to: jason-battle-engine
+    type: builds-on
+    evidence: https://github.com/Ashpp2223/clashroyalereplay
