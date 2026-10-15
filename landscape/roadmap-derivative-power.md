@@ -28,3 +28,11 @@
 交付一份能够被后来者引用的 *conformance fixture*，其价值大于继续增加二十张只含 README 的项目卡。
 
 [生态调查](2026-10-13-landscape.md) · [能力矩阵](../registry/implementations.yaml)
+
+## 2026-10-15 修订：原生新版引擎与记谱器优先问题
+
+[P0] 新版 160402012 的 ORACLE 静态映射距离可运行原生宿主仍缺 Android 运行门禁，**不能按函数识别数量计算完成度**。旧版可对照 [CR Native Sandbox](../projects/native-sandbox-imax9d.md)、[Linux Bionic 宿主](../projects/native-bionic-imax9d.md) 和 [FirstLight 原生渲染](../projects/firstlight-cr.md)。
+
+[P0] 面向记谱器的真实终点是 **离线创建→自主 Tick→双边动作→快照/回退→画面**。新版路径先提供 1–3 项受检实例，再研究快照与渲染，参见 [跨构建迁移研究](../research/reverse-engineering/client-build-migration-2026-10.md)。
+
+[P1] 复用 [RoyaleAPI Downloader](../projects/royaleapi-downloader-imax9d.md) 和 [R0 Elite Training](../projects/r0-elite-imax9d.md) 的**可追溯数据批次和训练契约**，而不是直接复用其数据或指标结论。

@@ -12,6 +12,7 @@
 | 从网络数据能确认什么 | [协议与消息史](protocol-history.md) | [旧版消息定义](https://github.com/royale-proxy/cr-messages) |
 | SC、CSV 等游戏资源怎样研究 | [资源格式研究](resource-formats.md) | [cr-sc-dump](https://github.com/123456abcdef/cr-sc-dump) |
 | 版本升级后旧结论还能不能用 | [构建与偏移复验](version-revalidation.md) | [腾讯 Overlay 失效案例](https://github.com/ak1NaN/ClashRoyale-tencent-overlay) |
+| 离线引擎在 15.535/16.402/腾讯 38.4.2 分别完成了什么 | [跨构建原生宿主进展](client-build-migration-2026-10.md) | [ClashAI ORACLE v7 门禁](https://github.com/vegetableleaf/ClashAI/blob/218554aee8b7be9b3ad5298349853d6fe747c90f/scratchpad/gauntlet/L74/oracle/linux/qualify/jnihost_ro/v7/GATES.md) |
 | 怎样保存 AI/人工研究的假设、证据与失败 | [研究方法](methodology.md) | [逆向发现机器索引](../../registry/reverse-findings.yaml) |
 
 ## 原始知识来源（不代表当前兼容）

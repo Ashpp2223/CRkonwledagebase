@@ -143,3 +143,47 @@ findings:
     game_build: "unknown"
     claim: "作者提供 Fingerprint 驱动的资源流程，CR 新版补丁握手受限"
     reproduced_by_middle_platform: false
+  - id: re-native-sandbox-host
+    title: "15.535.29 原生无画面 JNI Worker"
+    category: native
+    path: research/reverse-engineering/client-build-migration-2026-10.md
+    source: https://github.com/IMAX9D/cr-native-sandbox/blob/8c8443e26c4250f3ae8cd5d09298080ae9d8a782/README.md
+    source_sha: 8c8443e26c4250f3ae8cd5d09298080ae9d8a782
+    verification: author-documented
+    applicability: exact-build
+    game_build: "15.535.29 / x86_64"
+    claim: "原始 libg.so 由 JNI/Bionic 宿主驱动，有 reset/step/双方动作/观测；不等于提供画面、通用原生快照"
+    reproduced_by_middle_platform: false
+  - id: re-native-bionic-userland
+    title: "15.535.29 Linux 无 AVD Bionic 宿主"
+    category: native
+    path: research/reverse-engineering/client-build-migration-2026-10.md
+    source: https://github.com/IMAX9D/cr-native-linux-bionic/blob/7840e4e920fb8c4d63efb16333c9451a16343c76/README.md
+    source_sha: 7840e4e920fb8c4d63efb16333c9451a16343c76
+    verification: author-documented
+    applicability: exact-build
+    game_build: "15.535.29 / x86_64 / API31 userland"
+    claim: "复用 Android linker/ART/Bionic 的 Linux Worker 宿主；不得移植到其他 ABI 或 16.402 而不重建"
+    reproduced_by_middle_platform: false
+  - id: re-160402-static-lifecycle
+    title: "160402012 的 GameMain/DataTables/Replay/Tick 静态定位"
+    category: native
+    path: research/reverse-engineering/client-build-migration-2026-10.md
+    source: https://github.com/vegetableleaf/ClashAI/blob/218554aee8b7be9b3ad5298349853d6fe747c90f/scratchpad/gauntlet/L74/oracle/V3_REPORT.md
+    source_sha: 218554aee8b7be9b3ad5298349853d6fe747c90f
+    verification: author-documented
+    applicability: exact-build
+    game_build: "160402012 / x86_64"
+    claim: "v3 声明 18 项静态高置信生命周期入口，但没有有效的新版原生离线战斗运行证据"
+    reproduced_by_middle_platform: false
+  - id: re-160402-v7-gates
+    title: "160402012 v7 安卓运行门禁未完成"
+    category: native
+    path: research/reverse-engineering/client-build-migration-2026-10.md
+    source: https://github.com/vegetableleaf/ClashAI/blob/218554aee8b7be9b3ad5298349853d6fe747c90f/scratchpad/gauntlet/L74/oracle/linux/qualify/jnihost_ro/v7/GATES.md
+    source_sha: 218554aee8b7be9b3ad5298349853d6fe747c90f
+    verification: author-documented
+    applicability: exact-build
+    game_build: "160402012 / x86_64"
+    claim: "v7 门禁 G1–G4 为离线检查及编译；G5 Android 实测与 G6 Linux worker shell 校验未通过"
+    reproduced_by_middle_platform: false

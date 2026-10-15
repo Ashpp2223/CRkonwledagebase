@@ -37,3 +37,17 @@
 | [AI Card Tracker](card-tracker.md) | 历史对手卡序视觉估计 |
 
 完整收录逻辑和低优先级项目见 [GitHub 技术生态调查](../landscape/2026-10-13-landscape.md)。
+
+## 2026-10-15 作者仓库和 Fork 来源网络
+
+| 新收录来源 | 为什么值得研究 |
+| --- | --- |
+| [CR Native Sandbox](native-sandbox-imax9d.md) | 原版 x86_64 libg 无画面战斗服务、Replay 驱动 |
+| [CR Native Linux Bionic](native-bionic-imax9d.md) | Linux 无 AVD/KVM 的原生 Worker 宿主 |
+| [FL Royale](fl-royale.md) | Android 离线原生可玩客户端和画面壳 |
+| [RoyaleAPI Downloader](royaleapi-downloader-imax9d.md) | 回放采集、历史批次、去重和断点恢复 |
+| [R0 Elite Training](r0-elite-imax9d.md) | 原生采集→数据契约→训练验收 |
+| [Jason SC Decoder](sc-decoder-jason.md) | SC 动画解码及可视化 |
+| [Arron CR Collector](cr-collector-arron.md) | 公开回放协作采集 |
+
+[作者/Fork/依赖追踪与不纳入理由](../landscape/2026-10-15-source-network.md)
