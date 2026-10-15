@@ -30,3 +30,9 @@ last_reviewed: null
 - 用最小可复现用例与反例检验后才能升级为 R3 集成能力。
 
 [完整生态技术筛选](../../landscape/2026-10-13-landscape.md) · [能力目录](../README.md)
+
+## 2026-10-15：RoyaleSim 源码核查升级
+
+[跨版本校准接口](../../docs/source-audits/royalesim-client-parity-2026-10-15.md) 已按 `R2 / source-inspected` 登记到 `simulator-validation--royalesim`。可核查 `client_arms`、`replay_parity`、建筑部署末 Tick 的分支回归**代码和测试定义**；上游实际录制数据、误差数字及所有版本精度均未在本中台独立复现。
+
+采用 [版本差异方法笔记](../../research/knowledge-notes/cr-model-selfplay-client-parity-2026-10-15.md) 构造固定客户端、卡表与动作时序的差分基准。

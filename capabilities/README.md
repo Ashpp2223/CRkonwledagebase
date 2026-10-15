@@ -8,6 +8,7 @@
 | 原生底座 | [状态观测](state-observation/README.md) | 内部状态、实体与合法动作 |
 | 状态研究 | [快照与恢复](snapshot-recovery/README.md) | 进程快照、回放、序列化及分叉 |
 | 搜索 | [前瞻规划](lookahead-planning/README.md) | 多候选模拟、评估与策略蒸馏 |
+| 回放 | [轨迹可视化](battle-visualization/README.md) | 已有模拟器轨迹的播放、单步与实体检查 |
 | 回放 | [对局重建](replay-reconstruction/README.md) | 外部事件与对局复现 |
 | 感知 | [视觉状态](visual-perception/README.md) | 屏幕识别与状态融合 |
 | 训练数据 | [回放→训练样本](replay-to-learning/README.md) | 真人样本重建、IL/RL 数据版本化 |

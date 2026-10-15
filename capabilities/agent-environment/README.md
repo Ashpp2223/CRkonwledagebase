@@ -67,3 +67,12 @@ last_reviewed: null
 - [Clapha Engine](../../projects/clapha-engine.md) 在 Jason 的公开代码中供 PPO 进程内模拟；底层仓库私有，尚不能作为公开可审引擎。
 - [R0 Elite Training](../../projects/r0-elite-training.md) 负责数据契约和 IL/PPO 训练，不是战斗逻辑实现。
 - [RoyaleAPI Downloader](../../projects/royaleapi-downloader.md) 与 [Arron CR Collector](../../projects/cr-collector.md) 是外部回放数据供给，必须和原生观测及下游训练的来源分开记录。
+
+## 2026-10-15：世界模型训练适配与训练器
+
+| 项目 | 可复用接口 | 成熟度 |
+| --- | --- | --- |
+| [Longling R2-Dreamer](../../projects/longling-simulator.md) | `CREnv` → `grid(32,18,15)`、手牌/圣水与三段 55 维 multi-one-hot 动作；对手池及自博弈 | R2 **仅环境桥接源码静态核查**，见 [审查](../../docs/source-audits/longling-r2dreamer-2026-10-15.md) |
+| [RoyaleLearn](../../projects/royale-learn.md) | `Learner(make_env)`、奖励、训练与存档 | R1 作者文档，未独立训练 |
+
+复用这些架构须显式区分“自建规则模拟”与“原生战斗真值”；不保证模型输入与 FirstLight、IMAX9D 或 RoyaleGym 直接兼容。

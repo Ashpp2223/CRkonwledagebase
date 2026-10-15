@@ -38,3 +38,7 @@ last_reviewed: null
 - [R0 Elite Training](../../projects/r0-elite-training.md)：原生状态采集至编译/认证/TBPTT，使用 contract SHA 拒绝混用语义不一致的数据。
 
 [开发者网络调查](../../landscape/2026-10-15-developer-network.md)
+
+## 2026-10-15 模仿迁移与模型工件
+
+- [RoyaleImitate](../../projects/royale-imitate.md)（R1，作者文档）：教师策略的 `save_actor`、摘要和 `warm_start`、模仿约束。它补充的是**训练阶段和工件兼容约束**，不等同于真人回放转结构化逐 Tick 数据已经复现。

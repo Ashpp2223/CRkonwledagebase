@@ -37,3 +37,13 @@ Python 侧智能体接口，README 提供与底层 RoyaleSim 共同使用的对�
 - [上游 README](https://github.com/RoyaleGym/RoyaleSim)
 
 **待核实**：精确上游提交、运行环境、独立复现测试以及上游作者审阅。
+
+## 2026-10-15 补全模块化生态（独立 Project）
+
+- [RoyaleSim](royalesim.md)：规则模拟器与客户端规则校准。
+- [RoyaleLearn](royale-learn.md)：训练/模型存档。
+- [RoyaleImitate](royale-imitate.md)：模仿/教师权重工件。
+- [RoyaleViser](royale-viser.md)：保存轨迹及实时对局可视化。
+- [RoyaleBot](royale-bot.md)：限定 Null's Android 客户端的模型部署。
+
+这些模块分别建项目 ID，不将完整生态笼统归为 RoyaleGym 单一仓库的内建功能。

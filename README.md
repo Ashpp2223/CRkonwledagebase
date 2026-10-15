@@ -52,3 +52,9 @@
 - 不镜像无授权 APK、原生库、模型权重、游戏贴图、泄露客户端或原始真人回放。
 - 中台的 [接口草案](contracts/README.md) 均为 **Draft**，不暗示其他开发者已经采用统一 ABI。
 
+## 2026-10-15：CR 模拟器与 AI 技术知识扩展
+
+- [5 个新来源和项目说明](projects/README.md)：Longling R2-Dreamer、RoyaleLearn、RoyaleImitate、RoyaleViser、RoyaleBot。
+- [跨客户端规则保真与模型自博弈专题](research/knowledge-notes/cr-model-selfplay-client-parity-2026-10-15.md)：将可信源码入口、可用范围和测试反例结合。
+- [战斗轨迹可视化](capabilities/battle-visualization/README.md)：与原生恢复/事件重建分开分类。
+- [Longling 源码审查](docs/source-audits/longling-r2dreamer-2026-10-15.md) · [RoyaleSim 源码审查](docs/source-audits/royalesim-client-parity-2026-10-15.md)。

@@ -29,3 +29,7 @@ last_reviewed: null
 - 用最小可复现用例与反例检验后才能升级为 R3 集成能力。
 
 [完整生态技术筛选](../../landscape/2026-10-13-landscape.md) · [能力目录](../README.md)
+
+## 2026-10-15 新增设备部署示例
+
+- [RoyaleBot](../../projects/royale-bot.md)：将 RoyaleLearn 模型部署到**特定 Null's Royale 15.535.13 ARM64** 客户端，具备 PC 侧推理、dry-run 与可选可视化；客户端准备 `rb-build` 是单独发布的工具。此条为 R1/作者文档，不能自动扩展到正式服。

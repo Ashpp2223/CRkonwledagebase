@@ -48,3 +48,7 @@ RoyaleSim (Rust 规则模拟器)
 ## 本轮非成果与边界
 
 没有读到完整 Following/Starred 人员名单、没有逐行审查四个候选全部源码、没有运行 Android/训练环境、没有核验真实回放与原生 Tick 一致性。当前补充说明是**有证据的候选线索文档**，并非已复现或已集成四项能力。
+
+## 2026-10-15 正式融入知识库
+
+候选的 RoyaleBot / RoyaleViser / RoyaleLearn / RoyaleImitate 已分别建 [Project、Implementation、Topic](../projects/README.md)。新增 [longling 的 R2-Dreamer Fork](../projects/longling-simulator.md) 和 [RoyaleSim 校准审查](../docs/source-audits/royalesim-client-parity-2026-10-15.md)，并建立 [总研究专题](../research/knowledge-notes/cr-model-selfplay-client-parity-2026-10-15.md)。**没有**把网页未能确认的 Following 关系改写成技术合作证据。

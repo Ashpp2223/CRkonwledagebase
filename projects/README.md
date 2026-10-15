@@ -64,3 +64,15 @@
 | [Arron CR Collector](cr-collector.md) | 分布式志愿者采集/协调（注意网站使用条款） |
 
 开发者与明确 Fork 关系及未收录原因见 [网络调查](../landscape/2026-10-15-developer-network.md)。
+
+## 2026-10-15 正式收录：世界模型、自博弈与 RoyaleGym 配套组件
+
+| 新项目 | 具体价值 |
+| --- | --- |
+| [Longling Simulator × R2-Dreamer](longling-simulator.md) | Jason Fork 的 Dreamer 桥接、55 维动作、自博弈池；部分接口 R2 |
+| [RoyaleLearn](royale-learn.md) | RoyaleGym 的独立训练器 |
+| [RoyaleImitate](royale-imitate.md) | 教师权重、warm start、模仿约束 |
+| [RoyaleViser](royale-viser.md) | .msgpack / 实时模拟轨迹查看 |
+| [RoyaleBot](royale-bot.md) | 限定 Null's Royale 客户端的模型部署 |
+
+[新发现及去重依据](../research/knowledge-notes/cr-model-selfplay-client-parity-2026-10-15.md) · [项目/能力注册表](../registry/implementations.yaml)
