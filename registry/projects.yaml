@@ -217,3 +217,46 @@ projects:
     verification: author-documented
     license: unknown
     topics: [cr-replay-state]
+
+  - id: cr-native-sandbox
+    title: "CR Native Sandbox"
+    repository: https://github.com/IMAX9D/cr-native-sandbox
+    path: projects/cr-native-sandbox.md
+    verification: author-documented
+    license: MIT
+    topics: [cr-native-engine, cr-replay-state, cr-ai-environment]
+  - id: cr-native-linux-bionic
+    title: "CR Native Linux Bionic"
+    repository: https://github.com/IMAX9D/cr-native-linux-bionic
+    path: projects/cr-native-linux-bionic.md
+    verification: author-documented
+    license: MIT
+    topics: [cr-native-engine]
+  - id: clapha-engine
+    title: "Clapha Engine (private)"
+    repository: https://github.com/arronwang01/clapha-engine
+    path: projects/clapha-engine.md
+    verification: author-documented
+    license: unknown
+    topics: [cr-native-engine, cr-ai-environment]
+  - id: r0-elite-training
+    title: "R0 Elite Training"
+    repository: https://github.com/IMAX9D/r0-elite-training
+    path: projects/r0-elite-training.md
+    verification: author-documented
+    license: MIT
+    topics: [cr-ai-environment]
+  - id: royaleapi-downloader
+    title: "RoyaleAPI Downloader"
+    repository: https://github.com/IMAX9D/royaleapi-downloader
+    path: projects/royaleapi-downloader.md
+    verification: author-documented
+    license: unknown
+    topics: [cr-replay-state, cr-ai-environment]
+  - id: cr-collector
+    title: "Arron CR Collector"
+    repository: https://github.com/arronwang01/cr-collector
+    path: projects/cr-collector.md
+    verification: author-documented
+    license: unknown
+    topics: [cr-ai-environment]

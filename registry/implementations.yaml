@@ -713,3 +713,113 @@ implementations:
     claim: "SC 资源精灵预处理和 pygame 动画预览"
     limits: "不是现代全格式认证的解码器，不负责游戏内渲染"
     evidence: https://github.com/Jason-XII/sc-decoder/blob/7b639d6b6a949522a71ebb8ae19552e58d71c157/README.md
+
+# 2026-10-15 developer-network discovery: all integrations remain unverified.
+  - id: battle-control--cr-native-sandbox
+    capability: battle-control
+    project: cr-native-sandbox
+    reuse_level: R1
+    verification: author-documented
+    integration: unverified
+    claim: "原始 x86_64 libg 15.535.29 的无画面离线 reset/step、双边动作"
+    limits: "固定二进制/资源；不带原生帧或记谱器快照接口"
+    evidence: https://github.com/IMAX9D/cr-native-sandbox/blob/8c8443e26c4250f3ae8cd5d09298080ae9d8a782/README.md
+  - id: state-observation--cr-native-sandbox
+    capability: state-observation
+    project: cr-native-sandbox
+    reuse_level: R1
+    verification: author-documented
+    integration: unverified
+    claim: "原生战斗实体、投射物、手牌、终局结构化读取"
+    limits: "仅锁定版本及其原生 Worker；无第三方运行验证"
+    evidence: https://github.com/IMAX9D/cr-native-sandbox/blob/8c8443e26c4250f3ae8cd5d09298080ae9d8a782/README.md
+  - id: replay-reconstruction--cr-native-sandbox
+    capability: replay-reconstruction
+    project: cr-native-sandbox
+    reuse_level: R1
+    verification: author-documented
+    integration: unverified
+    claim: "通过原生 replay loader 与 act/step 重驱事件"
+    limits: "缺失种子、初手、等级等隐藏条件时不能保证对局完全还原"
+    evidence: https://github.com/IMAX9D/cr-native-sandbox/blob/8c8443e26c4250f3ae8cd5d09298080ae9d8a782/README.md
+  - id: agent-environment--cr-native-sandbox
+    capability: agent-environment
+    project: cr-native-sandbox
+    reuse_level: R1
+    verification: author-documented
+    integration: unverified
+    claim: "原生环境上的 Self-Play/训练采集 Worker"
+    limits: "训练数据和客户端版本均绑定外部资源，不是通用 SDK"
+    evidence: https://github.com/IMAX9D/cr-native-sandbox/blob/8c8443e26c4250f3ae8cd5d09298080ae9d8a782/README.md
+  - id: battle-control--cr-native-linux-bionic
+    capability: battle-control
+    project: cr-native-linux-bionic
+    reuse_level: R1
+    verification: author-documented
+    integration: unverified
+    claim: "Linux 无 AVD/KVM 通过 Bionic/ART 宿主加载原生 libg 并提供 Worker"
+    limits: "固定 150535029 x86_64/API31；需专门用户态包与系统权限"
+    evidence: https://github.com/IMAX9D/cr-native-linux-bionic/blob/7840e4e920fb8c4d63efb16333c9451a16343c76/README.md
+  - id: battle-control--clapha-engine
+    capability: battle-control
+    project: clapha-engine
+    reuse_level: R0
+    verification: author-documented
+    integration: unverified
+    claim: "Jason 公开适配器通过私有 CrxEnv 创建原生战斗并执行 step"
+    limits: "真实 loader 非公开，无法审查或分发；未证实快照/原生渲染"
+    evidence: https://github.com/Jason-XII/clash-royale-battle-engine/blob/70a08af6807fa4d59a11c7d52bf6272a96afe30c/clapha.py
+  - id: agent-environment--clapha-engine
+    capability: agent-environment
+    project: clapha-engine
+    reuse_level: R0
+    verification: author-documented
+    integration: unverified
+    claim: "Jason 通过 ClaphaEngine 进行 Linux x86_64 进程内原生 PPO 自博弈"
+    limits: "被引用引擎本体私有；版本 150535029；在中台无法安装重测"
+    evidence: https://github.com/Jason-XII/clash-royale-battle-engine/blob/70a08af6807fa4d59a11c7d52bf6272a96afe30c/README.md
+  - id: replay-to-learning--r0-elite-training
+    capability: replay-to-learning
+    project: r0-elite-training
+    reuse_level: R1
+    verification: author-documented
+    integration: unverified
+    claim: "原生采集、数据编译/准入、契约哈希、TBPTT 模仿训练和验证"
+    limits: "依赖外部数据、GPU 和匹配的 contract；不可把作者基准当独立复现"
+    evidence: https://github.com/IMAX9D/r0-elite-training/blob/a60db2bebdb1860bdce1f042149fa332264ca90e/README.md
+  - id: agent-environment--r0-elite-training
+    capability: agent-environment
+    project: r0-elite-training
+    reuse_level: R1
+    verification: author-documented
+    integration: unverified
+    claim: "为原生帧和动作数据提供模型训练与批次化数据后端"
+    limits: "不是可独立运行的战斗引擎；依赖上游场景与数据"
+    evidence: https://github.com/IMAX9D/r0-elite-training/blob/a60db2bebdb1860bdce1f042149fa332264ca90e/README.md
+  - id: replay-reconstruction--royaleapi-downloader
+    capability: replay-reconstruction
+    project: royaleapi-downloader
+    reuse_level: R1
+    verification: author-documented
+    integration: unverified
+    claim: "采集与标准化 RoyaleAPI 对局事件、赛季、卡组与塔兵记录"
+    limits: "采集事件不是完整状态；缺隐藏种子；网站访问与使用限制"
+    evidence: https://github.com/IMAX9D/royaleapi-downloader/blob/ed80af8eedecbd48e7a49babfee309f41b595e9d/README.md
+  - id: replay-to-learning--royaleapi-downloader
+    capability: replay-to-learning
+    project: royaleapi-downloader
+    reuse_level: R1
+    verification: author-documented
+    integration: unverified
+    claim: "SQLite 去重/断点恢复的对局数据收集为下游模仿学习供给素材"
+    limits: "只做采集，不保证重建原始战斗状态；站点条款需遵守"
+    evidence: https://github.com/IMAX9D/royaleapi-downloader/blob/ed80af8eedecbd48e7a49babfee309f41b595e9d/README.md
+  - id: replay-to-learning--cr-collector
+    capability: replay-to-learning
+    project: cr-collector
+    reuse_level: R0
+    verification: author-documented
+    integration: unverified
+    claim: "志愿者浏览器会话采集与集中任务服务之间的采集协议"
+    limits: "需协调服务和有效会话，作者明确指出 RoyaleAPI 自动化访问的条款风险"
+    evidence: https://github.com/arronwang01/cr-collector/blob/e70ceafcfd64d78d332dae16ccfc05071da3a803/README.md

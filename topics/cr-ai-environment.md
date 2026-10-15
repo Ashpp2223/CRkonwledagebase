@@ -4,7 +4,7 @@ title: "AI 训练环境与决策"
 type: topic
 status: investigating
 verification: author-documented
-projects: [firstlight-cr, jason-battle-engine, jason-simulator, tencent-model-harness, hasty-cr, royalegym, royalesim, crforge, katacr, itzik-clashenv, clashai-vegetableleaf, crsim-agent-larkindaniel, build-a-bot, detection-dataset, claude-royale, native-sandbox-imax9d, r0-elite-imax9d]
+projects: [firstlight-cr, jason-battle-engine, jason-simulator, tencent-model-harness, hasty-cr, royalegym, royalesim, crforge, katacr, itzik-clashenv, clashai-vegetableleaf, crsim-agent-larkindaniel, build-a-bot, detection-dataset, claude-royale, native-sandbox-imax9d, r0-elite-imax9d, cr-native-sandbox, clapha-engine, r0-elite-training, royaleapi-downloader, cr-collector]
 last_reviewed: null
 ---
 
@@ -51,3 +51,11 @@ last_reviewed: null
 
 - [CR Native Sandbox](../projects/native-sandbox-imax9d.md)：原版 Android x86_64 `libg.so` 离线无画面战斗宿主；通过 JniHost/AssetManager/JNI 初始化，提供 reset、step、双方动作、原生观测与 JSON-line Worker。
 - [R0 Elite Training](../projects/r0-elite-imax9d.md)：原生对局采集数据的版本化编译/准入/认证/训练流程，包含 tensorizer、分批训练、后端共享内存和一致性测试。
+
+## 2026-10-15 开发者网络新增来源
+
+- [CR Native Sandbox](../projects/cr-native-sandbox.md)：参见固定构建及相应技术边界；统一评价以实现登记为准。
+- [Clapha Engine (private)](../projects/clapha-engine.md)：参见固定构建及相应技术边界；统一评价以实现登记为准。
+- [R0 Elite Training](../projects/r0-elite-training.md)：参见固定构建及相应技术边界；统一评价以实现登记为准。
+- [RoyaleAPI Downloader](../projects/royaleapi-downloader.md)：参见固定构建及相应技术边界；统一评价以实现登记为准。
+- [Arron CR Collector](../projects/cr-collector.md)：参见固定构建及相应技术边界；统一评价以实现登记为准。

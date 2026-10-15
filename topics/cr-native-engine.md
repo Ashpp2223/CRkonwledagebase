@@ -4,7 +4,7 @@ title: "原生战斗引擎"
 type: topic
 status: investigating
 verification: author-documented
-projects: [firstlight-cr, jason-battle-engine, replay-studio, ashpp-replay, native-sandbox-imax9d, native-bionic-imax9d, fl-royale]
+projects: [firstlight-cr, jason-battle-engine, replay-studio, ashpp-replay, native-sandbox-imax9d, native-bionic-imax9d, fl-royale, cr-native-sandbox, cr-native-linux-bionic, clapha-engine]
 last_reviewed: null
 ---
 
@@ -40,3 +40,9 @@ last_reviewed: null
 - [CR Native Sandbox](../projects/native-sandbox-imax9d.md)：原版 Android x86_64 `libg.so` 离线无画面战斗宿主；通过 JniHost/AssetManager/JNI 初始化，提供 reset、step、双方动作、原生观测与 JSON-line Worker。
 - [CR Native Linux Bionic](../projects/native-bionic-imax9d.md)：在 Linux x86_64 宿主中部署 Android API 31 Bionic linker/ART 和 Binderless JniHost，直接驱动版本固定的原版游戏 Worker，不启动 AVD/KVM。
 - [FL Royale](../projects/fl-royale.md)：基于 FirstLight 的 Android 离线可玩客户端，提供原生战斗画面、大厅、卡组、对战 AI 及本地流程。
+
+## 2026-10-15 开发者网络新增来源
+
+- [CR Native Sandbox](../projects/cr-native-sandbox.md)：参见固定构建及相应技术边界；统一评价以实现登记为准。
+- [CR Native Linux Bionic](../projects/cr-native-linux-bionic.md)：参见固定构建及相应技术边界；统一评价以实现登记为准。
+- [Clapha Engine (private)](../projects/clapha-engine.md)：参见固定构建及相应技术边界；统一评价以实现登记为准。

@@ -36,3 +36,16 @@ relationships:
     to: native-sandbox-imax9d
     type: engine-uses
     evidence: https://github.com/vegetableleaf/ClashAI/blob/218554aee8b7be9b3ad5298349853d6fe747c90f/README.md
+
+  - from: cr-native-linux-bionic
+    to: cr-native-sandbox
+    type: runtime-host-for
+    evidence: https://github.com/IMAX9D/cr-native-linux-bionic/blob/7840e4e920fb8c4d63efb16333c9451a16343c76/README.md
+  - from: jason-battle-engine
+    to: clapha-engine
+    type: engine-uses
+    evidence: https://github.com/Jason-XII/clash-royale-battle-engine/blob/70a08af6807fa4d59a11c7d52bf6272a96afe30c/clapha.py
+  - from: clashai-vegetableleaf
+    to: cr-native-sandbox
+    type: engine-uses
+    evidence: https://github.com/vegetableleaf/ClashAI/blob/ec4ef8e9dcaaaa4169ff8768bd36323e93840f9c/research/CR_NATIVE_SANDBOX_ASSESSMENT.md

@@ -4,7 +4,7 @@ title: "回放、快照与状态恢复"
 type: topic
 status: investigating
 verification: author-documented
-projects: [firstlight-cr, jason-battle-engine, replay-studio, ashpp-replay, clashai-vegetableleaf, fl-royale, royaleapi-downloader-imax9d, cr-collector-arron]
+projects: [firstlight-cr, jason-battle-engine, replay-studio, ashpp-replay, clashai-vegetableleaf, fl-royale, royaleapi-downloader-imax9d, cr-collector-arron, cr-native-sandbox, royaleapi-downloader]
 last_reviewed: null
 ---
 
@@ -42,3 +42,8 @@ last_reviewed: null
 - [FL Royale](../projects/fl-royale.md)：基于 FirstLight 的 Android 离线可玩客户端，提供原生战斗画面、大厅、卡组、对战 AI 及本地流程。
 - [RoyaleAPI Downloader](../projects/royaleapi-downloader-imax9d.md)：对局事件与相关元数据的批量采集：SQLite 持久化队列、跨玩家去重、固定赛季、增量回填和离线校验。
 - [Arron CR Collector](../projects/cr-collector-arron.md)：面向 RoyaleAPI 公开对局信息的志愿者采集客户端与协调服务，含分布式采集、进度恢复和透明的运行范围说明。
+
+## 2026-10-15 开发者网络新增来源
+
+- [CR Native Sandbox](../projects/cr-native-sandbox.md)：参见固定构建及相应技术边界；统一评价以实现登记为准。
+- [RoyaleAPI Downloader](../projects/royaleapi-downloader.md)：参见固定构建及相应技术边界；统一评价以实现登记为准。
