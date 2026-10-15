@@ -4,7 +4,7 @@ title: "原生战斗引擎"
 type: topic
 status: investigating
 verification: author-documented
-projects: [firstlight-cr, jason-battle-engine, replay-studio, ashpp-replay, native-sandbox-imax9d, native-bionic-imax9d, fl-royale, cr-native-sandbox, cr-native-linux-bionic, clapha-engine]
+projects: [firstlight-cr, jason-battle-engine, replay-studio, ashpp-replay, native-sandbox-imax9d, native-bionic-imax9d, fl-royale, clapha-engine]
 last_reviewed: null
 ---
 
@@ -41,8 +41,4 @@ last_reviewed: null
 - [CR Native Linux Bionic](../projects/native-bionic-imax9d.md)：在 Linux x86_64 宿主中部署 Android API 31 Bionic linker/ART 和 Binderless JniHost，直接驱动版本固定的原版游戏 Worker，不启动 AVD/KVM。
 - [FL Royale](../projects/fl-royale.md)：基于 FirstLight 的 Android 离线可玩客户端，提供原生战斗画面、大厅、卡组、对战 AI 及本地流程。
 
-## 2026-10-15 开发者网络新增来源
-
-- [CR Native Sandbox](../projects/cr-native-sandbox.md)：参见固定构建及相应技术边界；统一评价以实现登记为准。
-- [CR Native Linux Bionic](../projects/cr-native-linux-bionic.md)：参见固定构建及相应技术边界；统一评价以实现登记为准。
-- [Clapha Engine (private)](../projects/clapha-engine.md)：参见固定构建及相应技术边界；统一评价以实现登记为准。
+- [Clapha Engine（仅公开适配器）](../projects/clapha-engine.md)：Jason 的 `clapha.py` 提供 Linux x86_64 原生环境调用，底层 loader 私有、无法独立核查。

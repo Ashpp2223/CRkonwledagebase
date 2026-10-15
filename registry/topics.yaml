@@ -2,7 +2,7 @@ topics:
   - id: cr-native-engine
     title: "原生战斗引擎"
     path: topics/cr-native-engine.md
-    projects: [firstlight-cr, jason-battle-engine, replay-studio, ashpp-replay, native-sandbox-imax9d, native-bionic-imax9d, fl-royale]
+    projects: [firstlight-cr, jason-battle-engine, replay-studio, ashpp-replay, native-sandbox-imax9d, native-bionic-imax9d, fl-royale, clapha-engine]
   - id: cr-battle-simulation
     title: "独立战斗模拟器"
     path: topics/cr-battle-simulation.md
@@ -14,7 +14,7 @@ topics:
   - id: cr-ai-environment
     title: "AI 训练环境与决策"
     path: topics/cr-ai-environment.md
-    projects: [firstlight-cr, jason-battle-engine, jason-simulator, tencent-model-harness, hasty-cr, royalegym, royalesim, crforge, katacr, itzik-clashenv, clashai-vegetableleaf, crsim-agent-larkindaniel, build-a-bot, detection-dataset, claude-royale, native-sandbox-imax9d, r0-elite-imax9d]
+    projects: [firstlight-cr, jason-battle-engine, jason-simulator, tencent-model-harness, hasty-cr, royalegym, royalesim, crforge, katacr, itzik-clashenv, clashai-vegetableleaf, crsim-agent-larkindaniel, build-a-bot, detection-dataset, claude-royale, native-sandbox-imax9d, r0-elite-imax9d, clapha-engine]
   - id: cr-runtime-observation
     title: "运行时游戏状态观测"
     path: topics/cr-runtime-observation.md

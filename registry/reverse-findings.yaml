@@ -188,28 +188,6 @@ findings:
     claim: "v7 门禁 G1–G4 为离线检查及编译；G5 Android 实测与 G6 Linux worker shell 校验未通过"
     reproduced_by_middle_platform: false
 
-  - id: re-sandbox-x86-worker
-    title: "原生 x86_64 无画面 reset/step Worker"
-    category: native
-    path: research/reverse-engineering/client-upgrade-160402.md
-    source: https://github.com/IMAX9D/cr-native-sandbox/blob/8c8443e26c4250f3ae8cd5d09298080ae9d8a782/README.md
-    source_sha: 8c8443e26c4250f3ae8cd5d09298080ae9d8a782
-    verification: author-documented
-    applicability: exact-build
-    game_build: "15.535.29 / x86_64"
-    claim: "作者描述原始 libg 驱动的 reset/step 与双边命令，需构建锁定；不支持原生帧"
-    reproduced_by_middle_platform: false
-  - id: re-bionic-userland-host
-    title: "Linux Bionic/ART 不依赖 AVD 的原生宿主"
-    category: native
-    path: research/reverse-engineering/client-upgrade-160402.md
-    source: https://github.com/IMAX9D/cr-native-linux-bionic/blob/7840e4e920fb8c4d63efb16333c9451a16343c76/README.md
-    source_sha: 7840e4e920fb8c4d63efb16333c9451a16343c76
-    verification: author-documented
-    applicability: exact-build
-    game_build: "15.535.29 / x86_64 / Android userland 31"
-    claim: "Linux 以 Android linker、ART、属性区和 JNI Host 驱动原生战斗 Worker，未证明支持其他 ABI/版本"
-    reproduced_by_middle_platform: false
   - id: re-clapha-private-loader
     title: "私有 Clapha 的 Linux 进程内原生战斗封装"
     category: native
@@ -220,17 +198,6 @@ findings:
     applicability: exact-build
     game_build: "150535029 / x86_64 Linux（公开调用方）"
     claim: "公开 ClaphaEngine 包装层直接调用 CrxEnv.create_match 与 step；私有 loader/快照不可审查"
-    reproduced_by_middle_platform: false
-  - id: re-oracle-16402-static
-    title: "16.402.12 生命周期静态定位与运行关卡"
-    category: native
-    path: research/reverse-engineering/client-upgrade-160402.md
-    source: https://github.com/vegetableleaf/ClashAI/blob/ec4ef8e9dcaaaa4169ff8768bd36323e93840f9c/scratchpad/gauntlet/L74/oracle/linux/qualify/jnihost_ro/v7/GATES.md
-    source_sha: ec4ef8e9dcaaaa4169ff8768bd36323e93840f9c
-    verification: author-documented
-    applicability: exact-build
-    game_build: "160402012 / x86_64"
-    claim: "作者 v7 离线源码和编译关卡通过，但 Android 目标机运行 G5 未完成；不能当成已可运行新版离线引擎"
     reproduced_by_middle_platform: false
   - id: re-tencent-live-poststep
     title: "腾讯 38.4.2 step Hook 与部分状态观测"

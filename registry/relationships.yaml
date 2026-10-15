@@ -37,10 +37,6 @@ relationships:
     type: engine-uses
     evidence: https://github.com/vegetableleaf/ClashAI/blob/218554aee8b7be9b3ad5298349853d6fe747c90f/README.md
 
-  - from: cr-native-linux-bionic
-    to: cr-native-sandbox
-    type: runtime-host-for
-    evidence: https://github.com/IMAX9D/cr-native-linux-bionic/blob/7840e4e920fb8c4d63efb16333c9451a16343c76/README.md
   - from: jason-battle-engine
     to: clapha-engine
     type: engine-uses
