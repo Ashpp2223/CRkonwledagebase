@@ -60,3 +60,10 @@ last_reviewed: null
 | [CRSim Agent](../../projects/crsim-agent-larkindaniel.md) | PPO checkpoint 重现与信息边界审计；R1 |
 
 [技术组合地图](../../landscape/composition-patterns.md) · [高价值项目调查](../../landscape/2026-10-13-landscape.md)
+
+## 2026-10-15 新增训练与宿主分层
+
+- [CR Native Sandbox](../../projects/cr-native-sandbox.md) 提供固定构建下的真实原生 headless 战斗。
+- [Clapha Engine](../../projects/clapha-engine.md) 在 Jason 的公开代码中供 PPO 进程内模拟；底层仓库私有，尚不能作为公开可审引擎。
+- [R0 Elite Training](../../projects/r0-elite-training.md) 负责数据契约和 IL/PPO 训练，不是战斗逻辑实现。
+- [RoyaleAPI Downloader](../../projects/royaleapi-downloader.md) 与 [Arron CR Collector](../../projects/cr-collector.md) 是外部回放数据供给，必须和原生观测及下游训练的来源分开记录。

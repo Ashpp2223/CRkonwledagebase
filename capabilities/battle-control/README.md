@@ -55,3 +55,13 @@ last_reviewed: null
 - 可复用的自动化端到端验收测试；目前只有**测试说明**，未有实测结果。
 
 [返回能力目录](../README.md) · [查看快照能力](../snapshot-recovery/README.md)
+
+## 新发现的原生宿主（2026-10-15）
+
+| 项目 | 已有证据 | 接入记谱器的主要差距 |
+| --- | --- | --- |
+| [CR Native Sandbox](../../projects/cr-native-sandbox.md) | 15.535.29 原生 libg、无画面 reset/step，作者说明与 API | 无原生帧、未证实跨历史状态快照 |
+| [CR Native Linux Bionic](../../projects/cr-native-linux-bionic.md) | Linux 无 AVD/KVM 运行同构建 x86_64 Worker | 版本与 ABI 约束、渲染和快照接口缺失 |
+| [Clapha Engine（私有）](../../projects/clapha-engine.md) | [Jason 公开的 ClaphaEngine](https://github.com/Jason-XII/clash-royale-battle-engine/blob/70a08af6807fa4d59a11c7d52bf6272a96afe30c/clapha.py) 显示 `create_match/step` | 不能直接取得底层源码；不证明画面或快照 |
+
+[16.402.12 静态逆向与未完成关卡](../../research/reverse-engineering/client-upgrade-160402.md) 单独区分新构建；以上旧版本结论不可直接搬用。单项评级以实现矩阵为准。

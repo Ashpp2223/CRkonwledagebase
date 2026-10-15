@@ -25,6 +25,8 @@
 
 **[逆向工程知识中心](research/reverse-engineering/README.md)**：APK/Native、运行时内存、战斗对象布局、历史网络协议、资源格式、版本复验与 [17 条版本绑定的发现记录](registry/reverse-findings.yaml)。这是独立的证据型知识层，并非运行时组件。
 
+- **[2026-10-15 开发者网络与新仓库调查](landscape/2026-10-15-developer-network.md)**：从开发者公开仓库及已确认的 Fork/协作关系发现原生宿主、私有 Clapha、数据与训练线索；不可访问的 Star/Follow 图谱明确标注。
+- **[新版 16.402.12 原生生命周期研究](research/reverse-engineering/client-upgrade-160402.md)**：区分静态定位、源码编译与真正的新版离线原生执行。
 - **[2026 年 GitHub 生态技术调查](landscape/2026-10-13-landscape.md)**：高价值项目与配套研究、优先级 A/B/C、排除理由及已知失效。
 - **[可组合的技术链路](landscape/composition-patterns.md)**：原生→模拟→搜索、回放→训练、视觉→分析、资源→校准四条路线。
 - **[2026-10-15 研究者项目/Fork 网络](landscape/2026-10-15-source-network.md)**：新增 Linux 原生宿主、可玩离线壳、回放采集和旧版 Fork 差异；[新版战斗迁移进度](research/reverse-engineering/client-build-migration-2026-10.md)。
@@ -32,7 +34,7 @@
 
 ## 知识研究与复用
 
-[知识生命周期与质量标准](docs/knowledge-workflow.md) · [知识笔记实例：四种状态恢复](research/knowledge-notes/snapshot-semantics.md) · [知识研究 / 综合 / 应用 Skills](docs/skills.md)
+[知识生命周期与质量标准](docs/knowledge-workflow.md) · [原生引擎宿主架构的可迁移知识](research/knowledge-notes/native-runtime-hosting.md) · [知识笔记实例：四种状态恢复](research/knowledge-notes/snapshot-semantics.md) · [知识研究 / 综合 / 应用 Skills](docs/skills.md)
 
 ## 项目与证据
 

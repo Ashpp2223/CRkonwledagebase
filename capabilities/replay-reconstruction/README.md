@@ -53,3 +53,11 @@ last_reviewed: null
 | [ClashAI](../../projects/clashai-vegetableleaf.md) | 真人回放在原生环境重驱，用于训练数据加工；R1 |
 
 [技术组合地图](../../landscape/composition-patterns.md) · [高价值项目调查](../../landscape/2026-10-13-landscape.md)
+
+## 2026-10-15 发现：数据来源与原生重驱应分层
+
+- [RoyaleAPI Downloader](../../projects/royaleapi-downloader.md) 做上游对局抓取、去重与标准化，**不是**原生战斗执行器。
+- [CR Native Sandbox](../../projects/cr-native-sandbox.md) 执行固定构建原生回放重驱；即使所有已知动作被接受，也不证明隐藏初手和种子恢复准确。
+- [ClashAI 的实验记录](../../projects/clashai-vegetableleaf.md) 提供作者对原生重驱可复现性和拒绝动作的测量路径；由作者测量，不等于中台重测。
+
+[开发者网络调查](../../landscape/2026-10-15-developer-network.md)

@@ -5,3 +5,5 @@
 - [快照、深拷贝、序列化与动作重放的区别](snapshot-semantics.md)：同样“恢复局面”的需求，为什么实际实现不能直接互换。
 
 新笔记先用 [知识模板](../../templates/knowledge-note.md) 判断是否真的产生了新结论；与已有技术专题重复的材料应优先修改 [topics](../../topics/README.md)。知识收录、证据审核、归纳和应用的流程见 [知识生命周期](../../docs/knowledge-workflow.md)。
+
+- [原生战斗的四种宿主方式](native-runtime-hosting.md)：Android ARM64 原生画面、Android x86_64 无窗口 Worker、Linux Bionic 及私有 Clapha 进程内 Loader 的真实差别。

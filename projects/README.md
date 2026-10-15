@@ -51,3 +51,16 @@
 | [Arron CR Collector](cr-collector-arron.md) | 公开回放协作采集 |
 
 [作者/Fork/依赖追踪与不纳入理由](../landscape/2026-10-15-source-network.md)
+
+## 2026-10-15 开发者网络发现
+
+| 项目 | 关键能力 |
+| --- | --- |
+| [CR Native Sandbox](cr-native-sandbox.md) | 原生 15.535.29 x86_64 无画面 reset/step / replay |
+| [CR Native Linux Bionic](cr-native-linux-bionic.md) | 无 AVD/KVM 直接部署原生 Worker |
+| [Clapha Engine（私有）](clapha-engine.md) | Jason 公布的 Linux x86_64 进程内原生控制封装，loader 不可审 |
+| [R0 Elite Training](r0-elite-training.md) | 数据契约、原生样本编译、TBPTT 模仿训练验证 |
+| [RoyaleAPI Downloader](royaleapi-downloader.md) | 对局事件持久采集、队列去重和采集校验 |
+| [Arron CR Collector](cr-collector.md) | 分布式志愿者采集/协调（注意网站使用条款） |
+
+开发者与明确 Fork 关系及未收录原因见 [网络调查](../landscape/2026-10-15-developer-network.md)。

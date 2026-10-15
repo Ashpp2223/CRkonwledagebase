@@ -11,6 +11,7 @@
 | 原生结构布局与游戏规则如何形成可测试证据 | [原生布局与战斗语义](native-layouts.md) | [FirstLight C++ 结构约束](https://github.com/Jaasssoooonnnnn/FirstLight_CR/blob/3ade158c52bf33de3ffcea600ce380946b7de0d8/native_runner/probe/combat_deployment_layout.h) |
 | 从网络数据能确认什么 | [协议与消息史](protocol-history.md) | [旧版消息定义](https://github.com/royale-proxy/cr-messages) |
 | SC、CSV 等游戏资源怎样研究 | [资源格式研究](resource-formats.md) | [cr-sc-dump](https://github.com/123456abcdef/cr-sc-dump) |
+| 16.402.12 是否已经有独立新版离线引擎 | [新版生命周期证据与缺口](client-upgrade-160402.md) | [vegetableleaf Oracle v7](https://github.com/vegetableleaf/ClashAI/blob/ec4ef8e9dcaaaa4169ff8768bd36323e93840f9c/scratchpad/gauntlet/L74/oracle/linux/qualify/jnihost_ro/v7/GATES.md) |
 | 版本升级后旧结论还能不能用 | [构建与偏移复验](version-revalidation.md) | [腾讯 Overlay 失效案例](https://github.com/ak1NaN/ClashRoyale-tencent-overlay) |
 | 离线引擎在 15.535/16.402/腾讯 38.4.2 分别完成了什么 | [跨构建原生宿主进展](client-build-migration-2026-10.md) | [ClashAI ORACLE v7 门禁](https://github.com/vegetableleaf/ClashAI/blob/218554aee8b7be9b3ad5298349853d6fe747c90f/scratchpad/gauntlet/L74/oracle/linux/qualify/jnihost_ro/v7/GATES.md) |
 | 怎样保存 AI/人工研究的假设、证据与失败 | [研究方法](methodology.md) | [逆向发现机器索引](../../registry/reverse-findings.yaml) |
@@ -23,6 +24,13 @@
 - [FirstLight_CR](https://github.com/Jaasssoooonnnnn/FirstLight_CR)：Native Probe、版本相关布局、原生行为测试和训练层契约。
 - [Jason-XII/clash-royale-battle-engine](https://github.com/Jason-XII/clash-royale-battle-engine)：将原生战斗封装为客户端 API 的研究。
 - [ak1NaN Tencent Overlay](https://github.com/ak1NaN/ClashRoyale-tencent-overlay) 与 [Model Harness](https://github.com/ak1NaN/ClashRoyale-tencent-model-harness)：不同客户端偏移移植、版本失效及原生数据映射。
+
+**新的原生宿主与版本迁移资料**
+
+- [CR Native Sandbox](../../projects/cr-native-sandbox.md)：15.535.29 原始 `libg` 无画面 Worker；[Linux Bionic](../../projects/cr-native-linux-bionic.md) 在同版本消除 AVD/KVM 依赖。
+- [Clapha Engine（私有）](../../projects/clapha-engine.md)：Jason 的公开包装层证明使用了另一条 Linux 进程内加载路线，但无法审查私有 loader。
+- [vegetableleaf Oracle 16.402.12](client-upgrade-160402.md)：18 个生命周期静态条目和 Android 真正执行尚未通过的门槛；版本迁移不可误标已完成。
+- [原生宿主架构比较](../knowledge-notes/native-runtime-hosting.md)：区分有画面/无画面、Android/纯 Linux、进程内快照与对局重放。
 
 **历史协议与工具研究（2016–2018 年为主）**
 
