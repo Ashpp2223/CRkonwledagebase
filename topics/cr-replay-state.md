@@ -4,7 +4,7 @@ title: "回放、快照与状态恢复"
 type: topic
 status: investigating
 verification: author-documented
-projects: [firstlight-cr, jason-battle-engine, replay-studio, ashpp-replay, clashai-vegetableleaf, fl-royale, royaleapi-downloader-imax9d, cr-collector-arron]
+projects: [firstlight-cr, jason-battle-engine, replay-studio, ashpp-replay, clashai-vegetableleaf, fl-royale, royaleapi-downloader-imax9d, cr-collector-arron, royale-viser]
 last_reviewed: null
 ---
 
@@ -42,3 +42,7 @@ last_reviewed: null
 - [FL Royale](../projects/fl-royale.md)：基于 FirstLight 的 Android 离线可玩客户端，提供原生战斗画面、大厅、卡组、对战 AI 及本地流程。
 - [RoyaleAPI Downloader](../projects/royaleapi-downloader-imax9d.md)：对局事件与相关元数据的批量采集：SQLite 持久化队列、跨玩家去重、固定赛季、增量回填和离线校验。
 - [Arron CR Collector](../projects/cr-collector-arron.md)：面向 RoyaleAPI 公开对局信息的志愿者采集客户端与协调服务，含分布式采集、进度恢复和透明的运行范围说明。
+
+## 2026-10-15：轨迹浏览与原生快照的区别
+
+[RoyaleViser](../projects/royale-viser.md) 可以单步观看 RoyaleGym 运行时/保存的模拟战斗，属于 [战斗轨迹可视化](../capabilities/battle-visualization/README.md)。其 `.msgpack` 并非原生 `libg` 的可恢复战斗状态，不能直接支持任意 Tick 分叉或原生撤回。

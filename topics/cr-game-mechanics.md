@@ -37,3 +37,7 @@ last_reviewed: null
 
 - [ClashRoyaleEnv](../projects/itzik-clashenv.md)：C++17确定性模拟器、独立深拷贝分支、搜索教师、PPO训练及浏览器可视化。
 - [CRSim Agent](../projects/crsim-agent-larkindaniel.md)：冻结八卡的确定性模拟、信息公平性审计、PPO复现实验。
+
+## 2026-10-15：从单项规则反例校准机制
+
+[RoyaleSim 静态核查](../docs/source-audits/royalesim-client-parity-2026-10-15.md) 以 `combat.BUILDING_DEPLOY_LAST_TICK` 为具体例子，说明 Tesla 和普通建筑的部署末帧行为不能用一条笼统规则概括。通过固定客户端构建和 `calibration_overrides`，可以保存不同客户端规则而不污染原本的仿真基线。

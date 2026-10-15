@@ -4,7 +4,7 @@ title: "独立战斗模拟器"
 type: topic
 status: investigating
 verification: author-documented
-projects: [jason-simulator, hasty-cr, royalegym, royalesim, crforge, itzik-clashenv, crsim-agent-larkindaniel]
+projects: [jason-simulator, hasty-cr, royalegym, royalesim, crforge, itzik-clashenv, crsim-agent-larkindaniel, longling-simulator]
 last_reviewed: null
 ---
 
@@ -38,3 +38,9 @@ last_reviewed: null
 
 - [ClashRoyaleEnv](../projects/itzik-clashenv.md)：C++17确定性模拟器、独立深拷贝分支、搜索教师、PPO训练及浏览器可视化。
 - [CRSim Agent](../projects/crsim-agent-larkindaniel.md)：冻结八卡的确定性模拟、信息公平性审计、PPO复现实验。
+
+## 2026-10-15：世界模型实验与版本化规则检验
+
+[Longling CR Simulator × R2-Dreamer](../projects/longling-simulator.md) 是 Jason 的 Fork，重点是 Dreamer 的环境桥接和自博弈，而不是另一套独立原生规则。
+
+[RoyaleSim 版本校准审查](../docs/source-audits/royalesim-client-parity-2026-10-15.md) 说明利用客户端 `client_arms` 与逐 Tick `replay_parity` 构建机制差异的反例测试。可复用的是**差分验证方法**，不要直接把跨版本数值混用。

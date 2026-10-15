@@ -4,7 +4,7 @@ title: "运行时游戏状态观测"
 type: topic
 status: investigating
 verification: author-documented
-projects: [memory-reader, tencent-overlay, tencent-model-harness, katacr, clashai-vegetableleaf, build-a-bot, detection-dataset, claude-royale, card-tracker]
+projects: [memory-reader, tencent-overlay, tencent-model-harness, katacr, clashai-vegetableleaf, build-a-bot, detection-dataset, claude-royale, card-tracker, royale-bot]
 last_reviewed: null
 ---
 
@@ -42,3 +42,7 @@ last_reviewed: null
 - [AI Card Tracker](../projects/card-tracker.md)：早期CNN卡牌跟踪、循环和圣水估计。
 
 逆向方法与版本证据另见 [逆向知识中心](../research/reverse-engineering/README.md) 和 [相关研究](../research/reverse-engineering/runtime-memory.md)。
+
+## 2026-10-15：设备端观测与策略执行案例
+
+[RoyaleBot](../projects/royale-bot.md) 的 Null's Royale / PC 模型联动可作为设备观测→策略决策→执行桥接参考。其限定客户端构建和独立 `rb-build` 前处理不构成通用内存读取 SDK。

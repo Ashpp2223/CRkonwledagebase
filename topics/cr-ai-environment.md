@@ -4,7 +4,7 @@ title: "AI 训练环境与决策"
 type: topic
 status: investigating
 verification: author-documented
-projects: [firstlight-cr, jason-battle-engine, jason-simulator, tencent-model-harness, hasty-cr, royalegym, royalesim, crforge, katacr, itzik-clashenv, clashai-vegetableleaf, crsim-agent-larkindaniel, build-a-bot, detection-dataset, claude-royale, native-sandbox-imax9d, r0-elite-imax9d, clapha-engine]
+projects: [firstlight-cr, jason-battle-engine, jason-simulator, tencent-model-harness, hasty-cr, royalegym, royalesim, crforge, katacr, itzik-clashenv, clashai-vegetableleaf, crsim-agent-larkindaniel, build-a-bot, detection-dataset, claude-royale, native-sandbox-imax9d, r0-elite-imax9d, clapha-engine, longling-simulator, royale-bot, royale-learn, royale-imitate]
 last_reviewed: null
 ---
 
@@ -53,3 +53,12 @@ last_reviewed: null
 - [R0 Elite Training](../projects/r0-elite-imax9d.md)：原生对局采集数据的版本化编译/准入/认证/训练流程，包含 tensorizer、分批训练、后端共享内存和一致性测试。
 
 - [Clapha Engine（仅公开适配器）](../projects/clapha-engine.md)：Jason 的 `clapha.py` 提供 Linux x86_64 原生环境调用，底层 loader 私有、无法独立核查。
+
+## 2026-10-15：从环境到训练、模仿和部署
+
+- [Longling R2-Dreamer](../projects/longling-simulator.md)：模拟器环境转换、world model、自博弈对手池；静态审查 [环境接口](../docs/source-audits/longling-r2dreamer-2026-10-15.md)。
+- [RoyaleLearn](../projects/royale-learn.md)：训练优化、奖励和 checkpoint 管理。
+- [RoyaleImitate](../projects/royale-imitate.md)：教师策略导入、模型摘要、warm start 和模仿约束。
+- [RoyaleBot](../projects/royale-bot.md)：特定 Null's Android 客户端与 PC 端模型之间的部署桥接。
+
+这些项目的模型契约、客户端版本和数据来源彼此不同。训练成功不能自动推导正式游戏或原生引擎中的策略有效性。
