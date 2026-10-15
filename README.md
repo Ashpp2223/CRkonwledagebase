@@ -30,6 +30,7 @@
 - **[2026 年 GitHub 生态技术调查](landscape/2026-10-13-landscape.md)**：高价值项目与配套研究、优先级 A/B/C、排除理由及已知失效。
 - **[可组合的技术链路](landscape/composition-patterns.md)**：原生→模拟→搜索、回放→训练、视觉→分析、资源→校准四条路线。
 - **[2026-10-15 研究者项目/Fork 网络](landscape/2026-10-15-source-network.md)**：新增 Linux 原生宿主、可玩离线壳、回放采集和旧版 Fork 差异；[新版战斗迁移进度](research/reverse-engineering/client-build-migration-2026-10.md)。
+- **[2026-10-15 社交图复查与 RoyaleGym 模块补充](landscape/2026-10-15-social-graph-followup.md)**：核查四位开发者账号的可访问边界，新增 RoyaleBot、RoyaleViser、RoyaleLearn、RoyaleImitate 候选研究；核对 FirstLight 派生 Fork 的增量。
 - **[衍生战斗力路线图](landscape/roadmap-derivative-power.md)**：接下来哪些底层验证和文档资产最能减少重复研究。
 
 ## 知识研究与复用
