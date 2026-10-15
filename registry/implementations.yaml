@@ -586,3 +586,130 @@ implementations:
     claim: "利用原生引擎回放真人命令并导出观察"
     limits: "尚未经中台独立集成验证，需固定游戏/数据/运行环境及相关许可证"
     evidence: https://github.com/vegetableleaf/ClashAI
+
+  - id: battle-control--native-sandbox-imax9d
+    capability: battle-control
+    project: native-sandbox-imax9d
+    reuse_level: R1
+    verification: author-documented
+    integration: unverified
+    claim: "x86_64 原生 libg 无画面战斗 reset/step/动作和状态读出"
+    limits: "固定 15.535.29，精确 APK/资源/Bionic/JNI，未见通用画面或完整快照"
+    evidence: https://github.com/IMAX9D/cr-native-sandbox/blob/8c8443e26c4250f3ae8cd5d09298080ae9d8a782/README.md
+  - id: battle-control--native-bionic-imax9d
+    capability: battle-control
+    project: native-bionic-imax9d
+    reuse_level: R1
+    verification: author-documented
+    integration: unverified
+    claim: "Linux 用户态直接托管版本锁定的原生游戏 Worker，不需 AVD/KVM"
+    limits: "依赖 Android31 用户态及匹配 x86_64 libg；是宿主方案，不是新游戏规则"
+    evidence: https://github.com/IMAX9D/cr-native-linux-bionic/blob/7840e4e920fb8c4d63efb16333c9451a16343c76/README.md
+  - id: battle-control--fl-royale
+    capability: battle-control
+    project: fl-royale
+    reuse_level: R1
+    verification: author-documented
+    integration: unverified
+    claim: "基于 FirstLight 的 Android 原生离线可玩战斗壳"
+    limits: "客户端可玩不等于可外部 reset/step/snapshot；需自己的配套资源"
+    evidence: https://github.com/Jaasssoooonnnnn/FL-Royale/blob/cf16ef1759f465d74f1797c5e92fe3d939bbb4fc/README.md
+  - id: state-observation--native-sandbox-imax9d
+    capability: state-observation
+    project: native-sandbox-imax9d
+    reuse_level: R1
+    verification: author-documented
+    integration: unverified
+    claim: "原生战斗状态完整或紧凑观测、手牌与单位"
+    limits: "仅精确版本，观测并非直接等价于游戏画面玩家可见信息"
+    evidence: https://github.com/IMAX9D/cr-native-sandbox/blob/8c8443e26c4250f3ae8cd5d09298080ae9d8a782/README.md
+  - id: agent-environment--native-sandbox-imax9d
+    capability: agent-environment
+    project: native-sandbox-imax9d
+    reuse_level: R1
+    verification: author-documented
+    integration: unverified
+    claim: "原生无界面环境和自博弈训练上游数据源"
+    limits: "环境的版本与卡牌/游戏资源要求锁定"
+    evidence: https://github.com/IMAX9D/cr-native-sandbox/blob/8c8443e26c4250f3ae8cd5d09298080ae9d8a782/README.md
+  - id: agent-environment--native-bionic-imax9d
+    capability: agent-environment
+    project: native-bionic-imax9d
+    reuse_level: R1
+    verification: author-documented
+    integration: unverified
+    claim: "Linux 多槽原生 Worker 供离线训练或批量实验"
+    limits: "需 Linux/Bionic 系统部署，不直接支持 ARM64"
+    evidence: https://github.com/IMAX9D/cr-native-linux-bionic/blob/7840e4e920fb8c4d63efb16333c9451a16343c76/README.md
+  - id: agent-environment--r0-elite-imax9d
+    capability: agent-environment
+    project: r0-elite-imax9d
+    reuse_level: R1
+    verification: author-documented
+    integration: unverified
+    claim: "编译后的训练数据集/模型/批量训练与等价性验证流程"
+    limits: "模型与数据契约版本相互绑定；不提供配套数据"
+    evidence: https://github.com/IMAX9D/r0-elite-training/blob/a60db2bebdb1860bdce1f042149fa332264ca90e/README.md
+  - id: replay-to-learning--native-sandbox-imax9d
+    capability: replay-to-learning
+    project: native-sandbox-imax9d
+    reuse_level: R1
+    verification: author-documented
+    integration: unverified
+    claim: "原生动作重演生成按 Tick 的训练状态/观测"
+    limits: "原始回放初手、等级、随机种子不一定齐备"
+    evidence: https://github.com/IMAX9D/cr-native-sandbox/blob/8c8443e26c4250f3ae8cd5d09298080ae9d8a782/README.md
+  - id: replay-to-learning--royaleapi-downloader-imax9d
+    capability: replay-to-learning
+    project: royaleapi-downloader-imax9d
+    reuse_level: R1
+    verification: author-documented
+    integration: unverified
+    claim: "赛季和玩家维度批量拉取回放事件与去重元数据"
+    limits: "上游 RoyaleAPI 访问与版权/会话限制，回放缺字段时不能称确定性完整"
+    evidence: https://github.com/IMAX9D/royaleapi-downloader/blob/ed80af8eedecbd48e7a49babfee309f41b595e9d/README.md
+  - id: replay-to-learning--r0-elite-imax9d
+    capability: replay-to-learning
+    project: r0-elite-imax9d
+    reuse_level: R1
+    verification: author-documented
+    integration: unverified
+    claim: "从原生采集帧生成通过准入/认证的模型训练样本"
+    limits: "训练数据和模型分发不在仓库，未独立验收"
+    evidence: https://github.com/IMAX9D/r0-elite-training/blob/a60db2bebdb1860bdce1f042149fa332264ca90e/README.md
+  - id: replay-to-learning--cr-collector-arron
+    capability: replay-to-learning
+    project: cr-collector-arron
+    reuse_level: R1
+    verification: author-documented
+    integration: unverified
+    claim: "公开回放采集协作与协调服务"
+    limits: "依赖 RoyaleAPI 访问政策，不提供逐 Tick 原生重演"
+    evidence: https://github.com/arronwang01/cr-collector/blob/e70ceafcfd64d78d332dae16ccfc05071da3a803/README.md
+  - id: replay-reconstruction--native-sandbox-imax9d
+    capability: replay-reconstruction
+    project: native-sandbox-imax9d
+    reuse_level: R1
+    verification: author-documented
+    integration: unverified
+    claim: "通过原生 Replay 初始化与逐 Tick 动作重驱还原对局"
+    limits: "无内置原生可视画面，重演相容不代表复原了所有隐含条件"
+    evidence: https://github.com/IMAX9D/cr-native-sandbox/blob/8c8443e26c4250f3ae8cd5d09298080ae9d8a782/README.md
+  - id: replay-reconstruction--fl-royale
+    capability: replay-reconstruction
+    project: fl-royale
+    reuse_level: R1
+    verification: author-documented
+    integration: unverified
+    claim: "离线客户端大厅和原生战斗画面可用于回放产品壳参考"
+    limits: "没有提供记谱器所需的分支复盘稳定接口"
+    evidence: https://github.com/Jaasssoooonnnnn/FL-Royale/blob/cf16ef1759f465d74f1797c5e92fe3d939bbb4fc/README.md
+  - id: asset-ingestion--sc-decoder-jason
+    capability: asset-ingestion
+    project: sc-decoder-jason
+    reuse_level: R1
+    verification: author-documented
+    integration: unverified
+    claim: "SC 资源精灵预处理和 pygame 动画预览"
+    limits: "不是现代全格式认证的解码器，不负责游戏内渲染"
+    evidence: https://github.com/Jason-XII/sc-decoder/blob/7b639d6b6a949522a71ebb8ae19552e58d71c157/README.md

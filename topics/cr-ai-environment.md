@@ -4,7 +4,7 @@ title: "AI 训练环境与决策"
 type: topic
 status: investigating
 verification: author-documented
-projects: [firstlight-cr, jason-battle-engine, jason-simulator, tencent-model-harness, hasty-cr, royalegym, royalesim, crforge, katacr, itzik-clashenv, clashai-vegetableleaf, crsim-agent-larkindaniel, build-a-bot, detection-dataset, claude-royale]
+projects: [firstlight-cr, jason-battle-engine, jason-simulator, tencent-model-harness, hasty-cr, royalegym, royalesim, crforge, katacr, itzik-clashenv, clashai-vegetableleaf, crsim-agent-larkindaniel, build-a-bot, detection-dataset, claude-royale, native-sandbox-imax9d, r0-elite-imax9d]
 last_reviewed: null
 ---
 
@@ -46,3 +46,8 @@ last_reviewed: null
 - [ClashRoyaleBuildABot](../projects/build-a-bot.md)：屏幕视觉检测器、结构化状态和动作策略分层。
 - [CR Detection Dataset](../projects/detection-dataset.md)：历史图像切片及合成目标检测样本生成方法。
 - [Claude Royale](../projects/claude-royale.md)：截图—LLM决策—输入的多智能体调度与UI生命周期经验。
+
+## 新增研究来源（2026-10-15）
+
+- [CR Native Sandbox](../projects/native-sandbox-imax9d.md)：原版 Android x86_64 `libg.so` 离线无画面战斗宿主；通过 JniHost/AssetManager/JNI 初始化，提供 reset、step、双方动作、原生观测与 JSON-line Worker。
+- [R0 Elite Training](../projects/r0-elite-imax9d.md)：原生对局采集数据的版本化编译/准入/认证/训练流程，包含 tensorizer、分批训练、后端共享内存和一致性测试。

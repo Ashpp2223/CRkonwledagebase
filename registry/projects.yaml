@@ -168,3 +168,52 @@ projects:
     verification: author-documented
     license: Apache-2.0
     topics: [cr-runtime-observation]
+  - id: native-sandbox-imax9d
+    title: "CR Native Sandbox"
+    repository: https://github.com/IMAX9D/cr-native-sandbox
+    path: projects/native-sandbox-imax9d.md
+    verification: author-documented
+    license: MIT
+    topics: [cr-native-engine, cr-ai-environment]
+  - id: native-bionic-imax9d
+    title: "CR Native Linux Bionic"
+    repository: https://github.com/IMAX9D/cr-native-linux-bionic
+    path: projects/native-bionic-imax9d.md
+    verification: author-documented
+    license: MIT
+    topics: [cr-native-engine]
+  - id: fl-royale
+    title: "FL Royale"
+    repository: https://github.com/Jaasssoooonnnnn/FL-Royale
+    path: projects/fl-royale.md
+    verification: author-documented
+    license: Apache-2.0
+    topics: [cr-native-engine, cr-replay-state]
+  - id: royaleapi-downloader-imax9d
+    title: "RoyaleAPI Downloader"
+    repository: https://github.com/IMAX9D/royaleapi-downloader
+    path: projects/royaleapi-downloader-imax9d.md
+    verification: author-documented
+    license: unknown
+    topics: [cr-replay-state]
+  - id: sc-decoder-jason
+    title: "Jason SC Decoder"
+    repository: https://github.com/Jason-XII/sc-decoder
+    path: projects/sc-decoder-jason.md
+    verification: author-documented
+    license: unknown
+    topics: [cr-assets-data]
+  - id: r0-elite-imax9d
+    title: "R0 Elite Training"
+    repository: https://github.com/IMAX9D/r0-elite-training
+    path: projects/r0-elite-imax9d.md
+    verification: author-documented
+    license: MIT
+    topics: [cr-ai-environment]
+  - id: cr-collector-arron
+    title: "Arron CR Collector"
+    repository: https://github.com/arronwang01/cr-collector
+    path: projects/cr-collector-arron.md
+    verification: author-documented
+    license: unknown
+    topics: [cr-replay-state]

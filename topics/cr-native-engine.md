@@ -4,7 +4,7 @@ title: "原生战斗引擎"
 type: topic
 status: investigating
 verification: author-documented
-projects: [firstlight-cr, jason-battle-engine, replay-studio, ashpp-replay]
+projects: [firstlight-cr, jason-battle-engine, replay-studio, ashpp-replay, native-sandbox-imax9d, native-bionic-imax9d, fl-royale]
 last_reviewed: null
 ---
 
@@ -34,3 +34,9 @@ last_reviewed: null
 [能力总入口](../capabilities/README.md) · [项目索引](../projects/README.md)
 
 逆向方法与版本证据另见 [逆向知识中心](../research/reverse-engineering/README.md) 和 [相关研究](../research/reverse-engineering/native-layouts.md)。
+
+## 新增研究来源（2026-10-15）
+
+- [CR Native Sandbox](../projects/native-sandbox-imax9d.md)：原版 Android x86_64 `libg.so` 离线无画面战斗宿主；通过 JniHost/AssetManager/JNI 初始化，提供 reset、step、双方动作、原生观测与 JSON-line Worker。
+- [CR Native Linux Bionic](../projects/native-bionic-imax9d.md)：在 Linux x86_64 宿主中部署 Android API 31 Bionic linker/ART 和 Binderless JniHost，直接驱动版本固定的原版游戏 Worker，不启动 AVD/KVM。
+- [FL Royale](../projects/fl-royale.md)：基于 FirstLight 的 Android 离线可玩客户端，提供原生战斗画面、大厅、卡组、对战 AI 及本地流程。

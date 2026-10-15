@@ -4,7 +4,7 @@ title: "资源与数据解析"
 type: topic
 status: investigating
 verification: author-documented
-projects: [sc-downloader, sc-extract, supercell-csv-decoder, royaleapi-static-data]
+projects: [sc-downloader, sc-extract, supercell-csv-decoder, royaleapi-static-data, sc-decoder-jason]
 last_reviewed: null
 ---
 
@@ -37,3 +37,7 @@ last_reviewed: null
 - [RoyaleAPI Static Data](../projects/royaleapi-static-data.md)：第三方卡牌JSON及显示元数据历史参考。
 
 逆向方法与版本证据另见 [逆向知识中心](../research/reverse-engineering/README.md) 和 [相关研究](../research/reverse-engineering/resource-formats.md)。
+
+## 新增研究来源（2026-10-15）
+
+- [Jason SC Decoder](../projects/sc-decoder-jason.md)：SC 格式精灵/动画处理工具，使用 sc_pipeline.py 预处理，并以 pygame 播放角色或表情动画。
