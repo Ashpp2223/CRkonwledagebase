@@ -41,3 +41,24 @@ relationships:
     to: clapha-engine
     type: engine-uses
     evidence: https://github.com/Jason-XII/clash-royale-battle-engine/blob/70a08af6807fa4d59a11c7d52bf6272a96afe30c/clapha.py
+
+  - from: longling-simulator
+    to: jason-simulator
+    type: derives-from
+    evidence: https://github.com/longlingking/clash-royale-simulator
+  - from: royale-learn
+    to: royalegym
+    type: trains-on
+    evidence: https://github.com/RoyaleGym/RoyaleLearn/blob/bd497751321127a8e4934a18f18ab9ef927c5cc9/README.md
+  - from: royale-imitate
+    to: royale-learn
+    type: extends
+    evidence: https://github.com/RoyaleGym/RoyaleImitate/blob/357cd55bf77f5c5d591de523ae9336cae3ab8f9c/README.md
+  - from: royale-viser
+    to: royalegym
+    type: visualizes
+    evidence: https://github.com/RoyaleGym/RoyaleViser/blob/8aada19cdf95f3e18b6bf7f3a33c521fc6b01a26/README.md
+  - from: royale-bot
+    to: royale-learn
+    type: deploys-models-from
+    evidence: https://github.com/RoyaleGym/RoyaleBot/blob/a2ff261d7323b64fe78455c9c50a06cc4846ca5e/README.md

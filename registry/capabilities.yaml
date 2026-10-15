@@ -60,3 +60,9 @@ capabilities:
     path: capabilities/agent-runtime/README.md
     lifecycle: catalogued
     standardization: none
+
+  - id: battle-visualization
+    title: "战斗轨迹可视化与逐帧检查"
+    path: capabilities/battle-visualization/README.md
+    lifecycle: catalogued
+    standardization: none

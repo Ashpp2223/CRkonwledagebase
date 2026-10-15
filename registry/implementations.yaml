@@ -389,12 +389,14 @@ implementations:
   - id: simulator-validation--royalesim
     capability: simulator-validation
     project: royalesim
-    reuse_level: R1
-    verification: author-documented
+    reuse_level: R2
+    verification: source-inspected
     integration: unverified
-    claim: "真实对局差分、单位时序和误差校准日志"
-    limits: "尚未经中台独立集成验证，需固定游戏/数据/运行环境及相关许可证"
-    evidence: https://github.com/RoyaleGym/RoyaleSim
+    claim: "客户端版本化校准臂、逐Tick真实轨迹差分与反例测试入口"
+    limits: "核查接口和测试源码存在；并未复现上游的真实轨迹精度统计"
+    evidence: https://github.com/RoyaleGym/RoyaleSim/blob/39e7d48253877858a064a4df140f01f4c4866d6c/crates/royalesim/src/client_arms.rs#L1-L30
+    reviewed_commit: 39e7d48253877858a064a4df140f01f4c4866d6c
+    audit_path: docs/source-audits/royalesim-client-parity-2026-10-15.md
   - id: simulator-validation--hasty-cr
     capability: simulator-validation
     project: hasty-cr
@@ -733,3 +735,50 @@ implementations:
     claim: "Jason 通过 ClaphaEngine 进行 Linux x86_64 进程内原生 PPO 自博弈"
     limits: "被引用引擎本体私有；版本 150535029；在中台无法安装重测"
     evidence: https://github.com/Jason-XII/clash-royale-battle-engine/blob/70a08af6807fa4d59a11c7d52bf6272a96afe30c/README.md
+  - id: agent-environment--longling-simulator
+    capability: agent-environment
+    project: longling-simulator
+    reuse_level: R2
+    verification: source-inspected
+    integration: unverified
+    claim: "CR模拟器接入Dreamer：观测网格/手牌/圣水以及三段共55维multi-one-hot动作解码"
+    limits: "仅适配层静态核查；未验证训练效果/原生保真；import会改变工作目录"
+    evidence: https://github.com/longlingking/clash-royale-simulator/blob/6086b9cac917cbdd479405091f90bca85b9bd66b/r2dreamer/envs/cr.py#L52-L153
+    reviewed_commit: 6086b9cac917cbdd479405091f90bca85b9bd66b
+    audit_path: docs/source-audits/longling-r2dreamer-2026-10-15.md
+  - id: agent-runtime--royale-bot
+    capability: agent-runtime
+    project: royale-bot
+    reuse_level: R1
+    verification: author-documented
+    integration: unverified
+    claim: "特定Nulls客户端观测到PC端模型决策和动作执行的桥接"
+    limits: "15.535.13 ARM64且rb-build独立发布；不保证正式服支持"
+    evidence: https://github.com/RoyaleGym/RoyaleBot/blob/a2ff261d7323b64fe78455c9c50a06cc4846ca5e/README.md
+  - id: battle-visualization--royale-viser
+    capability: battle-visualization
+    project: royale-viser
+    reuse_level: R1
+    verification: author-documented
+    integration: unverified
+    claim: "RoyaleGym实时战斗或保存的msgpack轨迹逐帧查看与实体检查"
+    limits: "不是原生可恢复快照；未与本地复盘器对接"
+    evidence: https://github.com/RoyaleGym/RoyaleViser/blob/8aada19cdf95f3e18b6bf7f3a33c521fc6b01a26/README.md
+  - id: agent-environment--royale-learn
+    capability: agent-environment
+    project: royale-learn
+    reuse_level: R1
+    verification: author-documented
+    integration: unverified
+    claim: "与RoyaleGym联动的训练器、奖励与模型存档接口"
+    limits: "训练优化而非规则引擎；未独立验证训练效果"
+    evidence: https://github.com/RoyaleGym/RoyaleLearn/blob/bd497751321127a8e4934a18f18ab9ef927c5cc9/README.md
+  - id: replay-to-learning--royale-imitate
+    capability: replay-to-learning
+    project: royale-imitate
+    reuse_level: R1
+    verification: author-documented
+    integration: unverified
+    claim: "教师策略工件与SHA-256摘要、warm_start和模仿约束"
+    limits: "warm_start不等于真实回放的完整IL数据重建；需匹配模型契约"
+    evidence: https://github.com/RoyaleGym/RoyaleImitate/blob/357cd55bf77f5c5d591de523ae9336cae3ab8f9c/README.md

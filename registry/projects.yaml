@@ -225,3 +225,43 @@ projects:
     verification: author-documented
     license: unknown
     topics: [cr-native-engine, cr-ai-environment]
+
+  - id: longling-simulator
+    title: "Longling CR Simulator × R2-Dreamer"
+    repository: https://github.com/longlingking/clash-royale-simulator
+    path: projects/longling-simulator.md
+    verification: author-documented
+    license: unknown
+    topics: [cr-battle-simulation, cr-ai-environment]
+
+  - id: royale-bot
+    title: "RoyaleBot"
+    repository: https://github.com/RoyaleGym/RoyaleBot
+    path: projects/royale-bot.md
+    verification: author-documented
+    license: MIT
+    topics: [cr-ai-environment, cr-runtime-observation]
+
+  - id: royale-viser
+    title: "RoyaleViser"
+    repository: https://github.com/RoyaleGym/RoyaleViser
+    path: projects/royale-viser.md
+    verification: author-documented
+    license: MIT
+    topics: [cr-replay-state]
+
+  - id: royale-learn
+    title: "RoyaleLearn"
+    repository: https://github.com/RoyaleGym/RoyaleLearn
+    path: projects/royale-learn.md
+    verification: author-documented
+    license: MIT
+    topics: [cr-ai-environment]
+
+  - id: royale-imitate
+    title: "RoyaleImitate"
+    repository: https://github.com/RoyaleGym/RoyaleImitate
+    path: projects/royale-imitate.md
+    verification: author-documented
+    license: MIT
+    topics: [cr-ai-environment]

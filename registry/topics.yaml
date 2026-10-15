@@ -6,19 +6,19 @@ topics:
   - id: cr-battle-simulation
     title: "独立战斗模拟器"
     path: topics/cr-battle-simulation.md
-    projects: [jason-simulator, hasty-cr, royalegym, royalesim, crforge, itzik-clashenv, crsim-agent-larkindaniel]
+    projects: [jason-simulator, hasty-cr, royalegym, royalesim, crforge, itzik-clashenv, crsim-agent-larkindaniel, longling-simulator]
   - id: cr-replay-state
     title: "回放、快照与状态恢复"
     path: topics/cr-replay-state.md
-    projects: [firstlight-cr, jason-battle-engine, replay-studio, ashpp-replay, clashai-vegetableleaf, fl-royale, royaleapi-downloader-imax9d, cr-collector-arron]
+    projects: [firstlight-cr, jason-battle-engine, replay-studio, ashpp-replay, clashai-vegetableleaf, fl-royale, royaleapi-downloader-imax9d, cr-collector-arron, royale-viser]
   - id: cr-ai-environment
     title: "AI 训练环境与决策"
     path: topics/cr-ai-environment.md
-    projects: [firstlight-cr, jason-battle-engine, jason-simulator, tencent-model-harness, hasty-cr, royalegym, royalesim, crforge, katacr, itzik-clashenv, clashai-vegetableleaf, crsim-agent-larkindaniel, build-a-bot, detection-dataset, claude-royale, native-sandbox-imax9d, r0-elite-imax9d, clapha-engine]
+    projects: [firstlight-cr, jason-battle-engine, jason-simulator, tencent-model-harness, hasty-cr, royalegym, royalesim, crforge, katacr, itzik-clashenv, clashai-vegetableleaf, crsim-agent-larkindaniel, build-a-bot, detection-dataset, claude-royale, native-sandbox-imax9d, r0-elite-imax9d, clapha-engine, longling-simulator, royale-bot, royale-learn, royale-imitate]
   - id: cr-runtime-observation
     title: "运行时游戏状态观测"
     path: topics/cr-runtime-observation.md
-    projects: [memory-reader, tencent-overlay, tencent-model-harness, katacr, clashai-vegetableleaf, build-a-bot, detection-dataset, claude-royale, card-tracker]
+    projects: [memory-reader, tencent-overlay, tencent-model-harness, katacr, clashai-vegetableleaf, build-a-bot, detection-dataset, claude-royale, card-tracker, royale-bot]
   - id: cr-assets-data
     title: "资源与数据解析"
     path: topics/cr-assets-data.md
