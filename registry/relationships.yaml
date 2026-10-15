@@ -41,7 +41,3 @@ relationships:
     to: clapha-engine
     type: engine-uses
     evidence: https://github.com/Jason-XII/clash-royale-battle-engine/blob/70a08af6807fa4d59a11c7d52bf6272a96afe30c/clapha.py
-  - from: clashai-vegetableleaf
-    to: cr-native-sandbox
-    type: engine-uses
-    evidence: https://github.com/vegetableleaf/ClashAI/blob/ec4ef8e9dcaaaa4169ff8768bd36323e93840f9c/research/CR_NATIVE_SANDBOX_ASSESSMENT.md

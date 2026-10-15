@@ -52,3 +52,7 @@ last_reviewed: null
 | [RoyaleAPI Static Data](../../projects/royaleapi-static-data.md) | 第三方静态 JSON/常量；R1 |
 
 [技术组合地图](../../landscape/composition-patterns.md) · [高价值项目调查](../../landscape/2026-10-13-landscape.md)
+
+## 2026-10-15：SC 动画可视化
+
+[Jason SC Decoder](../../projects/sc-decoder-jason.md) 的 `sc_pipeline.py` 预处理精灵，`sc_viewer.py` 通过 pygame 播放角色与表情。它补充了资源解码后的动画核查，但不等于原版战斗渲染，格式覆盖与新版本适配未经中台独立测试。
