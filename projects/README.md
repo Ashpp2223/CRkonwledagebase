@@ -76,3 +76,14 @@
 | [RoyaleBot](royale-bot.md) | 限定 Null's Royale 客户端的模型部署 |
 
 [新发现及去重依据](../research/knowledge-notes/cr-model-selfplay-client-parity-2026-10-15.md) · [项目/能力注册表](../registry/implementations.yaml)
+
+## 2026-10-31 上游复查（不新增 Project ID）
+
+| 既有项目 | 新的版本/文档证据 |
+| --- | --- |
+| [皇室战争复盘器](ashpp-replay.md) | 国服 38.4.5 / 0.4.1 双引擎版本身份及恢复验收 |
+| [RoyaleSim](royalesim.md) | 0.1.42 校准差异；可选 2026-10-19 卡表 |
+| [RoyaleLearn](royale-learn.md) | 0.5.20 观测编码诊断与 float16 配置 |
+| [RoyaleGym](royalegym.md) | FAQ 文档入口与独立模块职责复核 |
+
+以上改动更新的是**已有项目的来源档案**，不产生新的项目—能力实现关联，也不将作者验收改写为中台独立实测。
