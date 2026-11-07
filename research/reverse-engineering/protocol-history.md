@@ -12,6 +12,7 @@
 | [iGio90/frida_cr_proxy](https://github.com/iGio90/frida_cr_proxy) | 历史 Frida/Python 消息分析实验 | 旧 x86 客户端和历史协议条件 |
 | [Jason-XII My Own Findings](https://github.com/Jason-XII/cr-memory-reader/blob/9af94ca2f273ce526dda6256bdbd5d5555fb82d4/My%20Own%20Findings.md) | 从受控抓包事件关联到 Native 动作消息的探索过程 | 某 Null's 构建的实验，不是官方通用映射 |
 | [Giovanni Rocca Part 2](https://www.giovanni-rocca.com/reverse-engineering-supercell-clash-royale-part-2/) | 早期 ECT/OwnHomeData、校验和假设与验证过程 | 作者 2017 年研究，不能套用今天 |
+| [caunt/SupercellProxy](https://github.com/caunt/SupercellProxy/tree/6b4984aeec5b1cadf2948cf4e628e60821dc35b6) | .NET 消息 codec、回合结构、抓包归档与版本关联资源快照的实现参考 | 上游跨 Supercell 游戏，未建立当前皇室战争官方客户端的版本化兼容证据；ggggmllll 仓库是其 Fork |
 
 ## 关键概念辨析
 
@@ -26,6 +27,12 @@
 Giovanni Rocca 的原站：[2017 Clash Royale Part 2](https://www.giovanni-rocca.com/reverse-engineering-supercell-clash-royale-part-2/)、[2017 October Update Part 3](https://www.giovanni-rocca.com/reverse-engineering-supercell-october-update-part-3/)、[2017 Part 4](https://www.giovanni-rocca.com/reverse-engineering-supercell-part-4/)、[2018 Part 5](https://www.giovanni-rocca.com/journey-finland-reverse-engineering-android-supercell-pt-5/)。
 
 [weeco 历史包头研究](https://github.com/weeco/supercell-packet-listener/blob/dff096ba639e03e109c772885eab2a6ce7cdf2c2/README.md) 特别明确指出：它只能访问未加密的**消息元数据**，未获得加密的负载。这种诚实的研究边界比“支持全部协议”更值得中台保留。
+
+## 2026 年源码补充：协议观测需要携带构建身份
+
+[caunt/SupercellProxy 的 `ClientTurnHeader.cs`](https://github.com/caunt/SupercellProxy/blob/6b4984aeec5b1cadf2948cf4e628e60821dc35b6/src/SupercellProxy.Networking/Protocol/Turns/ClientTurnHeader.cs) 静态源码描述 `checksum`、`subTick`、8 个 `subChecksums` 和命令数量；[`EndClientTurnMessage.cs`](https://github.com/caunt/SupercellProxy/blob/6b4984aeec5b1cadf2948cf4e628e60821dc35b6/src/SupercellProxy.Networking/Protocol/Turns/EndClientTurnMessage.cs) 将命令、调试块与开发构建额外字段按 `CommandEnvironment` 分开编码。它们是**该仓库实现的消息模型**，未通过皇室战争当前官方构建的抓包/回放实测确认。
+
+更适合直接复用的做法来自 [`CaptureArchive.cs`](https://github.com/caunt/SupercellProxy/blob/6b4984aeec5b1cadf2948cf4e628e60821dc35b6/src/SupercellProxy.Networking/Captures/CaptureArchive.cs)：以客户端版本和资源指纹组织录制文件，并独立保留对应资源快照。对皇室战争的协议研究或同场景复验，可借鉴**版本 + 资源指纹 + 捕获数据同存**的证据结构，避免将不同版本的数据混作一份；是否可用在目标客户端仍需单独检验。
 
 ## 能沉淀到今天的内容
 
