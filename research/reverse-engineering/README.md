@@ -41,6 +41,14 @@
 - **待复验条件**：先确定样本构建及库指纹，再在授权测试环境中验证解密前后内存区的权限与内容、间接派发的真实调用关系、哈希输入地址与长度、校验失败路径和事件记录链，逐项保留可反证的原始观察。尚无这些材料时，保持各实现细节为 `unknown`。
 - **知识定位**：属于客户端保护层/逆向方法来源；不能作为战斗 Tick、卡牌规则或跨引擎一致性结论的依据。本文不收录绕过完整性检测的修改步骤。
 
+**2026-11-07 补充：作者公开源码与可复用边界**
+
+- **[AndProxyDemo](https://github.com/ggggmllll/AndProxyDemo/tree/4dbd3bfc369436babc18ee7aae2585f611421a2e)**（原创仓库，GPL-2.0）：[BinderHook.cpp](https://github.com/ggggmllll/AndProxyDemo/blob/4dbd3bfc369436babc18ee7aae2585f611421a2e/AndProxy/src/main/cpp/BinderHook.cpp) 可静态核查 `libbinder.so` 的 `ioctl` GOT 拦截与 JNI 事件分发；[seccomp_hook.cpp](https://github.com/ggggmllll/AndProxyDemo/blob/4dbd3bfc369436babc18ee7aae2585f611421a2e/AndProxy/src/main/cpp/seccomp_hook.cpp) 实现 `SECCOMP_RET_USER_NOTIF` 通知、supervisor 进程与寄存器采集流程；[SvcInterceptorTest.java](https://github.com/ggggmllll/AndProxyDemo/blob/4dbd3bfc369436babc18ee7aae2585f611421a2e/AndProxy/src/androidTest/java/com/gumuluo/proxy/SvcInterceptorTest.java) 有 `getpid` 的允许、拒绝、修改返回值测试**源码**。这是源码静态核查，未运行 Android 测试，也没有皇室战争样本的回归日志。
+- **与游戏的关系**：[作者在看雪的 2026-03-28 文章](https://bbs.kanxue.com/thread-290553.htm) 自述工具起源于《皇室战争》原生进程异常退出的观察；它提供的是 Android 运行时研究手段，**没有公开证明能恢复任何战斗逻辑**。仓库 README 标注 ARM64 和 Linux 内核 ≥5.10 的 `seccomp` 通知前提。
+- **区分文章与代码**：[2026-05-04 后续文章](https://bbs.kanxue.com/thread-291098.htm) 介绍无 Hook 的 Binder 代理方案；上述固定提交的 [BinderHook.cpp](https://github.com/ggggmllll/AndProxyDemo/blob/4dbd3bfc369436babc18ee7aae2585f611421a2e/AndProxy/src/main/cpp/BinderHook.cpp) 仍含 GOT Hook。不能将后续文章的方案默认为此仓库已实现并测试。
+- **[SupercellProxy](https://github.com/caunt/SupercellProxy/tree/6b4984aeec5b1cadf2948cf4e628e60821dc35b6)**（原创上游，MIT）：`ggggmllll/SupercellProxy` 为 [caunt/SupercellProxy](https://github.com/caunt/SupercellProxy) 的 Fork，核查时 [Fork 提交](https://github.com/ggggmllll/SupercellProxy/tree/471f8aba367a5657728fc9237b6e49d34dd98b64) 落后上游 11 个提交且无独立领先提交。应以原仓库归属原作者；其 .NET 协议、抓包归档及资源 CSV 解析代码作为**跨 Supercell 游戏的研究参考**，没有证明当前皇室战争线上协议兼容。具体源码入口见 [协议与消息史](protocol-history.md)。
+- **暂不独立登记**：[rustfrida-ab](https://github.com/ggggmllll/rustfrida-ab)、[elf-patcher](https://github.com/ggggmllll/elf-patcher)、[TInjector](https://github.com/ggggmllll/TInjector)、[GlossHook](https://github.com/ggggmllll/GlossHook) 属通用逆向/运行时工具，本次未发现直接对应皇室战争构建的实验材料。暂不新增 Project、Implementation、ReverseFinding 或成熟度等级。
+
 **历史协议与工具研究（2016–2018 年为主）**
 
 - [Giovanni Rocca 原作者文章](https://www.giovanni-rocca.com/reverse-engineering-supercell-clash-royale-part-2/)：逆向假设、协议数据结构、校验逻辑等历史研究方法。
