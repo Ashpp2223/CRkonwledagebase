@@ -15,6 +15,7 @@
 | 版本升级后旧结论还能不能用 | [构建与偏移复验](version-revalidation.md) | [腾讯 Overlay 失效案例](https://github.com/ak1NaN/ClashRoyale-tencent-overlay) |
 | 离线引擎在 15.535/16.402/腾讯 38.4.2 分别完成了什么 | [跨构建原生宿主进展](client-build-migration-2026-10.md) | [ClashAI ORACLE v7 门禁](https://github.com/vegetableleaf/ClashAI/blob/218554aee8b7be9b3ad5298349853d6fe747c90f/scratchpad/gauntlet/L74/oracle/linux/qualify/jnihost_ro/v7/GATES.md) |
 | 怎样保存 AI/人工研究的假设、证据与失败 | [研究方法](methodology.md) | [逆向发现机器索引](../../registry/reverse-findings.yaml) |
+| 如何判断客户端加固分析中的解密、派发与完整性检测证据 | [研究方法](methodology.md) | [看雪：Clash Royale 加固逆向笔记（2026-06-21）](https://bbs.kanxue.com/thread-291737.htm)，未复验 |
 
 ## 原始知识来源（不代表当前兼容）
 
@@ -31,6 +32,14 @@
 - [Clapha Engine（私有）](../../projects/clapha-engine.md)：Jason 的公开包装层证明使用了另一条 Linux 进程内加载路线，但无法审查私有 loader。
 - [vegetableleaf Oracle 16.402.12](client-upgrade-160402.md)：18 个生命周期静态条目和 Android 真正执行尚未通过的门槛；版本迁移不可误标已完成。
 - [原生宿主架构比较](../knowledge-notes/native-runtime-hosting.md)：区分有画面/无画面、Android/纯 Linux、进程内快照与对局重放。
+
+**2026-11-07 补充：客户端加固分析（外部研究线索）**
+
+- [看雪《尝试分析某海外加固》（2026-06-21）](https://bbs.kanxue.com/thread-291737.htm)：文章自述以 Clash Royale 为样本，讨论 `libsupercell_clashroyale.so` 的 ChaCha20、按需解密线程、间接函数派发、XXH64 代码完整性检测及检测事件记录。作者明确说明正文由 AI 生成，且记录了多次推翻早期假设的过程。
+- **证据状态：第三方作者报告，未独立验证。** 页面附部分反编译片段和 RVA，但未给出可唯一绑定客户端的版本号、ELF Build ID、原始二进制 SHA-256、可复用测试日志。文中提到的具体 RVA 不登记为本中台已确认的逆向发现，也不向其他客户端版本外推。
+- **需保留的竞争解释**：识别到加密常量与 4096 字节边界，不足以单独证明某缓冲区是可执行代码页；静态内容全为 `0xFF` 也可能是未初始化/哨兵填充值，不能单凭它证明表项已加密；线程局部存储的初始化标记不必然对应“代码页已解密”。
+- **待复验条件**：先确定样本构建及库指纹，再在授权测试环境中验证解密前后内存区的权限与内容、间接派发的真实调用关系、哈希输入地址与长度、校验失败路径和事件记录链，逐项保留可反证的原始观察。尚无这些材料时，保持各实现细节为 `unknown`。
+- **知识定位**：属于客户端保护层/逆向方法来源；不能作为战斗 Tick、卡牌规则或跨引擎一致性结论的依据。本文不收录绕过完整性检测的修改步骤。
 
 **历史协议与工具研究（2016–2018 年为主）**
 
