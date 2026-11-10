@@ -212,9 +212,9 @@ implementations:
     reuse_level: R1
     verification: author-documented
     integration: unverified
-    claim: "Java 模拟器经 ZMQ/Gymnasium 接口训练"
-    limits: "需要 Java 运行时和桥接进程"
-    evidence: https://github.com/voonhous/crforge
+    claim: "Java 多对局模拟环境，通过平坦缓冲区供 Python 训练器使用"
+    limits: "需要 Java 21 运行时、对应的游戏表与训练侧接口；不是旧版 ZMQ 桥接"
+    evidence: https://github.com/voonhous/crforge/blob/d3ae65de1e7cf3c8ecff58185d4269e52c9ab3df/docs/environment.md
   - id: agent-environment--katacr
     capability: agent-environment
     project: katacr
@@ -275,9 +275,9 @@ implementations:
     reuse_level: R1
     verification: author-documented
     integration: unverified
-    claim: "Java ECS、数据驱动卡牌和状态效果"
-    limits: "实现广度不代表无偏差"
-    evidence: https://github.com/voonhous/crforge
+    claim: "Java 50 ms 整数 Tick 规则模拟，参照 16.635.1 并支持 16.635.3/16.635.8 数据"
+    limits: "实现广度不等于全规则一致；觉醒巨人的真实回放比对为上游报告"
+    evidence: https://github.com/voonhous/crforge/blob/d3ae65de1e7cf3c8ecff58185d4269e52c9ab3df/docs/battle-core.md
   - id: lookahead-planning--itzik-clashenv
     capability: lookahead-planning
     project: itzik-clashenv
@@ -397,6 +397,17 @@ implementations:
     evidence: https://github.com/RoyaleGym/RoyaleSim/blob/39e7d48253877858a064a4df140f01f4c4866d6c/crates/royalesim/src/client_arms.rs#L1-L30
     reviewed_commit: 39e7d48253877858a064a4df140f01f4c4866d6c
     audit_path: docs/source-audits/royalesim-client-parity-2026-10-15.md
+  - id: simulator-validation--crforge
+    capability: simulator-validation
+    project: crforge
+    reuse_level: R2
+    verification: source-inspected
+    integration: unverified
+    claim: "对固定数据版本真实战斗参考追踪进行无容差逐 Tick 对比，并定位首个不一致 Tick/字段"
+    limits: "R2 仅适用指定差分接口的静态检查；没有中台复跑参考数据或验证任意版本全部规则"
+    evidence: https://github.com/voonhous/crforge/blob/d3ae65de1e7cf3c8ecff58185d4269e52c9ab3df/conformance/src/main/java/org/crforge/conformance/ReferenceComparison.java
+    reviewed_commit: d3ae65de1e7cf3c8ecff58185d4269e52c9ab3df
+    audit_path: docs/source-audits/crforge-16635-parity-2026-11-10.md
   - id: simulator-validation--hasty-cr
     capability: simulator-validation
     project: hasty-cr
