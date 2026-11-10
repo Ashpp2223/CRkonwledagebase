@@ -25,6 +25,7 @@ last_reviewed: null
 | [Jason Battle Engine](../../projects/jason-battle-engine.md) | `Engine.reset/step`、`RenderedEngine`，支持 `minimal-transition` | **R2/source-inspected（仅限客户端控制层代码）**；集成未验证，缺整体许可证确认 | [控制实现](https://github.com/Jason-XII/clash-royale-battle-engine/blob/2b3361954c189a8ea508f3f54cf94a56c2e045fc/engine.py#L147-L239) |
 | [Ashpp 复盘器](../../projects/ashpp-replay.md) | `BattleController.reset/step/play_card`，额外验证预期 Tick | R1；产品内部桥接，**不是**第三方公共 API | [实现](https://github.com/Ashpp2223/clashroyalereplay/blob/de46d7ea3831a64565140cdb9d4b947f9fe21916/bridge/controller.py#L126-L239) |
 | [Replay Studio](../../projects/replay-studio.md) | `app/engine.py` 的原生画面控制，导入对局后重建 | R1；面向回放产品，非现成组件包 | [实现](https://github.com/ak1NaN/ClashRoyale-replay-studio/blob/04d48bdcf2f54cf81dc809e56d9bc08691a167e2/app/engine.py#L63-L126) |
+| [Clashback](../../projects/clashback.md) | `CrxEnv.create_match/step/observe/queue_card_at`；构建 `160635001` | **R2/source-inspected（限原生接口源码）**；macOS/Rosetta，未中台运行 | [接口审计](../../docs/source-audits/clashback-160635001-2026-11-10.md) |
 
 > 细粒度评级以 [实现登记](../../registry/implementations.yaml) 为准。**R2 只确认已静态阅读控制入口及其限定条件**，不代表真实运行测试、跨项目 ABI 稳定或允许复制源码。
 
@@ -68,4 +69,4 @@ last_reviewed: null
 
 ## 2026-11-10：新版 16.635 原生战斗接口
 
-[Clashback](../../projects/clashback.md) 的 [CrxEnv](https://github.com/ak1NaN/Clashback/blob/45c1f26b942ae1d706f2004791e73013e4330099/vendor/crx/env.py) 暴露 `create_match/step/observe/queue_card_at/queue_ability_action_at`，由版本绑定的原版 x86_64 `libg.so` 构建 `160635001` 驱动，资源版本 `16.635.8`；[绑定表](https://github.com/ak1NaN/Clashback/blob/45c1f26b942ae1d706f2004791e73013e4330099/vendor/crx/bindings/160635001.json) 含对应函数地址、字段与哈希身份。现为应用内部 Python API，macOS/Rosetta 环境，归档 R1 / author-documented；未独立运行及验证觉醒巨人特殊行为，不视作稳定跨平台 SDK。
+[Clashback](../../projects/clashback.md) 的 [CrxEnv](https://github.com/ak1NaN/Clashback/blob/45c1f26b942ae1d706f2004791e73013e4330099/vendor/crx/env.py) 暴露 `create_match/step/observe/queue_card_at/queue_ability_action_at`，由版本绑定的原版 x86_64 `libg.so` 构建 `160635001` 驱动，资源版本 `16.635.8`；[绑定表](https://github.com/ak1NaN/Clashback/blob/45c1f26b942ae1d706f2004791e73013e4330099/vendor/crx/bindings/160635001.json) 含对应函数地址、字段与哈希身份。现为应用内部 Python API，macOS/Rosetta 环境，[固定源码专项审计](../../docs/source-audits/clashback-160635001-2026-11-10.md) 登记 **R2/source-inspected（仅建局、Tick、原生提交及观测接口）**；未独立运行或验证觉醒巨人特殊行为，不视作稳定跨平台 SDK。
