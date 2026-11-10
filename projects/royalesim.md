@@ -7,7 +7,7 @@ verification: author-documented
 repository: https://github.com/RoyaleGym/RoyaleSim
 topics: [cr-battle-simulation, cr-ai-environment, cr-game-mechanics]
 maintainers: []
-last_reviewed: "2026-10-31"
+last_reviewed: "2026-11-10"
 license: MIT
 ---
 
@@ -58,3 +58,13 @@ Rust 独立战斗引擎；README 描述整数 Tick 仿真及 Python 调用（Bat
 上游说明：旧版 `client_arms("15.535.29")` 与 `replay_parity` 继续选择旧行为；上述发布中 `SNAPSHOT_FORMAT` 仍为 `20`。使用不同客户端或平衡内容进行差分时，应同时固定**引擎提交、客户端 build、卡表及校准分支**，避免把版本差异误归因于物理规律错误。
 
 这是一份上游变更说明核对，不是本中台对新提交的 R2 源码审计或任何 R3 集成测试。既有 `simulator-validation--royalesim` 的 **R2** 仍仅适用于 [2026-10-15 固定源码审查](../docs/source-audits/royalesim-client-parity-2026-10-15.md) 指明的接口。
+
+## 2026-11-10 复查：0.1.51 与觉醒巨人
+
+上游 [固定提交 `d62501352d7995b352a167730c4a31e49f4ed570`](https://github.com/RoyaleGym/RoyaleSim/tree/d62501352d7995b352a167730c4a31e49f4ed570) / [CHANGELOG](https://github.com/RoyaleGym/RoyaleSim/blob/d62501352d7995b352a167730c4a31e49f4ed570/CHANGELOG.md) 记载最新核对到的版本 **0.1.51（2026-11-08）**。0.1.50/0.1.51 继续围绕真实对局进行客户端分支校准，包括旋风吸引时与单位接触的位移归并 `collision.ATTRACT_CONTACT_MEAN`；相关数值仍须依上游发布和场景分别复验。
+
+- **2026-11-03 的 16.635 数据表**：新增 `client160635007_20261103`（内容 16.635.8），包含 `Giant_EV1` 和觉醒镜像的配置。参见 [表版本提交](https://github.com/RoyaleGym/RoyaleSim/commit/cd3121abcce2ebe847ed48092b5330254a417284)。
+- **0.1.44 / 2026-11-04**：新增觉醒巨人狂暴区逻辑；生命值 ≤50% 触发，以 1,500 ms 间隔向背后生成友军狂暴区域，半径从 2 格到 3.5 格（按触发后攻击计数），克隆回普通巨人。可核对 [实现提交](https://github.com/RoyaleGym/RoyaleSim/commit/aef9a3d8894915f5542ae82128cefe43459076b6)、[字段提取测试](https://github.com/RoyaleGym/RoyaleSim/blob/d62501352d7995b352a167730c4a31e49f4ed570/tests/test_rage_areas_block.py) 和 [`evo_giant.rs` 场景单测](https://github.com/RoyaleGym/RoyaleSim/blob/d62501352d7995b352a167730c4a31e49f4ed570/crates/royalesim/tests/evo_giant.rs)。
+- **证据限制**：`evo_giant.rs` 首段明言 `Read off the table, not measured (no 16.635 capture holds the form)`；这些规则是表驱动实现与内部单测定义，不能宣称已经以觉醒巨人的真实原生录像逐 Tick 校准。其比较对象 [crforge](crforge.md) 提供一个实际参考用例的 `diagnostic_match` 作者报告，证据强度不同。
+
+此轮阅读了指定测试文件和日志，但没有执行该版本的 Cargo、下载原版回放或重新审计 `simulator-validation--royalesim` 既有 R2 接口；评级作用域保持 2026-10-15 原审查内容不变。具体技术与复验条件见 [16.635 与觉醒巨人研究笔记](../research/knowledge-notes/cr-16635-evo-giant-parity-2026-11-10.md)。
