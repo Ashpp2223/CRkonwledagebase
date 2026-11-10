@@ -221,3 +221,14 @@ findings:
     game_build: "160402012 + 2026-10-12 device update"
     claim: "作者区分设备更新的表覆盖和 APK fallback，以哈希记录有效表集合；配置数值不能直接证明运行机制"
     reproduced_by_middle_platform: false
+  - id: re-clashback-160635001-native
+    title: "Clashback 160635001 的原生战斗接口与 SHA 绑定"
+    category: native
+    path: research/reverse-engineering/client-build-migration-2026-10.md
+    source: https://github.com/ak1NaN/Clashback/blob/45c1f26b942ae1d706f2004791e73013e4330099/vendor/crx/env.py
+    source_sha: 45c1f26b942ae1d706f2004791e73013e4330099
+    verification: source-inspected
+    applicability: exact-build
+    game_build: "160635001 / x86_64 / libg SHA256 c4721bd90f46fd1709e9dc498e286462ad88cf817ec645c5749f0aa445fd6539 / resource 16.635.8"
+    claim: "CrxEnv 静态源码具备原生建局、Tick 推进、动作排队、观察；对应固定构建绑定及 NativeSnapshotStream 快照，未中台运行，未验觉醒巨人"
+    reproduced_by_middle_platform: false
