@@ -22,7 +22,7 @@ license: unknown
 - 作者当前提供 Apple 芯片 Mac、macOS ≥14.4、Rosetta 2 与 x86_64 Python 的离线回放使用路径，游戏原生引擎在 Rosetta 下运行、渲染由 macOS 窗口和 ANGLE 完成。不是已经验证的 Windows 或独立 Linux SDK。
 - 同构建热更新仅更换资源；如更换客户端构建，需要匹配 x86_64 APKM、重新适配引擎及观战资产，绑定文件的地址不能跨 build 直接复用。
 
-## 已有原生接口（源码静态定位）
+## 已有原生接口（专项 R2 源码静态核查）
 
 [`vendor/crx/env.py`](https://github.com/ak1NaN/Clashback/blob/45c1f26b942ae1d706f2004791e73013e4330099/vendor/crx/env.py) 包含 `CrxEnv`：
 
@@ -43,7 +43,11 @@ license: unknown
 
 ## 觉醒巨人的当前证据边界
 
-游戏数据版本 `16.635.8` 包含 `Giant_EV1` 相关内容，项目支持该版本的原生建局与资源，但**当前公开档案没有单独证明觉醒巨人出牌、半血狂暴和区域变化完整通过原生测试**。必须准备匹配的形态/卡组输入，分别确认部署、状态、狂暴作用与快照恢复；不能用“数据已更新”替代专项验证。
+项目 README 声明同步了数据版本 `16.635.8`，但 [`observed-160635001.json`](https://github.com/ak1NaN/Clashback/blob/45c1f26b942ae1d706f2004791e73013e4330099/updater/profiles/observed-160635001.json) 列有 `csv_logic/characters/giant.toml`，**没有直接列出 `csv_logic/characters/giant_ev1.toml`**。该文件是否通过其他表、补丁或形态配置提供尚未核实；不能单凭版本标签推断本项目已经成功部署 `Giant_EV1`。公开源码中也未找到针对觉醒巨人半血狂暴、攻击次数/区域半径和快照恢复的专项原生测试。应以卡表解析和实际对局验证为准。
+
+## 固定接口源码审计
+
+[2026-11-10 Clashback 专项审计](../docs/source-audits/clashback-160635001-2026-11-10.md) 静态确认战斗控制和快照的原生调用链；`battle-control--clashback`、`snapshot-recovery--clashback` 均按特定源码范围登记为 **R2/source-inspected**。原版的完整 Mac 运行、Windows 移植、可并行分叉、多场稳定 reset、逐帧官方轨迹一致性仍未独立验证；回放重建 `replay-reconstruction--clashback` 保持 R1。
 
 ## 复用与风险
 
