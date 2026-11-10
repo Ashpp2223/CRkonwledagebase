@@ -7,7 +7,7 @@ verification: author-documented
 repository: https://github.com/Jaasssoooonnnnn/FirstLight_CR
 topics: [cr-native-engine, cr-replay-state, cr-ai-environment]
 maintainers: []
-last_reviewed: null
+last_reviewed: "2026-11-10"
 license: Apache-2.0
 ---
 
@@ -30,3 +30,9 @@ license: Apache-2.0
 [原生控制能力](../capabilities/battle-control/README.md) · [快照恢复能力](../capabilities/snapshot-recovery/README.md) · [AI 训练专题](../topics/cr-ai-environment.md)
 
 本项目涉及的逆向研究方法与跨版本限制已整理至 [逆向工程知识中心](../research/reverse-engineering/README.md)。
+
+## 2026-11-10 上游提交复查
+
+主分支在 2026-10-31 新增/修复了战斗部署布局与剩余运行时遥测的探针及测试（[固定提交](https://github.com/Jaasssoooonnnnn/FirstLight_CR/commit/d7d7deb3c28bb894511fa9b96d1529ba7610961d)），并调整 [BattleEnv 塔兵状态传递](https://github.com/Jaasssoooonnnnn/FirstLight_CR/commit/4c58aef6af2f4aa729a11a6eb139032a9ccf5076) 与 [丰富遥测适配](https://github.com/Jaasssoooonnnnn/FirstLight_CR/commit/270139f2df7744ef3ce991de39e6d596d79fc66f)。这是既有运行时的维护，不表示已经移植到 16.635。
+
+[2026-10-31 README](https://github.com/Jaasssoooonnnnn/FirstLight_CR/blob/4c82496ad5af49a3c7ea2392f26ff7bac33d9707/README.md) 另外介绍了单独 `yes-delay` 分支的 Everlight 模型，使用出牌后 **20 Tick（1 秒）** 生效的时序。该分支声明与主分支的现有安装/验证契约应分开记录，尚未对该分支做单独源码审计或客户端一致性测试。
