@@ -4,8 +4,8 @@ title: "原生战斗引擎"
 type: topic
 status: investigating
 verification: author-documented
-projects: [firstlight-cr, jason-battle-engine, replay-studio, ashpp-replay, native-sandbox-imax9d, native-bionic-imax9d, fl-royale, clapha-engine]
-last_reviewed: null
+projects: [firstlight-cr, jason-battle-engine, replay-studio, ashpp-replay, native-sandbox-imax9d, native-bionic-imax9d, fl-royale, clapha-engine, clashback]
+last_reviewed: "2026-11-10"
 ---
 
 # 原生战斗引擎
@@ -42,3 +42,7 @@ last_reviewed: null
 - [FL Royale](../projects/fl-royale.md)：基于 FirstLight 的 Android 离线可玩客户端，提供原生战斗画面、大厅、卡组、对战 AI 及本地流程。
 
 - [Clapha Engine（仅公开适配器）](../projects/clapha-engine.md)：Jason 的 `clapha.py` 提供 Linux x86_64 原生环境调用，底层 loader 私有、无法独立核查。
+
+## 2026-11-10：16.635 原生接口新证据
+
+[Clashback](../projects/clashback.md) 已针对 x86_64 原生构建 `160635001` / 数据 `16.635.8` 定义完整的带指纹 bindings，公开 `CrxEnv.create_match/step/observe/queue_card_at` 与原生快照保存/恢复（macOS Rosetta 宿主）。这是一条**真实 libg 原生调用路线**，与 [crforge](../projects/crforge.md)、[RoyaleSim](../projects/royalesim.md) 的自建模拟器路线并列。原生接口存在可静态核查；是否在其他系统、觉醒巨人特定对局与通用 SDK 场景通过运行验收仍待测。
