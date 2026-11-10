@@ -7,7 +7,7 @@ verification: author-documented
 repository: https://github.com/ak1NaN/ClashRoyale-tencent-overlay
 topics: [cr-runtime-observation]
 maintainers: []
-last_reviewed: null
+last_reviewed: "2026-11-10"
 license: unknown
 ---
 
@@ -38,3 +38,7 @@ macOS/ARM64 腾讯客户端覆盖层，按 README 显示部署队列事件、半
 **待核实**：精确上游提交、运行环境、独立复现测试以及上游作者审阅。
 
 本项目涉及的逆向研究方法与跨版本限制已整理至 [逆向工程知识中心](../research/reverse-engineering/README.md)。
+
+## 2026-11-10 上游维护状态
+
+[2026-11-06 README 固定版本](https://github.com/ak1NaN/ClashRoyale-tencent-overlay/blob/00446d3f77e82acdf37c5ad5d859e68ed3069503/README.md) 顶部声明项目适配的是旧游戏包体，**作者不再更新和提供技术支持**。截至本次核查，GitHub 仓库的 `archived` 元数据仍为 `false`；这里所称“停止维护”依据 README，不能混写为 GitHub 已归档。18×32 网格、10 Hz 圣水覆盖和旧偏移只保留历史参考，不作为 38.4.5 或 16.635 当前可用接口。
