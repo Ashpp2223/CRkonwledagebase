@@ -793,3 +793,30 @@ implementations:
     claim: "教师策略工件与SHA-256摘要、warm_start和模仿约束"
     limits: "warm_start不等于真实回放的完整IL数据重建；需匹配模型契约"
     evidence: https://github.com/RoyaleGym/RoyaleImitate/blob/357cd55bf77f5c5d591de523ae9336cae3ab8f9c/README.md
+  - id: battle-control--clashback
+    capability: battle-control
+    project: clashback
+    reuse_level: R1
+    verification: author-documented
+    integration: unverified
+    claim: "原生 x86_64 libg(160635001) 的 create_match/step/observe、出牌和技能指令 Python 接口"
+    limits: "固定构建与 SHA；当前以 macOS 14.4+/Rosetta x86_64 Python 回放工作流为主，未中台独立运行"
+    evidence: https://github.com/ak1NaN/Clashback/blob/45c1f26b942ae1d706f2004791e73013e4330099/vendor/crx/env.py
+  - id: snapshot-recovery--clashback
+    capability: snapshot-recovery
+    project: clashback
+    reuse_level: R1
+    verification: author-documented
+    integration: unverified
+    claim: "原生 battle_snapshot_encode/load 与逐 Tick 磁盘缓存的回放恢复"
+    limits: "限 160402020/160635001、同一有效战斗和拥有线程；尚无任意跨进程克隆验证"
+    evidence: https://github.com/ak1NaN/Clashback/blob/45c1f26b942ae1d706f2004791e73013e4330099/neo_replay/native_snapshots.py
+  - id: replay-reconstruction--clashback
+    capability: replay-reconstruction
+    project: clashback
+    reuse_level: R1
+    verification: author-documented
+    integration: unverified
+    claim: "RoyaleAPI HTML 命令解析、起手与 RNG 估计、原生再模拟与渲染回放"
+    limits: "HTML 缺失隐藏状态，塔血/出牌对齐不能证明逐帧一致"
+    evidence: https://github.com/ak1NaN/Clashback/blob/45c1f26b942ae1d706f2004791e73013e4330099/neo_replay/native_worker.py
