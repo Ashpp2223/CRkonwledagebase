@@ -33,3 +33,11 @@ last_reviewed: null
 ## 2026-10-15 新增设备部署示例
 
 - [RoyaleBot](../../projects/royale-bot.md)：将 RoyaleLearn 模型部署到**特定 Null's Royale 15.535.13 ARM64** 客户端，具备 PC 侧推理、dry-run 与可选可视化；客户端准备 `rb-build` 是单独发布的工具。此条为 R1/作者文档，不能自动扩展到正式服。
+
+## 2026-11-10 上游运行时边界
+
+- [RoyaleBot](../../projects/royale-bot.md) 的外部分发工具 `rb-build 0.1.2` 适配 Null's Royale ARM64 `16.635.1` 与 `15.535.13`；训练侧要另指定 16.635 卡表，且尚未针对 Null's 新版实战校准。[固定来源](https://github.com/RoyaleGym/RoyaleBot/blob/2dc24cea2576deac46a79bca099438d9d23b8ed6/README.md)。
+- [Tencent Model Harness](../../projects/tencent-model-harness.md) 原始配置只覆盖旧版 `38.4.2`；作者 README 已标注停止维护，保留架构参考。
+- [ClashRoyaleEnv](../../projects/itzik-clashenv.md) 11 月 9 日新增录制帧→教师策略镜像入口；物理手机路径与跨标准库 seed 修复尚未完成。
+
+以上不改变实现矩阵既有 R 评级。
