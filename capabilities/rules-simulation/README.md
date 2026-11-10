@@ -26,8 +26,8 @@ last_reviewed: null
 | --- | --- | --- | --- | --- |
 | [Jason Clash Royale Simulator](../../projects/jason-simulator.md) | R1 · author-documented | 自主战斗实现、寻路与卡牌行为 | README 称实现 47 卡，非官方原生逻辑 | [来源](https://github.com/Jason-XII/clash-royale-simulator) |
 | [Hasty-CR](../../projects/hasty-cr.md) | R1 · author-documented | 整数确定性机制实现、机制探针与大量测试 | 仍须验证与目标原生版本的逐项一致性 | [来源](https://github.com/hastylmao/Hasty-CR) |
-| [RoyaleSim](../../projects/royalesim.md) | R1 · author-documented | Rust 固定 tick 战斗引擎 | 卡牌覆盖、准确性需基准评估 | [来源](https://github.com/RoyaleGym/RoyaleSim) |
-| [crforge](../../projects/crforge.md) | R1 · author-documented | Java ECS、数据驱动卡牌和状态效果 | 实现广度不代表无偏差 | [来源](https://github.com/voonhous/crforge) |
+| [RoyaleSim](../../projects/royalesim.md) | R1 · author-documented | Rust 固定 Tick 模拟；0.1.44 加入 16.635 的 `Giant_EV1` 表驱动规则 | 觉醒巨人时序来自表和内部测试，作者尚未用该卡的原生捕获校准 | [0.1.51](https://github.com/RoyaleGym/RoyaleSim/blob/d62501352d7995b352a167730c4a31e49f4ed570/CHANGELOG.md) |
+| [crforge](../../projects/crforge.md) | R1 · author-documented | Java 21 / 50 ms Tick，支持 16.635.3 / 16.635.8 数据及觉醒巨人 | 作者回放对照不能扩展为全部规则等价 | [来源](https://github.com/voonhous/crforge/tree/d3ae65de1e7cf3c8ecff58185d4269e52c9ab3df) |
 
 > 上表为**作者文档层级的能力关联**，未独立检查完整源码或运行测试；R0/R1 并不是可下载即用的组件。细节见 [成熟度规则](../../docs/reuse-maturity.md) 和 [机器登记](../../registry/implementations.yaml)。
 
@@ -54,3 +54,7 @@ last_reviewed: null
 | [CRSim Agent](../../projects/crsim-agent-larkindaniel.md) | 固定八卡历史规则可重复实验；R1 |
 
 [技术组合地图](../../landscape/composition-patterns.md) · [高价值项目调查](../../landscape/2026-10-13-landscape.md)
+
+## 2026-11-10：16.635 觉醒巨人规则实现
+
+[新版对照研究](../../research/knowledge-notes/cr-16635-evo-giant-parity-2026-11-10.md) 明确了两条自建模拟路线：crforge 的 `giant-evo-rage-v1/evo_giant_rage` 已有真实参考对照的 `diagnostic_match` 作者记录；RoyaleSim 将表中的狂暴触发、区域时钟、克隆语义写入专项场景测试，但承认尚无该卡的原生回放实测。本页的规则模拟能力保持 R1；crforge 的逐 Tick **校验接口**另在 [模拟器保真能力](../simulator-validation/README.md) 获得限定范围的 R2 静态审查。
