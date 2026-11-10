@@ -44,3 +44,9 @@ last_reviewed: null
 [Longling CR Simulator × R2-Dreamer](../projects/longling-simulator.md) 是 Jason 的 Fork，重点是 Dreamer 的环境桥接和自博弈，而不是另一套独立原生规则。
 
 [RoyaleSim 版本校准审查](../docs/source-audits/royalesim-client-parity-2026-10-15.md) 说明利用客户端 `client_arms` 与逐 Tick `replay_parity` 构建机制差异的反例测试。可复用的是**差分验证方法**，不要直接把跨版本数值混用。
+
+## 2026-11-10：16.635 系列的两条模拟路线
+
+[crforge](../projects/crforge.md) 使用 Java 21、50 ms 整数 Tick 及原游戏数据表，依赖版本化参考追踪做无容差差分；[RoyaleSim](../projects/royalesim.md) 以 Rust 和版本校准分支进行规则再实现。两者均已加入 16.635 数据中的觉醒巨人，但验证证据不同；参见 [跨引擎研究专题](../research/knowledge-notes/cr-16635-evo-giant-parity-2026-11-10.md)。
+
+本轮新增的是 `simulator-validation--crforge` 一项能力关联，未增加新的项目 ID；其 R2 [审计](../docs/source-audits/crforge-16635-parity-2026-11-10.md) 仅涵盖差分接口的静态代码。
