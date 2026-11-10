@@ -41,3 +41,7 @@ last_reviewed: null
 ## 2026-10-15：从单项规则反例校准机制
 
 [RoyaleSim 静态核查](../docs/source-audits/royalesim-client-parity-2026-10-15.md) 以 `combat.BUILDING_DEPLOY_LAST_TICK` 为具体例子，说明 Tesla 和普通建筑的部署末帧行为不能用一条笼统规则概括。通过固定客户端构建和 `calibration_overrides`，可以保存不同客户端规则而不污染原本的仿真基线。
+
+## 2026-11-10：觉醒巨人 Giant_EV1
+
+[16.635.8 跨引擎研究](../research/knowledge-notes/cr-16635-evo-giant-parity-2026-11-10.md)：记录半血触发、攻击次数决定狂暴区域大小、背向偏移、冻结计时与克隆语义。RoyaleSim 的机制值来自表读取与单测；crforge 的 `giant-evo-rage-v1/evo_giant_rage` 已列为真实参考对局 `diagnostic_match`。复现时必须绑定卡表版本、源码提交与真实参考追踪，避免把内部测试结果误作客户端事实。
