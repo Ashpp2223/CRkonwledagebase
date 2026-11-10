@@ -8,6 +8,7 @@
 | [Jason Clash Royale Battle Engine](jason-battle-engine.md) | [Jason-XII/clash-royale-battle-engine](https://github.com/Jason-XII/clash-royale-battle-engine) |
 | [Jason Clash Royale Simulator](jason-simulator.md) | [Jason-XII/clash-royale-simulator](https://github.com/Jason-XII/clash-royale-simulator) |
 | [Clash Royale Replay Studio](replay-studio.md) | [ak1NaN/ClashRoyale-replay-studio](https://github.com/ak1NaN/ClashRoyale-replay-studio) |
+| [Clashback](clashback.md) | [ak1NaN/Clashback](https://github.com/ak1NaN/Clashback) |
 | [皇室战争复盘器](ashpp-replay.md) | [Ashpp2223/clashroyalereplay](https://github.com/Ashpp2223/clashroyalereplay) |
 | [CR Memory Reader](memory-reader.md) | [Jason-XII/cr-memory-reader](https://github.com/Jason-XII/cr-memory-reader) |
 | [Tencent Overlay](tencent-overlay.md) | [ak1NaN/ClashRoyale-tencent-overlay](https://github.com/ak1NaN/ClashRoyale-tencent-overlay) |
@@ -93,3 +94,7 @@
 - [crforge](crforge.md)：补全 Java 21、16.635.1 参照客户端、16.635.8 真实参考对照及 [R2 校验接口审计](../docs/source-audits/crforge-16635-parity-2026-11-10.md)。
 - [RoyaleSim](royalesim.md)：核对 0.1.51 与觉醒巨人专项测试，保留“数据表推导、没有该形态的 16.635 原生回放校准”的边界。
 - [16.635 与觉醒巨人跨项目笔记](../research/knowledge-notes/cr-16635-evo-giant-parity-2026-11-10.md)：对照同一版本的实现、参考场景与未验证范围。未新增 Project ID。
+
+## 2026-11-10 补充纠错：16.635 原生战斗接口
+
+[Clashback](clashback.md) 已公开 `160635001` 原生 x86_64 引擎绑定与对局控制/逐 Tick 快照，资源 `16.635.8`。这条新发现修正了此前“仅找到自建规则模拟器”的不完整结论；底层实现存在、但作者报告/未独立运行，觉醒巨人专项原生用例仍待证实。新增加 1 Project、3 条能力实现关联。
