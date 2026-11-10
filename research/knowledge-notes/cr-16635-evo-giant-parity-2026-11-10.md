@@ -2,7 +2,7 @@
 
 **问题**：2026 年 11 月是否已有可研究的新客户端战斗规则、觉醒巨人原理及跨引擎验证证据？
 
-**结论（2026-11-10 补充）**：现有三条来源：crforge（Java）和 RoyaleSim（Rust）是独立战斗**模拟器**；[Clashback](../../projects/clashback.md) 则直接运行并封装新版 x86_64 **原生 `libg.so`（构建 `160635001`，资源 `16.635.8`）**，拥有 `CrxEnv.create_match/step/observe/queue_card_at` 和原生快照接口。crforge 的 `Giant_EV1` 有参考回放 `diagnostic_match`，RoyaleSim 有数据表与单测；Clashback 的觉醒巨人专项原生测试未找到。要区分“新版本原生接口已经存在”和“所有新卡原生效果均已验证”。
+**结论（2026-11-10 补充）**：现有三条来源：crforge（Java）和 RoyaleSim（Rust）是独立战斗**模拟器**；[Clashback](../../projects/clashback.md) 则直接运行并封装新版 x86_64 **原生 `libg.so`（构建 `160635001`，资源 `16.635.8`）**，拥有 `CrxEnv.create_match/step/observe/queue_card_at` 和原生快照接口。crforge 的 `Giant_EV1` 有参考回放 `diagnostic_match`，RoyaleSim 有数据表与单测；Clashback 的觉醒巨人专项原生测试未找到，其已公开资源清单中也未直接出现 `giant_ev1.toml`。要区分“新版本原生接口已经存在”和“所有新卡原生效果均已验证”。
 
 ## 版本与证据锚点
 
@@ -38,4 +38,6 @@
 
 ## 补充发现：Clashback 的原生调用和快照（2026-11-10）
 
-[固定提交](https://github.com/ak1NaN/Clashback/tree/45c1f26b942ae1d706f2004791e73013e4330099) 同时提供 [160635001 函数/字段映射](https://github.com/ak1NaN/Clashback/blob/45c1f26b942ae1d706f2004791e73013e4330099/vendor/crx/bindings/160635001.json)、[CrxEnv 原生控制层](https://github.com/ak1NaN/Clashback/blob/45c1f26b942ae1d706f2004791e73013e4330099/vendor/crx/env.py) 和 [NativeSnapshotStream](https://github.com/ak1NaN/Clashback/blob/45c1f26b942ae1d706f2004791e73013e4330099/neo_replay/native_snapshots.py)。宿主为 Apple Silicon Mac 上的 x86_64 Python/Rosetta，已有 HTML 重建回放和 Tick 快照的代码实现。本知识库仅静态确认具体入口存在，未运行原生环境；其构建和资源版本固定，不可推及国服 38.4.5 或未来更新。下游复盘器对接前需测真实觉醒巨人对局、重复建局稳定性、快照分支与 Windows 运行条件。
+[固定提交](https://github.com/ak1NaN/Clashback/tree/45c1f26b942ae1d706f2004791e73013e4330099) 同时提供 [160635001 函数/字段映射](https://github.com/ak1NaN/Clashback/blob/45c1f26b942ae1d706f2004791e73013e4330099/vendor/crx/bindings/160635001.json)、[CrxEnv 原生控制层](https://github.com/ak1NaN/Clashback/blob/45c1f26b942ae1d706f2004791e73013e4330099/vendor/crx/env.py) 和 [NativeSnapshotStream](https://github.com/ak1NaN/Clashback/blob/45c1f26b942ae1d706f2004791e73013e4330099/neo_replay/native_snapshots.py)。宿主为 Apple Silicon Mac 上的 x86_64 Python/Rosetta，已有 HTML 重建回放和 Tick 快照的代码实现。本知识库已经针对控制及快照入口完成 [R2 限定范围源码审计](../../docs/source-audits/clashback-160635001-2026-11-10.md)，但未运行原生环境；其构建和资源版本固定，不可推及国服 38.4.5 或未来更新。下游复盘器对接前需测真实觉醒巨人对局、重复建局稳定性、快照分支与 Windows 运行条件。
+
+**复核补充**：[`observed-160635001.json`](https://github.com/ak1NaN/Clashback/blob/45c1f26b942ae1d706f2004791e73013e4330099/updater/profiles/observed-160635001.json) 确认包含 `giant.toml`，没有与 `giant_ev1.toml` 精确匹配的独立文件路径。因此把“Clashback 已能运行觉醒巨人”维持为 **unknown**；若它通过其他表定义或热更新加载，需要实验和资源来源证据。只要资源版本为 `16.635.8` 并不足以升级这个结论。
