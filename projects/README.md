@@ -98,3 +98,22 @@
 ## 2026-11-10 补充纠错：16.635 原生战斗接口
 
 [Clashback](clashback.md) 已公开 `160635001` 原生 x86_64 引擎绑定与对局控制/逐 Tick 快照，资源 `16.635.8`。这条新发现修正了此前“仅找到自建规则模拟器”的不完整结论；底层实现存在、但作者报告/未独立运行，觉醒巨人专项原生用例仍待证实。新增加 1 Project、3 条能力实现关联。
+
+
+## 2026-11-10：追踪项目例行复查（既有项目维护）
+
+检查了现有正式项目的上游最新提交；本轮有价值的更新收敛到既有项目档案，**不新增 Project / Capability / Implementation ID，不提高 R 等级**。
+
+| 项目 | 本轮核对内容 |
+| --- | --- |
+| [RoyaleBot](royale-bot.md) / [RoyaleGym](royalegym.md) | Null's 16.635.1 `rb-build 0.1.2` 支持、16.635 卡表训练配置；新版实战录像尚未校准 |
+| [ClashRoyaleEnv](itzik-clashenv.md) | 录制帧教师决策、实时路径纠错、C++ 标准库 seed 差异；物理手机及 RNG 引擎修复未完成 |
+| [ClashAI](clashai-vegetableleaf.md) | 公开训练/评估主线使用 RoyaleSim，新增结果与样本不确定性说明 |
+| [FirstLight CR](firstlight-cr.md) | 10 月 31 日探针/遥测维护；`yes-delay` 分支 Everlight 时序单独识别 |
+| [crforge](crforge.md) | 回放中段启动、觉醒镜像交互、渔夫钩子边界、16.635.10 客户端身份 |
+| [Replay Studio](replay-studio.md) | 后续开发转移至 [Clashback](clashback.md)，旧版历史保留 |
+| [Tencent Overlay](tencent-overlay.md) / [Tencent Model Harness](tencent-model-harness.md) | 上游 README 声明停止维护；保留旧版架构，GitHub archived 元数据仍为 false |
+
+同时核对 [RoyaleSim](royalesim.md) 仍为 0.1.51、[RoyaleLearn](royale-learn.md) 仍为 0.5.20；[RoyaleViser](royale-viser.md) 11 月 7 日仅调整 CI 夜间平台；[皇室战争复盘器](ashpp-replay.md) 上游最新主分支提交仍为 10 月 18 日。上述项目未出现足以重估现有能力等级的新证据。
+
+不同上游的客户端构建、数据表、观测结构、训练时序及可见状态不能直接互换。
