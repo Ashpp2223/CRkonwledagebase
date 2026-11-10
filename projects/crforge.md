@@ -42,3 +42,12 @@ Java 21 独立战斗模拟器：核心将一局拆为每 50 ms 一个整数 Tick
 [可修改的规则模拟](../capabilities/rules-simulation/README.md) · [模拟器保真验证](../capabilities/simulator-validation/README.md) · [独立战斗模拟器](../topics/cr-battle-simulation.md) · [战斗机制](../topics/cr-game-mechanics.md)
 
 **仍待验证**：完整外部参考轨迹、跨设备运行、未覆盖的复杂规则和形态、与当前其他渠道客户端的兼容性及作者审阅。不得把作者自测转换成中台独立运行验证。
+
+## 2026-11-10 新增接口跟踪：从真实回放时刻启动与觉醒镜像
+
+- [2026-11-05 #854](https://github.com/voonhous/crforge/commit/4be7c013392273c0444ba0a36d3b130faec2cc7d)：环境添加 `startFromReplay(i, replay, tick)` / 向量化入口；通过原始回放配置和逐 Tick 命令推进到合法决策时刻，以生成**真实回放可到达状态**，而非任意写入单位/手牌的状态注入。可供回放中段分支决策实验使用，但不等于官方原生快照恢复。
+- [2026-11-05 #859](https://github.com/voonhous/crforge/commit/de262b838ea4ca7640980bba4e85d70be38a4a90)：补充觉醒镜像在英雄牌和 Merge Maiden 之后复制的规则与针对性的拒绝条件，附内部单测。与此前觉醒巨人的 `diagnostic_match` 属不同测试范围，不应将某一种形态的通过状态推广到整个觉醒体系。
+- [2026-11-09 #862](https://github.com/voonhous/crforge/commit/c8471087a322f18a110b2b31e281be30542fec33)：修正渔夫钩子目标在矿工转路开始时的特定交互。
+- [2026-11-10 #863](https://github.com/voonhous/crforge/commit/d3ae65de1e7cf3c8ecff58185d4269e52c9ab3df)：记录 Google Play 客户端 `16.635.10` 与数据 `16.635.8`；作者仍以 `16.635.1` 规则为基准，未确认旧客户端能否继续登录、数据通过包内还是热更新取得，故**不能凭文档变更推断新版客户端已重新完成行为校准**。
+
+以上为公开提交级别跟踪；既有 `simulator-validation--crforge` R2 审计只覆盖前文固定代码的比较接口，未为本节新增功能升级评级。
