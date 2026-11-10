@@ -48,3 +48,7 @@ Ashpp 的复盘控制器还明确处理了快照**之外**的调度队列，恢�
 | [RoyaleSim](../../projects/royalesim.md) | 字节 save/load 与 state_hash；R1 文档说明 |
 
 [技术组合地图](../../landscape/composition-patterns.md) · [高价值项目调查](../../landscape/2026-10-13-landscape.md)
+
+## 2026-11-10：新版 libg 原生快照（Clashback）
+
+[Clashback](../../projects/clashback.md) 的 [NativeSnapshotStream](https://github.com/ak1NaN/Clashback/blob/45c1f26b942ae1d706f2004791e73013e4330099/neo_replay/native_snapshots.py) 封装 `battle_snapshot_encode/load` 和原版观战恢复，在构建 `160402020` 与 `160635001` 上实现逐 Tick 的磁盘快照/回放跳转。恢复时校验同一有效战斗与版本 SHA；应用尚未证明能跨进程任意克隆状态，不能不经测量就用于并行树搜索。当前 R1 / author-documented，未独立运行。
