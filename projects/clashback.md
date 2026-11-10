@@ -43,7 +43,7 @@ license: unknown
 
 ## 觉醒巨人的当前证据边界
 
-项目 README 声明同步了数据版本 `16.635.8`，但 [`observed-160635001.json`](https://github.com/ak1NaN/Clashback/blob/45c1f26b942ae1d706f2004791e73013e4330099/updater/profiles/observed-160635001.json) 列有 `csv_logic/characters/giant.toml`，**没有直接列出 `csv_logic/characters/giant_ev1.toml`**。该文件是否通过其他表、补丁或形态配置提供尚未核实；不能单凭版本标签推断本项目已经成功部署 `Giant_EV1`。公开源码中也未找到针对觉醒巨人半血狂暴、攻击次数/区域半径和快照恢复的专项原生测试。应以卡表解析和实际对局验证为准。
+项目 README 声明同步了数据版本 `16.635.8`，但 [`observed-160635001.json`](https://github.com/ak1NaN/Clashback/blob/45c1f26b942ae1d706f2004791e73013e4330099/updater/profiles/observed-160635001.json) 列有 `csv_logic/characters/giant.toml`，**没有直接列出 `csv_logic/characters/giant_ev1.toml`**。清单中的 `electro_giant_ev1.toml` 对应觉醒雷电巨人（`ElectroGiant_EV1`），不能据此证明普通觉醒巨人（`Giant_EV1`）可用。该文件是否通过其他表、补丁或形态配置提供尚未核实；不能单凭版本标签推断本项目已经成功部署 `Giant_EV1`。公开源码中也未找到针对觉醒巨人半血狂暴、攻击次数/区域半径和快照恢复的专项原生测试。应以卡表解析和实际对局验证为准。
 
 ## 固定接口源码审计
 
