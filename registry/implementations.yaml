@@ -55,7 +55,7 @@ implementations:
     verification: author-documented
     integration: unverified
     claim: "腾讯版客户端的部署队列覆盖层"
-    limits: "README 声明旧内存偏移在 38.4.2 更新后失效"
+    limits: "旧内存偏移已失效；2026-11-06 作者 README 声明停止维护和技术支持"
     evidence: https://github.com/ak1NaN/ClashRoyale-tencent-overlay
   - id: state-observation--tencent-model-harness
     capability: state-observation
@@ -64,7 +64,7 @@ implementations:
     verification: author-documented
     integration: unverified
     claim: "国服观测转换为 FirstLight V4 模型输入"
-    limits: "适用 38.4.2 配置；需逐构建校验偏移"
+    limits: "仅历史 38.4.2 偏移；2026-11-06 作者 README 声明停止维护，不能按 38.4.5 可用推荐"
     evidence: https://github.com/ak1NaN/ClashRoyale-tencent-model-harness
   - id: state-observation--katacr
     capability: state-observation
@@ -764,8 +764,8 @@ implementations:
     verification: author-documented
     integration: unverified
     claim: "特定Nulls客户端观测到PC端模型决策和动作执行的桥接"
-    limits: "15.535.13 ARM64且rb-build独立发布；不保证正式服支持"
-    evidence: https://github.com/RoyaleGym/RoyaleBot/blob/a2ff261d7323b64fe78455c9c50a06cc4846ca5e/README.md
+    limits: "仅 Nulls Royale ARM64 15.535.13 / 16.635.1；rb-build 0.1.2 独立发布，未针对新版实战录像校准，不支持官方客户端"
+    evidence: https://github.com/RoyaleGym/RoyaleBot/blob/2dc24cea2576deac46a79bca099438d9d23b8ed6/README.md
   - id: battle-visualization--royale-viser
     capability: battle-visualization
     project: royale-viser
