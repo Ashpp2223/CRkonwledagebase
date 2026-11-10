@@ -84,6 +84,13 @@ projects:
     verification: author-documented
     license: Apache-2.0
     topics: [cr-battle-simulation, cr-game-mechanics, cr-ai-environment]
+  - id: clashback
+    title: "Clashback"
+    repository: https://github.com/ak1NaN/Clashback
+    path: projects/clashback.md
+    verification: author-documented
+    license: unknown
+    topics: [cr-native-engine, cr-replay-state]
   - id: katacr
     title: "KataCR"
     repository: https://github.com/wty-yy/KataCR
