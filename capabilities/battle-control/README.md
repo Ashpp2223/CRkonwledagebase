@@ -65,3 +65,7 @@ last_reviewed: null
 | [Clapha Engine（私有）](../../projects/clapha-engine.md) | [Jason 公开的 ClaphaEngine](https://github.com/Jason-XII/clash-royale-battle-engine/blob/70a08af6807fa4d59a11c7d52bf6272a96afe30c/clapha.py) 显示 `create_match/step` | 不能直接取得底层源码；不证明画面或快照 |
 
 [16.402.12 静态逆向与未完成关卡](../../research/reverse-engineering/client-upgrade-160402.md) 单独区分新构建；以上旧版本结论不可直接搬用。单项评级以实现矩阵为准。
+
+## 2026-11-10：新版 16.635 原生战斗接口
+
+[Clashback](../../projects/clashback.md) 的 [CrxEnv](https://github.com/ak1NaN/Clashback/blob/45c1f26b942ae1d706f2004791e73013e4330099/vendor/crx/env.py) 暴露 `create_match/step/observe/queue_card_at/queue_ability_action_at`，由版本绑定的原版 x86_64 `libg.so` 构建 `160635001` 驱动，资源版本 `16.635.8`；[绑定表](https://github.com/ak1NaN/Clashback/blob/45c1f26b942ae1d706f2004791e73013e4330099/vendor/crx/bindings/160635001.json) 含对应函数地址、字段与哈希身份。现为应用内部 Python API，macOS/Rosetta 环境，归档 R1 / author-documented；未独立运行及验证觉醒巨人特殊行为，不视作稳定跨平台 SDK。
