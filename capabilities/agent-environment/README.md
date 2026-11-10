@@ -30,7 +30,7 @@ last_reviewed: null
 | [Hasty-CR](../../projects/hasty-cr.md) | R1 · author-documented | 可确定性运行的模拟器及策略训练 | 独立模拟准确性必须按机制验证 | [来源](https://github.com/hastylmao/Hasty-CR) |
 | [RoyaleGym](../../projects/royalegym.md) | R1 · author-documented | Gymnasium/PettingZoo 风格环境与评测 | 需与 RoyaleSim 版本配套 | [来源](https://github.com/RoyaleGym/RoyaleGym) |
 | [RoyaleSim](../../projects/royalesim.md) | R1 · author-documented | Rust 底层战斗引擎与 Python API | 只是引擎，不等于完整训练工具链 | [来源](https://github.com/RoyaleGym/RoyaleSim) |
-| [crforge](../../projects/crforge.md) | R1 · author-documented | Java 模拟器经 ZMQ/Gymnasium 接口训练 | 需要 Java 运行时和桥接进程 | [来源](https://github.com/voonhous/crforge) |
+| [crforge](../../projects/crforge.md) | R1 · author-documented | Java 21 多局模拟，使用平坦缓冲区提供 Python 训练接口 | 需要 Java 21、匹配的卡表和环境接口；非旧版 ZMQ | [来源](https://github.com/voonhous/crforge) |
 | [KataCR](../../projects/katacr.md) | R1 · author-documented | 视觉观测下的策略训练和执行 | 验证环境为历史版本，运行前需重新评估 | [来源](https://github.com/wty-yy/KataCR) |
 | [Tencent Model Harness](../../projects/tencent-model-harness.md) | R1 · author-documented | FirstLight V4 模型在腾讯客户端的推理部署 | 这是推理适配而不是新的训练环境 | [来源](https://github.com/ak1NaN/ClashRoyale-tencent-model-harness) |
 
