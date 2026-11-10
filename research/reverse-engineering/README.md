@@ -30,7 +30,7 @@
 
 **新的原生宿主与版本迁移资料**
 
-- [Clashback](../../projects/clashback.md)（2026-11-04 固定源码）：macOS/Rosetta 下直接调用原版 x86_64 `libg.so` 构建 `160635001`，配置数据 `16.635.8`，具有 Python 建局、逐 Tick 推进、出牌、技能、观察和原生快照；后续跨平台适配与觉醒巨人专项测试待审。
+- [Clashback](../../projects/clashback.md)（2026-11-04 固定源码；[2026-11-10 静态审计](../../docs/source-audits/clashback-160635001-2026-11-10.md)）：macOS/Rosetta 下直接调用原版 x86_64 `libg.so` 构建 `160635001`，配置数据 `16.635.8`，具有 Python 建局、逐 Tick 推进、出牌、技能、观察和原生快照；后续跨平台适配与觉醒巨人专项测试待审。
 
 - [CR Native Sandbox](../../projects/cr-native-sandbox.md)：15.535.29 原始 `libg` 无画面 Worker；[Linux Bionic](../../projects/cr-native-linux-bionic.md) 在同版本消除 AVD/KVM 依赖。
 - [Clapha Engine（私有）](../../projects/clapha-engine.md)：Jason 的公开包装层证明使用了另一条 Linux 进程内加载路线，但无法审查私有 loader。
