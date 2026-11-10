@@ -4,8 +4,8 @@ title: "回放、快照与状态恢复"
 type: topic
 status: investigating
 verification: author-documented
-projects: [firstlight-cr, jason-battle-engine, replay-studio, ashpp-replay, clashai-vegetableleaf, fl-royale, royaleapi-downloader-imax9d, cr-collector-arron, royale-viser]
-last_reviewed: null
+projects: [firstlight-cr, jason-battle-engine, replay-studio, ashpp-replay, clashai-vegetableleaf, fl-royale, royaleapi-downloader-imax9d, cr-collector-arron, royale-viser, clashback]
+last_reviewed: "2026-11-10"
 ---
 
 # 回放、快照与状态恢复
@@ -46,3 +46,7 @@ last_reviewed: null
 ## 2026-10-15：轨迹浏览与原生快照的区别
 
 [RoyaleViser](../projects/royale-viser.md) 可以单步观看 RoyaleGym 运行时/保存的模拟战斗，属于 [战斗轨迹可视化](../capabilities/battle-visualization/README.md)。其 `.msgpack` 并非原生 `libg` 的可恢复战斗状态，不能直接支持任意 Tick 分叉或原生撤回。
+
+## 2026-11-10：Clashback 新版原生快照
+
+[Clashback](../projects/clashback.md) 使用 `NativeSnapshotStream` 在版本锁定的 `libg.so` 上序列化并恢复战斗状态（支持 `160402020`、`160635001`），由程序按 Tick 写入磁盘缓存实现回放跳转；快照带原生建局、命令队列和版本摘要约束。目前属于具体回放内的还原实现，未证明可作为任意多分支、跨进程状态克隆 SDK。
