@@ -12,6 +12,7 @@
 | 从网络数据能确认什么 | [协议与消息史](protocol-history.md) | [旧版消息定义](https://github.com/royale-proxy/cr-messages) |
 | SC、CSV 等游戏资源怎样研究 | [资源格式研究](resource-formats.md) | [cr-sc-dump](https://github.com/123456abcdef/cr-sc-dump) |
 | 16.402.12 是否已经有独立新版离线引擎 | [新版生命周期证据与缺口](client-upgrade-160402.md) | [vegetableleaf Oracle v7](https://github.com/vegetableleaf/ClashAI/blob/ec4ef8e9dcaaaa4169ff8768bd36323e93840f9c/scratchpad/gauntlet/L74/oracle/linux/qualify/jnihost_ro/v7/GATES.md) |
+| 2026 年 11 月 16.635 规则与觉醒巨人是否可复现 | [跨模拟器规则/回放证据](../knowledge-notes/cr-16635-evo-giant-parity-2026-11-10.md) | [crforge 逐 Tick 校验源码审计](../../docs/source-audits/crforge-16635-parity-2026-11-10.md)；两者是自建模拟器，不等于新版原生宿主 |
 | 版本升级后旧结论还能不能用 | [构建与偏移复验](version-revalidation.md) | [腾讯 Overlay 失效案例](https://github.com/ak1NaN/ClashRoyale-tencent-overlay) |
 | 离线引擎在 15.535/16.402/腾讯 38.4.2 分别完成了什么 | [跨构建原生宿主进展](client-build-migration-2026-10.md) | [ClashAI ORACLE v7 门禁](https://github.com/vegetableleaf/ClashAI/blob/218554aee8b7be9b3ad5298349853d6fe747c90f/scratchpad/gauntlet/L74/oracle/linux/qualify/jnihost_ro/v7/GATES.md) |
 | 怎样保存 AI/人工研究的假设、证据与失败 | [研究方法](methodology.md) | [逆向发现机器索引](../../registry/reverse-findings.yaml) |
