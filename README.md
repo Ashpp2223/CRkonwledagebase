@@ -70,7 +70,7 @@
 
 - **[新版战斗引擎与觉醒巨人研究](research/knowledge-notes/cr-16635-evo-giant-parity-2026-11-10.md)**：核对 16.635.1 客户端与 16.635.8 数据版本，区分官方原生引擎、crforge 参考回放逐 Tick 比对，以及 RoyaleSim 数据表/专项测试。
 - **[crforge 项目档案](projects/crforge.md)**：11 月 5 日实现 `Giant_EV1`，上游提交报告真实参考场景 `diagnostic_match`；[差分接口 R2 静态审计](docs/source-audits/crforge-16635-parity-2026-11-10.md) 仅覆盖指定源码和测试入口。
-- **[RoyaleSim 项目档案](projects/royalesim.md)**：更新至 0.1.51；觉醒巨人的区域/时钟测试来自 16.635 游戏表，作者说明该形态尚未被实际捕获轨迹校准。两项目此前均已入库，本次无新增 Project ID，新增 1 项限定证据的 Implementation。
+- **[RoyaleSim 项目档案](projects/royalesim.md)**：更新至 0.1.51；觉醒巨人的区域/时钟测试来自 16.635 游戏表，作者说明该形态尚未被实际捕获轨迹校准。两项目此前均已入库；这一轮仅对它们的能力登记增加 1 条验证关联。另行发现的新版原生宿主 Clashback 见下节。
 
 ## 2026-11-10 重要补充：新版原生引擎接口已经存在
 
