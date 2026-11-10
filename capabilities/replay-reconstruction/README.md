@@ -61,3 +61,7 @@ last_reviewed: null
 - [ClashAI 的实验记录](../../projects/clashai-vegetableleaf.md) 提供作者对原生重驱可复现性和拒绝动作的测量路径；由作者测量，不等于中台重测。
 
 [开发者网络调查](../../landscape/2026-10-15-developer-network.md)
+
+## 2026-11-10：新版原生 HTML 回放重建
+
+[Clashback](../../projects/clashback.md) 通过 [native_worker.py](https://github.com/ak1NaN/Clashback/blob/45c1f26b942ae1d706f2004791e73013e4330099/neo_replay/native_worker.py) 将 RoyaleAPI HTML 的出牌、技能、坐标与时间输入原生 `CrxEnv`，在 `160635001` / `16.635.8` 下再模拟并进行观战渲染。HTML 缺少起手牌、RNG 等内部信息，推断结果以出牌与终局塔血等外显指标校验，不具备逐帧等价的证明。归档 R1 / author-documented。
