@@ -23,7 +23,7 @@
 
 ## GitHub 全生态调查与选择依据
 
-**[逆向工程知识中心](research/reverse-engineering/README.md)**：APK/Native、运行时内存、战斗对象布局、历史网络协议、资源格式、版本复验与 [20 条版本绑定的发现记录](registry/reverse-findings.yaml)。这是独立的证据型知识层，并非运行时组件。
+**[逆向工程知识中心](research/reverse-engineering/README.md)**：APK/Native、运行时内存、战斗对象布局、历史网络协议、资源格式、版本复验与 [21 条版本绑定的发现记录](registry/reverse-findings.yaml)。这是独立的证据型知识层，并非运行时组件。
 
 - **[2026-10-15 开发者网络与新仓库调查](landscape/2026-10-15-developer-network.md)**：从开发者公开仓库及已确认的 Fork/协作关系发现原生宿主、私有 Clapha、数据与训练线索；不可访问的 Star/Follow 图谱明确标注。
 - **[新版 16.402.12 原生生命周期研究](research/reverse-engineering/client-upgrade-160402.md)**：区分静态定位、源码编译与真正的新版离线原生执行。
@@ -74,4 +74,4 @@
 
 ## 2026-11-10 重要补充：新版原生引擎接口已经存在
 
-[Clashback](projects/clashback.md)（ak1NaN）已公开 x86_64 `libg.so` 构建 `160635001`、游戏数据 `16.635.8` 对应的原生绑定，并在 macOS / Rosetta 下提供 `CrxEnv.create_match/step/observe/queue_card_at` 与 Tick 快照保存/恢复。它直接调用原生引擎，区别于重建战斗规则的 [crforge](projects/crforge.md)、[RoyaleSim](projects/royalesim.md)；觉醒巨人的专项原生校验尚无固定公开证据。补入 1 个 Project 和 3 条 R1 实现关联，授权状态 unknown，未独立运行验证。[研究笔记](research/knowledge-notes/cr-16635-evo-giant-parity-2026-11-10.md) 已相应纠错。
+[Clashback](projects/clashback.md)（ak1NaN）已公开 x86_64 `libg.so` 构建 `160635001`、游戏数据 `16.635.8` 对应的原生绑定，并在 macOS / Rosetta 下提供 `CrxEnv.create_match/step/observe/queue_card_at` 与 Tick 快照保存/恢复。它直接调用原生引擎，区别于重建战斗规则的 [crforge](projects/crforge.md)、[RoyaleSim](projects/royalesim.md)；觉醒巨人的专项原生校验尚无固定公开证据；其资源清单还需确认觉醒形态定义是否实际加载。补入 1 个 Project 和 3 条实现关联（战斗驱动、快照恢复两项 R2 静态核查；回放重建 R1），授权状态 unknown，未独立运行验证。[研究笔记](research/knowledge-notes/cr-16635-evo-giant-parity-2026-11-10.md) 已相应纠错。
