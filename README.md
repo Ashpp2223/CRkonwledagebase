@@ -2,7 +2,7 @@
 
 **从开发需求出发，查找现有技术、实现接口、验证证据与复用方法，并探索跨项目技术组合。**
 
-> 截至 2026-11-10（目录与关联复核）：**37 个正式项目档案、13 项能力、86 条“项目×能力”关联、7 个跨项目研究专题**。大部分条目属于作者文档级证据（R0/R1），少量单项能力完成固定 Commit 静态源码审查（R2），**没有独立验证的 R3/R4 集成组件**。项目作者并未全部参与维护。
+> 截至 2026-11-10（目录与关联复核）：**38 个正式项目档案、13 项能力、89 条“项目×能力”关联、7 个跨项目研究专题**。大部分条目属于作者文档级证据（R0/R1），少量单项能力完成固定 Commit 静态源码审查（R2），**没有独立验证的 R3/R4 集成组件**。项目作者并未全部参与维护。
 
 ## 从需求开始
 
@@ -71,3 +71,7 @@
 - **[新版战斗引擎与觉醒巨人研究](research/knowledge-notes/cr-16635-evo-giant-parity-2026-11-10.md)**：核对 16.635.1 客户端与 16.635.8 数据版本，区分官方原生引擎、crforge 参考回放逐 Tick 比对，以及 RoyaleSim 数据表/专项测试。
 - **[crforge 项目档案](projects/crforge.md)**：11 月 5 日实现 `Giant_EV1`，上游提交报告真实参考场景 `diagnostic_match`；[差分接口 R2 静态审计](docs/source-audits/crforge-16635-parity-2026-11-10.md) 仅覆盖指定源码和测试入口。
 - **[RoyaleSim 项目档案](projects/royalesim.md)**：更新至 0.1.51；觉醒巨人的区域/时钟测试来自 16.635 游戏表，作者说明该形态尚未被实际捕获轨迹校准。两项目此前均已入库，本次无新增 Project ID，新增 1 项限定证据的 Implementation。
+
+## 2026-11-10 重要补充：新版原生引擎接口已经存在
+
+[Clashback](projects/clashback.md)（ak1NaN）已公开 x86_64 `libg.so` 构建 `160635001`、游戏数据 `16.635.8` 对应的原生绑定，并在 macOS / Rosetta 下提供 `CrxEnv.create_match/step/observe/queue_card_at` 与 Tick 快照保存/恢复。它直接调用原生引擎，区别于重建战斗规则的 [crforge](projects/crforge.md)、[RoyaleSim](projects/royalesim.md)；觉醒巨人的专项原生校验尚无固定公开证据。补入 1 个 Project 和 3 条 R1 实现关联，授权状态 unknown，未独立运行验证。[研究笔记](research/knowledge-notes/cr-16635-evo-giant-parity-2026-11-10.md) 已相应纠错。
