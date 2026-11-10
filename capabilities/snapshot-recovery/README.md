@@ -20,6 +20,7 @@ last_reviewed: null
 | [FirstLight CR](../../projects/firstlight-cr.md) | `NativeClashEnv.create_snapshot/restore/release_snapshot` + 原生探针命令 | **R2/source-inspected**（只针对进程内快照接口的存在和限制） | 跨进程持久化、跨 manager generation 恢复、独立实例并行克隆、实际性能 |
 | [Ashpp 复盘器](../../projects/ashpp-replay.md) | `BattleController.snapshot_create/restore` + 清空旧分支调度 + 动作日志回放 | **R2/source-inspected**（只针对控制流程） | 全 GameState 字节级等价、并行多实例、不同平台集成 |
 | [Replay Studio](../../projects/replay-studio.md) | 按 Tick 预演算、应用级缓存和跳转 | R1/author-documented | 不等同于原生任意时刻快照 |
+| [Clashback](../../projects/clashback.md) | `NativeSnapshotStream.save/load` 原生序列化及每 Tick 磁盘快照；160635001 | **R2/source-inspected（限编码/恢复方法）** | 同局及拥有线程约束，未测试独立实例分叉和第三方平台 |
 
 **第一项是本次重要更正**：FirstLight 在其原生控制层中确实具备快照接口；旧版知识库漏收了这一能力。具体证据：[Python API](https://github.com/Jaasssoooonnnnn/FirstLight_CR/blob/3ade158c52bf33de3ffcea600ce380946b7de0d8/native_runner/cr_native_env.py#L2828-L2860) 与 [C++ 探针命令](https://github.com/Jaasssoooonnnnn/FirstLight_CR/blob/3ade158c52bf33de3ffcea600ce380946b7de0d8/native_runner/probe/cr_replay_probe.cpp#L6804-L6868)。
 
@@ -51,4 +52,4 @@ Ashpp 的复盘控制器还明确处理了快照**之外**的调度队列，恢�
 
 ## 2026-11-10：新版 libg 原生快照（Clashback）
 
-[Clashback](../../projects/clashback.md) 的 [NativeSnapshotStream](https://github.com/ak1NaN/Clashback/blob/45c1f26b942ae1d706f2004791e73013e4330099/neo_replay/native_snapshots.py) 封装 `battle_snapshot_encode/load` 和原版观战恢复，在构建 `160402020` 与 `160635001` 上实现逐 Tick 的磁盘快照/回放跳转。恢复时校验同一有效战斗与版本 SHA；应用尚未证明能跨进程任意克隆状态，不能不经测量就用于并行树搜索。当前 R1 / author-documented，未独立运行。
+[Clashback](../../projects/clashback.md) 的 [NativeSnapshotStream](https://github.com/ak1NaN/Clashback/blob/45c1f26b942ae1d706f2004791e73013e4330099/neo_replay/native_snapshots.py) 封装 `battle_snapshot_encode/load` 和原版观战恢复，在构建 `160402020` 与 `160635001` 上实现逐 Tick 的磁盘快照/回放跳转。恢复时校验同一有效战斗与版本 SHA；应用尚未证明能跨进程任意克隆状态，不能不经测量就用于并行树搜索。已就该快照编解码和原生恢复链完成 [R2/source-inspected 专项源码审计](../../docs/source-audits/clashback-160635001-2026-11-10.md)；没有中台独立运行或跨进程分支验收。
