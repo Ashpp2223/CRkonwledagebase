@@ -13,6 +13,7 @@
 | SC、CSV 等游戏资源怎样研究 | [资源格式研究](resource-formats.md) | [cr-sc-dump](https://github.com/123456abcdef/cr-sc-dump) |
 | 16.402.12 是否已经有独立新版离线引擎 | [新版生命周期证据与缺口](client-upgrade-160402.md) | [vegetableleaf Oracle v7](https://github.com/vegetableleaf/ClashAI/blob/ec4ef8e9dcaaaa4169ff8768bd36323e93840f9c/scratchpad/gauntlet/L74/oracle/linux/qualify/jnihost_ro/v7/GATES.md) |
 | 2026 年 11 月 16.635 规则与觉醒巨人是否可复现 | [跨模拟器规则/回放证据](../knowledge-notes/cr-16635-evo-giant-parity-2026-11-10.md) | [crforge 逐 Tick 校验源码审计](../../docs/source-audits/crforge-16635-parity-2026-11-10.md)；两者是自建模拟器，不等于新版原生宿主 |
+| 11 月 16.635 是否存在直接调用 `libg.so` 的原生战斗接口 | [Clashback 新版原生接口档案](../../projects/clashback.md) | [固定构建 160635001 绑定](https://github.com/ak1NaN/Clashback/blob/45c1f26b942ae1d706f2004791e73013e4330099/vendor/crx/bindings/160635001.json) 和 [CrxEnv](https://github.com/ak1NaN/Clashback/blob/45c1f26b942ae1d706f2004791e73013e4330099/vendor/crx/env.py) |
 | 版本升级后旧结论还能不能用 | [构建与偏移复验](version-revalidation.md) | [腾讯 Overlay 失效案例](https://github.com/ak1NaN/ClashRoyale-tencent-overlay) |
 | 离线引擎在 15.535/16.402/腾讯 38.4.2 分别完成了什么 | [跨构建原生宿主进展](client-build-migration-2026-10.md) | [ClashAI ORACLE v7 门禁](https://github.com/vegetableleaf/ClashAI/blob/218554aee8b7be9b3ad5298349853d6fe747c90f/scratchpad/gauntlet/L74/oracle/linux/qualify/jnihost_ro/v7/GATES.md) |
 | 怎样保存 AI/人工研究的假设、证据与失败 | [研究方法](methodology.md) | [逆向发现机器索引](../../registry/reverse-findings.yaml) |
@@ -28,6 +29,8 @@
 - [ak1NaN Tencent Overlay](https://github.com/ak1NaN/ClashRoyale-tencent-overlay) 与 [Model Harness](https://github.com/ak1NaN/ClashRoyale-tencent-model-harness)：不同客户端偏移移植、版本失效及原生数据映射。
 
 **新的原生宿主与版本迁移资料**
+
+- [Clashback](../../projects/clashback.md)（2026-11-04 固定源码）：macOS/Rosetta 下直接调用原版 x86_64 `libg.so` 构建 `160635001`，配置数据 `16.635.8`，具有 Python 建局、逐 Tick 推进、出牌、技能、观察和原生快照；后续跨平台适配与觉醒巨人专项测试待审。
 
 - [CR Native Sandbox](../../projects/cr-native-sandbox.md)：15.535.29 原始 `libg` 无画面 Worker；[Linux Bionic](../../projects/cr-native-linux-bionic.md) 在同版本消除 AVD/KVM 依赖。
 - [Clapha Engine（私有）](../../projects/clapha-engine.md)：Jason 的公开包装层证明使用了另一条 Linux 进程内加载路线，但无法审查私有 loader。
