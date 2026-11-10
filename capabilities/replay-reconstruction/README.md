@@ -65,3 +65,6 @@ last_reviewed: null
 ## 2026-11-10：新版原生 HTML 回放重建
 
 [Clashback](../../projects/clashback.md) 通过 [native_worker.py](https://github.com/ak1NaN/Clashback/blob/45c1f26b942ae1d706f2004791e73013e4330099/neo_replay/native_worker.py) 将 RoyaleAPI HTML 的出牌、技能、坐标与时间输入原生 `CrxEnv`，在 `160635001` / `16.635.8` 下再模拟并进行观战渲染。HTML 缺少起手牌、RNG 等内部信息，推断结果以出牌与终局塔血等外显指标校验，不具备逐帧等价的证明。归档 R1 / author-documented。
+
+
+2026-11-10 上游维护状态：[Replay Studio](../../projects/replay-studio.md) 的后续开发迁至 [Clashback](../../projects/clashback.md)；旧仓库 `15.535.13` HTML→原生画面复原仍属历史方案，不推断与新版 `160635001` 直接兼容。
