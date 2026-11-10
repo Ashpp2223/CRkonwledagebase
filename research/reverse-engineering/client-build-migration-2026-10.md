@@ -1,4 +1,4 @@
-# 跨构建原生战斗宿主：15.535、16.402 与腾讯 38.4.2
+# 跨构建原生战斗宿主：15.535、16.402、16.635 与腾讯 38.4.2
 
 截至 2026-10-15，本页区分**运行已证实的旧版路径**、**针对新版的静态发现**与**待验证的迁移能力**。
 
@@ -10,6 +10,7 @@
 | [CR Native Sandbox](../../projects/native-sandbox-imax9d.md) | 15.535.29，Android x86_64 | JNI/Java 宿主、API、固定指纹 | 作者报告可运行 | 无原生画面；未找到可供第三方复用的快照/恢复契约 |
 | [Linux Bionic](../../projects/native-bionic-imax9d.md) | 15.535.29，Linux x86_64 / Android API31 userland | linker/ART/Binderless JniHost，无 AVD/KVM | 作者报告可运行，复用 Sandbox Worker | 无原生画面；不是 16.402 迁移 |
 | [ClashAI ORACLE v3/v7](../../projects/clashai-vegetableleaf.md) | 160402012，x86_64 | 生命周期静态分析与 staged host；v7 compile/check 通过 | **未取得运行通过证据** | **没有新版渲染/快照通过证据** |
+| [Clashback](../../projects/clashback.md) | 160635001，macOS/Rosetta x86_64；数据 16.635.8 | 固定 SHA/函数和字段绑定、CrxEnv、原生快照（[源码审计](../../docs/source-audits/clashback-160635001-2026-11-10.md)） | 有建局、逐 Tick、出牌、观察源码；未中台实机运行 | 原版渲染回放与快照源码；通用多局 reset 和觉醒巨人专项待验 |
 | [AK Tencent Harness](../../projects/tencent-model-harness.md) | 38.4.2，ARM64 | 有原生 step Hook、command 构造、状态读取和提交 | **未公开独立离线创建和 Tick 驱动** | 依赖正在运行的客户端；`snapshot` 是部分观测，不是恢复点 |
 
 各版本编号不能直接按大小推断版本分支与 ABI 互相兼容。
@@ -45,3 +46,11 @@ v7 的 `GATES.md`：G1–G4 完成离线测试、源码检查与编译；**G5 An
 若只完成 1–3，适合作为无画面引擎研究原型，**不能立即替换需要原生画面和快照的用户复盘体验**。
 
 [来源网络](../../landscape/2026-10-15-source-network.md) · [构建与偏移复验](version-revalidation.md) · [逆向知识中心](README.md)
+
+## 2026-11-10：Clashback 对 160635001 的原生封装
+
+[固定提交 `45c1f26b942ae1d706f2004791e73013e4330099`](https://github.com/ak1NaN/Clashback/tree/45c1f26b942ae1d706f2004791e73013e4330099) 公开了 [`vendor/crx/env.py`](https://github.com/ak1NaN/Clashback/blob/45c1f26b942ae1d706f2004791e73013e4330099/vendor/crx/env.py)、[`160635001.json`](https://github.com/ak1NaN/Clashback/blob/45c1f26b942ae1d706f2004791e73013e4330099/vendor/crx/bindings/160635001.json) 以及 [`NativeSnapshotStream`](https://github.com/ak1NaN/Clashback/blob/45c1f26b942ae1d706f2004791e73013e4330099/neo_replay/native_snapshots.py)。映射对应原生 x86_64 `libg.so` SHA-256 `c4721bd90f46fd1709e9dc498e286462ad88cf817ec645c5749f0aa445fd6539`；作者 README 标注资源版本 `16.635.8`、macOS + Rosetta 环境。源码明确包含原生战斗启动、推进、动作队列、玩家/单位观察及同局快照的序列化与加载。
+
+**专项静态核查**：[Clashback 16.635001 原生接口审计](../../docs/source-audits/clashback-160635001-2026-11-10.md)。已核对源文件中的 **90 个原生函数映射、156 个字段映射**及方法调用链，限于特定接口 R2/source-inspected；未运行原版二进制，未证明进程内重复建局在 Mac 上稳定。它解决了先前文档对新版“只有静态生命周期线索”的信息缺口。
+
+**觉醒巨人边界**：对应 [文件清单](https://github.com/ak1NaN/Clashback/blob/45c1f26b942ae1d706f2004791e73013e4330099/updater/profiles/observed-160635001.json) 包含 `csv_logic/characters/giant.toml`，**未列明同名 `giant_ev1.toml` 文件**。这不证明形态无法由别的表加载，但也不能断言已在该原生宿主中完成觉醒巨人的部署/狂暴测试。较强的逐 Tick 对照证据仍来自 [crforge](../../projects/crforge.md) 的限定参考场景，且属于独立模拟器。
