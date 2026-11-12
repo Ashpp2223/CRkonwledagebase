@@ -188,6 +188,16 @@ implementations:
     claim: "可确定性运行的模拟器及策略训练"
     limits: "独立模拟准确性必须按机制验证"
     evidence: https://github.com/hastylmao/Hasty-CR
+  - id: agent-environment--royalefish
+    capability: agent-environment
+    project: royalefish
+    reuse_level: R1
+    verification: author-documented
+    integration: unverified
+    claim: "原生引擎离线对局、V4 recurrent actor-critic、PPO 自博弈训练及模型基线"
+    limits: "需自行提供原生战斗引擎与外部 V4 框架；README 性能和胜率未独立复现；未验证与 Clashback 兼容"
+    evidence: https://github.com/fabiospalla9-tech/RoyaleFish/blob/main/README.md
+
   - id: agent-environment--royalegym
     capability: agent-environment
     project: royalegym
