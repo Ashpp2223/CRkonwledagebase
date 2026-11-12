@@ -328,3 +328,35 @@ projects:
     verification: author-documented
     license: unknown
     topics: [cr-replay-state, cr-ai-environment]
+
+  - id: imax-native-sandbox
+    title: "CR Native Sandbox"
+    repository: https://github.com/IMAX9D/cr-native-sandbox
+    path: projects/imax-native-sandbox.md
+    verification: author-documented
+    license: unknown
+    topics: [cr-native-engine, cr-ai-environment]
+
+  - id: sc-fingerprint-rust
+    title: "SC Fingerprint Downloader Rust"
+    repository: https://github.com/TrixallTR/SC-Fingerprint-Downloader-RUST
+    path: projects/sc-fingerprint-rust.md
+    verification: author-documented
+    license: unknown
+    topics: [cr-assets-data]
+
+  - id: supercell-asset-decompressor
+    title: "Supercell Asset Decompressor"
+    repository: https://github.com/abhishek-kumar-14/supercell-asset-decompressor
+    path: projects/supercell-asset-decompressor.md
+    verification: author-documented
+    license: unknown
+    topics: [cr-assets-data]
+
+  - id: royaleapi-replay-dataset
+    title: "RoyaleAPI Replay Dataset"
+    repository: https://github.com/Aminiwow/royaleapi-replay-dataset
+    path: projects/royaleapi-replay-dataset.md
+    verification: author-documented
+    license: unknown
+    topics: [cr-replay-state, cr-ai-environment]
