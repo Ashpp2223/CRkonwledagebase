@@ -67,3 +67,7 @@
 [research-cr-knowledge](../.agents/skills/research-cr-knowledge/SKILL.md) 负责搜集和拆解证据；[synthesize-cr-knowledge](../.agents/skills/synthesize-cr-knowledge/SKILL.md) 负责多源归纳；[apply-cr-knowledge](../.agents/skills/apply-cr-knowledge/SKILL.md) 负责用知识回答开发问题；[curate-cr-knowledge](../.agents/skills/curate-cr-knowledge/SKILL.md) 负责写回索引；[review-cr-evidence](../.agents/skills/review-cr-evidence/SKILL.md) 负责质量审查。
 
 只在能形成独立、可重用技术解释时创建知识笔记。一个问题若已经在能力卡或专题讲清楚，优先编辑原页面。
+
+## 调查覆盖与结论覆盖分别记录
+
+每次生态检索记录作者仓库、Fork、依赖与引用的覆盖范围，以及未读取的文件/无法访问的上游。没有 README 不代表没有实现；需继续检查实际目录、源文件或数据。审查具体源码只支持对应路径和条件下的结论，不能直接推广至项目整体。项目数量、审查完成率、独立运行验证率分别统计，避免以收录数量代替知识质量。
