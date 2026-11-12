@@ -100,3 +100,7 @@
 ### 研究修订：FirstLight Zero 回放一致性边界
 
 新增 [FirstLight Zero 训练与回放合同审查](docs/source-audits/firstlight-zero-2026-11-12.md)。其回放导出/重驱检查覆盖动作及终局字段，不可据此推断逐 Tick 完整状态一致或支持任意帧快照恢复。另核对 RoyaleAPI/cr-api-docs 为 2020 年停用的历史 API 文档归档。
+
+### 源码核查：精确回放的实际判定范围
+
+[Simulator Trial 与 FirstLight Zero 源码审查](docs/source-audits/simulator-trial-firstlight-zero-code-2026-11-12.md)：直接检查回放导出、重驱比较和训练 preflight 源码。Simulator Trial 存在作者明确记录的单位交互与轨迹偏差，不能作为已验证高保真引擎。FirstLight Zero 的 exact replay 谓词未比较逐 Tick 完整状态。
