@@ -2,7 +2,7 @@
 
 **从开发需求出发，查找现有技术、实现接口、验证证据与复用方法，并探索跨项目技术组合。**
 
-> 截至 2026-11-12（目录与关联复核）：**45 个正式项目档案、13 项能力、90 条“项目×能力”关联、7 个跨项目研究专题**。大部分条目属于作者文档级证据（R0/R1），少量单项能力完成固定 Commit 静态源码审查（R2），**没有独立验证的 R3/R4 集成组件**。项目作者并未全部参与维护。
+> 截至 2026-11-12（目录与关联复核）：**49 个正式项目档案、13 项能力、90 条“项目×能力”关联、7 个跨项目研究专题**。大部分条目属于作者文档级证据（R0/R1），少量单项能力完成固定 Commit 静态源码审查（R2），**没有独立验证的 R3/R4 集成组件**。项目作者并未全部参与维护。
 
 ## 从需求开始
 
@@ -84,3 +84,7 @@
 ## 2026-11-12：跨名称关联扩展
 
 新增 [6 个独立项目来源](projects/README.md)：Clash Royale Research、CrownZero、Clash Royale Post-Game Analyzer、Elixir MCP、Elixir MCP Collector、Clash Royale Dataset Browser。检索包括非直观仓库名与项目依赖链；均为 R1 作者文档级证据，未增加能力实现关联或宣称独立运行验证。
+
+## 2026-11-12：第二轮发现
+
+新增 [4 个独立项目](projects/README.md)：CR Native Sandbox、SC Fingerprint Downloader Rust、Supercell Asset Decompressor、RoyaleAPI Replay Dataset；Jason-XII 模拟器已在库中，未重复登记。全部保持 R1 作者文档证据。
