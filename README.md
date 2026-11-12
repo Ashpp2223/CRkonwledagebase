@@ -96,3 +96,7 @@
 ## 2026-11-12：作者仓库全量名称筛查
 
 从注册表得到 30 个不同 GitHub 所有者，枚举各账号公开仓库并对重点候选读取 README，新增 [9 项](projects/README.md)。发现 IMAX9D/cr-native-sandbox 在 registry/projects.yaml 中有两条登记：已移除重复的 `imax-native-sandbox` 注册条目，保留原 `native-sandbox-imax9d` 正式档案；目前为 58 条登记、58 个不同仓库。
+
+### 研究修订：FirstLight Zero 回放一致性边界
+
+新增 [FirstLight Zero 训练与回放合同审查](docs/source-audits/firstlight-zero-2026-11-12.md)。其回放导出/重驱检查覆盖动作及终局字段，不可据此推断逐 Tick 完整状态一致或支持任意帧快照恢复。另核对 RoyaleAPI/cr-api-docs 为 2020 年停用的历史 API 文档归档。
