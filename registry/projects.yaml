@@ -360,3 +360,11 @@ projects:
     verification: author-documented
     license: unknown
     topics: [cr-replay-state, cr-ai-environment]
+
+  - id: jason-daybreak
+    title: "Daybreak CR"
+    repository: https://github.com/Jason-XII/daybreak-cr
+    path: projects/jason-daybreak.md
+    verification: author-documented
+    license: unknown
+    topics: [cr-native-engine, cr-ai-environment, cr-replay-state]
