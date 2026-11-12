@@ -146,3 +146,17 @@
 - **新增**：[Daybreak CR](jason-daybreak.md) — Jason-XII 的回放重驱、IL/PPO、模型对战和晋级训练链。
 - **IMAX9D 已收录**：`cr-native-sandbox`、`cr-native-linux-bionic`、`royaleapi-downloader`、`r0-elite-training`；应按“回放采集 → 原生环境 → 数据编译 → 模型训练”理解依赖关系，运行契约仍需逐项核验。
 - **Jason-XII 已收录**：`clash-royale-simulator`、`cr-memory-reader`、`sc-decoder` 等；其余公开仓库不因作者身份自动视为 CR 项目。
+
+## 2026-11-12：30 个已登记 GitHub 所有者的仓库遍历
+
+- [FirstLight Zero](firstlight-zero.md) — [Jaasssoooonnnnn/FirstLight-Zero](https://github.com/Jaasssoooonnnnn/FirstLight-Zero)
+- [Clash Royale Dataset](wty-cr-dataset.md) — [wty-yy/Clash-Royale-Dataset](https://github.com/wty-yy/Clash-Royale-Dataset)
+- [CR Agent API Docs](cr-agent-api-docs.md) — [jthingelstad/cr-agent-api-docs](https://github.com/jthingelstad/cr-agent-api-docs)
+- [Elixir MCP Discord](elixir-mcp-discord.md) — [jthingelstad/elixir-mcp-discord](https://github.com/jthingelstad/elixir-mcp-discord)
+- [SC Export Name Extractor](sc-exportname-extractor.md) — [TrixallTR/SC-ExportName-Extractor](https://github.com/TrixallTR/SC-ExportName-Extractor)
+- [CR Tilemap Converter](cr-new-tilemap.md) — [Darknighture/cr-new-tilemap](https://github.com/Darknighture/cr-new-tilemap)
+- [CR Chest Probability Calculator](cr-chest-probability.md) — [Darknighture/cr-chest-probability-calculator](https://github.com/Darknighture/cr-chest-probability-calculator)
+- [RoyaleRating](royalerating.md) — [RoyaleAPI/royalerating](https://github.com/RoyaleAPI/royalerating)
+- [RoyaleAPI Assets](cr-api-assets.md) — [RoyaleAPI/cr-api-assets](https://github.com/RoyaleAPI/cr-api-assets)
+
+重点排除：DiffuPlan、TRACE、aboufama/clash-game 属其他领域；vegetableleaf/KataCR 与 max-miller1204/KataCR 的 README 与 wty-yy/KataCR 同源，暂不独立登记。Jason-XII/daybreak-cr 已在上一轮新增。其他作者仓库已做名称级遍历，非所有仓库都已源码审计。
