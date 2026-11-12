@@ -63,6 +63,14 @@ projects:
     verification: author-documented
     license: MIT
     topics: [cr-battle-simulation, cr-game-mechanics, cr-ai-environment]
+  - id: royalefish
+    title: "RoyaleFish"
+    repository: https://github.com/fabiospalla9-tech/RoyaleFish
+    path: projects/royalefish.md
+    verification: author-documented
+    license: Apache-2.0
+    topics: [cr-native-engine, cr-ai-environment]
+
   - id: royalegym
     title: "RoyaleGym"
     repository: https://github.com/RoyaleGym/RoyaleGym
