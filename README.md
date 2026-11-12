@@ -2,7 +2,7 @@
 
 **从开发需求出发，查找现有技术、实现接口、验证证据与复用方法，并探索跨项目技术组合。**
 
-> 截至 2026-11-12（目录与关联复核）：**39 个正式项目档案、13 项能力、90 条“项目×能力”关联、7 个跨项目研究专题**。大部分条目属于作者文档级证据（R0/R1），少量单项能力完成固定 Commit 静态源码审查（R2），**没有独立验证的 R3/R4 集成组件**。项目作者并未全部参与维护。
+> 截至 2026-11-12（目录与关联复核）：**45 个正式项目档案、13 项能力、90 条“项目×能力”关联、7 个跨项目研究专题**。大部分条目属于作者文档级证据（R0/R1），少量单项能力完成固定 Commit 静态源码审查（R2），**没有独立验证的 R3/R4 集成组件**。项目作者并未全部参与维护。
 
 ## 从需求开始
 
@@ -80,3 +80,7 @@
 
 - [RoyaleFish](projects/royalefish.md)：补入原生战斗引擎并行自博弈、V4 recurrent actor-critic、PPO 训练与公开模型基线；原生引擎和 V4 框架需自行提供。
 - 新增 1 个 Project 和 1 条 `agent-environment` 实现关联；已按固定提交 [e94f9d6](https://github.com/fabiospalla9-tech/RoyaleFish/tree/e94f9d6b3c17c5e308272d01d6fdfe0e312201e9) 对训练流水线完成 [R2 静态源码审查](docs/source-audits/royalefish-2026-11-12.md)。性能、胜率、引擎运行与分支快照均未独立验证。
+
+## 2026-11-12：跨名称关联扩展
+
+新增 [6 个独立项目来源](projects/README.md)：Clash Royale Research、CrownZero、Clash Royale Post-Game Analyzer、Elixir MCP、Elixir MCP Collector、Clash Royale Dataset Browser。检索包括非直观仓库名与项目依赖链；均为 R1 作者文档级证据，未增加能力实现关联或宣称独立运行验证。
