@@ -280,3 +280,51 @@ projects:
     verification: author-documented
     license: MIT
     topics: [cr-ai-environment]
+
+  - id: aboufama-research
+    title: "Clash Royale Research"
+    repository: https://github.com/aboufama/clash-royale-research
+    path: projects/aboufama-research.md
+    verification: author-documented
+    license: unknown
+    topics: [cr-battle-simulation, cr-game-mechanics]
+
+  - id: crownzero
+    title: "CrownZero"
+    repository: https://github.com/anishhchitnis/crownzero
+    path: projects/crownzero.md
+    verification: author-documented
+    license: unknown
+    topics: [cr-ai-environment, cr-runtime-observation]
+
+  - id: clash-royale-pod
+    title: "Clash Royale Post-Game Analyzer"
+    repository: https://github.com/max-miller1204/Clash-Royale-Pod
+    path: projects/clash-royale-pod.md
+    verification: author-documented
+    license: unknown
+    topics: [cr-runtime-observation, cr-replay-state]
+
+  - id: elixir-mcp
+    title: "Elixir MCP"
+    repository: https://github.com/jthingelstad/elixir-mcp
+    path: projects/elixir-mcp.md
+    verification: author-documented
+    license: unknown
+    topics: [cr-assets-data]
+
+  - id: elixir-mcp-collector
+    title: "Elixir MCP Collector"
+    repository: https://github.com/jthingelstad/elixir-mcp-collector
+    path: projects/elixir-mcp-collector.md
+    verification: author-documented
+    license: unknown
+    topics: [cr-assets-data]
+
+  - id: cr-dataset-browser
+    title: "Clash Royale Dataset Browser"
+    repository: https://github.com/HumaidAlhuthali/clash-royale-dataset-browser
+    path: projects/cr-dataset-browser.md
+    verification: author-documented
+    license: unknown
+    topics: [cr-replay-state, cr-ai-environment]
