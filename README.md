@@ -104,3 +104,7 @@
 ### 源码核查：精确回放的实际判定范围
 
 [Simulator Trial 与 FirstLight Zero 源码审查](docs/source-audits/simulator-trial-firstlight-zero-code-2026-11-12.md)：直接检查回放导出、重驱比较和训练 preflight 源码。Simulator Trial 存在作者明确记录的单位交互与轨迹偏差，不能作为已验证高保真引擎。FirstLight Zero 的 exact replay 谓词未比较逐 Tick 完整状态。
+
+## 全库源码普查（进行中）
+
+[58 项源码审查总账](docs/source-audits/full-repository-audit-tracker-2026-11-12.md)已建立，按 P0（待审）、P1（部分源码）、P2（核心实现及测试/依赖）、P3（独立运行）分别记录。**收录不等于验证**；对未达到 P2 的项目不宣称完成审计。后续逐仓库记录代码文件、缺陷、版本与证据。
