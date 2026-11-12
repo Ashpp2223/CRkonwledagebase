@@ -79,4 +79,4 @@
 ## 2026-11-12：RoyaleFish 离线强化学习项目
 
 - [RoyaleFish](projects/royalefish.md)：补入原生战斗引擎并行自博弈、V4 recurrent actor-critic、PPO 训练与公开模型基线；原生引擎和 V4 框架需自行提供。
-- 新增 1 个 Project 和 1 条 `agent-environment` R1 实现关联；性能及胜率均为作者报告，未独立复现或核对固定源码提交。
+- 新增 1 个 Project 和 1 条 `agent-environment` 实现关联；已按固定提交 [e94f9d6](https://github.com/fabiospalla9-tech/RoyaleFish/tree/e94f9d6b3c17c5e308272d01d6fdfe0e312201e9) 对训练流水线完成 [R2 静态源码审查](docs/source-audits/royalefish-2026-11-12.md)。性能、胜率、引擎运行与分支快照均未独立验证。
