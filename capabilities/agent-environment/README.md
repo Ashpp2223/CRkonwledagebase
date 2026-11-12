@@ -28,6 +28,7 @@ last_reviewed: null
 | [Jason Clash Royale Battle Engine](../../projects/jason-battle-engine.md) | R1 · author-documented | 离线对局与模仿/PPO 训练流水线 | 依赖原生游戏数据及外部模拟环境 | [来源](https://github.com/Jason-XII/clash-royale-battle-engine) |
 | [Jason Clash Royale Simulator](../../projects/jason-simulator.md) | R1 · author-documented | 独立模拟器和强化学习环境 | 卡牌覆盖不完整 | [来源](https://github.com/Jason-XII/clash-royale-simulator) |
 | [Hasty-CR](../../projects/hasty-cr.md) | R1 · author-documented | 可确定性运行的模拟器及策略训练 | 独立模拟准确性必须按机制验证 | [来源](https://github.com/hastylmao/Hasty-CR) |
+| [RoyaleFish](../../projects/royalefish.md) | R1 · author-documented | 原生引擎离线自博弈、PPO 与公开模型基线 | 需自行提供引擎与 V4 框架；未独立复现 | [来源](https://github.com/fabiospalla9-tech/RoyaleFish) |
 | [RoyaleGym](../../projects/royalegym.md) | R1 · author-documented | Gymnasium/PettingZoo 风格环境与评测 | 需与 RoyaleSim 版本配套 | [来源](https://github.com/RoyaleGym/RoyaleGym) |
 | [RoyaleSim](../../projects/royalesim.md) | R1 · author-documented | Rust 底层战斗引擎与 Python API | 只是引擎，不等于完整训练工具链 | [来源](https://github.com/RoyaleGym/RoyaleSim) |
 | [crforge](../../projects/crforge.md) | R1 · author-documented | Java 21 多局模拟，使用平坦缓冲区提供 Python 训练接口 | 需要 Java 21、匹配的卡表和环境接口；非旧版 ZMQ | [来源](https://github.com/voonhous/crforge) |
