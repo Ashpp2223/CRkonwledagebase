@@ -15,3 +15,7 @@
 ## 文档交叉核验（2026-11-12）
 
 [审查笔记](../docs/source-audits/firstlight-zero-2026-11-12.md)：明确 20Hz/5 Tick 决策、模型观测、固定卡组评估协议、replay_export/replay_check 的验证边界。R1+，尚非源码审计或独立运行。
+
+## 2026-11-12 限定源码审计
+
+[源码审查记录](../docs/source-audits/simulator-trial-firstlight-zero-code-2026-11-12.md)：已读 `tools/replay_check.py`、`tools/replay_export.py`。`identical` 仅比较 episode、最终 Tick、皇冠、塔血汇总比例和执行出牌事件；未涵盖逐 Tick 全状态，且英雄能力事件未直接进入该谓词。可参考其原生重驱与双层事件格式，不能直接推定支持任意帧恢复。
