@@ -368,3 +368,75 @@ projects:
     verification: author-documented
     license: unknown
     topics: [cr-native-engine, cr-ai-environment, cr-replay-state]
+
+  - id: firstlight-zero
+    title: "FirstLight Zero"
+    repository: https://github.com/Jaasssoooonnnnn/FirstLight-Zero
+    path: projects/firstlight-zero.md
+    verification: author-documented
+    license: unknown
+    topics: [cr-ecosystem]
+
+  - id: wty-cr-dataset
+    title: "Clash Royale Dataset"
+    repository: https://github.com/wty-yy/Clash-Royale-Dataset
+    path: projects/wty-cr-dataset.md
+    verification: author-documented
+    license: unknown
+    topics: [cr-ecosystem]
+
+  - id: cr-agent-api-docs
+    title: "CR Agent API Docs"
+    repository: https://github.com/jthingelstad/cr-agent-api-docs
+    path: projects/cr-agent-api-docs.md
+    verification: author-documented
+    license: unknown
+    topics: [cr-ecosystem]
+
+  - id: elixir-mcp-discord
+    title: "Elixir MCP Discord"
+    repository: https://github.com/jthingelstad/elixir-mcp-discord
+    path: projects/elixir-mcp-discord.md
+    verification: author-documented
+    license: unknown
+    topics: [cr-ecosystem]
+
+  - id: sc-exportname-extractor
+    title: "SC Export Name Extractor"
+    repository: https://github.com/TrixallTR/SC-ExportName-Extractor
+    path: projects/sc-exportname-extractor.md
+    verification: author-documented
+    license: unknown
+    topics: [cr-ecosystem]
+
+  - id: cr-new-tilemap
+    title: "CR Tilemap Converter"
+    repository: https://github.com/Darknighture/cr-new-tilemap
+    path: projects/cr-new-tilemap.md
+    verification: author-documented
+    license: unknown
+    topics: [cr-ecosystem]
+
+  - id: cr-chest-probability
+    title: "CR Chest Probability Calculator"
+    repository: https://github.com/Darknighture/cr-chest-probability-calculator
+    path: projects/cr-chest-probability.md
+    verification: author-documented
+    license: unknown
+    topics: [cr-ecosystem]
+
+  - id: royalerating
+    title: "RoyaleRating"
+    repository: https://github.com/RoyaleAPI/royalerating
+    path: projects/royalerating.md
+    verification: author-documented
+    license: unknown
+    topics: [cr-ecosystem]
+
+  - id: cr-api-assets
+    title: "RoyaleAPI Assets"
+    repository: https://github.com/RoyaleAPI/cr-api-assets
+    path: projects/cr-api-assets.md
+    verification: author-documented
+    license: unknown
+    topics: [cr-ecosystem]
