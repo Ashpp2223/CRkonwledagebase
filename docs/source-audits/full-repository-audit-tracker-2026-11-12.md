@@ -25,7 +25,7 @@
 | tencent-model-harness | [repo](https://github.com/ak1NaN/ClashRoyale-tencent-model-harness) | P0（待逐文件检查） | 待审 |
 | hasty-cr | [repo](https://github.com/hastylmao/Hasty-CR) | P0（待逐文件检查） | 待审 |
 | royalefish | [repo](https://github.com/fabiospalla9-tech/RoyaleFish) | P1（有限文件） | 既有审计：docs/source-audits/royalefish-2026-11-12.md |
-| royalegym | [repo](https://github.com/RoyaleGym/RoyaleGym) | P0（待逐文件检查） | 待审 |
+| royalegym | [repo](https://github.com/RoyaleGym/RoyaleGym) | P1（部分源码） | [2026-11-13 源码审查](royalegym-source-2026-11-13.md)：依赖、环境入口、Mock/Rust 区分；未运行测试 |
 | royalesim | [repo](https://github.com/RoyaleGym/RoyaleSim) | P0（待逐文件检查） | 待审 |
 | crforge | [repo](https://github.com/voonhous/crforge) | P0（待逐文件检查） | 待审 |
 | clashback | [repo](https://github.com/ak1NaN/Clashback) | P0（待逐文件检查） | 待审 |
@@ -90,3 +90,10 @@
 - 项目普查必须追查没有 README 的仓库内部文件；作者仓库枚举、候选筛选与核心代码审计是三个不同完成阶段。
 - 每次更新记录实际核查文件、固定提交、测试是否执行、排除原因及未查范围；不得用 P1 代替 P2。
 - 完成每批编辑后实际运行仓库校验脚本；未运行或失败必须报告。
+
+## 2026-11-13 本轮续查
+
+- RoyaleGym：检查 README、pyproject.toml、包导出与 env.py 部分实现，新增 [P1 审查记录](royalegym-source-2026-11-13.md)。正式项目总数仍为 58，P1 从 2 项增至 3 项，P2/P3 仍为 0。
+- RoyaleSim 的 Cargo.toml 与 Clashback 的 pyproject.toml 在指定路径返回 404；**仅说明该路径不可读取，不表示仓库不存在或无源码**，需继续枚举实际文件树。
+- IMAX9D/cr-native-sandbox README 已复核：上游区分旧版 15.535.29 原生宿主与新版 MuMu ARM64 160402002 实验，且训练吞吐数字有采集与完整更新口径差异。仅阅读 README，不提升其 P0 等级。
+- 本轮没有运行知识库校验脚本或上游测试；所有结论均为静态检查。
