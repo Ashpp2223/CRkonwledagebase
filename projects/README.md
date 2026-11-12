@@ -118,3 +118,16 @@
 同时核对 [RoyaleSim](royalesim.md) 仍为 0.1.51、[RoyaleLearn](royale-learn.md) 仍为 0.5.20；[RoyaleViser](royale-viser.md) 11 月 7 日仅调整 CI 夜间平台；[皇室战争复盘器](ashpp-replay.md) 上游最新主分支提交仍为 10 月 18 日。上述项目未出现足以重估现有能力等级的新证据。
 
 不同上游的客户端构建、数据表、观测结构、训练时序及可见状态不能直接互换。
+
+## 2026-11-12 新收录：跨名称搜索发现
+
+| 项目 | 来源 | 初步价值 |
+| --- | --- | --- |
+| [Clash Royale Research](aboufama-research.md) | [aboufama/clash-royale-research](https://github.com/aboufama/clash-royale-research) | R1 作者文档，未运行验证 |
+| [CrownZero](crownzero.md) | [anishhchitnis/crownzero](https://github.com/anishhchitnis/crownzero) | R1 作者文档，未运行验证 |
+| [Clash Royale Post-Game Analyzer](clash-royale-pod.md) | [max-miller1204/Clash-Royale-Pod](https://github.com/max-miller1204/Clash-Royale-Pod) | R1 作者文档，未运行验证 |
+| [Elixir MCP](elixir-mcp.md) | [jthingelstad/elixir-mcp](https://github.com/jthingelstad/elixir-mcp) | R1 作者文档，未运行验证 |
+| [Elixir MCP Collector](elixir-mcp-collector.md) | [jthingelstad/elixir-mcp-collector](https://github.com/jthingelstad/elixir-mcp-collector) | R1 作者文档，未运行验证 |
+| [Clash Royale Dataset Browser](cr-dataset-browser.md) | [HumaidAlhuthali/clash-royale-dataset-browser](https://github.com/HumaidAlhuthali/clash-royale-dataset-browser) | R1 作者文档，未运行验证 |
+
+[本轮去重与筛选记录](../landscape/2026-11-12-github-discovery.md)。
