@@ -131,3 +131,12 @@
 | [Clash Royale Dataset Browser](cr-dataset-browser.md) | [HumaidAlhuthali/clash-royale-dataset-browser](https://github.com/HumaidAlhuthali/clash-royale-dataset-browser) | R1 作者文档，未运行验证 |
 
 [本轮去重与筛选记录](../landscape/2026-11-12-github-discovery.md)。
+
+## 2026-11-12 第二轮：非直观名称与依赖链
+
+- [CR Native Sandbox](imax-native-sandbox.md) — [IMAX9D/cr-native-sandbox](https://github.com/IMAX9D/cr-native-sandbox)，R1 待源码验证。
+- [SC Fingerprint Downloader Rust](sc-fingerprint-rust.md) — [TrixallTR/SC-Fingerprint-Downloader-RUST](https://github.com/TrixallTR/SC-Fingerprint-Downloader-RUST)，R1 待源码验证。
+- [Supercell Asset Decompressor](supercell-asset-decompressor.md) — [abhishek-kumar-14/supercell-asset-decompressor](https://github.com/abhishek-kumar-14/supercell-asset-decompressor)，R1 待源码验证。
+- [RoyaleAPI Replay Dataset](royaleapi-replay-dataset.md) — [Aminiwow/royaleapi-replay-dataset](https://github.com/Aminiwow/royaleapi-replay-dataset)，R1 待源码验证。
+
+已存在的 [Jason Simulator](jason-simulator.md) 去重保留原档案。
