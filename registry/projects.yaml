@@ -329,14 +329,6 @@ projects:
     license: unknown
     topics: [cr-replay-state, cr-ai-environment]
 
-  - id: imax-native-sandbox
-    title: "CR Native Sandbox"
-    repository: https://github.com/IMAX9D/cr-native-sandbox
-    path: projects/imax-native-sandbox.md
-    verification: author-documented
-    license: unknown
-    topics: [cr-native-engine, cr-ai-environment]
-
   - id: sc-fingerprint-rust
     title: "SC Fingerprint Downloader Rust"
     repository: https://github.com/TrixallTR/SC-Fingerprint-Downloader-RUST
