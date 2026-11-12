@@ -76,10 +76,17 @@
 
 ## 注册表外的已发现候选（不可算作已完成项目审计）
 
-- arronwang01/clash-royale-simulator-trial：已检查 preflight.py 及训练/校准记录；有未解决的单位交互和轨迹漂移。见 [限定审查](../docs/source-audits/simulator-trial-firstlight-zero-code-2026-11-12.md)。
+- arronwang01/clash-royale-simulator-trial：已检查 preflight.py 及训练/校准记录；有未解决的单位交互和轨迹漂移。见 [限定审查](simulator-trial-firstlight-zero-code-2026-11-12.md)。
 - wty-yy/Clash-Royale-Replay-Dataset：无 README，需从文件树/提交记录/数据样本入手。
 - RoyaleAPI/cr-api-docs：旧 API 归档，须与现行官方 API 区分。
 
 ## 完成标准
 
 逐项目都有可复查的证据链接、实现能力/缺陷/许可结论和明确的未验证项；未通过 P2 的不得标注为“源码审计完成”。项目总体完成需 58 项全部逐一达到 P2 或有充分理由判定为纯资源/空仓/文档，并单独注明 P3 运行覆盖范围。
+
+## 维护约束（2026-11-13）
+
+- P0–P3 为审查覆盖进度，与 Implementation 的 R0–R4 复用成熟度完全独立；不做自动换算。
+- 项目普查必须追查没有 README 的仓库内部文件；作者仓库枚举、候选筛选与核心代码审计是三个不同完成阶段。
+- 每次更新记录实际核查文件、固定提交、测试是否执行、排除原因及未查范围；不得用 P1 代替 P2。
+- 完成每批编辑后实际运行仓库校验脚本；未运行或失败必须报告。
