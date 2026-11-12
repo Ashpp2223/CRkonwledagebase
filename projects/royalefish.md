@@ -3,7 +3,7 @@ id: royalefish
 title: "RoyaleFish"
 type: project
 status: implemented
-verification: author-documented
+verification: source-inspected
 repository: https://github.com/fabiospalla9-tech/RoyaleFish
 topics: [cr-ai-training, cr-native-engine]
 maintainers: []
@@ -13,7 +13,7 @@ license: Apache-2.0
 
 # RoyaleFish：基于原生战斗引擎的离线强化学习与自博弈
 
-**上游**：[fabiospalla9-tech/RoyaleFish](https://github.com/fabiospalla9-tech/RoyaleFish) · **证据**：[README](https://github.com/fabiospalla9-tech/RoyaleFish/blob/main/README.md)（2026-11-12 阅读）· **等级**：R1 / author-documented，未进行固定提交源码审计或独立运行验证。
+**上游**：[fabiospalla9-tech/RoyaleFish](https://github.com/fabiospalla9-tech/RoyaleFish) · **证据**：[README](https://github.com/fabiospalla9-tech/RoyaleFish/blob/main/README.md)（2026-11-12 阅读）· **证据**：固定提交 [e94f9d6](https://github.com/fabiospalla9-tech/RoyaleFish/tree/e94f9d6b3c17c5e308272d01d6fdfe0e312201e9)；训练流水线 **R2 / source-inspected（限定源码范围）**，未独立运行。参见[专项审计](../docs/source-audits/royalefish-2026-11-12.md)。
 
 ## 项目定位
 
@@ -48,6 +48,6 @@ license: Apache-2.0
 4. **跨引擎验证**：需固定引擎构建、资源版本、随机种子和对局输入，逐 Tick 比较状态与行为。
 5. **下一轮审查**：固定上游 commit，检查 `NOTICE`、`royalefish/config.py`、`ever_server.py`、`ever_collector.py`、`ever_learner.py` 与模型权重的可用性，再决定是否提升证据等级或登记实现关联。
 
-**暂不新增已验证能力实现**：项目目前仅有 README 级证据，尚不能据此确认其 API 满足中台的能力契约。
+**能力边界**：已对训练流水线登记限定范围 R2 静态审查；原生引擎、分支快照、对局保真与性能未验收。
 
 [智能体环境](../capabilities/agent-environment/README.md) · [原生战斗驱动](../capabilities/battle-control/README.md) · [状态快照与恢复](../capabilities/snapshot-recovery/README.md)
