@@ -38,3 +38,7 @@ R 等级不表示性能、准确度或安全性的连续分数。R3 不代表“
 CI 检查上述结构要求。项目主页上的 `verification: author-documented` 与某个具体能力的 `verification: source-inspected` 可以并存：**不能因为检查过一项 API 就宣称完整项目已通过源码审查**。
 
 首次参考：[2026-10-13 原生引擎源码核查](source-audits/native-engine-2026-10-13.md)。
+
+## 与全库源码普查 P0–P3 的关系
+
+全库审查总账中的 P0（待审）、P1（局部源码）、P2（核心实现/测试/依赖覆盖）、P3（独立运行）只衡量**项目层面的调查进度**。它与本页 R0–R4 **不是换算关系**：R 等级以单项 Implementation 的具体可复用证据为准，且仍需满足固定 Commit、审计路径及测试日志等门槛。不得因某项目 P2/P3 而批量提升其所有 Implementation 等级。
