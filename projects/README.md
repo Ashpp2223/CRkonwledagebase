@@ -14,6 +14,7 @@
 | [Tencent Overlay](tencent-overlay.md) | [ak1NaN/ClashRoyale-tencent-overlay](https://github.com/ak1NaN/ClashRoyale-tencent-overlay) |
 | [Tencent Model Harness](tencent-model-harness.md) | [ak1NaN/ClashRoyale-tencent-model-harness](https://github.com/ak1NaN/ClashRoyale-tencent-model-harness) |
 | [Hasty-CR](hasty-cr.md) | [hastylmao/Hasty-CR](https://github.com/hastylmao/Hasty-CR) |
+| [RoyaleFish](royalefish.md) | [fabiospalla9-tech/RoyaleFish](https://github.com/fabiospalla9-tech/RoyaleFish) |
 | [RoyaleGym](royalegym.md) | [RoyaleGym/RoyaleGym](https://github.com/RoyaleGym/RoyaleGym) |
 | [RoyaleSim](royalesim.md) | [RoyaleGym/RoyaleSim](https://github.com/RoyaleGym/RoyaleSim) |
 | [crforge](crforge.md) | [voonhous/crforge](https://github.com/voonhous/crforge) |
