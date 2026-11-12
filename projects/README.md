@@ -140,3 +140,9 @@
 - [RoyaleAPI Replay Dataset](royaleapi-replay-dataset.md) — [Aminiwow/royaleapi-replay-dataset](https://github.com/Aminiwow/royaleapi-replay-dataset)，R1 待源码验证。
 
 已存在的 [Jason Simulator](jason-simulator.md) 去重保留原档案。
+
+## 2026-11-12 作者仓库关系复核
+
+- **新增**：[Daybreak CR](jason-daybreak.md) — Jason-XII 的回放重驱、IL/PPO、模型对战和晋级训练链。
+- **IMAX9D 已收录**：`cr-native-sandbox`、`cr-native-linux-bionic`、`royaleapi-downloader`、`r0-elite-training`；应按“回放采集 → 原生环境 → 数据编译 → 模型训练”理解依赖关系，运行契约仍需逐项核验。
+- **Jason-XII 已收录**：`clash-royale-simulator`、`cr-memory-reader`、`sc-decoder` 等；其余公开仓库不因作者身份自动视为 CR 项目。
