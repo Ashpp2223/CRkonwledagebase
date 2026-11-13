@@ -15,12 +15,12 @@
 
 | ID | 上游 | 源码检查状态 | 备注 |
 |---|---|---|---|
-| firstlight-cr | [repo](https://github.com/Jaasssoooonnnnn/FirstLight_CR) | P0（待逐文件检查） | 待审 |
+| firstlight-cr | [repo](https://github.com/Jaasssoooonnnnn/FirstLight_CR) | P1（部分源码） | [2026-11-13 审查](firstlight-cr-source-2026-11-13.md)；未运行测试 |
 | jason-battle-engine | [repo](https://github.com/Jason-XII/clash-royale-battle-engine) | P0（待逐文件检查） | 待审 |
-| jason-simulator | [repo](https://github.com/Jason-XII/clash-royale-simulator) | P0（待逐文件检查） | 待审 |
+| jason-simulator | [repo](https://github.com/Jason-XII/clash-royale-simulator) | P1（部分源码） | [2026-11-13 审查](jason-simulator-source-2026-11-13.md)；未运行测试 |
 | replay-studio | [repo](https://github.com/ak1NaN/ClashRoyale-replay-studio) | P1（部分源码） | [2026-11-13 审查](replay-studio-source-2026-11-13.md)；未运行测试 |
 | ashpp-replay | [repo](https://github.com/Ashpp2223/clashroyalereplay) | P1（部分源码） | [2026-11-13 审查](ashpp-replay-source-2026-11-13.md)；未运行测试 |
-| memory-reader | [repo](https://github.com/Jason-XII/cr-memory-reader) | P0（待逐文件检查） | 待审 |
+| memory-reader | [repo](https://github.com/Jason-XII/cr-memory-reader) | P0（仅目录与 README） | [2026-11-13 初查](memory-reader-source-2026-11-13.md)；待核心源码 |
 | tencent-overlay | [repo](https://github.com/ak1NaN/ClashRoyale-tencent-overlay) | P0（待逐文件检查） | 待审 |
 | tencent-model-harness | [repo](https://github.com/ak1NaN/ClashRoyale-tencent-model-harness) | P0（待逐文件检查） | 待审 |
 | hasty-cr | [repo](https://github.com/hastylmao/Hasty-CR) | P0（待逐文件检查） | 待审 |
@@ -43,7 +43,7 @@
 | card-tracker | [repo](https://github.com/AmarSaini/Clash-Royale-AI-Card-Tracker) | P0（待逐文件检查） | 待审 |
 | native-sandbox-imax9d | [repo](https://github.com/IMAX9D/cr-native-sandbox) | P1（部分源码） | [2026-11-13 原生宿主审查](imax-native-sandbox-source-2026-11-13.md)：环境接口、Worker、版本边界 |
 | native-bionic-imax9d | [repo](https://github.com/IMAX9D/cr-native-linux-bionic) | P1（部分源码） | [2026-11-13 审查](native-bionic-imax9d-source-2026-11-13.md)；未运行测试 |
-| fl-royale | [repo](https://github.com/Jaasssoooonnnnn/FL-Royale) | P0（待逐文件检查） | 待审 |
+| fl-royale | [repo](https://github.com/Jaasssoooonnnnn/FL-Royale) | P1（部分源码） | [2026-11-13 审查](fl-royale-source-2026-11-13.md)；未运行测试 |
 | royaleapi-downloader-imax9d | [repo](https://github.com/IMAX9D/royaleapi-downloader) | P0（待逐文件检查） | 待审 |
 | sc-decoder-jason | [repo](https://github.com/Jason-XII/sc-decoder) | P0（待逐文件检查） | 待审 |
 | r0-elite-imax9d | [repo](https://github.com/IMAX9D/r0-elite-training) | P0（待逐文件检查） | 待审 |
@@ -117,3 +117,12 @@
 - [Ashpp Replay](ashpp-replay-source-2026-11-13.md)：实际默认分支为 codex/windows-native-engine-probe，检查 Windows Clashback AVD 适配器、三套 engine profile、分支数据模型。
 - [AK Replay Studio](replay-studio-source-2026-11-13.md)：检查 TCP 战斗控制客户端与快照 seek Mock 测试，区分测试设计与实际运行结果。
 - 当前总账：58 项，**9 项 P1，49 项 P0，0 项 P2/P3**。未执行测试和仓库校验脚本。
+
+## 2026-11-13 第五轮续查
+
+- [FirstLight_CR](firstlight-cr-source-2026-11-13.md)：操作日志 snapshot 与 ruleset/runner attestation，P0→P1；尚未证明任意状态克隆。
+- [FL-Royale](fl-royale-source-2026-11-13.md)：cold clone 诊断代码，P0→P1；根级对象图检查不等于完整别名安全。
+- [Jason Python simulator](jason-simulator-source-2026-11-13.md)：独立规则模拟器的实体/伤害/目标源码，P0→P1。
+- [Jason memory reader](memory-reader-source-2026-11-13.md)：仅目录和 README，保持 P0。
+- Jason-XII/clash-royale-battle-engine 的 GitHub 仓库元信息/默认分支读取异常，未强行认定不存在；需要进一步核实。
+- 当前总账：58 项，**12 项 P1，46 项 P0，0 项 P2/P3**。未运行上游测试或知识库校验脚本。
