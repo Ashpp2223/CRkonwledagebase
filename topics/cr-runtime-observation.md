@@ -4,7 +4,7 @@ title: "运行时游戏状态观测"
 type: topic
 status: investigating
 verification: author-documented
-projects: [memory-reader, tencent-overlay, tencent-model-harness, katacr, clashai-vegetableleaf, build-a-bot, detection-dataset, claude-royale, card-tracker, royale-bot]
+projects: [memory-reader, tencent-overlay, tencent-model-harness, katacr, clashai-vegetableleaf, build-a-bot, detection-dataset, claude-royale, card-tracker, royale-bot, crownzero, clash-royale-pod]
 last_reviewed: null
 ---
 
