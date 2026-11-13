@@ -44,3 +44,10 @@
 - [vegetableleaf/KataCR](https://github.com/vegetableleaf/KataCR)、[vegetableleaf/cr-memory-reader](https://github.com/vegetableleaf/cr-memory-reader)：检查 GitHub repo ID、fork parent、tree SHA、源代码与已登记同名项目的关系，必要时作为来源镜像/派生项目独立登记。
 
 **进度口径**：本批新增枚举 10 位作者；此前已完成 Jason-XII、Jaasssoooonnnnn、IMAX9D、ak1NaN 四位。登记表提取出 30 位不同 owner，仍有 16 位待完整枚举。枚举不等于逐仓完整源码审查。
+
+
+### 关联仓库身份已核实
+
+- `vegetableleaf/KataCR`：GitHub repo ID `1328413445`，`fork: true`，parent **`wty-yy/KataCR`**（ID `701588460`）。
+- `vegetableleaf/cr-memory-reader`：GitHub repo ID `1327819989`，`fork: true`，parent **`Jason-XII/cr-memory-reader`**（ID `1314885072`）。
+- 两项均为**不同 repo ID 的 fork**，不能作为原仓库别名或重复计数消失；应作为衍生来源建立关系，后续 diff 判断是否存在独立功能。
