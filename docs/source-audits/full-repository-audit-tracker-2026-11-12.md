@@ -138,3 +138,11 @@
 
 - [作者仓库清单与候选分流](author-repository-sweep-2026-11-13.md)：Jason-XII 24、Jaasssoooonnnnn 12、IMAX9D 7、ak1NaN 4 个公开仓库；合计 47 条作者仓库搜索结果（仅四位作者，且可能交叉），对 3c3u-bot、rea、TRACE、DiffuPlan 进一步枚举实际文件树；没有仅凭作者相同就收入 CR 正式注册表。
 - 验证风险：`scripts/validate.py` 要求每个注册项目页面有 YAML front matter；抽查 `projects/firstlight-zero.md` 发现没有，说明即使补齐 `cr-ecosystem` 也**不能推定全库校验通过**。待单独系统修复所有基线结构问题并实际执行校验。
+
+## 2026-11-13 第七轮：基线校验修复
+
+- 检查 57 个注册项目的页面，确认其中 **18 个**缺失 YAML front matter（此前预估 19 个，逐项核对后纠正为 18）；已按 `registry/projects.yaml` 添加元数据，原正文保留。新增元数据中的 `status: research` 表示当前审查阶段，不提升任何证据等级。
+- 修复 `royalefish` 的专题元数据和反向引用，保留原先的 `source-inspected` 等级；修复历史别名页面 `jason-daybreak.md` 的错误相对链接。
+- 根据实际 `scripts/validate.py` 检查规则，补齐六个专题的项目反向引用，并同步六份专题页 front matter。
+- **首次实际读取 GitHub Actions 校验日志**：在修复过程中，从 18 项错误逐步降至 3 项（最后三项为尚未同步的专题页）；所有六个专题页现已同步。最新 push 的自动工作流结果待确认，不能提前宣称通过。
+- 审查状态不变：57 项，13 项 P1、44 项 P0、0 项 P2/P3。以上为知识库结构修复，不代表上游源码审查等级提升。
