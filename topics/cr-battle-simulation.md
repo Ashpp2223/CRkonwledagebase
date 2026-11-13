@@ -4,7 +4,7 @@ title: "独立战斗模拟器"
 type: topic
 status: investigating
 verification: author-documented
-projects: [jason-simulator, hasty-cr, royalegym, royalesim, crforge, itzik-clashenv, crsim-agent-larkindaniel, longling-simulator]
+projects: [jason-simulator, hasty-cr, royalegym, royalesim, crforge, itzik-clashenv, crsim-agent-larkindaniel, longling-simulator, aboufama-research]
 last_reviewed: null
 ---
 
