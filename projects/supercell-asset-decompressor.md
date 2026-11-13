@@ -1,3 +1,16 @@
+---
+id: supercell-asset-decompressor
+title: "Supercell Asset Decompressor"
+type: project
+status: research
+verification: author-documented
+repository: https://github.com/abhishek-kumar-14/supercell-asset-decompressor
+topics: [cr-assets-data]
+maintainers: []
+last_reviewed: null
+license: unknown
+---
+
 # Supercell Asset Decompressor
 
 - 上游：https://github.com/abhishek-kumar-14/supercell-asset-decompressor
