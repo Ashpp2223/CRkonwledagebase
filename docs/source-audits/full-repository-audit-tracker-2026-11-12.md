@@ -230,3 +230,11 @@
 - [CR Agent API Docs](cr-agent-api-docs-source-2026-11-13.md)：cr-probe 客户端、URL 标签规范化与采样时窗重建，P0→P1。
 - [wty-yy Detection Dataset](https://github.com/wty-yy/Clash-Royale-Detection-Dataset) 与 [wty-yy Clash Royale Dataset](https://github.com/wty-yy/Clash-Royale-Dataset) 两库 YAML 的 class map blob SHA 相同（`02990874e94bc52234e63d54629c929a1b875868`），需后续审查数据文件去重、标注质量与许可，均保持 P0。
 - 当前总账：**57 项，50 项 P1，7 项 P0，0 项 P2/P3**；未运行上游测试。
+
+## 2026-11-13 第十七轮续查
+
+- [aboufama research](aboufama-research-source-2026-11-13.md)：TypeScript 原生机制移植、Fidelity V/P/D/A 分级、400-tick 原生轨迹差分测试源码，P0→P1。
+- [Elixir MCP](elixir-mcp-source-2026-11-13.md)：公开战斗短链、Playwright 匿名访问与无障碍测试，P0→P1。
+- [CR Agent API Docs](cr-agent-api-docs-source-2026-11-13.md)：cr-probe API 采样器、# tag 编码、事件时间窗重建，P0→P1。
+- 两个 wty-yy 数据集仓库检测到相同的 detection YAML blob，尚需检查实际样本覆盖与两仓重叠，保持 P0。
+- 当前总账：**57 项，50 项 P1，7 项 P0，0 项 P2/P3**。未运行上游测试。
