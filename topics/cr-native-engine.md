@@ -4,7 +4,7 @@ title: "原生战斗引擎"
 type: topic
 status: investigating
 verification: author-documented
-projects: [firstlight-cr, jason-battle-engine, replay-studio, ashpp-replay, native-sandbox-imax9d, native-bionic-imax9d, fl-royale, clapha-engine, clashback]
+projects: [firstlight-cr, jason-battle-engine, royalefish, replay-studio, ashpp-replay, native-sandbox-imax9d, native-bionic-imax9d, fl-royale, clapha-engine, clashback]
 last_reviewed: "2026-11-10"
 ---
 
