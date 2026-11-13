@@ -1,3 +1,16 @@
+---
+id: cr-api-assets
+title: "RoyaleAPI Assets"
+type: project
+status: research
+verification: author-documented
+repository: https://github.com/RoyaleAPI/cr-api-assets
+topics: [cr-ecosystem]
+maintainers: []
+last_reviewed: null
+license: unknown
+---
+
 # RoyaleAPI Assets
 
 - 来源：https://github.com/RoyaleAPI/cr-api-assets
