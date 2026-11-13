@@ -1,3 +1,16 @@
+---
+id: firstlight-zero
+title: "FirstLight Zero"
+type: project
+status: research
+verification: author-documented
+repository: https://github.com/Jaasssoooonnnnn/FirstLight-Zero
+topics: [cr-ecosystem]
+maintainers: []
+last_reviewed: null
+license: unknown
+---
+
 # FirstLight Zero
 
 - 来源：https://github.com/Jaasssoooonnnnn/FirstLight-Zero
