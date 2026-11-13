@@ -133,3 +133,8 @@
 - **另发现基础注册表缺陷**：9 个项目引用 `cr-ecosystem`，但 `registry/topics.yaml` 未定义。已补齐专题注册与页面。
 - 纠正后总账：**57 项，13 项 P1，44 项 P0，0 项 P2/P3**。先前 58 项口径作历史记录，不追改旧批次日志。
 - 尝试通过容器 clone 运行 `scripts/validate.py`，但容器无法解析 github.com，未能运行。仓库已有 push 自动校验工作流；本轮未读取工作流执行结果，不能宣称校验通过。
+
+### 第六轮补充：作者仓库横向普查
+
+- [作者仓库清单与候选分流](author-repository-sweep-2026-11-13.md)：Jason-XII 24、Jaasssoooonnnnn 12、IMAX9D 7、ak1NaN 4 个公开仓库；合计 47 条作者仓库搜索结果（仅四位作者，且可能交叉），对 3c3u-bot、rea、TRACE、DiffuPlan 进一步枚举实际文件树；没有仅凭作者相同就收入 CR 正式注册表。
+- 验证风险：`scripts/validate.py` 要求每个注册项目页面有 YAML front matter；抽查 `projects/firstlight-zero.md` 发现没有，说明即使补齐 `cr-ecosystem` 也**不能推定全库校验通过**。待单独系统修复所有基线结构问题并实际执行校验。
