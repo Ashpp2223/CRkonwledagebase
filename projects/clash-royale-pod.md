@@ -1,3 +1,16 @@
+---
+id: clash-royale-pod
+title: "Clash Royale Post-Game Analyzer"
+type: project
+status: research
+verification: author-documented
+repository: https://github.com/max-miller1204/Clash-Royale-Pod
+topics: [cr-runtime-observation, cr-replay-state]
+maintainers: []
+last_reviewed: null
+license: unknown
+---
+
 # Clash Royale Post-Game Analyzer
 
 - **上游**：https://github.com/max-miller1204/Clash-Royale-Pod
