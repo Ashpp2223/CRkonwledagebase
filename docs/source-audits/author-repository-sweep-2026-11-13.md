@@ -86,3 +86,14 @@
 6. [TrixallTR/SC-Server](https://github.com/TrixallTR/SC-Server)：Rust Supercell packet reader/writer，待检查具体游戏协议适用性。
 
 **覆盖口径：30/30 位 owner 已枚举；已发现新候选，但本轮尚未将候选全部加入 57 项正式登记表。** 后续按源码价值、独立性与授权边界逐项收录。
+
+
+## 2026-11-13 第十九轮：候选项目源文件核实
+
+- `arronwang01/clash-royale-simulator-trial`：已读 [src/clasher_new/battle.py](https://github.com/arronwang01/clash-royale-simulator-trial/blob/main/src/clasher_new/battle.py) blob `17a87d0da7fedef36a36a688e775fc58831e9901`。Entity 维护 HP、shield、attack cooldown、targetable 与 invincible、跨河跳跃、buff/debuff 等状态；源码含 `is_building/is_projectile/is_troop` 类标志位优化。需进一步比较 Jason-XII 的 simulator 与 longlingking 的 simulator，确认独立实现/分支来源。
+- `jthingelstad/elixir-bot`：已读 [README.md](https://github.com/jthingelstad/elixir-bot/blob/main/README.md) blob `7bd4c3660ea22ef52b42b7ce5e170dd6337517c4`。明确写明 **2026-09-26 退役**，曾于 2026-02 至 09 服务 POAP KINGS，后续由 Elixir MCP/Collector/Discord 等取代。历史事件采集、内容去重、事务化派生视图值得研究；应标为 archived historical architecture，不推荐作为现役服务部署。
+- `TrixallTR/SC-Server`：已读 [src/stream/packet.rs](https://github.com/TrixallTR/SC-Server/blob/main/src/stream/packet.rs) blob `e1a4da5ec1edf836d7c3da3f6186b2fc8f6fa2a4`，写入 u16 packet ID、u24 payload length、u16 0，随后写 major/build/minor 等字段。尚未证实具体 CR 客户端版本兼容性或握手流程；仅列 Supercell protocol 研究候选。
+- `max-miller1204/KataCR`：GitHub repo ID `1170276082`，`fork: true`，parent `wty-yy/KataCR`。可作为 fork 来源记录，待 diff 决定独立收录。
+- `arronwang01/clash-ai-releases`：目前仅 README，未见可执行源码；应核查 Releases 后再判断。
+
+本轮明确区分“作者仓库枚举已完成”和“每个仓库完整源审计已完成”；后者仍在进行。
