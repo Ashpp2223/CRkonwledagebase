@@ -1,3 +1,16 @@
+---
+id: sc-fingerprint-rust
+title: "SC Fingerprint Downloader Rust"
+type: project
+status: research
+verification: author-documented
+repository: https://github.com/TrixallTR/SC-Fingerprint-Downloader-RUST
+topics: [cr-assets-data]
+maintainers: []
+last_reviewed: null
+license: unknown
+---
+
 # SC Fingerprint Downloader Rust
 
 - 上游：https://github.com/TrixallTR/SC-Fingerprint-Downloader-RUST
