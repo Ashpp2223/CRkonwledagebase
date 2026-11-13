@@ -58,15 +58,15 @@
 | crownzero | [repo](https://github.com/anishhchitnis/crownzero) | P0（待逐文件检查） | 待审 |
 | clash-royale-pod | [repo](https://github.com/max-miller1204/Clash-Royale-Pod) | P0（待逐文件检查） | 待审 |
 | elixir-mcp | [repo](https://github.com/jthingelstad/elixir-mcp) | P0（待逐文件检查） | 待审 |
-| elixir-mcp-collector | [repo](https://github.com/jthingelstad/elixir-mcp-collector) | P0（待逐文件检查） | 待审 |
-| cr-dataset-browser | [repo](https://github.com/HumaidAlhuthali/clash-royale-dataset-browser) | P0（待逐文件检查） | 待审 |
+| elixir-mcp-collector | [repo](https://github.com/jthingelstad/elixir-mcp-collector) | P1（部分源码） | [2026-11-13 审查](elixir-mcp-collector-source-2026-11-13.md)；固定上游 commit；未运行测试 |
+| cr-dataset-browser | [repo](https://github.com/HumaidAlhuthali/clash-royale-dataset-browser) | P1（部分源码） | [2026-11-13 审查](cr-dataset-browser-source-2026-11-13.md)；固定上游 commit；未运行测试 |
 | sc-fingerprint-rust | [repo](https://github.com/TrixallTR/SC-Fingerprint-Downloader-RUST) | P1（部分源码） | [2026-11-13 审查](sc-fingerprint-rust-source-2026-11-13.md)；固定上游 commit；未运行测试 |
 | supercell-asset-decompressor | [repo](https://github.com/abhishek-kumar-14/supercell-asset-decompressor) | P0（待逐文件检查） | 待审 |
 | royaleapi-replay-dataset | [repo](https://github.com/Aminiwow/royaleapi-replay-dataset) | P0（待逐文件检查） | 待审 |
 | firstlight-zero | [repo](https://github.com/Jaasssoooonnnnn/FirstLight-Zero) | P1（有限文件） | 审计：docs/source-audits/simulator-trial-firstlight-zero-code-2026-11-12.md |
 | wty-cr-dataset | [repo](https://github.com/wty-yy/Clash-Royale-Dataset) | P0（待逐文件检查） | 待审 |
 | cr-agent-api-docs | [repo](https://github.com/jthingelstad/cr-agent-api-docs) | P0（待逐文件检查） | 待审 |
-| elixir-mcp-discord | [repo](https://github.com/jthingelstad/elixir-mcp-discord) | P0（待逐文件检查） | 待审 |
+| elixir-mcp-discord | [repo](https://github.com/jthingelstad/elixir-mcp-discord) | P1（部分源码） | [2026-11-13 审查](elixir-mcp-discord-source-2026-11-13.md)；固定上游 commit；未运行测试 |
 | sc-exportname-extractor | [repo](https://github.com/TrixallTR/SC-ExportName-Extractor) | P1（部分源码） | [2026-11-13 审查](sc-exportname-extractor-source-2026-11-13.md)；固定上游 commit；未运行测试 |
 | cr-new-tilemap | [repo](https://github.com/Darknighture/cr-new-tilemap) | P0（待逐文件检查） | 待审 |
 | cr-chest-probability | [repo](https://github.com/Darknighture/cr-chest-probability-calculator) | P0（待逐文件检查） | 待审 |
@@ -204,3 +204,12 @@
 - [RoyaleRating](https://github.com/RoyaleAPI/royalerating) 仓库目前主要是文档，尚未找到可审计的本地核心计算实现，保持 P0。
 - [Elixir MCP](https://github.com/jthingelstad/elixir-mcp) 规模约 3615 个 tree entries，已确认 Node 24 workspace 和 acceptance fixtures；只读 package.json，保持 P0，待分模块审查。
 - 当前总账：**57 项，39 项 P1，18 项 P0，0 项 P2/P3**。未运行上游测试。
+
+## 2026-11-13 第十五轮续查
+
+- [Elixir MCP Collector](elixir-mcp-collector-source-2026-11-13.md)：Go CR API 访问限制、403 断路器与租约重试职责，P0→P1。
+- [Elixir MCP Discord](elixir-mcp-discord-source-2026-11-13.md)：公会政策时效闸门、三通道预算预留，P0→P1。
+- [Clash Royale Dataset Browser](cr-dataset-browser-source-2026-11-13.md)：HF Parquet 回放帧导出、JPEG 转码及离线索引，P0→P1。
+- [RoyaleAPI cr-api-data](https://github.com/RoyaleAPI/cr-api-data) 当前树主要为静态 JSON，未找到计算实现；应按数据资产做 schema/版本审查，保持 P0。
+- [Aminiwow replay dataset](https://github.com/Aminiwow/royaleapi-replay-dataset) 当前仅 README，无源码，保持 P0。
+- 固定三个上游 commit；未运行上游测试。总账：**57 项，42 项 P1，15 项 P0，0 项 P2/P3**。
