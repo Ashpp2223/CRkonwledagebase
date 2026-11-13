@@ -6,27 +6,27 @@ topics:
   - id: cr-battle-simulation
     title: "独立战斗模拟器"
     path: topics/cr-battle-simulation.md
-    projects: [jason-simulator, hasty-cr, royalegym, royalesim, crforge, itzik-clashenv, crsim-agent-larkindaniel, longling-simulator]
+    projects: [jason-simulator, hasty-cr, royalegym, royalesim, crforge, itzik-clashenv, crsim-agent-larkindaniel, longling-simulator, aboufama-research]
   - id: cr-replay-state
     title: "回放、快照与状态恢复"
     path: topics/cr-replay-state.md
-    projects: [firstlight-cr, jason-battle-engine, replay-studio, ashpp-replay, clashai-vegetableleaf, fl-royale, royaleapi-downloader-imax9d, cr-collector-arron, royale-viser, clashback]
+    projects: [firstlight-cr, jason-battle-engine, replay-studio, ashpp-replay, clashai-vegetableleaf, fl-royale, royaleapi-downloader-imax9d, cr-collector-arron, royale-viser, clashback, clash-royale-pod, cr-dataset-browser, royaleapi-replay-dataset]
   - id: cr-ai-environment
     title: "AI 训练环境与决策"
     path: topics/cr-ai-environment.md
-    projects: [firstlight-cr, jason-battle-engine, royalefish, jason-simulator, tencent-model-harness, hasty-cr, royalegym, royalesim, crforge, katacr, itzik-clashenv, clashai-vegetableleaf, crsim-agent-larkindaniel, build-a-bot, detection-dataset, claude-royale, native-sandbox-imax9d, r0-elite-imax9d, clapha-engine, longling-simulator, royale-bot, royale-learn, royale-imitate]
+    projects: [firstlight-cr, jason-battle-engine, royalefish, jason-simulator, tencent-model-harness, hasty-cr, royalegym, royalesim, crforge, katacr, itzik-clashenv, clashai-vegetableleaf, crsim-agent-larkindaniel, build-a-bot, detection-dataset, claude-royale, native-sandbox-imax9d, r0-elite-imax9d, clapha-engine, longling-simulator, royale-bot, royale-learn, royale-imitate, crownzero, cr-dataset-browser, royaleapi-replay-dataset]
   - id: cr-runtime-observation
     title: "运行时游戏状态观测"
     path: topics/cr-runtime-observation.md
-    projects: [memory-reader, tencent-overlay, tencent-model-harness, katacr, clashai-vegetableleaf, build-a-bot, detection-dataset, claude-royale, card-tracker, royale-bot]
+    projects: [memory-reader, tencent-overlay, tencent-model-harness, katacr, clashai-vegetableleaf, build-a-bot, detection-dataset, claude-royale, card-tracker, royale-bot, crownzero, clash-royale-pod]
   - id: cr-assets-data
     title: "资源与数据解析"
     path: topics/cr-assets-data.md
-    projects: [sc-downloader, sc-extract, supercell-csv-decoder, royaleapi-static-data, sc-decoder-jason]
+    projects: [sc-downloader, sc-extract, supercell-csv-decoder, royaleapi-static-data, sc-decoder-jason, elixir-mcp, elixir-mcp-collector, sc-fingerprint-rust, supercell-asset-decompressor]
   - id: cr-game-mechanics
     title: "战斗机制、寻路与数值"
     path: topics/cr-game-mechanics.md
-    projects: [jason-simulator, hasty-cr, crforge, royalesim, itzik-clashenv, crsim-agent-larkindaniel]
+    projects: [jason-simulator, hasty-cr, crforge, royalesim, itzik-clashenv, crsim-agent-larkindaniel, aboufama-research]
 
   - id: cr-ecosystem
     title: "皇室战争生态工具与资料"
