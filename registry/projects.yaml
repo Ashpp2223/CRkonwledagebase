@@ -8,8 +8,8 @@ projects:
     license: Apache-2.0
     topics: [cr-native-engine, cr-replay-state, cr-ai-environment]
   - id: jason-battle-engine
-    title: "Jason Clash Royale Battle Engine"
-    repository: https://github.com/Jason-XII/clash-royale-battle-engine
+    title: "Daybreak CR (historical Clash Royale Battle Engine)"
+    repository: https://github.com/Jason-XII/daybreak-cr
     path: projects/jason-battle-engine.md
     verification: author-documented
     license: unknown
@@ -353,13 +353,6 @@ projects:
     license: unknown
     topics: [cr-replay-state, cr-ai-environment]
 
-  - id: jason-daybreak
-    title: "Daybreak CR"
-    repository: https://github.com/Jason-XII/daybreak-cr
-    path: projects/jason-daybreak.md
-    verification: author-documented
-    license: unknown
-    topics: [cr-native-engine, cr-ai-environment, cr-replay-state]
 
   - id: firstlight-zero
     title: "FirstLight Zero"
