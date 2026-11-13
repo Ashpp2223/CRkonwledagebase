@@ -4,7 +4,7 @@ title: "资源与数据解析"
 type: topic
 status: investigating
 verification: author-documented
-projects: [sc-downloader, sc-extract, supercell-csv-decoder, royaleapi-static-data, sc-decoder-jason]
+projects: [sc-downloader, sc-extract, supercell-csv-decoder, royaleapi-static-data, sc-decoder-jason, elixir-mcp, elixir-mcp-collector, sc-fingerprint-rust, supercell-asset-decompressor]
 last_reviewed: null
 ---
 
