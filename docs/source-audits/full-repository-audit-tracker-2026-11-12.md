@@ -55,21 +55,21 @@
 | royale-learn | [repo](https://github.com/RoyaleGym/RoyaleLearn) | P1（部分源码） | [2026-11-13 审查](royale-learn-source-2026-11-13.md)；固定上游 commit；未运行测试 |
 | royale-imitate | [repo](https://github.com/RoyaleGym/RoyaleImitate) | P1（部分源码） | [2026-11-13 审查](royale-imitate-source-2026-11-13.md)；固定上游 commit；未运行测试 |
 | aboufama-research | [repo](https://github.com/aboufama/clash-royale-research) | P0（待逐文件检查） | 待审 |
-| crownzero | [repo](https://github.com/anishhchitnis/crownzero) | P0（待逐文件检查） | 待审 |
-| clash-royale-pod | [repo](https://github.com/max-miller1204/Clash-Royale-Pod) | P0（待逐文件检查） | 待审 |
+| crownzero | [repo](https://github.com/anishhchitnis/crownzero) | P1（部分源码） | [2026-11-13 审查](crownzero-source-2026-11-13.md)；固定上游 commit；未运行测试 |
+| clash-royale-pod | [repo](https://github.com/max-miller1204/Clash-Royale-Pod) | P1（部分源码） | [2026-11-13 审查](clash-royale-pod-source-2026-11-13.md)；固定上游 commit；未运行测试 |
 | elixir-mcp | [repo](https://github.com/jthingelstad/elixir-mcp) | P0（待逐文件检查） | 待审 |
 | elixir-mcp-collector | [repo](https://github.com/jthingelstad/elixir-mcp-collector) | P1（部分源码） | [2026-11-13 审查](elixir-mcp-collector-source-2026-11-13.md)；固定上游 commit；未运行测试 |
 | cr-dataset-browser | [repo](https://github.com/HumaidAlhuthali/clash-royale-dataset-browser) | P1（部分源码） | [2026-11-13 审查](cr-dataset-browser-source-2026-11-13.md)；固定上游 commit；未运行测试 |
 | sc-fingerprint-rust | [repo](https://github.com/TrixallTR/SC-Fingerprint-Downloader-RUST) | P1（部分源码） | [2026-11-13 审查](sc-fingerprint-rust-source-2026-11-13.md)；固定上游 commit；未运行测试 |
-| supercell-asset-decompressor | [repo](https://github.com/abhishek-kumar-14/supercell-asset-decompressor) | P0（待逐文件检查） | 待审 |
+| supercell-asset-decompressor | [repo](https://github.com/abhishek-kumar-14/supercell-asset-decompressor) | P1（部分源码） | [2026-11-13 审查](supercell-asset-decompressor-source-2026-11-13.md)；固定上游 commit；未运行测试 |
 | royaleapi-replay-dataset | [repo](https://github.com/Aminiwow/royaleapi-replay-dataset) | P0（待逐文件检查） | 待审 |
 | firstlight-zero | [repo](https://github.com/Jaasssoooonnnnn/FirstLight-Zero) | P1（有限文件） | 审计：docs/source-audits/simulator-trial-firstlight-zero-code-2026-11-12.md |
 | wty-cr-dataset | [repo](https://github.com/wty-yy/Clash-Royale-Dataset) | P0（待逐文件检查） | 待审 |
 | cr-agent-api-docs | [repo](https://github.com/jthingelstad/cr-agent-api-docs) | P0（待逐文件检查） | 待审 |
 | elixir-mcp-discord | [repo](https://github.com/jthingelstad/elixir-mcp-discord) | P1（部分源码） | [2026-11-13 审查](elixir-mcp-discord-source-2026-11-13.md)；固定上游 commit；未运行测试 |
 | sc-exportname-extractor | [repo](https://github.com/TrixallTR/SC-ExportName-Extractor) | P1（部分源码） | [2026-11-13 审查](sc-exportname-extractor-source-2026-11-13.md)；固定上游 commit；未运行测试 |
-| cr-new-tilemap | [repo](https://github.com/Darknighture/cr-new-tilemap) | P0（待逐文件检查） | 待审 |
-| cr-chest-probability | [repo](https://github.com/Darknighture/cr-chest-probability-calculator) | P0（待逐文件检查） | 待审 |
+| cr-new-tilemap | [repo](https://github.com/Darknighture/cr-new-tilemap) | P1（部分源码） | [2026-11-13 审查](cr-new-tilemap-source-2026-11-13.md)；固定上游 commit；未运行测试 |
+| cr-chest-probability | [repo](https://github.com/Darknighture/cr-chest-probability-calculator) | P1（部分源码） | [2026-11-13 审查](cr-chest-probability-source-2026-11-13.md)；固定上游 commit；未运行测试 |
 | royalerating | [repo](https://github.com/RoyaleAPI/royalerating) | P0（待逐文件检查） | 待审 |
 | cr-api-assets | [repo](https://github.com/RoyaleAPI/cr-api-assets) | P0（待逐文件检查） | 待审 |
 
@@ -213,3 +213,12 @@
 - [RoyaleAPI cr-api-data](https://github.com/RoyaleAPI/cr-api-data) 当前树主要为静态 JSON，未找到计算实现；应按数据资产做 schema/版本审查，保持 P0。
 - [Aminiwow replay dataset](https://github.com/Aminiwow/royaleapi-replay-dataset) 当前仅 README，无源码，保持 P0。
 - 固定三个上游 commit；未运行上游测试。总账：**57 项，42 项 P1，15 项 P0，0 项 P2/P3**。
+
+## 2026-11-13 第十六轮续查
+
+- [Clash Royale Pod](clash-royale-pod-source-2026-11-13.md)：视频 EV 与卡牌内标准差失误判定，P0→P1。
+- [CrownZero](crownzero-source-2026-11-13.md)：Build-A-Bot 实时适配与匹配场景禁出牌闸门，P0→P1。
+- [CR New Tilemap](cr-new-tilemap-source-2026-11-13.md)：CSV 竞技场地图转 PDF，P0→P1。
+- [Chest Probability Calculator](cr-chest-probability-source-2026-11-13.md)：多级升级概率 GUI，P0→P1。
+- [Supercell Asset Decompressor](supercell-asset-decompressor-source-2026-11-13.md)：SC/SC2/Sig/LZMA/Zstd 头部与解压、SCLZ 不支持，P0→P1。
+- 五项固定上游 commit；未运行上游测试。总账：**57 项，47 项 P1，10 项 P0，0 项 P2/P3**。
