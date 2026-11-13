@@ -4,7 +4,7 @@ title: "AI 训练环境与决策"
 type: topic
 status: investigating
 verification: author-documented
-projects: [firstlight-cr, jason-battle-engine, jason-simulator, tencent-model-harness, hasty-cr, royalegym, royalesim, crforge, katacr, itzik-clashenv, clashai-vegetableleaf, crsim-agent-larkindaniel, build-a-bot, detection-dataset, claude-royale, native-sandbox-imax9d, r0-elite-imax9d, clapha-engine, longling-simulator, royale-bot, royale-learn, royale-imitate]
+projects: [firstlight-cr, jason-battle-engine, royalefish, jason-simulator, tencent-model-harness, hasty-cr, royalegym, royalesim, crforge, katacr, itzik-clashenv, clashai-vegetableleaf, crsim-agent-larkindaniel, build-a-bot, detection-dataset, claude-royale, native-sandbox-imax9d, r0-elite-imax9d, clapha-engine, longling-simulator, royale-bot, royale-learn, royale-imitate]
 last_reviewed: null
 ---
 
