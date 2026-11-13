@@ -38,7 +38,7 @@
 | sc-extract | [repo](https://github.com/nextonesfaster/sc-extract) | P1（部分源码） | [2026-11-13 审查](sc-extract-source-2026-11-13.md)；固定上游 commit；未运行测试 |
 | detection-dataset | [repo](https://github.com/wty-yy/Clash-Royale-Detection-Dataset) | P0（待逐文件检查） | 待审 |
 | claude-royale | [repo](https://github.com/houseworthe/claude-royale) | P1（部分源码） | [2026-11-13 审查](claude-royale-source-2026-11-13.md)；固定上游 commit；未运行测试 |
-| supercell-csv-decoder | [repo](https://github.com/proydakov/supercell-resource-decoder) | P0（待逐文件检查） | 待审 |
+| supercell-csv-decoder | [repo](https://github.com/proydakov/supercell-resource-decoder) | P1（部分源码） | [2026-11-13 审查](supercell-csv-decoder-source-2026-11-13.md)；固定上游 commit；未运行测试 |
 | royaleapi-static-data | [repo](https://github.com/RoyaleAPI/cr-api-data) | P0（待逐文件检查） | 待审 |
 | card-tracker | [repo](https://github.com/AmarSaini/Clash-Royale-AI-Card-Tracker) | P1（部分源码） | [2026-11-13 审查](card-tracker-source-2026-11-13.md)；固定上游 commit；未运行测试 |
 | native-sandbox-imax9d | [repo](https://github.com/IMAX9D/cr-native-sandbox) | P1（部分源码） | [2026-11-13 原生宿主审查](imax-native-sandbox-source-2026-11-13.md)：环境接口、Worker、版本边界 |
@@ -47,7 +47,7 @@
 | royaleapi-downloader-imax9d | [repo](https://github.com/IMAX9D/royaleapi-downloader) | P1（部分源码） | [2026-11-13 源码审查](royaleapi-downloader-imax9d-source-2026-11-13.md)；未运行测试 |
 | sc-decoder-jason | [repo](https://github.com/Jason-XII/sc-decoder) | P1（部分源码） | [2026-11-13 审查](sc-decoder-jason-source-2026-11-13.md)；固定上游 commit；未运行测试 |
 | r0-elite-imax9d | [repo](https://github.com/IMAX9D/r0-elite-training) | P1（部分源码） | [2026-11-13 审查](r0-elite-imax9d-source-2026-11-13.md)；固定上游 commit；未运行测试 |
-| cr-collector-arron | [repo](https://github.com/arronwang01/cr-collector) | P0（待逐文件检查） | 待审 |
+| cr-collector-arron | [repo](https://github.com/arronwang01/cr-collector) | P1（部分源码） | [2026-11-13 审查](cr-collector-arron-source-2026-11-13.md)；固定上游 commit；未运行测试 |
 | clapha-engine | [repo](https://github.com/arronwang01/clapha-engine) | P0（待逐文件检查） | 待审 |
 | longling-simulator | [repo](https://github.com/longlingking/clash-royale-simulator) | P1（部分源码） | [2026-11-13 审查](longling-simulator-source-2026-11-13.md)；固定上游 commit；未运行测试 |
 | royale-bot | [repo](https://github.com/RoyaleGym/RoyaleBot) | P1（部分源码） | [2026-11-13 审查](royale-bot-source-2026-11-13.md)；固定上游 commit；未运行测试 |
@@ -67,7 +67,7 @@
 | wty-cr-dataset | [repo](https://github.com/wty-yy/Clash-Royale-Dataset) | P0（待逐文件检查） | 待审 |
 | cr-agent-api-docs | [repo](https://github.com/jthingelstad/cr-agent-api-docs) | P0（待逐文件检查） | 待审 |
 | elixir-mcp-discord | [repo](https://github.com/jthingelstad/elixir-mcp-discord) | P0（待逐文件检查） | 待审 |
-| sc-exportname-extractor | [repo](https://github.com/TrixallTR/SC-ExportName-Extractor) | P0（待逐文件检查） | 待审 |
+| sc-exportname-extractor | [repo](https://github.com/TrixallTR/SC-ExportName-Extractor) | P1（部分源码） | [2026-11-13 审查](sc-exportname-extractor-source-2026-11-13.md)；固定上游 commit；未运行测试 |
 | cr-new-tilemap | [repo](https://github.com/Darknighture/cr-new-tilemap) | P0（待逐文件检查） | 待审 |
 | cr-chest-probability | [repo](https://github.com/Darknighture/cr-chest-probability-calculator) | P0（待逐文件检查） | 待审 |
 | royalerating | [repo](https://github.com/RoyaleAPI/royalerating) | P0（待逐文件检查） | 待审 |
@@ -195,3 +195,12 @@
 - [claude-royale](claude-royale-source-2026-11-13.md)：BlueStacks UI 点击、网格映射、截图评测设计，P0→P1。
 - [SC Fingerprint Rust](sc-fingerprint-rust-source-2026-11-13.md)：fingerprint 清单与 Tokio 并发下载，缺失写入后哈希验证证据，P0→P1。
 - 固定四个上游 commit；本轮未运行上游测试。当前总账：**57 项，36 项 P1，21 项 P0，0 项 P2/P3**。
+
+## 2026-11-13 第十四轮续查
+
+- [Supercell CSV Decoder](supercell-csv-decoder-source-2026-11-13.md)：旧版 LZMA CSV 头部修复与编解码，P0→P1。
+- [CR Collector](cr-collector-arron-source-2026-11-13.md)：RoyaleAPI 分页抓取、replay_tag 去重、AIMD 限速，P0→P1。
+- [SC ExportName Extractor](sc-exportname-extractor-source-2026-11-13.md)：SC 特征扫描、字符串提取与边界风险，P0→P1。
+- [RoyaleRating](https://github.com/RoyaleAPI/royalerating) 仓库目前主要是文档，尚未找到可审计的本地核心计算实现，保持 P0。
+- [Elixir MCP](https://github.com/jthingelstad/elixir-mcp) 规模约 3615 个 tree entries，已确认 Node 24 workspace 和 acceptance fixtures；只读 package.json，保持 P0，待分模块审查。
+- 当前总账：**57 项，39 项 P1，18 项 P0，0 项 P2/P3**。未运行上游测试。
