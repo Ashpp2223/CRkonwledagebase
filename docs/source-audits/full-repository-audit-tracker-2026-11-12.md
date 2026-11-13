@@ -45,13 +45,13 @@
 | native-bionic-imax9d | [repo](https://github.com/IMAX9D/cr-native-linux-bionic) | P1（部分源码） | [2026-11-13 审查](native-bionic-imax9d-source-2026-11-13.md)；未运行测试 |
 | fl-royale | [repo](https://github.com/Jaasssoooonnnnn/FL-Royale) | P1（部分源码） | [2026-11-13 审查](fl-royale-source-2026-11-13.md)；未运行测试 |
 | royaleapi-downloader-imax9d | [repo](https://github.com/IMAX9D/royaleapi-downloader) | P1（部分源码） | [2026-11-13 源码审查](royaleapi-downloader-imax9d-source-2026-11-13.md)；未运行测试 |
-| sc-decoder-jason | [repo](https://github.com/Jason-XII/sc-decoder) | P0（待逐文件检查） | 待审 |
-| r0-elite-imax9d | [repo](https://github.com/IMAX9D/r0-elite-training) | P0（待逐文件检查） | 待审 |
+| sc-decoder-jason | [repo](https://github.com/Jason-XII/sc-decoder) | P1（部分源码） | [2026-11-13 审查](sc-decoder-jason-source-2026-11-13.md)；固定上游 commit；未运行测试 |
+| r0-elite-imax9d | [repo](https://github.com/IMAX9D/r0-elite-training) | P1（部分源码） | [2026-11-13 审查](r0-elite-imax9d-source-2026-11-13.md)；固定上游 commit；未运行测试 |
 | cr-collector-arron | [repo](https://github.com/arronwang01/cr-collector) | P0（待逐文件检查） | 待审 |
 | clapha-engine | [repo](https://github.com/arronwang01/clapha-engine) | P0（待逐文件检查） | 待审 |
 | longling-simulator | [repo](https://github.com/longlingking/clash-royale-simulator) | P0（待逐文件检查） | 待审 |
-| royale-bot | [repo](https://github.com/RoyaleGym/RoyaleBot) | P0（待逐文件检查） | 待审 |
-| royale-viser | [repo](https://github.com/RoyaleGym/RoyaleViser) | P0（待逐文件检查） | 待审 |
+| royale-bot | [repo](https://github.com/RoyaleGym/RoyaleBot) | P1（部分源码） | [2026-11-13 审查](royale-bot-source-2026-11-13.md)；固定上游 commit；未运行测试 |
+| royale-viser | [repo](https://github.com/RoyaleGym/RoyaleViser) | P1（部分源码） | [2026-11-13 审查](royale-viser-source-2026-11-13.md)；固定上游 commit；未运行测试 |
 | royale-learn | [repo](https://github.com/RoyaleGym/RoyaleLearn) | P0（待逐文件检查） | 待审 |
 | royale-imitate | [repo](https://github.com/RoyaleGym/RoyaleImitate) | P0（待逐文件检查） | 待审 |
 | aboufama-research | [repo](https://github.com/aboufama/clash-royale-research) | P0（待逐文件检查） | 待审 |
@@ -155,3 +155,11 @@
 - [IMAX9D RoyaleAPI Downloader](royaleapi-downloader-imax9d-source-2026-11-13.md)：离线回放 schema 与 native contract 校验、队列恢复测试代码，P0→P1。
 - 本轮还枚举 [Jason sc-decoder](https://github.com/Jason-XII/sc-decoder) 830 条目录项并读取 README；未检查实际解码源码，**保持 P0**。
 - 当前审查总账：**57 项，17 项 P1，40 项 P0，0 项 P2/P3**。未运行上游测试，仍需固定上游完整 commit。
+
+## 2026-11-13 第九轮续查
+
+- [Jason sc-decoder](sc-decoder-jason-source-2026-11-13.md)：SC v4/v5/Zstd/纹理/动画处理流水线，P0→P1。
+- [IMAX9D r0-elite-training](r0-elite-imax9d-source-2026-11-13.md)：原生训练数据准入 contract 与 teacher-forced 回放 Worker，P0→P1。
+- [RoyaleViser](royale-viser-source-2026-11-13.md)：首次分歧 Tick、匹配单位覆盖缺口、未知数据展示，P0→P1。
+- [RoyaleBot](royale-bot-source-2026-11-13.md)：直播帧到策略动作、坐标转换、在途下牌确认，P0→P1。
+- 本批四项目已用 GitHub commit API 固定上游 HEAD，记录关键文件 blob；未运行上游测试。当前总账：**57 项，21 项 P1，36 项 P0，0 项 P2/P3**。
