@@ -29,7 +29,7 @@
 | royalesim | [repo](https://github.com/RoyaleGym/RoyaleSim) | P1（部分源码） | [2026-11-13 审查](royalesim-source-2026-11-13.md)；未运行测试 |
 | crforge | [repo](https://github.com/voonhous/crforge) | P0（待逐文件检查） | 待审 |
 | clashback | [repo](https://github.com/ak1NaN/Clashback) | P1（部分源码） | [2026-11-13 审查](clashback-source-2026-11-13.md)；未运行测试 |
-| katacr | [repo](https://github.com/wty-yy/KataCR) | P0（待逐文件检查） | 待审 |
+| katacr | [repo](https://github.com/wty-yy/KataCR) | P1（部分源码） | [2026-11-13 审查](katacr-source-2026-11-13.md)；固定上游 commit；未运行测试 |
 | sc-downloader | [repo](https://github.com/Darknighture/sc-downloader-gui) | P0（待逐文件检查） | 待审 |
 | itzik-clashenv | [repo](https://github.com/itzik123/ClashRoyaleAi) | P0（待逐文件检查） | 待审 |
 | clashai-vegetableleaf | [repo](https://github.com/vegetableleaf/ClashAI) | P0（待逐文件检查） | 待审 |
@@ -52,8 +52,8 @@
 | longling-simulator | [repo](https://github.com/longlingking/clash-royale-simulator) | P0（待逐文件检查） | 待审 |
 | royale-bot | [repo](https://github.com/RoyaleGym/RoyaleBot) | P1（部分源码） | [2026-11-13 审查](royale-bot-source-2026-11-13.md)；固定上游 commit；未运行测试 |
 | royale-viser | [repo](https://github.com/RoyaleGym/RoyaleViser) | P1（部分源码） | [2026-11-13 审查](royale-viser-source-2026-11-13.md)；固定上游 commit；未运行测试 |
-| royale-learn | [repo](https://github.com/RoyaleGym/RoyaleLearn) | P0（待逐文件检查） | 待审 |
-| royale-imitate | [repo](https://github.com/RoyaleGym/RoyaleImitate) | P0（待逐文件检查） | 待审 |
+| royale-learn | [repo](https://github.com/RoyaleGym/RoyaleLearn) | P1（部分源码） | [2026-11-13 审查](royale-learn-source-2026-11-13.md)；固定上游 commit；未运行测试 |
+| royale-imitate | [repo](https://github.com/RoyaleGym/RoyaleImitate) | P1（部分源码） | [2026-11-13 审查](royale-imitate-source-2026-11-13.md)；固定上游 commit；未运行测试 |
 | aboufama-research | [repo](https://github.com/aboufama/clash-royale-research) | P0（待逐文件检查） | 待审 |
 | crownzero | [repo](https://github.com/anishhchitnis/crownzero) | P0（待逐文件检查） | 待审 |
 | clash-royale-pod | [repo](https://github.com/max-miller1204/Clash-Royale-Pod) | P0（待逐文件检查） | 待审 |
@@ -163,3 +163,11 @@
 - [RoyaleViser](royale-viser-source-2026-11-13.md)：首次分歧 Tick、匹配单位覆盖缺口、未知数据展示，P0→P1。
 - [RoyaleBot](royale-bot-source-2026-11-13.md)：直播帧到策略动作、坐标转换、在途下牌确认，P0→P1。
 - 本批四项目已用 GitHub commit API 固定上游 HEAD，记录关键文件 blob；未运行上游测试。当前总账：**57 项，21 项 P1，36 项 P0，0 项 P2/P3**。
+
+## 2026-11-13 第十轮续查
+
+- [RoyaleLearn](royale-learn-source-2026-11-13.md)：确定性等级、GPU/BLAS 前置约束、原子 checkpoint、恢复身份核验，P0→P1。
+- [RoyaleImitate](royale-imitate-source-2026-11-13.md)：人类回放转 imitation 数据、手牌初始顺序推定、拒绝样本计数及正则化警报，P0→P1。
+- [KataCR](katacr-source-2026-11-13.md)：JAX 目标检测、圣水分类与本地权重依赖，P0→P1。
+- [arronwang01/clapha-engine](https://github.com/arronwang01/clapha-engine) 本轮仓库 API 返回 404；**不等同于项目不存在**，可能是迁移、删除、私有或访问限制，待追踪上游重命名及包发行来源；保持 P0。
+- 本轮固定三个上游 commit；未运行上游测试。总账：**57 项，24 项 P1，33 项 P0，0 项 P2/P3**。
