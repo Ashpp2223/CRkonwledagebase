@@ -30,17 +30,17 @@
 | crforge | [repo](https://github.com/voonhous/crforge) | P1（部分源码） | [2026-11-13 审查](crforge-source-2026-11-13.md)；固定上游 commit；未运行测试 |
 | clashback | [repo](https://github.com/ak1NaN/Clashback) | P1（部分源码） | [2026-11-13 审查](clashback-source-2026-11-13.md)；未运行测试 |
 | katacr | [repo](https://github.com/wty-yy/KataCR) | P1（部分源码） | [2026-11-13 审查](katacr-source-2026-11-13.md)；固定上游 commit；未运行测试 |
-| sc-downloader | [repo](https://github.com/Darknighture/sc-downloader-gui) | P0（待逐文件检查） | 待审 |
+| sc-downloader | [repo](https://github.com/Darknighture/sc-downloader-gui) | P1（部分源码） | [2026-11-13 审查](sc-downloader-source-2026-11-13.md)；固定上游 commit；未运行测试 |
 | itzik-clashenv | [repo](https://github.com/itzik123/ClashRoyaleAi) | P1（部分源码） | [2026-11-13 审查](itzik-clashenv-source-2026-11-13.md)；固定上游 commit；未运行测试 |
 | clashai-vegetableleaf | [repo](https://github.com/vegetableleaf/ClashAI) | P1（部分源码） | [2026-11-13 审查](clashai-vegetableleaf-source-2026-11-13.md)；固定上游 commit；未运行测试 |
-| crsim-agent-larkindaniel | [repo](https://github.com/larkindaniel/clash-royale-agent) | P0（待逐文件检查） | 待审 |
-| build-a-bot | [repo](https://github.com/Pbatch/ClashRoyaleBuildABot) | P0（待逐文件检查） | 待审 |
+| crsim-agent-larkindaniel | [repo](https://github.com/larkindaniel/clash-royale-agent) | P1（部分源码） | [2026-11-13 审查](crsim-agent-larkindaniel-source-2026-11-13.md)；固定上游 commit；未运行测试 |
+| build-a-bot | [repo](https://github.com/Pbatch/ClashRoyaleBuildABot) | P1（部分源码） | [2026-11-13 审查](build-a-bot-source-2026-11-13.md)；固定上游 commit；未运行测试 |
 | sc-extract | [repo](https://github.com/nextonesfaster/sc-extract) | P0（待逐文件检查） | 待审 |
 | detection-dataset | [repo](https://github.com/wty-yy/Clash-Royale-Detection-Dataset) | P0（待逐文件检查） | 待审 |
 | claude-royale | [repo](https://github.com/houseworthe/claude-royale) | P0（待逐文件检查） | 待审 |
 | supercell-csv-decoder | [repo](https://github.com/proydakov/supercell-resource-decoder) | P0（待逐文件检查） | 待审 |
 | royaleapi-static-data | [repo](https://github.com/RoyaleAPI/cr-api-data) | P0（待逐文件检查） | 待审 |
-| card-tracker | [repo](https://github.com/AmarSaini/Clash-Royale-AI-Card-Tracker) | P0（待逐文件检查） | 待审 |
+| card-tracker | [repo](https://github.com/AmarSaini/Clash-Royale-AI-Card-Tracker) | P1（部分源码） | [2026-11-13 审查](card-tracker-source-2026-11-13.md)；固定上游 commit；未运行测试 |
 | native-sandbox-imax9d | [repo](https://github.com/IMAX9D/cr-native-sandbox) | P1（部分源码） | [2026-11-13 原生宿主审查](imax-native-sandbox-source-2026-11-13.md)：环境接口、Worker、版本边界 |
 | native-bionic-imax9d | [repo](https://github.com/IMAX9D/cr-native-linux-bionic) | P1（部分源码） | [2026-11-13 审查](native-bionic-imax9d-source-2026-11-13.md)；未运行测试 |
 | fl-royale | [repo](https://github.com/Jaasssoooonnnnn/FL-Royale) | P1（部分源码） | [2026-11-13 审查](fl-royale-source-2026-11-13.md)；未运行测试 |
@@ -179,3 +179,11 @@
 - [itzik ClashRoyaleAi](itzik-clashenv-source-2026-11-13.md)：实时画面时效、重复动作防护、失败重试，P0→P1。
 - [vegetableleaf ClashAI](clashai-vegetableleaf-source-2026-11-13.md)：旋风河道限制测试与分支评分统计，P0→P1。
 - 固定四个上游 commit；本轮未运行上游测试。当前总账：**57 项，28 项 P1，29 项 P0，0 项 P2/P3**。
+
+## 2026-11-13 第十二轮续查
+
+- [BuildABot](build-a-bot-source-2026-11-13.md)：ADB H264 视频抓取、8 卡策略动作、网格映射，P0→P1。
+- [CRSim Agent](crsim-agent-larkindaniel-source-2026-11-13.md)：公开观测编码器与奖励势函数，文档列出私有信息隔离及近似机制，P0→P1；整套调用图未核验。
+- [SC Downloader GUI](sc-downloader-source-2026-11-13.md)：下载重试、停止时 Queue 清理、解压失败保留原字节，P0→P1。
+- [AI Card Tracker](card-tracker-source-2026-11-13.md)：旧版 Keras 图像分类、三次确认、对手圣水时间估算，P0→P1。
+- 固定四个上游 commit；未运行上游测试。当前总账：**57 项，32 项 P1，25 项 P0，0 项 P2/P3**。
