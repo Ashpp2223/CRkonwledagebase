@@ -1,3 +1,16 @@
+---
+id: cr-agent-api-docs
+title: "CR Agent API Docs"
+type: project
+status: research
+verification: author-documented
+repository: https://github.com/jthingelstad/cr-agent-api-docs
+topics: [cr-ecosystem]
+maintainers: []
+last_reviewed: null
+license: unknown
+---
+
 # CR Agent API Docs
 
 - 来源：https://github.com/jthingelstad/cr-agent-api-docs
