@@ -1,6 +1,6 @@
 # 全库源码普查总账（2026-11-12 启动）
 
-范围：注册表 58 个独立 GitHub 项目；本表按**项目**而非作者计数。此表的“源码已读”只表示此前存在可追溯的部分文件检查，不代表全项目审计完成。
+范围：原注册表 58 条，2026-11-13 去重后 57 个独立 GitHub 项目；本表按**项目**而非作者计数。此表的“源码已读”只表示此前存在可追溯的部分文件检查，不代表全项目审计完成。
 
 ## 统一检查标准
 
@@ -16,7 +16,7 @@
 | ID | 上游 | 源码检查状态 | 备注 |
 |---|---|---|---|
 | firstlight-cr | [repo](https://github.com/Jaasssoooonnnnn/FirstLight_CR) | P1（部分源码） | [2026-11-13 审查](firstlight-cr-source-2026-11-13.md)；未运行测试 |
-| jason-battle-engine | [repo](https://github.com/Jason-XII/clash-royale-battle-engine) | P0（待逐文件检查） | 待审 |
+| jason-battle-engine | [repo](https://github.com/Jason-XII/daybreak-cr) | P1（部分源码） | [2026-11-13 审查](jason-daybreak-source-2026-11-13.md)；旧名 clash-royale-battle-engine |
 | jason-simulator | [repo](https://github.com/Jason-XII/clash-royale-simulator) | P1（部分源码） | [2026-11-13 审查](jason-simulator-source-2026-11-13.md)；未运行测试 |
 | replay-studio | [repo](https://github.com/ak1NaN/ClashRoyale-replay-studio) | P1（部分源码） | [2026-11-13 审查](replay-studio-source-2026-11-13.md)；未运行测试 |
 | ashpp-replay | [repo](https://github.com/Ashpp2223/clashroyalereplay) | P1（部分源码） | [2026-11-13 审查](ashpp-replay-source-2026-11-13.md)；未运行测试 |
@@ -63,7 +63,6 @@
 | sc-fingerprint-rust | [repo](https://github.com/TrixallTR/SC-Fingerprint-Downloader-RUST) | P0（待逐文件检查） | 待审 |
 | supercell-asset-decompressor | [repo](https://github.com/abhishek-kumar-14/supercell-asset-decompressor) | P0（待逐文件检查） | 待审 |
 | royaleapi-replay-dataset | [repo](https://github.com/Aminiwow/royaleapi-replay-dataset) | P0（待逐文件检查） | 待审 |
-| jason-daybreak | [repo](https://github.com/Jason-XII/daybreak-cr) | P0（待逐文件检查） | 待审 |
 | firstlight-zero | [repo](https://github.com/Jaasssoooonnnnn/FirstLight-Zero) | P1（有限文件） | 审计：docs/source-audits/simulator-trial-firstlight-zero-code-2026-11-12.md |
 | wty-cr-dataset | [repo](https://github.com/wty-yy/Clash-Royale-Dataset) | P0（待逐文件检查） | 待审 |
 | cr-agent-api-docs | [repo](https://github.com/jthingelstad/cr-agent-api-docs) | P0（待逐文件检查） | 待审 |
@@ -82,7 +81,7 @@
 
 ## 完成标准
 
-逐项目都有可复查的证据链接、实现能力/缺陷/许可结论和明确的未验证项；未通过 P2 的不得标注为“源码审计完成”。项目总体完成需 58 项全部逐一达到 P2 或有充分理由判定为纯资源/空仓/文档，并单独注明 P3 运行覆盖范围。
+逐项目都有可复查的证据链接、实现能力/缺陷/许可结论和明确的未验证项；未通过 P2 的不得标注为“源码审计完成”。项目总体完成需当前 57 项全部逐一达到 P2 或有充分理由判定为纯资源/空仓/文档，并单独注明 P3 运行覆盖范围。
 
 ## 维护约束（2026-11-13）
 
@@ -126,3 +125,11 @@
 - [Jason memory reader](memory-reader-source-2026-11-13.md)：仅目录和 README，保持 P0。
 - Jason-XII/clash-royale-battle-engine 的 GitHub 仓库元信息/默认分支读取异常，未强行认定不存在；需要进一步核实。
 - 当前总账：58 项，**12 项 P1，46 项 P0，0 项 P2/P3**。未运行上游测试或知识库校验脚本。
+
+## 2026-11-13 第六轮续查：同仓库重命名去重
+
+- **发现并修复重复登记**：`Jason-XII/clash-royale-battle-engine` 已迁移为 `Jason-XII/daybreak-cr`，GitHub repository ID 均为 `1366867946`；旧 commit 仍可在新仓库访问。注册表保留原 `jason-battle-engine` ID 以保护关联引用，删除重复 `jason-daybreak` 条目；原文档保留为历史别名页。
+- [Daybreak 源码审查](jason-daybreak-source-2026-11-13.md)：检查当前 `cr/engine.py`、`cr/live_budget.py`、`tests/test_engine.py` 与 README，P0→P1；未运行测试。当前 main 与历史 `engine.py` 应区分。
+- **另发现基础注册表缺陷**：9 个项目引用 `cr-ecosystem`，但 `registry/topics.yaml` 未定义。已补齐专题注册与页面。
+- 纠正后总账：**57 项，13 项 P1，44 项 P0，0 项 P2/P3**。先前 58 项口径作历史记录，不追改旧批次日志。
+- 尝试通过容器 clone 运行 `scripts/validate.py`，但容器无法解析 github.com，未能运行。仓库已有 push 自动校验工作流；本轮未读取工作流执行结果，不能宣称校验通过。
