@@ -41,7 +41,7 @@
 | supercell-csv-decoder | [repo](https://github.com/proydakov/supercell-resource-decoder) | P0（待逐文件检查） | 待审 |
 | royaleapi-static-data | [repo](https://github.com/RoyaleAPI/cr-api-data) | P0（待逐文件检查） | 待审 |
 | card-tracker | [repo](https://github.com/AmarSaini/Clash-Royale-AI-Card-Tracker) | P0（待逐文件检查） | 待审 |
-| native-sandbox-imax9d | [repo](https://github.com/IMAX9D/cr-native-sandbox) | P0（待逐文件检查） | 待审 |
+| native-sandbox-imax9d | [repo](https://github.com/IMAX9D/cr-native-sandbox) | P1（部分源码） | [2026-11-13 原生宿主审查](imax-native-sandbox-source-2026-11-13.md)：环境接口、Worker、版本边界 |
 | native-bionic-imax9d | [repo](https://github.com/IMAX9D/cr-native-linux-bionic) | P0（待逐文件检查） | 待审 |
 | fl-royale | [repo](https://github.com/Jaasssoooonnnnn/FL-Royale) | P0（待逐文件检查） | 待审 |
 | royaleapi-downloader-imax9d | [repo](https://github.com/IMAX9D/royaleapi-downloader) | P0（待逐文件检查） | 待审 |
@@ -97,3 +97,10 @@
 - RoyaleSim 的 Cargo.toml 与 Clashback 的 pyproject.toml 在指定路径返回 404；**仅说明该路径不可读取，不表示仓库不存在或无源码**，需继续枚举实际文件树。
 - IMAX9D/cr-native-sandbox README 已复核：上游区分旧版 15.535.29 原生宿主与新版 MuMu ARM64 160402002 实验，且训练吞吐数字有采集与完整更新口径差异。仅阅读 README，不提升其 P0 等级。
 - 本轮没有运行知识库校验脚本或上游测试；所有结论均为静态检查。
+
+## 2026-11-13 第二轮续查
+
+- [RoyaleGym](royalegym-source-2026-11-13.md)：扩展至 action/replay/rust_engine/state_mutator/protocol 和两份 Rust parity 测试源码，仍 P1，测试未运行。
+- [IMAX9D/cr-native-sandbox](imax-native-sandbox-source-2026-11-13.md)：首次检查 env/worker/包配置/技术文档，P0→P1；原生 Android AVD 依赖与无 Surface 的区别明确。
+- 当前总账：58 项，**4 项 P1，54 项 P0，0 项 P2/P3**。P1 只是局部审查，不能代表完成。
+- 本轮未运行仓库校验脚本和上游测试；尚未冻结完整上游 commit。后续须补齐。
