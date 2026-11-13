@@ -1,3 +1,16 @@
+---
+id: aboufama-research
+title: "Clash Royale Research"
+type: project
+status: research
+verification: author-documented
+repository: https://github.com/aboufama/clash-royale-research
+topics: [cr-battle-simulation, cr-game-mechanics]
+maintainers: []
+last_reviewed: null
+license: unknown
+---
+
 # Clash Royale Research
 
 - **上游**：https://github.com/aboufama/clash-royale-research
