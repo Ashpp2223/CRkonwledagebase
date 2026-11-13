@@ -1,3 +1,16 @@
+---
+id: cr-new-tilemap
+title: "CR Tilemap Converter"
+type: project
+status: research
+verification: author-documented
+repository: https://github.com/Darknighture/cr-new-tilemap
+topics: [cr-ecosystem]
+maintainers: []
+last_reviewed: null
+license: unknown
+---
+
 # CR Tilemap Converter
 
 - 来源：https://github.com/Darknighture/cr-new-tilemap
