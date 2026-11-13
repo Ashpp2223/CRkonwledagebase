@@ -67,7 +67,7 @@ projects:
     title: "RoyaleFish"
     repository: https://github.com/fabiospalla9-tech/RoyaleFish
     path: projects/royalefish.md
-    verification: author-documented
+    verification: source-inspected
     license: Apache-2.0
     topics: [cr-native-engine, cr-ai-environment]
 
