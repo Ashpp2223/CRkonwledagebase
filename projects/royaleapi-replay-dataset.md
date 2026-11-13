@@ -1,3 +1,16 @@
+---
+id: royaleapi-replay-dataset
+title: "RoyaleAPI Replay Dataset"
+type: project
+status: research
+verification: author-documented
+repository: https://github.com/Aminiwow/royaleapi-replay-dataset
+topics: [cr-replay-state, cr-ai-environment]
+maintainers: []
+last_reviewed: null
+license: unknown
+---
+
 # RoyaleAPI Replay Dataset
 
 - 上游：https://github.com/Aminiwow/royaleapi-replay-dataset
