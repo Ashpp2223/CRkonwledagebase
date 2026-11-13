@@ -1,3 +1,16 @@
+---
+id: wty-cr-dataset
+title: "Clash Royale Dataset"
+type: project
+status: research
+verification: author-documented
+repository: https://github.com/wty-yy/Clash-Royale-Dataset
+topics: [cr-ecosystem]
+maintainers: []
+last_reviewed: null
+license: unknown
+---
+
 # Clash Royale Dataset
 
 - 来源：https://github.com/wty-yy/Clash-Royale-Dataset
