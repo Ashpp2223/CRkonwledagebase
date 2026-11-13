@@ -26,9 +26,9 @@
 | hasty-cr | [repo](https://github.com/hastylmao/Hasty-CR) | P0（待逐文件检查） | 待审 |
 | royalefish | [repo](https://github.com/fabiospalla9-tech/RoyaleFish) | P1（有限文件） | 既有审计：docs/source-audits/royalefish-2026-11-12.md |
 | royalegym | [repo](https://github.com/RoyaleGym/RoyaleGym) | P1（部分源码） | [2026-11-13 源码审查](royalegym-source-2026-11-13.md)：依赖、环境入口、Mock/Rust 区分；未运行测试 |
-| royalesim | [repo](https://github.com/RoyaleGym/RoyaleSim) | P0（待逐文件检查） | 待审 |
+| royalesim | [repo](https://github.com/RoyaleGym/RoyaleSim) | P1（部分源码） | [2026-11-13 审查](royalesim-source-2026-11-13.md)；未运行测试 |
 | crforge | [repo](https://github.com/voonhous/crforge) | P0（待逐文件检查） | 待审 |
-| clashback | [repo](https://github.com/ak1NaN/Clashback) | P0（待逐文件检查） | 待审 |
+| clashback | [repo](https://github.com/ak1NaN/Clashback) | P1（部分源码） | [2026-11-13 审查](clashback-source-2026-11-13.md)；未运行测试 |
 | katacr | [repo](https://github.com/wty-yy/KataCR) | P0（待逐文件检查） | 待审 |
 | sc-downloader | [repo](https://github.com/Darknighture/sc-downloader-gui) | P0（待逐文件检查） | 待审 |
 | itzik-clashenv | [repo](https://github.com/itzik123/ClashRoyaleAi) | P0（待逐文件检查） | 待审 |
@@ -42,7 +42,7 @@
 | royaleapi-static-data | [repo](https://github.com/RoyaleAPI/cr-api-data) | P0（待逐文件检查） | 待审 |
 | card-tracker | [repo](https://github.com/AmarSaini/Clash-Royale-AI-Card-Tracker) | P0（待逐文件检查） | 待审 |
 | native-sandbox-imax9d | [repo](https://github.com/IMAX9D/cr-native-sandbox) | P1（部分源码） | [2026-11-13 原生宿主审查](imax-native-sandbox-source-2026-11-13.md)：环境接口、Worker、版本边界 |
-| native-bionic-imax9d | [repo](https://github.com/IMAX9D/cr-native-linux-bionic) | P0（待逐文件检查） | 待审 |
+| native-bionic-imax9d | [repo](https://github.com/IMAX9D/cr-native-linux-bionic) | P1（部分源码） | [2026-11-13 审查](native-bionic-imax9d-source-2026-11-13.md)；未运行测试 |
 | fl-royale | [repo](https://github.com/Jaasssoooonnnnn/FL-Royale) | P0（待逐文件检查） | 待审 |
 | royaleapi-downloader-imax9d | [repo](https://github.com/IMAX9D/royaleapi-downloader) | P0（待逐文件检查） | 待审 |
 | sc-decoder-jason | [repo](https://github.com/Jason-XII/sc-decoder) | P0（待逐文件检查） | 待审 |
@@ -104,3 +104,10 @@
 - [IMAX9D/cr-native-sandbox](imax-native-sandbox-source-2026-11-13.md)：首次检查 env/worker/包配置/技术文档，P0→P1；原生 Android AVD 依赖与无 Surface 的区别明确。
 - 当前总账：58 项，**4 项 P1，54 项 P0，0 项 P2/P3**。P1 只是局部审查，不能代表完成。
 - 本轮未运行仓库校验脚本和上游测试；尚未冻结完整上游 commit。后续须补齐。
+
+## 2026-11-13 第三轮续查
+
+- [Clashback](clashback-source-2026-11-13.md)：枚举 7600 条 Git tree 条目（其中 6860 个 blob）；抽查原生快照、逐 Tick 缓存和 worker。发现逐 Tick 快照实现；恢复/分支确定性未独立验证。
+- [RoyaleSim](royalesim-source-2026-11-13.md)：枚举 679 条 Git tree 条目；Rust 工程入口在 crates/royalesim；抽查 spell.rs 和 hash_continuity.rs。
+- [IMAX9D Linux Bionic](native-bionic-imax9d-source-2026-11-13.md)：枚举 18 条 Git tree 条目；抽查 runtime.py 与测试，确认 Android 用户态文件依赖而无需 AVD/KVM。
+- 当前总账：58 项，**7 项 P1，51 项 P0，0 项 P2/P3**。以上仅为抽样源码审查；未运行上游测试及知识库校验脚本。
