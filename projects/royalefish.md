@@ -5,7 +5,7 @@ type: project
 status: implemented
 verification: source-inspected
 repository: https://github.com/fabiospalla9-tech/RoyaleFish
-topics: [cr-ai-training, cr-native-engine]
+topics: [cr-native-engine, cr-ai-environment]
 maintainers: []
 last_reviewed: "2026-11-12"
 license: Apache-2.0
