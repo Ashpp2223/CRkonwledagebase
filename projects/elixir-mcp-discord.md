@@ -1,3 +1,16 @@
+---
+id: elixir-mcp-discord
+title: "Elixir MCP Discord"
+type: project
+status: research
+verification: author-documented
+repository: https://github.com/jthingelstad/elixir-mcp-discord
+topics: [cr-ecosystem]
+maintainers: []
+last_reviewed: null
+license: unknown
+---
+
 # Elixir MCP Discord
 
 - 来源：https://github.com/jthingelstad/elixir-mcp-discord
