@@ -18,8 +18,8 @@
 | firstlight-cr | [repo](https://github.com/Jaasssoooonnnnn/FirstLight_CR) | P0（待逐文件检查） | 待审 |
 | jason-battle-engine | [repo](https://github.com/Jason-XII/clash-royale-battle-engine) | P0（待逐文件检查） | 待审 |
 | jason-simulator | [repo](https://github.com/Jason-XII/clash-royale-simulator) | P0（待逐文件检查） | 待审 |
-| replay-studio | [repo](https://github.com/ak1NaN/ClashRoyale-replay-studio) | P0（待逐文件检查） | 待审 |
-| ashpp-replay | [repo](https://github.com/Ashpp2223/clashroyalereplay) | P0（待逐文件检查） | 待审 |
+| replay-studio | [repo](https://github.com/ak1NaN/ClashRoyale-replay-studio) | P1（部分源码） | [2026-11-13 审查](replay-studio-source-2026-11-13.md)；未运行测试 |
+| ashpp-replay | [repo](https://github.com/Ashpp2223/clashroyalereplay) | P1（部分源码） | [2026-11-13 审查](ashpp-replay-source-2026-11-13.md)；未运行测试 |
 | memory-reader | [repo](https://github.com/Jason-XII/cr-memory-reader) | P0（待逐文件检查） | 待审 |
 | tencent-overlay | [repo](https://github.com/ak1NaN/ClashRoyale-tencent-overlay) | P0（待逐文件检查） | 待审 |
 | tencent-model-harness | [repo](https://github.com/ak1NaN/ClashRoyale-tencent-model-harness) | P0（待逐文件检查） | 待审 |
@@ -111,3 +111,9 @@
 - [RoyaleSim](royalesim-source-2026-11-13.md)：枚举 679 条 Git tree 条目；Rust 工程入口在 crates/royalesim；抽查 spell.rs 和 hash_continuity.rs。
 - [IMAX9D Linux Bionic](native-bionic-imax9d-source-2026-11-13.md)：枚举 18 条 Git tree 条目；抽查 runtime.py 与测试，确认 Android 用户态文件依赖而无需 AVD/KVM。
 - 当前总账：58 项，**7 项 P1，51 项 P0，0 项 P2/P3**。以上仅为抽样源码审查；未运行上游测试及知识库校验脚本。
+
+## 2026-11-13 第四轮续查
+
+- [Ashpp Replay](ashpp-replay-source-2026-11-13.md)：实际默认分支为 codex/windows-native-engine-probe，检查 Windows Clashback AVD 适配器、三套 engine profile、分支数据模型。
+- [AK Replay Studio](replay-studio-source-2026-11-13.md)：检查 TCP 战斗控制客户端与快照 seek Mock 测试，区分测试设计与实际运行结果。
+- 当前总账：58 项，**9 项 P1，49 项 P0，0 项 P2/P3**。未执行测试和仓库校验脚本。
