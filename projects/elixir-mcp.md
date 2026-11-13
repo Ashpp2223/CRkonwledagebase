@@ -1,3 +1,16 @@
+---
+id: elixir-mcp
+title: "Elixir MCP"
+type: project
+status: research
+verification: author-documented
+repository: https://github.com/jthingelstad/elixir-mcp
+topics: [cr-assets-data]
+maintainers: []
+last_reviewed: null
+license: unknown
+---
+
 # Elixir MCP
 
 - **上游**：https://github.com/jthingelstad/elixir-mcp
