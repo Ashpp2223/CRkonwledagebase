@@ -27,3 +27,8 @@ topics:
     title: "战斗机制、寻路与数值"
     path: topics/cr-game-mechanics.md
     projects: [jason-simulator, hasty-cr, crforge, royalesim, itzik-clashenv, crsim-agent-larkindaniel]
+
+  - id: cr-ecosystem
+    title: "皇室战争生态工具与资料"
+    path: topics/cr-ecosystem.md
+    projects: [firstlight-zero, wty-cr-dataset, cr-agent-api-docs, elixir-mcp-discord, sc-exportname-extractor, cr-new-tilemap, cr-chest-probability, royalerating, cr-api-assets]
