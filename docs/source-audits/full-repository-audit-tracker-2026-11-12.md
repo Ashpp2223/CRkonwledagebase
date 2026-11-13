@@ -20,9 +20,9 @@
 | jason-simulator | [repo](https://github.com/Jason-XII/clash-royale-simulator) | P1（部分源码） | [2026-11-13 审查](jason-simulator-source-2026-11-13.md)；未运行测试 |
 | replay-studio | [repo](https://github.com/ak1NaN/ClashRoyale-replay-studio) | P1（部分源码） | [2026-11-13 审查](replay-studio-source-2026-11-13.md)；未运行测试 |
 | ashpp-replay | [repo](https://github.com/Ashpp2223/clashroyalereplay) | P1（部分源码） | [2026-11-13 审查](ashpp-replay-source-2026-11-13.md)；未运行测试 |
-| memory-reader | [repo](https://github.com/Jason-XII/cr-memory-reader) | P0（仅目录与 README） | [2026-11-13 初查](memory-reader-source-2026-11-13.md)；待核心源码 |
-| tencent-overlay | [repo](https://github.com/ak1NaN/ClashRoyale-tencent-overlay) | P0（待逐文件检查） | 待审 |
-| tencent-model-harness | [repo](https://github.com/ak1NaN/ClashRoyale-tencent-model-harness) | P0（待逐文件检查） | 待审 |
+| memory-reader | [repo](https://github.com/Jason-XII/cr-memory-reader) | P1（部分源码） | [2026-11-13 源码审查](memory-reader-source-2026-11-13.md)；未运行测试 |
+| tencent-overlay | [repo](https://github.com/ak1NaN/ClashRoyale-tencent-overlay) | P1（部分源码） | [2026-11-13 源码审查](tencent-overlay-source-2026-11-13.md)；未运行测试 |
+| tencent-model-harness | [repo](https://github.com/ak1NaN/ClashRoyale-tencent-model-harness) | P1（部分源码） | [2026-11-13 源码审查](tencent-model-harness-source-2026-11-13.md)；未运行测试 |
 | hasty-cr | [repo](https://github.com/hastylmao/Hasty-CR) | P0（待逐文件检查） | 待审 |
 | royalefish | [repo](https://github.com/fabiospalla9-tech/RoyaleFish) | P1（有限文件） | 既有审计：docs/source-audits/royalefish-2026-11-12.md |
 | royalegym | [repo](https://github.com/RoyaleGym/RoyaleGym) | P1（部分源码） | [2026-11-13 源码审查](royalegym-source-2026-11-13.md)：依赖、环境入口、Mock/Rust 区分；未运行测试 |
@@ -44,7 +44,7 @@
 | native-sandbox-imax9d | [repo](https://github.com/IMAX9D/cr-native-sandbox) | P1（部分源码） | [2026-11-13 原生宿主审查](imax-native-sandbox-source-2026-11-13.md)：环境接口、Worker、版本边界 |
 | native-bionic-imax9d | [repo](https://github.com/IMAX9D/cr-native-linux-bionic) | P1（部分源码） | [2026-11-13 审查](native-bionic-imax9d-source-2026-11-13.md)；未运行测试 |
 | fl-royale | [repo](https://github.com/Jaasssoooonnnnn/FL-Royale) | P1（部分源码） | [2026-11-13 审查](fl-royale-source-2026-11-13.md)；未运行测试 |
-| royaleapi-downloader-imax9d | [repo](https://github.com/IMAX9D/royaleapi-downloader) | P0（待逐文件检查） | 待审 |
+| royaleapi-downloader-imax9d | [repo](https://github.com/IMAX9D/royaleapi-downloader) | P1（部分源码） | [2026-11-13 源码审查](royaleapi-downloader-imax9d-source-2026-11-13.md)；未运行测试 |
 | sc-decoder-jason | [repo](https://github.com/Jason-XII/sc-decoder) | P0（待逐文件检查） | 待审 |
 | r0-elite-imax9d | [repo](https://github.com/IMAX9D/r0-elite-training) | P0（待逐文件检查） | 待审 |
 | cr-collector-arron | [repo](https://github.com/arronwang01/cr-collector) | P0（待逐文件检查） | 待审 |
@@ -146,3 +146,12 @@
 - 根据实际 `scripts/validate.py` 检查规则，补齐六个专题的项目反向引用，并同步六份专题页 front matter。
 - **首次实际读取 GitHub Actions 校验日志**：在修复过程中，从 18 项错误逐步降至 3 项（最后三项为尚未同步的专题页）；所有六个专题页现已同步。最新 push 的自动工作流结果待确认，不能提前宣称通过。
 - 审查状态不变：57 项，13 项 P1、44 项 P0、0 项 P2/P3。以上为知识库结构修复，不代表上游源码审查等级提升。
+
+## 2026-11-13 第八轮续查
+
+- [Jason memory reader](memory-reader-source-2026-11-13.md)：Frida Hook、下牌事件、root ADB 进程内存读取，P0→P1。
+- [AK Tencent Overlay](tencent-overlay-source-2026-11-13.md)：原生圣水/队列 Hook 与身份区分，P0→P1。
+- [AK Tencent Model Harness](tencent-model-harness-source-2026-11-13.md)：partial/complete 状态隔离、输入完整性、动作时效及测试代码，P0→P1。
+- [IMAX9D RoyaleAPI Downloader](royaleapi-downloader-imax9d-source-2026-11-13.md)：离线回放 schema 与 native contract 校验、队列恢复测试代码，P0→P1。
+- 本轮还枚举 [Jason sc-decoder](https://github.com/Jason-XII/sc-decoder) 830 条目录项并读取 README；未检查实际解码源码，**保持 P0**。
+- 当前审查总账：**57 项，17 项 P1，40 项 P0，0 项 P2/P3**。未运行上游测试，仍需固定上游完整 commit。
