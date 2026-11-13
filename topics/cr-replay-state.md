@@ -4,7 +4,7 @@ title: "回放、快照与状态恢复"
 type: topic
 status: investigating
 verification: author-documented
-projects: [firstlight-cr, jason-battle-engine, replay-studio, ashpp-replay, clashai-vegetableleaf, fl-royale, royaleapi-downloader-imax9d, cr-collector-arron, royale-viser, clashback]
+projects: [firstlight-cr, jason-battle-engine, replay-studio, ashpp-replay, clashai-vegetableleaf, fl-royale, royaleapi-downloader-imax9d, cr-collector-arron, royale-viser, clashback, clash-royale-pod, cr-dataset-browser, royaleapi-replay-dataset]
 last_reviewed: "2026-11-10"
 ---
 
