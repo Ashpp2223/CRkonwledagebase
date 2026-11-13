@@ -1,3 +1,9 @@
+# Daybreak CR — 历史登记别名
+
+该仓库与 [Jason Battle Engine / Daybreak CR](jason-battle-engine.md) 是同一个 GitHub repository ID（1366867946），现已合并登记为 `jason-battle-engine`。本文件保留作为旧链接入口；请以主项目页和 [源码审查总账](../docs/source-audits/full-repository-audit-tracker-2026-11-12.md) 为准。
+
+## 合并前的研究笔记
+
 # Daybreak CR — Jason-XII
 
 - 上游：https://github.com/Jason-XII/daybreak-cr
