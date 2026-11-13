@@ -8,7 +8,7 @@
 
 - 上游：https://github.com/Jason-XII/daybreak-cr
 - 证据等级：R1（README 核查，未固定提交源码审计、未运行）
-- 与已收录 [Jason Simulator](jason-simulator.md)、[CR Memory Reader](cr-memory-reader.md) 属同作者不同技术路线；不能默认共享引擎或数据契约。
+- 与已收录 [Jason Simulator](jason-simulator.md)、[CR Memory Reader](memory-reader.md) 属同作者不同技术路线；不能默认共享引擎或数据契约。
 
 ## 价值
 
