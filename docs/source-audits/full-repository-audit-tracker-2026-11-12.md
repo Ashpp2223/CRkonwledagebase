@@ -23,16 +23,16 @@
 | memory-reader | [repo](https://github.com/Jason-XII/cr-memory-reader) | P1（部分源码） | [2026-11-13 源码审查](memory-reader-source-2026-11-13.md)；未运行测试 |
 | tencent-overlay | [repo](https://github.com/ak1NaN/ClashRoyale-tencent-overlay) | P1（部分源码） | [2026-11-13 源码审查](tencent-overlay-source-2026-11-13.md)；未运行测试 |
 | tencent-model-harness | [repo](https://github.com/ak1NaN/ClashRoyale-tencent-model-harness) | P1（部分源码） | [2026-11-13 源码审查](tencent-model-harness-source-2026-11-13.md)；未运行测试 |
-| hasty-cr | [repo](https://github.com/hastylmao/Hasty-CR) | P0（待逐文件检查） | 待审 |
+| hasty-cr | [repo](https://github.com/hastylmao/Hasty-CR) | P1（部分源码） | [2026-11-13 审查](hasty-cr-source-2026-11-13.md)；固定上游 commit；未运行测试 |
 | royalefish | [repo](https://github.com/fabiospalla9-tech/RoyaleFish) | P1（有限文件） | 既有审计：docs/source-audits/royalefish-2026-11-12.md |
 | royalegym | [repo](https://github.com/RoyaleGym/RoyaleGym) | P1（部分源码） | [2026-11-13 源码审查](royalegym-source-2026-11-13.md)：依赖、环境入口、Mock/Rust 区分；未运行测试 |
 | royalesim | [repo](https://github.com/RoyaleGym/RoyaleSim) | P1（部分源码） | [2026-11-13 审查](royalesim-source-2026-11-13.md)；未运行测试 |
-| crforge | [repo](https://github.com/voonhous/crforge) | P0（待逐文件检查） | 待审 |
+| crforge | [repo](https://github.com/voonhous/crforge) | P1（部分源码） | [2026-11-13 审查](crforge-source-2026-11-13.md)；固定上游 commit；未运行测试 |
 | clashback | [repo](https://github.com/ak1NaN/Clashback) | P1（部分源码） | [2026-11-13 审查](clashback-source-2026-11-13.md)；未运行测试 |
 | katacr | [repo](https://github.com/wty-yy/KataCR) | P1（部分源码） | [2026-11-13 审查](katacr-source-2026-11-13.md)；固定上游 commit；未运行测试 |
 | sc-downloader | [repo](https://github.com/Darknighture/sc-downloader-gui) | P0（待逐文件检查） | 待审 |
-| itzik-clashenv | [repo](https://github.com/itzik123/ClashRoyaleAi) | P0（待逐文件检查） | 待审 |
-| clashai-vegetableleaf | [repo](https://github.com/vegetableleaf/ClashAI) | P0（待逐文件检查） | 待审 |
+| itzik-clashenv | [repo](https://github.com/itzik123/ClashRoyaleAi) | P1（部分源码） | [2026-11-13 审查](itzik-clashenv-source-2026-11-13.md)；固定上游 commit；未运行测试 |
+| clashai-vegetableleaf | [repo](https://github.com/vegetableleaf/ClashAI) | P1（部分源码） | [2026-11-13 审查](clashai-vegetableleaf-source-2026-11-13.md)；固定上游 commit；未运行测试 |
 | crsim-agent-larkindaniel | [repo](https://github.com/larkindaniel/clash-royale-agent) | P0（待逐文件检查） | 待审 |
 | build-a-bot | [repo](https://github.com/Pbatch/ClashRoyaleBuildABot) | P0（待逐文件检查） | 待审 |
 | sc-extract | [repo](https://github.com/nextonesfaster/sc-extract) | P0（待逐文件检查） | 待审 |
@@ -171,3 +171,11 @@
 - [KataCR](katacr-source-2026-11-13.md)：JAX 目标检测、圣水分类与本地权重依赖，P0→P1。
 - [arronwang01/clapha-engine](https://github.com/arronwang01/clapha-engine) 本轮仓库 API 返回 404；**不等同于项目不存在**，可能是迁移、删除、私有或访问限制，待追踪上游重命名及包发行来源；保持 P0。
 - 本轮固定三个上游 commit；未运行上游测试。总账：**57 项，24 项 P1，33 项 P0，0 项 P2/P3**。
+
+## 2026-11-13 第十一轮续查
+
+- [Hasty-CR](hasty-cr-source-2026-11-13.md)：区分真实客户端参数与近似过程，校准测试明确 `real_measurements == 0` 和 `NOT_READY`，P0→P1。
+- [crforge](crforge-source-2026-11-13.md)：轨迹 SHA、首次逐字段分歧、参考数据缺失时跳过测试，P0→P1。
+- [itzik ClashRoyaleAi](itzik-clashenv-source-2026-11-13.md)：实时画面时效、重复动作防护、失败重试，P0→P1。
+- [vegetableleaf ClashAI](clashai-vegetableleaf-source-2026-11-13.md)：旋风河道限制测试与分支评分统计，P0→P1。
+- 固定四个上游 commit；本轮未运行上游测试。当前总账：**57 项，28 项 P1，29 项 P0，0 项 P2/P3**。
