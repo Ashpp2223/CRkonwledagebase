@@ -35,9 +35,9 @@
 | clashai-vegetableleaf | [repo](https://github.com/vegetableleaf/ClashAI) | P1（部分源码） | [2026-11-13 审查](clashai-vegetableleaf-source-2026-11-13.md)；固定上游 commit；未运行测试 |
 | crsim-agent-larkindaniel | [repo](https://github.com/larkindaniel/clash-royale-agent) | P1（部分源码） | [2026-11-13 审查](crsim-agent-larkindaniel-source-2026-11-13.md)；固定上游 commit；未运行测试 |
 | build-a-bot | [repo](https://github.com/Pbatch/ClashRoyaleBuildABot) | P1（部分源码） | [2026-11-13 审查](build-a-bot-source-2026-11-13.md)；固定上游 commit；未运行测试 |
-| sc-extract | [repo](https://github.com/nextonesfaster/sc-extract) | P0（待逐文件检查） | 待审 |
+| sc-extract | [repo](https://github.com/nextonesfaster/sc-extract) | P1（部分源码） | [2026-11-13 审查](sc-extract-source-2026-11-13.md)；固定上游 commit；未运行测试 |
 | detection-dataset | [repo](https://github.com/wty-yy/Clash-Royale-Detection-Dataset) | P0（待逐文件检查） | 待审 |
-| claude-royale | [repo](https://github.com/houseworthe/claude-royale) | P0（待逐文件检查） | 待审 |
+| claude-royale | [repo](https://github.com/houseworthe/claude-royale) | P1（部分源码） | [2026-11-13 审查](claude-royale-source-2026-11-13.md)；固定上游 commit；未运行测试 |
 | supercell-csv-decoder | [repo](https://github.com/proydakov/supercell-resource-decoder) | P0（待逐文件检查） | 待审 |
 | royaleapi-static-data | [repo](https://github.com/RoyaleAPI/cr-api-data) | P0（待逐文件检查） | 待审 |
 | card-tracker | [repo](https://github.com/AmarSaini/Clash-Royale-AI-Card-Tracker) | P1（部分源码） | [2026-11-13 审查](card-tracker-source-2026-11-13.md)；固定上游 commit；未运行测试 |
@@ -49,7 +49,7 @@
 | r0-elite-imax9d | [repo](https://github.com/IMAX9D/r0-elite-training) | P1（部分源码） | [2026-11-13 审查](r0-elite-imax9d-source-2026-11-13.md)；固定上游 commit；未运行测试 |
 | cr-collector-arron | [repo](https://github.com/arronwang01/cr-collector) | P0（待逐文件检查） | 待审 |
 | clapha-engine | [repo](https://github.com/arronwang01/clapha-engine) | P0（待逐文件检查） | 待审 |
-| longling-simulator | [repo](https://github.com/longlingking/clash-royale-simulator) | P0（待逐文件检查） | 待审 |
+| longling-simulator | [repo](https://github.com/longlingking/clash-royale-simulator) | P1（部分源码） | [2026-11-13 审查](longling-simulator-source-2026-11-13.md)；固定上游 commit；未运行测试 |
 | royale-bot | [repo](https://github.com/RoyaleGym/RoyaleBot) | P1（部分源码） | [2026-11-13 审查](royale-bot-source-2026-11-13.md)；固定上游 commit；未运行测试 |
 | royale-viser | [repo](https://github.com/RoyaleGym/RoyaleViser) | P1（部分源码） | [2026-11-13 审查](royale-viser-source-2026-11-13.md)；固定上游 commit；未运行测试 |
 | royale-learn | [repo](https://github.com/RoyaleGym/RoyaleLearn) | P1（部分源码） | [2026-11-13 审查](royale-learn-source-2026-11-13.md)；固定上游 commit；未运行测试 |
@@ -60,7 +60,7 @@
 | elixir-mcp | [repo](https://github.com/jthingelstad/elixir-mcp) | P0（待逐文件检查） | 待审 |
 | elixir-mcp-collector | [repo](https://github.com/jthingelstad/elixir-mcp-collector) | P0（待逐文件检查） | 待审 |
 | cr-dataset-browser | [repo](https://github.com/HumaidAlhuthali/clash-royale-dataset-browser) | P0（待逐文件检查） | 待审 |
-| sc-fingerprint-rust | [repo](https://github.com/TrixallTR/SC-Fingerprint-Downloader-RUST) | P0（待逐文件检查） | 待审 |
+| sc-fingerprint-rust | [repo](https://github.com/TrixallTR/SC-Fingerprint-Downloader-RUST) | P1（部分源码） | [2026-11-13 审查](sc-fingerprint-rust-source-2026-11-13.md)；固定上游 commit；未运行测试 |
 | supercell-asset-decompressor | [repo](https://github.com/abhishek-kumar-14/supercell-asset-decompressor) | P0（待逐文件检查） | 待审 |
 | royaleapi-replay-dataset | [repo](https://github.com/Aminiwow/royaleapi-replay-dataset) | P0（待逐文件检查） | 待审 |
 | firstlight-zero | [repo](https://github.com/Jaasssoooonnnnn/FirstLight-Zero) | P1（有限文件） | 审计：docs/source-audits/simulator-trial-firstlight-zero-code-2026-11-12.md |
@@ -187,3 +187,11 @@
 - [SC Downloader GUI](sc-downloader-source-2026-11-13.md)：下载重试、停止时 Queue 清理、解压失败保留原字节，P0→P1。
 - [AI Card Tracker](card-tracker-source-2026-11-13.md)：旧版 Keras 图像分类、三次确认、对手圣水时间估算，P0→P1。
 - 固定四个上游 commit；未运行上游测试。当前总账：**57 项，32 项 P1，25 项 P0，0 项 P2/P3**。
+
+## 2026-11-13 第十三轮续查
+
+- [sc-extract](sc-extract-source-2026-11-13.md)：SC region/纹理渲染与压缩 CSV 解析，P0→P1。
+- [longling simulator](longling-simulator-source-2026-11-13.md)：Python 实体战斗与 R2-Dreamer Gym 适配，P0→P1。
+- [claude-royale](claude-royale-source-2026-11-13.md)：BlueStacks UI 点击、网格映射、截图评测设计，P0→P1。
+- [SC Fingerprint Rust](sc-fingerprint-rust-source-2026-11-13.md)：fingerprint 清单与 Tokio 并发下载，缺失写入后哈希验证证据，P0→P1。
+- 固定四个上游 commit；本轮未运行上游测试。当前总账：**57 项，36 项 P1，21 项 P0，0 项 P2/P3**。
