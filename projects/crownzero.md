@@ -1,3 +1,16 @@
+---
+id: crownzero
+title: "CrownZero"
+type: project
+status: research
+verification: author-documented
+repository: https://github.com/anishhchitnis/crownzero
+topics: [cr-ai-environment, cr-runtime-observation]
+maintainers: []
+last_reviewed: null
+license: unknown
+---
+
 # CrownZero
 
 - **上游**：https://github.com/anishhchitnis/crownzero
