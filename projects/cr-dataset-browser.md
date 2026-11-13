@@ -1,3 +1,16 @@
+---
+id: cr-dataset-browser
+title: "Clash Royale Dataset Browser"
+type: project
+status: research
+verification: author-documented
+repository: https://github.com/HumaidAlhuthali/clash-royale-dataset-browser
+topics: [cr-replay-state, cr-ai-environment]
+maintainers: []
+last_reviewed: null
+license: unknown
+---
+
 # Clash Royale Dataset Browser
 
 - **上游**：https://github.com/HumaidAlhuthali/clash-royale-dataset-browser
