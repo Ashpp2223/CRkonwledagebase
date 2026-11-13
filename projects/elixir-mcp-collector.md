@@ -1,3 +1,16 @@
+---
+id: elixir-mcp-collector
+title: "Elixir MCP Collector"
+type: project
+status: research
+verification: author-documented
+repository: https://github.com/jthingelstad/elixir-mcp-collector
+topics: [cr-assets-data]
+maintainers: []
+last_reviewed: null
+license: unknown
+---
+
 # Elixir MCP Collector
 
 - **上游**：https://github.com/jthingelstad/elixir-mcp-collector
