@@ -51,3 +51,38 @@
 - `vegetableleaf/KataCR`：GitHub repo ID `1328413445`，`fork: true`，parent **`wty-yy/KataCR`**（ID `701588460`）。
 - `vegetableleaf/cr-memory-reader`：GitHub repo ID `1327819989`，`fork: true`，parent **`Jason-XII/cr-memory-reader`**（ID `1314885072`）。
 - 两项均为**不同 repo ID 的 fork**，不能作为原仓库别名或重复计数消失；应作为衍生来源建立关系，后续 diff 判断是否存在独立功能。
+
+
+## 2026-11-13 补扫：剩余 16 位作者公开仓库枚举完成
+
+通过 GitHub `user:<owner>` 搜索逐一枚举，每位最多 100 条，当前返回数均小于 100。**至此 registry/projects.yaml 提取的 30 位不同 owner 已全部完成公开仓库名称枚举**；这不代表每个仓库已完成源码审查。
+
+| 作者 | 搜索返回数 | 发现与后续 |
+|---|---:|---|
+| Ashpp2223 | 18 | **ClashRoyale**（fork retroroyale/ClashRoyale，C# 服务端/战斗代码）、**Clash-Royale-v1-Client-Leak**（fork clashRoyaleClients 原始客户端 C++）、FirstLight_CR、royaleapi-downloader、clash-royale-simulator、cr-memory-reader、clash-royale-battle-engine 等未全部作为独立来源记录；优先确认 fork 关系、差异与版权边界 |
+| RoyaleGym | 7 | RoyaleGym/RoyaleLearn/RoyaleSim/RoyaleBot/RoyaleViser/RoyaleImitate 均已登记；另 .github |
+| RoyaleAPI | 8 | cr-api、cr-api-assets、cr-api-data、cr-api-docs、royalerating 等已登记，family-config/cr-api-ux/brand 待查数据价值 |
+| AmarSaini | 27 | Card Tracker 已登记，其他以 ML/课程项目为主 |
+| arronwang01 | 8 | **clash-royale-simulator-trial**（独立仓库，160 tree entries，含 Python 战斗模拟与 calibration 文档）；**clash-royale-battle-engine**（fork Jason-XII/daybreak-cr）；**clash-ai-releases**（仅 README）；cr-collector 已登记。原 clapha-engine 仍需确认是否改名 |
+| longlingking | 6 | clash-royale-simulator 已登记，其余未见明确 CR 专项 |
+| aboufama | 40 | clash-royale-research 已登记；clash-game 目录 42593 entries，但描述是 **Clash of Clans 风格** Web 游戏，不能仅按 clash 名称当成皇室战争项目 |
+| anishhchitnis | 6 | crownzero 已登记，其余未见明确 CR 专项 |
+| max-miller1204 | 62 | Clash-Royale-Pod 已登记；**KataCR** 为 fork wty-yy/KataCR（GitHub repo ID 1170276082），后续比较 diff |
+| jthingelstad | 49 | elixir-mcp、elixir-mcp-collector、elixir-mcp-discord、cr-agent-api-docs 已登记；**elixir-bot**（612 tree entries）明确服务 POAP KINGS Clash Royale 公会，含事件驱动 Discord agent，建议补录 |
+| HumaidAlhuthali | 1 | Dataset Browser 已登记 |
+| TrixallTR | 3 | 两个 SC 工具已登记；**SC-Server** Rust packet reader/writer（10 tree entries），需核查 Supercell 通信协议相关性和版本 |
+| abhishek-kumar-14 | 8 | supercell-asset-decompressor 已登记；**coc-asset-mapping**、**coc-memory-identifier-scanner** 为 Clash of Clans 关联工具，跨游戏技术可参考但需独立标签 |
+| Aminiwow | 3 | royaleapi-replay-dataset 已登记 |
+| proydakov | 46 | supercell-resource-decoder 已登记，其余主要通用 C++/Rust/Android 工具 |
+| houseworthe | 9 | claude-royale 已登记，其余多为通用 agent/MCP/素材项目 |
+
+### 本批新增明确候选与来源身份
+
+1. [arronwang01/clash-royale-simulator-trial](https://github.com/arronwang01/clash-royale-simulator-trial)：独立仓库，Python 战斗模拟器，含 `MECHANIC_AUDIT.md`、`CALIBRATION_PLAYBOOK.md` 和 `src/clasher_new/battle.py`，待与 Jason-XII simulator 的实现/来源比较。
+2. [arronwang01/clash-royale-battle-engine](https://github.com/arronwang01/clash-royale-battle-engine)：GitHub repo ID `1414417845`，`fork: true`，parent `Jason-XII/daybreak-cr`；独立 fork，不能误判为原仓库改名。
+3. [jthingelstad/elixir-bot](https://github.com/jthingelstad/elixir-bot)：独立仓库，明确服务 Clash Royale 公会，事件驱动自动化。
+4. [Ashpp2223/ClashRoyale](https://github.com/Ashpp2223/ClashRoyale)：GitHub repo ID `1218071653`，fork parent `retroroyale/ClashRoyale`，包含 C# battle/server 项目。
+5. [Ashpp2223/Clash-Royale-v1-Client-Leak](https://github.com/Ashpp2223/Clash-Royale-v1-Client-Leak)：GitHub repo ID `1305406867`，fork parent `clashRoyaleClients/Clash-Royale-v1-Client-Leak`；存在原版客户端版权/再分发风险，知识库宜仅保存元数据与研究结论。
+6. [TrixallTR/SC-Server](https://github.com/TrixallTR/SC-Server)：Rust Supercell packet reader/writer，待检查具体游戏协议适用性。
+
+**覆盖口径：30/30 位 owner 已枚举；已发现新候选，但本轮尚未将候选全部加入 57 项正式登记表。** 后续按源码价值、独立性与授权边界逐项收录。
