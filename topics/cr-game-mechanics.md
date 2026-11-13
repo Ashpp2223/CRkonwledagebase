@@ -4,7 +4,7 @@ title: "战斗机制、寻路与数值"
 type: topic
 status: investigating
 verification: author-documented
-projects: [jason-simulator, hasty-cr, crforge, royalesim, itzik-clashenv, crsim-agent-larkindaniel]
+projects: [jason-simulator, hasty-cr, crforge, royalesim, itzik-clashenv, crsim-agent-larkindaniel, aboufama-research]
 last_reviewed: null
 ---
 
