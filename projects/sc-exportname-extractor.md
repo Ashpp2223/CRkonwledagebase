@@ -1,3 +1,16 @@
+---
+id: sc-exportname-extractor
+title: "SC Export Name Extractor"
+type: project
+status: research
+verification: author-documented
+repository: https://github.com/TrixallTR/SC-ExportName-Extractor
+topics: [cr-ecosystem]
+maintainers: []
+last_reviewed: null
+license: unknown
+---
+
 # SC Export Name Extractor
 
 - 来源：https://github.com/TrixallTR/SC-ExportName-Extractor
